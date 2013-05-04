@@ -1,93 +1,82 @@
 @mixin bold() {
-  font-family: $font-sans-bold;
-  font-weight: normal;
+    font-family: $font-sans-bold;
+    font-weight: normal;
 }
 
 @mixin italic() {
-  font-family: $font-sans-italic;
-  font-style: normal;
+    font-family: $font-sans-italic;
+    font-style: normal;
 }
 
 @mixin bold-italic() {
-  font-family: $font-sans-bold-italic;
-  font-weight: normal;
-  font-style: normal;
+    font-family: $font-sans-bold-italic;
+    font-weight: normal;
+    font-style: normal;
 }
 
 @mixin font-sans() {
-  font-family: $font-sans;
-  font-weight: normal !important;
-  font-style: normal !important;
+    font-family: $font-sans;
+    font-weight: normal !important;
+    font-style: normal !important;
 }
 
 @mixin font-serif() {
-  font-family: $font-serif;
-  font-weight: normal !important;
-  font-style: normal !important;
+    font-family: $font-serif;
+    font-weight: normal !important;
+    font-style: normal !important;
 }
 
 // Transitions
 @mixin transition($transition...) {
-  -webkit-transition: $transition;
-          transition: $transition;
-}
-
-// Ugh, is there a better way to handle these next two?
-@mixin transition-two($transition1, $transition2) {
-  -webkit-transition: $transition1, $transition2;
-          transition: $transition1, $transition2;
-}
-
-@mixin transition-three($transition1, $transition2, $transition3) {
-  -webkit-transition: $transition1, $transition2, $transition3;
-          transition: $transition1, $transition2, $transition3;
+    -webkit-transition: $transition;
+            transition: $transition;
 }
 
 @mixin transition-delay($transition-delay) {
-  -webkit-transition-delay: $transition-delay;
-          transition-delay: $transition-delay;
+    -webkit-transition-delay: $transition-delay;
+            transition-delay: $transition-delay;
 }
 
 @mixin transition-duration($transition-duration) {
-  -webkit-transition-duration: $transition-duration;
-          transition-duration: $transition-duration;
+    -webkit-transition-duration: $transition-duration;
+            transition-duration: $transition-duration;
 }
 
 // Transformations
 @mixin rotate($degrees) {
-  -webkit-transform: rotate($degrees);
-      -ms-transform: rotate($degrees);
-          transform: rotate($degrees);
+    -webkit-transform: rotate($degrees);
+        -ms-transform: rotate($degrees);
+            transform: rotate($degrees);
 }
 
 @mixin scale($ratio) {
-  -webkit-transform: scale($ratio);
-      -ms-transform: scale($ratio);
-          transform: scale($ratio);
+    -webkit-transform: scale($ratio);
+        -ms-transform: scale($ratio);
+            transform: scale($ratio);
 }
 
 @mixin translate($x, $y) {
-  -webkit-transform: translate($x, $y);
-      -ms-transform: translate($x, $y);
-          transform: translate($x, $y);
+    -webkit-transform: translate($x, $y);
+        -ms-transform: translate($x, $y);
+            transform: translate($x, $y);
 }
 
 @mixin translateY($y) {
-  -webkit-transform: translateY($y);
-      -ms-transform: translateY($y);
-          transform: translateY($y);
+    -webkit-transform: translateY($y);
+        -ms-transform: translateY($y);
+            transform: translateY($y);
 }
 
 @mixin skew($x, $y) {
-  -webkit-transform: skew($x, $y);
-      -ms-transform: skewX($x) skewY($y); // See https://github.com/twitter/bootstrap/issues/4885
-          transform: skew($x, $y);
-  -webkit-backface-visibility: hidden; // See https://github.com/twitter/bootstrap/issues/5319
+    -webkit-transform: skew($x, $y);
+        -ms-transform: skewX($x) skewY($y); // See https://github.com/twitter/bootstrap/issues/4885
+            transform: skew($x, $y);
+    -webkit-backface-visibility: hidden; // See https://github.com/twitter/bootstrap/issues/5319
 }
 
 @mixin translate3d($x, $y, $z) {
-  -webkit-transform: translate3d($x, $y, $z);
-          transform: translate3d($x, $y, $z);
+    -webkit-transform: translate3d($x, $y, $z);
+            transform: translate3d($x, $y, $z);
 }
 
 // Backface visibility
@@ -95,25 +84,25 @@
 // Default value is `visible`, but can be changed to `hidden
 // See git pull https://github.com/dannykeane/bootstrap.git backface-visibility for examples
 @mixin backface-visibility($visibility) {
-  -webkit-backface-visibility: $visibility;
-     -moz-backface-visibility: $visibility;
-          backface-visibility: $visibility;
+    -webkit-backface-visibility: $visibility;
+       -moz-backface-visibility: $visibility;
+            backface-visibility: $visibility;
 }
 
 // Box sizing
 @mixin box-sizing($boxmodel) {
-  -moz-box-sizing: $boxmodel;
-       box-sizing: $boxmodel;
+    -moz-box-sizing: $boxmodel;
+         box-sizing: $boxmodel;
 }
 
 // User select
 // For selecting text on the page
 @mixin user-select($select) {
-  -webkit-touch-callout: $select;
-  -webkit-user-select: $select;
-     -moz-user-select: $select;
-      -ms-user-select: $select;
-          user-select: $select;
+    -webkit-touch-callout: $select;
+    -webkit-user-select: $select;
+       -moz-user-select: $select;
+        -ms-user-select: $select;
+            user-select: $select;
 }
 
 @mixin border-radius($val) {
@@ -123,18 +112,18 @@
 
 // Resize anything
 @mixin resizable($direction) {
-  resize: $direction; // Options: horizontal, vertical, both
-  overflow: auto; // Safari fix
+    resize: $direction; // Options: horizontal, vertical, both
+    overflow: auto; // Safari fix
 }
 
 // Optional hyphenation
 @mixin hyphens($mode: auto) {
-  word-wrap: break-word;
-  -webkit-hyphens: $mode;
-     -moz-hyphens: $mode;
-      -ms-hyphens: $mode;
-       -o-hyphens: $mode;
-          hyphens: $mode;
+    word-wrap: break-word;
+    -webkit-hyphens: $mode;
+       -moz-hyphens: $mode;
+        -ms-hyphens: $mode;
+         -o-hyphens: $mode;
+            hyphens: $mode;
 }
 
 // BACKGROUNDS
@@ -142,66 +131,65 @@
 
 // Add an alphatransparency value to any background or border color (via Elyse Holladay)
 @mixin translucent-background($color: $white, $alpha: 1) {
-  background-color: hsla(hue($color), saturation($color), lightness($color), $alpha);
+    background-color: hsla(hue($color), saturation($color), lightness($color), $alpha);
 }
 
 @mixin translucent-border($color: $white, $alpha: 1) {
-  border-color: hsla(hue($color), saturation($color), lightness($color), $alpha);
-  background-clip: padding-box;
+    border-color: hsla(hue($color), saturation($color), lightness($color), $alpha);
+    background-clip: padding-box;
 }
 
 // Gradient Bar Colors for buttons and alerts
 @mixin gradientBar($primaryColor, $secondaryColor, $textColor: #fff, $textShadow: 0 -1px 0 rgba(0,0,0,.25)) {
-  color: $textColor;
-  text-shadow: $textShadow;
-  @include gradient-vertical($primaryColor, $secondaryColor);
-  border-color: $secondaryColor $secondaryColor darken($secondaryColor, 15%);
-  border-color: rgba(0,0,0,.1) rgba(0,0,0,.1) fade-in(rgba(0,0,0,.1), 0.15);
+    color: $textColor;
+    text-shadow: $textShadow;
+    @include gradient-vertical($primaryColor, $secondaryColor);
+    border-color: $secondaryColor $secondaryColor darken($secondaryColor, 15%);
+    border-color: rgba(0,0,0,.1) rgba(0,0,0,.1) fade-in(rgba(0,0,0,.1), 0.15);
 }
 
 // GRADIENTS
 // --------------------------------------------------
 
 @mixin gradient-vertical($startColor: #555, $endColor: #333) {
-  background-color: mix($startColor, $endColor, 60%);
-  background-image: -webkit-linear-gradient(top, $startColor, $endColor); // Safari 5.1+, Chrome 10+
-  background-image: linear-gradient(to bottom, $startColor, $endColor);
-  background-repeat: repeat-x;
+    background-color: mix($startColor, $endColor, 60%);
+    background-image: -webkit-linear-gradient(top, $startColor, $endColor); // Safari 5.1+, Chrome 10+
+    background-image: linear-gradient(to bottom, $startColor, $endColor);
+    background-repeat: repeat-x;
 }
 
-
 @mixin gradient-horizontal($startColor: #555, $endColor: #333) {
-  background-color: mix($startColor, $endColor, 60%);
-  background-image: -webkit-linear-gradient(left, $startColor, $endColor); // Safari 5.1+, Chrome 10+
-  background-image: linear-gradient(to right, $startColor, $endColor);
-  background-repeat: repeat-x;
+    background-color: mix($startColor, $endColor, 60%);
+    background-image: -webkit-linear-gradient(left, $startColor, $endColor); // Safari 5.1+, Chrome 10+
+    background-image: linear-gradient(to right, $startColor, $endColor);
+    background-repeat: repeat-x;
 }
 
 @mixin gradient-directional($startColor: #555, $endColor: #333, $deg: 45deg) {
-  background-color: $endColor;
-  background-image: -webkit-linear-gradient($deg, $startColor, $endColor); // Safari 5.1+, Chrome 10+
-  background-image: linear-gradient($deg, $startColor, $endColor);
-  background-repeat: repeat-x;
+    background-color: $endColor;
+    background-image: -webkit-linear-gradient($deg, $startColor, $endColor); // Safari 5.1+, Chrome 10+
+    background-image: linear-gradient($deg, $startColor, $endColor);
+    background-repeat: repeat-x;
 }
 
 @mixin gradient-vertical-three-colors($startColor: #00b3ee, $midColor: #7a43b6, $colorStop: 50%, $endColor: #c3325f) {
-  background-color: mix($midColor, $endColor, 80%);
-  background-image: -webkit-linear-gradient($startColor, $midColor $colorStop, $endColor);
-  background-image: linear-gradient($startColor, $midColor $colorStop, $endColor);
-  background-repeat: no-repeat;
+    background-color: mix($midColor, $endColor, 80%);
+    background-image: -webkit-linear-gradient($startColor, $midColor $colorStop, $endColor);
+    background-image: linear-gradient($startColor, $midColor $colorStop, $endColor);
+    background-repeat: no-repeat;
 }
 
 @mixin gradient-radial($innerColor: #555, $outerColor: #333)  {
-  background-color: $outerColor;
-  background-image: -webkit-radial-gradient(circle, $innerColor, $outerColor);
-  background-image: radial-gradient(circle, $innerColor, $outerColor);
-  background-repeat: no-repeat;
+    background-color: $outerColor;
+    background-image: -webkit-radial-gradient(circle, $innerColor, $outerColor);
+    background-image: radial-gradient(circle, $innerColor, $outerColor);
+    background-repeat: no-repeat;
 }
 
 @mixin gradient-striped($color: #555, $angle: 45deg) {
-  background-color: $color;
-  background-image: -webkit-linear-gradient($angle, rgba(255,255,255,.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.15) 50%, rgba(255,255,255,.15) 75%, transparent 75%, transparent);
-  background-image: linear-gradient($angle, rgba(255,255,255,.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.15) 50%, rgba(255,255,255,.15) 75%, transparent 75%, transparent);
+    background-color: $color;
+    background-image: -webkit-linear-gradient($angle, rgba(255,255,255,.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.15) 50%, rgba(255,255,255,.15) 75%, transparent 75%, transparent);
+    background-image: linear-gradient($angle, rgba(255,255,255,.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.15) 50%, rgba(255,255,255,.15) 75%, transparent 75%, transparent);
 }
 
 // FORMS
@@ -283,52 +271,52 @@
 
 // Apply button styles to any element
 @mixin button() {
-  display: inline-block;
-  margin-bottom: 0; // For input.button
-  font-size: $baseFontSize;
-  line-height: $baseLineHeight;
-  text-align: center;
-  vertical-align: middle;
-  cursor: pointer;
-  @include buttonBackground($buttonBackground, $buttonBackgroundHighlight, $grayDark, 0 1px 1px rgba(255,255,255,.75));
-  border: 1px solid $buttonBorder;
-  border-bottom-color: darken($buttonBorder, 10%);
-  @include border-radius($baseBorderRadius);
-  box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+    display: inline-block;
+    margin-bottom: 0; // For input.button
+    font-size: $baseFontSize;
+    line-height: $baseLineHeight;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    @include buttonBackground($buttonBackground, $buttonBackgroundHighlight, $grayDark, 0 1px 1px rgba(255,255,255,.75));
+    border: 1px solid $buttonBorder;
+    border-bottom-color: darken($buttonBorder, 10%);
+    @include border-radius($baseBorderRadius);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
 
-  // Hover/focus state
-  &:hover,
-  &:focus {
-    color: $grayDark;
-    text-decoration: none;
-    background-position: 0 -15px;
+    // Hover/focus state
+    &:hover,
+    &:focus {
+        color: $grayDark;
+        text-decoration: none;
+        background-position: 0 -15px;
 
-    // transition is only when going to hover/focus, otherwise the background
-    // behind the gradient (there for IE<=9 fallback) gets mismatched
-    @include transition(background-position 0.1s linear);
-  }
+        // transition is only when going to hover/focus, otherwise the background
+        // behind the gradient (there for IE<=9 fallback) gets mismatched
+        @include transition(background-position 0.1s linear);
+    }
 
-  // Focus state for keyboard and accessibility
-  &:focus {
-    @include tab-focus();
-  }
+    // Focus state for keyboard and accessibility
+    &:focus {
+        @include tab-focus();
+    }
 
-  // Active state
-  &.active,
-  &:active {
-    background-image: none;
-    outline: 0;
-    box-shadow: inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05);
-  }
+    // Active state
+    &.active,
+    &:active {
+        background-image: none;
+        outline: 0;
+        box-shadow: inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05);
+    }
 
-  // Disabled state
-  &.disabled,
-  &[disabled] {
-    cursor: default;
-    background-image: none;
-    opacity: 0.65;
-    box-shadow: none;
-  }
+    // Disabled state
+    &.disabled,
+    &[disabled] {
+        cursor: default;
+        background-image: none;
+        opacity: 0.65;
+        box-shadow: none;
+    }
 }
 
 @mixin buttonBackground($startColor, $endColor, $textColor: #fff, $textShadow: 0 -1px 0 rgba(0,0,0,.25)) {

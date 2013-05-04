@@ -1,220 +1,252 @@
-    html,
-    body {
-        background: #282828;
-        height: 100%;
+html,
+body {
+    background: #282828;
+    height: 100%;
+}
+
+body.off-canvas {
+    padding-top: $nav-bar-height;
+
+    @include breakpoint($off-canvas-medium-width) {
+        padding-top: 0;
+    }
+}
+
+.off-canvas {
+
+    .pull-down-container {
+        position: absolute;
+        top: 0;
     }
 
-    body.off-canvas {
-        padding-top: $nav-bar-height;
+    .pull-down {
+        height: 40px;
+        width: 44px;
+    }
+
+    .gov-bar {
+        position: absolute;
+        width: 100%;
+
+        form {
+            margin: 0;
+        }
+    }
+
+    .site-bar {
+        position: absolute;
+        width: 100%;
+    }
+
+    .global-nav {
+        position: fixed;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 0;
 
         @include breakpoint($off-canvas-medium-width) {
-            padding-top: 0;
-        }
-    }
-
-    .off-canvas {
-
-        .pull-down-container {
-            position: absolute;
-            top: 0;
+            height: 46px;
+            overflow: visible;
+            z-index: 30;
         }
 
-        .pull-down {
-            height: 40px;
-            width: 44px;
+        .sub-menu-title {
+            display: inline-block;
+            color: #AAA;
+            font-size: 1.45em;
+            position: relative;
+            left: 20%;
+            line-height: $nav-bar-height;
+            padding-top: 0.15em;
         }
 
-        .gov-bar {
-            position: absolute;
-            width: 100%;
-
-            form {
-                margin: 0;
-            }
-        }
-
-        .site-bar {
-            position: absolute;
-            width: 100%;
-        }
-
-        .global-nav {
-            position: fixed;
-            top: 0;
-            height: 100%;
-            width: 100%;
-            z-index: 0;
+        .nav-container {
+            height: inherit;
+            overflow-y: scroll;
 
             @include breakpoint($off-canvas-medium-width) {
-                height: 46px;
-                overflow: visible;
-                z-index: 30;
+                overflow: hidden;
+
+                ul {
+                    min-height: auto;
+                }
             }
 
-            .sub-menu-title {
-                display: inline-block;
-                color: #AAA;
-                font-size: 1.45em;
-                position: relative;
-                left: 20%;
-                line-height: $nav-bar-height;
-                padding-top: 0.15em;
+            @include breakpoint($off-canvas-large-width) {
+                @include border-radius(4px);
             }
 
-            .nav-container {
-                height: inherit;
-                overflow-y: scroll;
+            & > ul {
+                min-height: 1000px;
 
                 @include breakpoint($off-canvas-medium-width) {
-                    overflow: hidden;
-
-                    ul {
-                        min-height: auto;
-                    }
+                    min-height: auto;
                 }
+            }
+        }
 
-                @include breakpoint($off-canvas-large-width) {
-                    @include border-radius(4px);
-                }
+        ul {
+            margin-left: 16%;
 
-                & > ul {
-                    min-height: 1000px;
+            @include breakpoint($off-canvas-medium-width) {
+                margin-left: 0;
+            }
 
-                    @include breakpoint($off-canvas-medium-width) {
-                        min-height: auto;
-                    }
+            li {
+                padding-left: 3%;
+
+                @include breakpoint($off-canvas-medium-width) {
+                    padding-left: 0;
                 }
             }
 
             ul {
-                margin-left: 16%;
+                position: fixed;
+                top: 53px;
+                left: 100%;
+                display: block;
+                height: 100%;
+                width: 100%;
+                background: #333 !important;
+                @include transition(left 0.2s ease);
 
                 @include breakpoint($off-canvas-medium-width) {
-                    margin-left: 0;
-                }
-
-                li {
-                    padding-left: 3%;
-
-                    @include breakpoint($off-canvas-medium-width) {
-                        padding-left: 0;
-                    }
-                }
-
-                ul {
-                    position: fixed;
-                    top: 53px;
-                    left: 100%;
-                    display: block;
-                    height: 100%;
-                    width: 100%;
-                    background: #333 !important;
-                    @include transition(left 0.2s ease);
-
-                    @include breakpoint($off-canvas-medium-width) {
-                        position: absolute;
-                        top: 50px !important;
-                        left: 0;
-                        background: #454545 !important; /* M */
-                        border-radius: 0;
-                        overflow: hidden;
-                        visibility: hidden;
-                        @include transition(left 0s ease);
-                    }
-
-                    @include breakpoint($off-canvas-large-width) {
-                        border-radius: 4px !important; /* Do not use mixin here */
-                        background-clip: padding-box !important;
-                    }
-
-                    li {
-                        padding-left: 2% !important;
-
-                        @include breakpoint($off-canvas-medium-width) {
-                            border-right: 1px solid #000;
-                            border-left: 1px solid #666;
-                        }
-
-                        &:first {
-                            @include breakpoint($off-canvas-medium-width) {
-                                border-left: none;
-                            }
-                        }
-                    }
-
-                    @include breakpoint($off-canvas-medium-width) {
-                        &.active-menu {
-                            visibility: visible;
-
-                            li {
-                                padding: 0 !important;
-                            }
-                        }
-                    }
-                }
-            }
-
-            .menu-controls {
-                height: 53px;
-
-                @include breakpoint($off-canvas-medium-width) {
-                    display: none;
-                }
-
-                .menu-back {
-                    @include gradient-vertical(#999, #505050);
-                    @include border-radius(5px);
-                    color: #fff;
-                    margin: 10px;
-                    padding: 7px 7px 7px 1px;
                     position: absolute;
-                    right: 0;
+                    top: 50px !important;
+                    left: 0;
+                    background: #454545 !important; /* M */
+                    border-radius: 0;
+                    overflow: hidden;
                     visibility: hidden;
+                    @include transition(left 0s ease);
                 }
-            }
 
-            .active-menu {
-                left: 0;
-                z-index: 1;
+                @include breakpoint($off-canvas-large-width) {
+                    border-radius: 4px !important; /* Do not use mixin here */
+                    background-clip: padding-box !important;
+                }
 
                 li {
-                    @include breakpoint($off-canvas-medium-width) {
-                        padding-left: 0;
-                        border-bottom: 0;
+                    padding-left: 2% !important;
 
-                        a {
-                            border-radius: 4px;
-                            background: #454545 !important;
+                    @include breakpoint($off-canvas-medium-width) {
+                        border-right: 1px solid #000;
+                        border-left: 1px solid #666;
+                    }
+
+                    &:first {
+                        @include breakpoint($off-canvas-medium-width) {
+                            border-left: none;
+                        }
+                    }
+                }
+
+                @include breakpoint($off-canvas-medium-width) {
+                    &.active-menu {
+                        visibility: visible;
+
+                        li {
+                            padding: 0 !important;
                         }
                     }
                 }
             }
-        } // end .global-nav
-
-        &.active-sub-menu .global-nav .menu-controls .menu-back {
-            visibility: visible;
         }
 
-        .page {
-            position: relative;
-            height: auto;
-            min-height: 100%;
-            top: 0;
-            width: 100%;
+        .menu-controls {
+            height: 53px;
 
             @include breakpoint($off-canvas-medium-width) {
-                min-height: auto;
-                top: -23px;
-                left: 0;
+                display: none;
+            }
+
+            .menu-back {
+                @include gradient-vertical(#999, #505050);
+                @include border-radius(5px);
+                color: #fff;
+                margin: 10px;
+                padding: 7px 7px 7px 1px;
+                position: absolute;
+                right: 0;
+                visibility: hidden;
             }
         }
 
+        .active-menu {
+            left: 0;
+            z-index: 1;
+
+            li {
+                @include breakpoint($off-canvas-medium-width) {
+                    padding-left: 0;
+                    border-bottom: 0;
+
+                    a {
+                        border-radius: 4px;
+                        background: #454545 !important;
+                    }
+                }
+            }
+        }
+    } // end .global-nav
+
+    &.active-sub-menu .global-nav .menu-controls .menu-back {
+        visibility: visible;
+    }
+
+    .page {
+        position: relative;
+        height: auto;
+        min-height: 100%;
+        top: 0;
+        width: 100%;
+
+        @include breakpoint($off-canvas-medium-width) {
+            min-height: auto;
+            top: -23px;
+            left: 0;
+        }
+    }
+
+    .pull-down,
+    .pull-down-container,
+    .gov-bar,
+    .site-bar,
+    .page {
+        @include transition(top 0.2s ease, left 0.2s ease, height 0.2s ease);
+    }
+
+    .gov-bar,
+    .site-bar,
+    .global-nav,
+    .page {
+        @include breakpoint($off-canvas-medium-width) {
+            position: relative;
+        }
+    }
+
+    &.active-gov-bar {
+        .pull-down-container,
+        .site-bar {
+            top: 88px;
+        }
+
+        .site-bar {
+            @include breakpoint($off-canvas-medium-width) {
+                top: 0;
+            }
+        }
+    }
+
+    &.active-site-menu {
         .pull-down,
         .pull-down-container,
         .gov-bar,
         .site-bar,
         .page {
-            @include transition-three(top 0.2s ease, left 0.2s ease, height 0.2s ease);
+          position: fixed;
+          left: -82%;
         }
 
         .gov-bar,
@@ -222,74 +254,42 @@
         .global-nav,
         .page {
             @include breakpoint($off-canvas-medium-width) {
+                left: auto;
                 position: relative;
             }
         }
 
-        &.active-gov-bar {
-            .pull-down-container,
-            .site-bar {
-                top: 88px;
-            }
+        .global-nav .icon-right-open:before {
+            padding-top: 3px;
+            position: absolute;
+            right: 5%;
 
-            .site-bar {
-                @include breakpoint($off-canvas-medium-width) {
-                    top: 0;
-                }
+            @include breakpoint($off-canvas-medium-width) {
+                position: relative;
+                right: auto;
             }
         }
 
-        &.active-site-menu {
-            .pull-down,
-            .pull-down-container,
-            .gov-bar,
-            .site-bar,
-            .page {
-              position: fixed;
-              left: -82%;
+        .mobile-menu-button {
+            box-shadow: inset 6px 0px 8px -2px #000;
+        }
+
+        .page {
+            box-shadow: 5px 49px 8px #000;
+
+            @include breakpoint($off-canvas-medium-width) {
+                box-shadow: none;
             }
+        }
 
-            .gov-bar,
-            .site-bar,
-            .global-nav,
-            .page {
-                @include breakpoint($off-canvas-medium-width) {
-                    left: auto;
-                    position: relative;
-                }
+        .footer {
+            left: -82%;
+
+            @include breakpoint($off-canvas-medium-width) {
+                left: auto;
             }
+        }
 
-            .global-nav .icon-right-open:before {
-                padding-top: 3px;
-                position: absolute;
-                right: 5%;
+    } // end &.active-site-menu
 
-                @include breakpoint($off-canvas-medium-width) {
-                    position: relative;
-                    right: auto;
-                }
-            }
-
-            .mobile-menu-button {
-                box-shadow: inset 6px 0px 8px -2px #000;
-            }
-
-            .page {
-                box-shadow: 5px 49px 8px #000;
-
-                @include breakpoint($off-canvas-medium-width) {
-                    box-shadow: none;
-                }
-            }
-
-            .footer {
-                left: -82%;
-
-                @include breakpoint($off-canvas-medium-width) {
-                    left: auto;
-                }
-            }
-
-        } // end &.active-site-menu
-
-    } // end .off-canvas
+} // end .off-canvas
