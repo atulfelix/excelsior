@@ -1,4 +1,4 @@
-// Craig's thumbnails, need to merge with Foundation's `.th` class
+// Should be merged with Foundation's `.th` class
 .thumbnail {
   background-color: #f9f9f9;
   box-shadow: 0 0 0.25em #444;
@@ -25,7 +25,7 @@
 }
 
 .section .thumbnail {
-  max-width: 33%; // Pretty arbitrary, just made up for the accordion demo
+    max-width: 33%; // Pretty arbitrary, just made up for the accordion demo
 }
 
 // Thumbnails prototype
@@ -95,54 +95,50 @@
 }
 
 .li-text {
-  display: table-cell;
-  vertical-align: top;
-  width: 70%;
-  padding-right: 7%;
+    display: table-cell;
+    vertical-align: top;
+    width: 70%;
+    padding-right: 7%;
 }
 
 .li-head,
 .li-sub {
-  margin: 0;
+    margin: 0;
 }
 
 // Map
 
 .map-canvas {
-  height: 300px;
-  width: 100%;
-  margin-bottom: 1em;
-  border: 1px solid #999;
-  box-shadow: 0 0 3px #999;
-}
+    height: 300px;
+    width: 100%;
+    margin-bottom: 1em;
+    border: 1px solid #999;
+    box-shadow: 0 0 3px #999;
 
-#map_canvas img,
-#map_canvas embed,
-#map_canvas object,
-.map_canvas img,
-.map_canvas embed,
-.map_canvas object {
-  max-width: none !important;
+    img,
+    embed,
+    object {
+        max-width: none !important;
+    }
 }
 
 .video-container {
     position: relative;
     padding-bottom: 56.25%;
     padding-top: 30px; height: 0; overflow: hidden;
-}
 
-.video-container iframe,
-.video-container object,
-.video-container embed {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    iframe,
+    object,
+    embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
 }
 
 @media only screen and (max-width: 24em) {
-
     .video-container {
         height: auto;
         padding: 0;
@@ -151,6 +147,5 @@
     .image-to-list .has-video a span {
         position: relative;
     }
-
 }
 
