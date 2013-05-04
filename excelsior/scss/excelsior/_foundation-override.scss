@@ -338,6 +338,13 @@ section .title a,
     border: none;
 }
 
+.section-container > section,
+.section-container > .section,
+.section-container.auto > section,
+.section-container.auto > .section {
+    border: 1px solid #cccccc; // instead of just border-top
+}
+
 // Accordion
 
 .section-container.accordion section .title,
@@ -345,8 +352,8 @@ section .title a,
     font-family: $font-sans;
 }
 
-.auto section.section,
-.accordion section.section {
+.auto .section,
+.accordion .section {
     @include border-radius($baseBorderRadius);
     border-left: 1px solid #cccccc;
     border-right: 1px solid #cccccc;
@@ -369,6 +376,8 @@ section .title a,
     padding-right: 26px; // width of chevron plus its right position offset
 }
 
+.accordion div.auto .title:after,
+.accordion div.section .title:after,
 .accordion section.auto .title:after,
 .accordion section.section .title:after {
     content: $icon-down-open;
@@ -381,6 +390,8 @@ section .title a,
     //@include rotate(90deg);
 }
 
+.accordion div.auto.active .title:after,
+.accordion div.section.active .title:after,
 .accordion section.auto.active .title:after,
 .accordion section.section.active .title:after {
     top: 8px;
@@ -395,6 +406,8 @@ section .title a,
     }
 
     // Same styles as above
+    .auto div.auto .title:after,
+    .auto div.section .title:after,
     .auto section.auto .title:after,
     .auto section.section .title:after {
         content: $icon-down-open;
@@ -407,6 +420,8 @@ section .title a,
         //@include rotate(90deg);
     }
 
+    .auto div.auto.active .title:after,
+    .auto div.section.active .title:after,
     .auto section.auto.active .title:after,
     .auto section.section.active .title:after {
         top: 6px;
@@ -416,6 +431,7 @@ section .title a,
 }
 
 // Orbit
+
 .touch .orbit-container .orbit-prev,
 .touch .orbit-container .orbit-next {
     display: inherit;
