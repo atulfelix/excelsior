@@ -1,18 +1,18 @@
-// Foundation Overrides
+// // Foundation Overrides
 
-// KNOW TO FIX OVERRIDES
+// // KNOW TO FIX OVERRIDES
 
-/*
+
 body {
-  font-family: $font-sans;
+    font-family: $font-sans;
 }
 
 a {
-  text-decoration: underline;
+    text-decoration: underline;
 
-  &:hover {
-    text-decoration: none;
-  }
+    &:hover {
+        text-decoration: none;
+    }
 }
 
 .pull-down-container,
@@ -29,7 +29,8 @@ nav {
 select,
 textarea,
 button,
-input, // Need to list all of these types to override Foundation's specificity
+input,
+// Need to list all of these types to override Foundation's specificity
 input[type="text"],
 input[type="password"],
 input[type="datetime"],
@@ -85,6 +86,18 @@ h6 {
 
 p {
   font-family: $font-sans;
+}
+
+.split.button span:before {
+    border-color: #444 transparent transparent transparent;
+}
+
+.split.button span {
+    border-left-color: #c3c3c3;
+}
+
+.split.button.secondary span {
+    border-left-color: #1e728c;
 }
 
 table {
@@ -168,199 +181,259 @@ ul.f-dropdown li {
 
 // Panels
 
-.panel h4 a {
-  text-decoration: none;
+.panel {
 
-  &:hover {
-    text-decoration: none;
-  }
+    &.callout {
+        border-color: $infoBorder;
+        color: rgba(255,255,255,.75);
+        @include buttonBackground($btnPrimaryBackground, $btnPrimaryBackgroundHighlight);
+
+        &:hover {
+            @include transition(background-position 0.1s linear);
+        }
+    }
+
+    h4 a {
+        text-decoration: none;
+
+        &:hover {
+           text-decoration: none;
+        }
+    }
 }
 
 // Sub nav
 
 .sub-nav {
-  dt:not(.active) a,
-  dd:not(.active) a {
-    padding: 0.1875em 0.5625em; // 3px 9px
+    dt:not(.active) a,
+    dd:not(.active) a {
+        padding: 0.1875em 0.5625em; // 3px 9px
 
-    &:hover {
-      @include border-radius(1000px);
-      background: #999;
-      color: #fff;
+        &:hover {
+            @include border-radius(1000px);
+            background: #999;
+            color: #fff;
+        }
     }
-  }
+
+    dt.active a,
+    dd.active a {
+        padding: 0.1875em 0.5625em; // 3px 9px
+        @include buttonBackground($btnPrimaryBackground, $btnPrimaryBackgroundHighlight);
+
+        &:hover {
+            @include border-radius(1000px);
+            @include transition(background-position 0.1s linear);
+            color: #fff;
+        }
+    }
 }
 
 // Reveal Modal
 
 .close-reveal-modal {
-  text-decoration: none;
-
-  &:hover {
     text-decoration: none;
-  }
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+// Pagination
+
+.pagination {
+    li.current a,
+    li.current a {
+        text-decoration: none;
+        @include border-radius($baseBorderRadius);
+        @include buttonBackground($btnPrimaryBackground, $btnPrimaryBackgroundHighlight);
+
+        &:hover,
+        &:focus {
+            text-decoration: none;
+            @include transition(background-position 0.1s linear);
+        }
+    }
 }
 
 // Breadcrumbs
 
 .breadcrumbs li a,
 .breadcrumbs li span {
-  text-transform: none;
-  font-size: 0.9em;
+    text-transform: none;
+    // font-size: 0.9em;
 }
 
 .breadcrumbs li a {
-  &:hover {
-    text-decoration: none;
-  }
+    &:hover {
+        text-decoration: none;
+    }
 
-  &[href="#"],
-  &[href="#"]:hover {
-    cursor: default;
-    text-decoration: none;
-  }
+    &[href="#"],
+    &[href="#"]:hover {
+        cursor: default;
+        text-decoration: none;
+    }
 }
 
 // Sections
 
 section .title a,
 .section .title a {
-  text-decoration: none;
-
-  &:hover {
     text-decoration: none;
-  }
+
+    &:hover {
+        text-decoration: none;
+    }
 }
 
 .section-container.tabs section .title,
 .section-container.tabs .section .title{
-  font-family: $font-sans-bold;
-  font-weight: normal;
-  border-top-left-radius: 6px;
-  border-top-right-radius: 6px;
-  background-clip: padding-box;
+      font-family: $font-sans-bold;
+      font-weight: normal;
+      border-top-left-radius: 6px;
+      border-top-right-radius: 6px;
+      background-clip: padding-box;
 }
 
 .section-container.auto section .title,
 .section-container.auto .section .title{
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-  background-clip: padding-box;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      background-clip: padding-box;
 }
 
 // Same styles as above
 @media screen and (min-width: 48em) {
-  .section-container.auto section .title,
-  .section-container.auto .section .title {
-    font-family: $font-sans-bold;
-    font-weight: normal;
-    border-top-left-radius: 6px;
-    border-top-right-radius: 6px;
-    background-clip: padding-box;
-  }
+    .section-container.auto section .title,
+    .section-container.auto .section .title {
+        font-family: $font-sans-bold;
+        font-weight: normal;
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+        background-clip: padding-box;
+    }
 }
 
 .section-container section .content,
 .section-container .section .content,
 .section-container.auto section .content,
 .section-container.auto .section .content {
-  background-color: transparent; // Bleeds over the border radius
-  border-top-right-radius: 3px;
-  border-bottom-left-radius: 3px;
-  border-bottom-right-radius: 3px;
-  background-clip: padding-box;
+    background-color: transparent; // Bleeds over the border radius
+    border-top-right-radius: $baseBorderRadius;
+    border-bottom-left-radius: $baseBorderRadius;
+    border-bottom-right-radius: $baseBorderRadius;
+    background-clip: padding-box;
 }
 
 .section-container section .title a,
 .section-container .section .title a,
 .section-container.auto section .title a,
 .section-container.auto .section .title a {
-  padding: 8px 14px;
+    padding: 8px 14px;
 }
 
 .section-container,
 .section-container.auto {
-  border: none;
+    border: none;
+}
+
+@media (max-width: 47.9em) {
+    .section-container > section,
+    .section-container > .section,
+    .section-container.auto > section,
+    .section-container.auto > .section {
+        border: 1px solid #cccccc; // instead of just border-top
+    }
 }
 
 // Accordion
 
 .section-container.accordion section .title,
 .section-container.accordion .section .title {
-  font-family: $font-sans;
+    font-family: $font-sans;
 }
 
-.auto section.section,
-.accordion section.section {
-  @include border-radius(3px);
-  border-left: 1px solid #cccccc;
-  border-right: 1px solid #cccccc;
-  border-bottom: 1px solid #cccccc;
+.auto .section,
+.accordion .section {
+    @include border-radius($baseBorderRadius);
+    border-left: 1px solid #cccccc;
+    border-right: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
 }
 
 .auto section.section:last-child,
 .accordion section.section:last-child {
-  margin-bottom: 0;
+    margin-bottom: 0;
 }
 
 .title a {
-  text-overflow: ellipsis;
-  overflow: hidden;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 .accordion section.auto > .title,
 .accordion section.section > .title {
-  position: relative;
-  padding-right: 26px; // width of chevron plus its right position offset
+    position: relative;
+    padding-right: 26px; // width of chevron plus its right position offset
 }
 
+.accordion div.auto .title:after,
+.accordion div.section .title:after,
 .accordion section.auto .title:after,
 .accordion section.section .title:after {
-  content: $icon-down-open;
-  position: absolute;
-  top: 6px;
-  right: 18px;
-  font-family: $font-icons;
-  font-style: normal;
-  font-weight: normal;
-  //@include rotate(90deg);
-}
-
-.accordion section.auto.active .title:after,
-.accordion section.section.active .title:after {
-  top: 8px;
-  right: 18px;
-  @include rotate(180deg);
-}
-
-@media screen and (max-width: 47.9em) {
-
-  .auto section {
-    margin-bottom: 0.5em;
-  }
-
-  // Same styles as above
-  .auto section.auto .title:after,
-  .auto section.section .title:after {
     content: $icon-down-open;
     position: absolute;
-    top: 8px;
+    top: 6px;
     right: 18px;
     font-family: $font-icons;
     font-style: normal;
     font-weight: normal;
     //@include rotate(90deg);
-  }
+}
 
-  .auto section.auto.active .title:after,
-  .auto section.section.active .title:after {
-    top: 6px;
+.accordion div.auto.active .title:after,
+.accordion div.section.active .title:after,
+.accordion section.auto.active .title:after,
+.accordion section.section.active .title:after {
+    top: 8px;
     right: 18px;
     @include rotate(180deg);
-  }
+}
+
+@media screen and (max-width: 47.9em) {
+
+    .auto section {
+        margin-bottom: 0.5em;
+    }
+
+    // Same styles as above
+    .auto div.auto .title:after,
+    .auto div.section .title:after,
+    .auto section.auto .title:after,
+    .auto section.section .title:after {
+        content: $icon-down-open;
+        position: absolute;
+        top: 8px;
+        right: 18px;
+        font-family: $font-icons;
+        font-style: normal;
+        font-weight: normal;
+        //@include rotate(90deg);
+    }
+
+    .auto div.auto.active .title:after,
+    .auto div.section.active .title:after,
+    .auto section.auto.active .title:after,
+    .auto section.section.active .title:after {
+        top: 6px;
+        right: 18px;
+        @include rotate(180deg);
+    }
 }
 
 // Orbit
+
 .touch .orbit-container .orbit-prev,
 .touch .orbit-container .orbit-next {
     display: inherit;
@@ -369,15 +442,11 @@ section .title a,
 // Clearing (Lightbox)
 
 .clearing-blackout {
-  top: 48px
-}
+    top: 48px;
 
-@media only screen and (min-width: 48em) {
-
-  .clearing-blackout {
-    top: 0
-  }
-
+    @include breakpoint(48em) {
+        top: 0;
+    }
 }
 
 .clearing-close {
@@ -386,4 +455,31 @@ section .title a,
   &:hover {
     text-decoration: none;
   }
+}
+
+// Labels (same colors as alerts)
+.label {
+    color: $grayDark;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+    background-color: #e6e6e6;
+    border: 1px solid $btnBorder;
+    @include border-radius($baseBorderRadius);
+}
+
+.label.secondary {
+    background-color: $infoBackground;
+    border-color: $infoBorder;
+    color: $infoText;
+}
+
+.label.alert {
+    background-color: $errorBackground;
+    border-color: $errorBorder;
+    color: $errorText;
+}
+
+.label.success {
+    background-color: $successBackground;
+    border-color: $successBorder;
+    color: $successText;
 }
