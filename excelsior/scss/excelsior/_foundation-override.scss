@@ -338,11 +338,13 @@ section .title a,
     border: none;
 }
 
-.section-container > section,
-.section-container > .section,
-.section-container.auto > section,
-.section-container.auto > .section {
-    border: 1px solid #cccccc; // instead of just border-top
+@media (max-width: 47.9em) {
+    .section-container > section,
+    .section-container > .section,
+    .section-container.auto > section,
+    .section-container.auto > .section {
+        border: 1px solid #cccccc; // instead of just border-top
+    }
 }
 
 // Accordion
