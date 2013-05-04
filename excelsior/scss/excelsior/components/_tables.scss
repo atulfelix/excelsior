@@ -31,6 +31,26 @@ th {
     @include bold();
 }
 
+// table {
+
+//   thead,
+//   tfoot {
+//     tr {
+//       th {
+//         font-family: $font-sans-bold;
+//         font-weight: normal;
+//       }
+//     }
+//   }
+
+//   tr {
+//     th {
+//       font-family: $font-sans-bold;
+//       font-weight: normal;
+//     }
+//   }
+// }
+
 // Bottom align for column headings
 thead th {
     vertical-align: bottom;

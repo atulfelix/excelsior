@@ -6,6 +6,12 @@ input.button, // Foundation specificity
 button.button {
     @include button();
     padding: 6px 12px;
+    font-family: $font-sans;
+    font-weight: normal !important;
+}
+
+.button small {
+    font-size: 75%;
 }
 
 // Button Sizes
@@ -14,6 +20,8 @@ button.button {
 // Large
 .button.large {
     padding: $paddingLarge;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
     font-size: $fontSizeLarge;
     @include border-radius($borderRadiusLarge);
 }

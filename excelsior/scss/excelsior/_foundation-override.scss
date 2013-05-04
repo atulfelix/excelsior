@@ -1,182 +1,31 @@
-// // Foundation Overrides
-
-// // KNOW TO FIX OVERRIDES
-
-
-body {
-    font-family: $font-sans;
-}
-
-a {
-    text-decoration: underline;
-
-    &:hover {
-        text-decoration: none;
-    }
-}
-
-.pull-down-container,
-.gov-bar,
-.site-bar,
-nav {
-  a,
-  a:hover,
-  a:active {
-    text-decoration: none;
-  }
-}
-
-select,
-textarea,
-button,
-input,
-// Need to list all of these types to override Foundation's specificity
-input[type="text"],
-input[type="password"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="date"],
-input[type="month"],
-input[type="time"],
-input[type="week"],
-input[type="number"],
-input[type="email"],
-input[type="url"],
-input[type="search"],
-input[type="tel"],
-input[type="color"] {
-  font-family: $font-sans;
-  font-size: 16px; // Prevents iOS from zooming in when an input gains focus
-}
-
-button,
-.button {
-  font-family: $font-sans;
-  font-weight: normal !important;
-  padding-bottom: 0.5em;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  @include font-serif;
-}
-
-h1 {
-  font-size: 2em;
-}
-
-h2 {
-  font-size: 1.75em;
-}
-
-h3 {
-  font-size: 1.5em;
-}
-
-h4 {
-  font-size: 1.25em;
-}
-
-h5 {
-  font-size: 1.125em;
-}
-
-h6 {
-  font-size: 1em;
-}
-
-p {
-  font-family: $font-sans;
-}
-
-.split.button span:before {
-    border-color: #444 transparent transparent transparent;
-}
+// Foundation Overrides
 
 .split.button span {
     border-left-color: #c3c3c3;
+
+    &:before {
+        border-color: #444 transparent transparent transparent;
+    }
 }
 
 .split.button.secondary span {
     border-left-color: #1e728c;
 }
 
-table {
-
-  thead,
-  tfoot {
-    tr {
-      th {
-        font-family: $font-sans-bold;
-        font-weight: normal;
-      }
-    }
-  }
-
-  tr {
-    th {
-      font-family: $font-sans-bold;
-      font-weight: normal;
-    }
-  }
-}
-
-em,
-i {
-  font-family: $font-sans-italic;
-  font-style: normal;
-}
-
-strong,
-b {
-  font-family: $font-sans-bold;
-  font-weight: normal;
-}
-
-strong em,
-em strong {
-  font-family: $font-sans-bold-italic;
-  font-style: normal;
-  font-weight: normal;
-}
-
-legend, fieldset legend {
-  font-family: $font-sans-bold;
-  font-weight: normal;
-  background:transparent;
-}
-
-input[type="search"]::-webkit-search-decoration,
-input[type="search"]::-webkit-search-cancel-button {
-  -webkit-appearance: none;
-}
-
-ul, ol, dl {
-  font-family: inherit;
-}
-
 ul.f-dropdown li {
-  padding: 0;
+    padding: 0;
 }
 
 @media only screen and (min-width: 48em) {
-  li.hide-for-small {
-    list-style-type: disc;
-  }
-}
-
-.button small {
-  font-size: 75%;
-}
-
-.button.large {
-  padding-left: 1.5em;
-  padding-right: 1.5em;
+    li.hide-for-small {
+        list-style-type: disc;
+    }
 }
 
 .dropdown.button.tiny:before,
 .dropdown.button.small:before,
 .dropdown.button.large:before {
-  border-color: black transparent transparent transparent;
+    border-color: black transparent transparent transparent;
 }
 
 // Panels
@@ -261,7 +110,6 @@ ul.f-dropdown li {
 .breadcrumbs li a,
 .breadcrumbs li span {
     text-transform: none;
-    // font-size: 0.9em;
 }
 
 .breadcrumbs li a {
@@ -450,11 +298,11 @@ section .title a,
 }
 
 .clearing-close {
-  text-decoration: none;
-
-  &:hover {
     text-decoration: none;
-  }
+
+    &:hover {
+        text-decoration: none;
+    }
 }
 
 // Labels (same colors as alerts)
@@ -464,22 +312,22 @@ section .title a,
     background-color: #e6e6e6;
     border: 1px solid $buttonBorder;
     @include border-radius($baseBorderRadius);
-}
 
-.label.secondary {
-    background-color: $infoBackground;
-    border-color: $infoBorder;
-    color: $infoText;
-}
+    &.secondary {
+        background-color: $infoBackground;
+        border-color: $infoBorder;
+        color: $infoText;
+    }
 
-.label.alert {
-    background-color: $errorBackground;
-    border-color: $errorBorder;
-    color: $errorText;
-}
+    &.alert {
+        background-color: $errorBackground;
+        border-color: $errorBorder;
+        color: $errorText;
+    }
 
-.label.success {
-    background-color: $successBackground;
-    border-color: $successBorder;
-    color: $successText;
+    &.success {
+        background-color: $successBackground;
+        border-color: $successBorder;
+        color: $successText;
+    }
 }

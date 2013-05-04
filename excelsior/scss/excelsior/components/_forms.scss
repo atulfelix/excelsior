@@ -16,7 +16,8 @@ fieldset {
 }
 
 // Groups of fields with labels on top (legends)
-legend {
+legend,
+fieldset legend {
     display: block;
     width: 100%;
     padding: 0;
@@ -24,8 +25,10 @@ legend {
     font-size: $baseFontSize * 1.5;
     line-height: $baseLineHeight * 2;
     color: $grayDark;
+    @include bold();
     border: 0;
     border-bottom: 1px solid #e5e5e5;
+    background: transparent;
 
     // Small
     small {
@@ -64,6 +67,9 @@ label {
 // Shared size and type resets
 select,
 textarea,
+button,
+input,
+// Need to list all of these types to override Foundation's specificity
 input[type="text"],
 input[type="password"],
 input[type="datetime"],
@@ -77,15 +83,15 @@ input[type="email"],
 input[type="url"],
 input[type="search"],
 input[type="tel"],
-input[type="color"],
-.uneditable-input {
+input[type="color"] {
     display: inline-block;
     padding: 4px 6px;
-    font-size: $baseFontSize;
+    font-family: $font-sans;
+    font-size: 16px; // Prevents iOS from zooming in when an input gains focus
     line-height: $baseLineHeight;
-    color: $gray;
     @include border-radius($inputBorderRadius);
     vertical-align: middle;
+    color: $gray;
 }
 
 // Reset height since textareas have rows
@@ -159,6 +165,29 @@ input[type="color"],
     // }
 }
 
+select,
+textarea,
+button,
+input,
+// Need to list all of these types to override Foundation's specificity
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"] {
+    font-family: $font-sans;
+    font-size: 16px; // Prevents iOS from zooming in when an input gains focus
+}
+
 // Reset width of input images, buttons, radios, checkboxes
 input[type="file"],
 input[type="image"],
@@ -168,6 +197,11 @@ input[type="button"] {
 // input[type="radio"],
 // input[type="checkbox"] {
     width: auto; // Override of generic input selector
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
 }
 
 // Set the height of select and file controls to match text inputs
