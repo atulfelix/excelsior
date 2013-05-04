@@ -91,27 +91,27 @@ input[type="button"] {
 // Set the backgrounds
 // -------------------------
 .button.secondary {
-    @include buttonBackground($btnPrimaryBackground, $btnPrimaryBackgroundHighlight);
+    @include buttonBackground($buttonSecondaryBackground, $buttonSecondaryBackgroundHighlight);
 }
 
 // Warning appears are orange
 .button.warning {
-    @include buttonBackground($btnWarningBackground, $btnWarningBackgroundHighlight);
+    @include buttonBackground($buttonWarningBackground, $buttonWarningBackgroundHighlight);
 }
 
 // Danger and error appear as red
 .button.alert {
-    @include buttonBackground($btnDangerBackground, $btnDangerBackgroundHighlight);
+    @include buttonBackground($buttonAlertBackground, $buttonAlertBackgroundHighlight);
 }
 
 // Success appears as green
 .button.success {
-    @include buttonBackground($btnSuccessBackground, $btnSuccessBackgroundHighlight);
+    @include buttonBackground($buttonSuccessBackground, $buttonSuccessBackgroundHighlight);
 }
 
 // Info appears as a neutral blue
 .button.info {
-    @include buttonBackground($btnInfoBackground, $btnInfoBackgroundHighlight);
+    @include buttonBackground($buttonInfoBackground, $buttonInfoBackgroundHighlight);
 }
 
 // Inverse appears as dark gray

@@ -186,7 +186,7 @@ ul.f-dropdown li {
     &.callout {
         border-color: $infoBorder;
         color: rgba(255,255,255,.75);
-        @include buttonBackground($btnPrimaryBackground, $btnPrimaryBackgroundHighlight);
+        @include buttonBackground($buttonSecondaryBackground, $buttonSecondaryBackgroundHighlight);
 
         &:hover {
             @include transition(background-position 0.1s linear);
@@ -219,7 +219,7 @@ ul.f-dropdown li {
     dt.active a,
     dd.active a {
         padding: 0.1875em 0.5625em; // 3px 9px
-        @include buttonBackground($btnPrimaryBackground, $btnPrimaryBackgroundHighlight);
+        @include buttonBackground($buttonSecondaryBackground, $buttonSecondaryBackgroundHighlight);
 
         &:hover {
             @include border-radius(1000px);
@@ -246,7 +246,7 @@ ul.f-dropdown li {
     li.current a {
         text-decoration: none;
         @include border-radius($baseBorderRadius);
-        @include buttonBackground($btnPrimaryBackground, $btnPrimaryBackgroundHighlight);
+        @include buttonBackground($buttonSecondaryBackground, $buttonSecondaryBackgroundHighlight);
 
         &:hover,
         &:focus {
@@ -462,7 +462,7 @@ section .title a,
     color: $grayDark;
     text-shadow: 0 1px 0 rgba(255,255,255,.5);
     background-color: #e6e6e6;
-    border: 1px solid $btnBorder;
+    border: 1px solid $buttonBorder;
     @include border-radius($baseBorderRadius);
 }
 
