@@ -88,6 +88,18 @@ p {
   font-family: $font-sans;
 }
 
+.split.button span:before {
+    border-color: #444 transparent transparent transparent;
+}
+
+.split.button span {
+    border-left-color: #c3c3c3;
+}
+
+.split.button.secondary span {
+    border-left-color: #1e728c;
+}
+
 table {
 
   thead,
