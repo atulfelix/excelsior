@@ -13,10 +13,12 @@
  * Based on https://github.com/filamentgroup/RWD-Table-Patterns
  */
 (function() {
-  $.widget('EWF.responsiveTable', {
-    options: {
+    EWF.responsiveTableDefaultOptions = {
         dropdownLabel: 'Select Columns'
-    },
+    };
+
+  $.widget('EWF.responsiveTable', {
+    options: EWF.responsiveTableDefaultOptions,
 
     // Set up the widget
     _create: function() {
@@ -28,7 +30,7 @@
           $bodyRows = $tbody.find('tr'),
           tableId = $table.attr('id'),
           totalMinWidth = 0,
-          opts = self.options,
+          opts = self.options || {},
           $dropdown;
 
       /**
@@ -162,6 +164,12 @@
           $dropdown = $('<div class="rt-table-menu" id="' + tableId + '-check-container"></div>');
           $dropdown.insertBefore($table);
         }
+
+        //TODO: fix options not being picked up
+        if (!opts || !opts.dropdownLabel) {
+            opts = EWF.responsiveTableDefaultOptions;
+        }
+
         $dropdown.prepend('<a href="#" data-dropdown="drop-' + tableId + '" class="small button dropdown radius">' + opts.dropdownLabel + '</a>');
         $dropdown.append('<ul id="drop-' + tableId + '" class="f-dropdown rt-table-dropdown"></ul>');
       }
@@ -258,5 +266,5 @@
 }());
 
 $(function(){
-  $('table').responsiveTable();
+  $('table').responsiveTable(EWF.responsiveTableDefaultOptions);
 });
