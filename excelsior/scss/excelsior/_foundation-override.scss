@@ -1,8 +1,8 @@
-// Foundation Overrides
+// // Foundation Overrides
 
-// KNOW TO FIX OVERRIDES
+// // KNOW TO FIX OVERRIDES
 
-/*
+
 body {
   font-family: $font-sans;
 }
@@ -29,7 +29,8 @@ nav {
 select,
 textarea,
 button,
-input, // Need to list all of these types to override Foundation's specificity
+input,
+// Need to list all of these types to override Foundation's specificity
 input[type="text"],
 input[type="password"],
 input[type="datetime"],
@@ -206,7 +207,7 @@ ul.f-dropdown li {
 .breadcrumbs li a,
 .breadcrumbs li span {
   text-transform: none;
-  font-size: 0.9em;
+  // font-size: 0.9em;
 }
 
 .breadcrumbs li a {
