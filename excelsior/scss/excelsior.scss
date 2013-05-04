@@ -9,11 +9,11 @@
 @import "excelsior/components/_fonts.scss";
 
 // These files can be re-arranged as necessary, but test any changes
-//@import "excelsior/components/_tables.scss";
-//@import "excelsior/components/_alerts.scss";
-//@import "excelsior/components/_block-to-stack.scss";
+@import "excelsior/components/_tables.scss";
+@import "excelsior/components/_alerts.scss";
+@import "excelsior/components/_block-to-stack.scss";
 @import "excelsior/components/_buttons.scss";
-//@import "excelsior/components/_forms.scss"; // Must come after `buttons`
+@import "excelsior/components/_forms.scss"; // Must come after `buttons`
 //@import "excelsior/components/_footer.scss";
 //@import "excelsior/components/_lightbox.scss";
 //@import "excelsior/components/_lists.scss";

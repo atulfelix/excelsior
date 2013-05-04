@@ -1,77 +1,6 @@
-//
-// Buttons
-// --------------------------------------------------
-
-$black:                 #000 !default;
-$grayDarker:            #222 !default;
-$grayDark:              #333 !default;
-$gray:                  #555 !default;
-$grayLight:             #999 !default;
-$grayLighter:           #eee !default;
-$white:                 #fff !default;
-
-$linkColor:             #08c !default;
-$linkColorHover:        darken($linkColor, 15%) !default;
-
-$blue:                  #049cdb !default;
-$blueDark:              #0064cd !default;
-$green:                 #46a546 !default;
-$red:                   #9d261d !default;
-$yellow:                #ffc40d !default;
-$orange:                #f89406 !default;
-$pink:                  #c3325f !default;
-$purple:                #7a43b6 !default;
-
-$baseFontSize:          14px !default;
-$baseLineHeight:        20px !default;
-
-$fontSizeLarge:         $baseFontSize * 1.25 !default; // ~18px
-$fontSizeSmall:         $baseFontSize * 0.85 !default; // ~12px
-$fontSizeTiny:          $baseFontSize * 0.75 !default; // ~11px
-
-$paddingLarge:          11px 19px !default; // 44px
-$paddingSmall:          2px 10px !default;  // 26px
-$paddingTiny:           0px 6px !default;   // 22px
-
-$baseBorderRadius:      4px !default;
-$borderRadiusLarge:     6px !default;
-$borderRadiusSmall:     3px !default;
-
-$btnBackground:                     #fff !default;
-$btnBackgroundHighlight:            darken(#fff, 10%) !default;
-$btnBorder:                         #ccc !default;
-
-$btnPrimaryBackground:              $linkColor !default;
-$btnPrimaryBackgroundHighlight:     adjust-hue($btnPrimaryBackground, 20%) !default;
-
-$btnInfoBackground:                 #5bc0de !default;
-$btnInfoBackgroundHighlight:        #2f96b4 !default;
-
-$btnSuccessBackground:              #62c462 !default;
-$btnSuccessBackgroundHighlight:     #51a351 !default;
-
-$btnWarningBackground:              lighten($orange, 15%) !default;
-$btnWarningBackgroundHighlight:     $orange !default;
-
-$btnDangerBackground:               #ee5f5b !default;
-$btnDangerBackgroundHighlight:      #bd362f !default;
-
-$btnInverseBackground:              #444 !default;
-$btnInverseBackgroundHighlight:     $grayDarker !default;
-
-$blue:                  #049cdb !default;
-$blueDark:              #0064cd !default;
-$green:                 #46a546 !default;
-$red:                   #9d261d !default;
-$yellow:                #ffc40d !default;
-$orange:                #f89406 !default;
-$pink:                  #c3325f !default;
-$purple:                #7a43b6 !default;
-
 // Base styles
 // --------------------------------------------------
 
-// Core
 .button,
 input.button, // Foundation specificity
 button.button {
@@ -79,42 +8,43 @@ button.button {
     padding: 6px 12px;
 }
 
-
-
 // Button Sizes
 // --------------------------------------------------
 
 // Large
 .button.large {
-  padding: $paddingLarge;
-  font-size: $fontSizeLarge;
-  @include border-radius($borderRadiusLarge);
+    padding: $paddingLarge;
+    font-size: $fontSizeLarge;
+    @include border-radius($borderRadiusLarge);
 }
+
 .button.large [class^="icon-"],
 .button.large [class*=" icon-"] {
-  margin-top: 4px;
+    margin-top: 4px;
 }
 
 // Small
 .button.small {
-  padding: $paddingSmall;
-  font-size: $fontSizeSmall;
-  @include border-radius($borderRadiusSmall);
-}
-.button.small [class^="icon-"],
-.button.small [class*=" icon-"] {
-  margin-top: 0;
-}
-.button.tiny [class^="icon-"],
-.button.tiny [class*=" icon-"] {
-  margin-top: -1px;
+    padding: $paddingSmall;
+    font-size: $fontSizeSmall;
+    @include border-radius($borderRadiusSmall);
 }
 
-// Tiny
-.button.tiny {
-  padding: $paddingTiny;
-  font-size: $fontSizeTiny;
-  @include border-radius($borderRadiusSmall);
+.button.small [class^="icon-"],
+.button.small [class*=" icon-"] {
+    margin-top: 0;
+}
+
+.button.mini [class^="icon-"],
+.button.mini [class*=" icon-"] {
+    margin-top: -1px;
+}
+
+// Mini
+.button.mini {
+    padding: $paddingMini;
+    font-size: $fontSizeMini;
+    @include border-radius($borderRadiusSmall);
 }
 
 
@@ -122,25 +52,25 @@ button.button {
 // -------------------------
 
 .button-block {
-  display: block;
-  width: 100%;
-  padding-left: 0;
-  padding-right: 0;
-  @include box-sizing(border-box);
+      display: block;
+      width: 100%;
+      padding-left: 0;
+      padding-right: 0;
+      @include box-sizing(border-box);
 }
 
 // Vertically space out multiple block buttons
 .button-block + .button-block {
-  margin-top: 5px;
+    margin-top: 5px;
 }
 
 // Specificity overrides
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {
-  &.button-block {
-    width: 100%;
-  }
+    &.button-block {
+        width: 100%;
+    }
 }
 
 
@@ -150,38 +80,43 @@ input[type="button"] {
 
 // Provide *some* extra contrast for those who can get it
 .button.secondary.active,
-.button-warning.active,
+.button.warning.active,
 .button.alert.active,
 .button.success.active,
-.button-info.active,
-.button-inverse.active {
-  color: rgba(255,255,255,.75);
+.button.info.active,
+.button.inverse.active {
+    color: rgba(255,255,255,.75);
 }
 
 // Set the backgrounds
 // -------------------------
 .button.secondary {
-  @include buttonBackground($btnPrimaryBackground, $btnPrimaryBackgroundHighlight);
+    @include buttonBackground($btnPrimaryBackground, $btnPrimaryBackgroundHighlight);
 }
+
 // Warning appears are orange
-.button-warning {
-  @include buttonBackground($btnWarningBackground, $btnWarningBackgroundHighlight);
+.button.warning {
+    @include buttonBackground($btnWarningBackground, $btnWarningBackgroundHighlight);
 }
+
 // Danger and error appear as red
 .button.alert {
-  @include buttonBackground($btnDangerBackground, $btnDangerBackgroundHighlight);
+    @include buttonBackground($btnDangerBackground, $btnDangerBackgroundHighlight);
 }
+
 // Success appears as green
 .button.success {
-  @include buttonBackground($btnSuccessBackground, $btnSuccessBackgroundHighlight);
+    @include buttonBackground($btnSuccessBackground, $btnSuccessBackgroundHighlight);
 }
+
 // Info appears as a neutral blue
-.button-info {
-  @include buttonBackground($btnInfoBackground, $btnInfoBackgroundHighlight);
+.button.info {
+    @include buttonBackground($btnInfoBackground, $btnInfoBackgroundHighlight);
 }
+
 // Inverse appears as dark gray
-.button-inverse {
-  @include buttonBackground($btnInverseBackground, $btnInverseBackgroundHighlight);
+.button.inverse {
+    @include buttonBackground($btnInverseBackground, $btnInverseBackgroundHighlight);
 }
 
 
@@ -192,24 +127,27 @@ input[type="button"] {
 .button-link,
 .button-link:active,
 .button-link[disabled] {
-  background-color: transparent;
-  background-image: none;
-  box-shadow: none;
+    background-color: transparent;
+    background-image: none;
+    box-shadow: none;
 }
+
 .button-link {
-  border-color: transparent;
-  cursor: pointer;
-  color: $linkColor;
-  @include border-radius(0);
+    border-color: transparent;
+    cursor: pointer;
+    color: $linkColor;
+    @include border-radius(0);
 }
+
 .button-link:hover,
 .button-link:focus {
-  color: $linkColorHover;
-  text-decoration: underline;
-  background-color: transparent;
+    color: $linkColorHover;
+    text-decoration: underline;
+    background-color: transparent;
 }
+
 .button-link[disabled]:hover,
 .button-link[disabled]:focus {
-  color: $grayDark;
-  text-decoration: none;
+    color: $grayDark;
+    text-decoration: none;
 }
