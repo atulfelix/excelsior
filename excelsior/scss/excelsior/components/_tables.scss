@@ -1,78 +1,107 @@
-/*!
- * Bootstrap v2.3.1
- *
- * Copyright 2012 Twitter, Inc
- * Licensed under the Apache License v2.0
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Designed and built with all the love in the world @twitter by @mdo and @fat.
- */
+//
+// Tables
+// --------------------------------------------------
+
+
+// BASE TABLES
+// -----------------
 
 table {
-    background-color: #fff;
-    border-spacing: 0;
+}
+
+// BASELINE STYLES
+// ---------------
+
+table {
     width: 100%;
-    max-width: 100%;
-    margin-bottom: 20px;
-    border: 1px solid #dddddd;
-    border-collapse: separate;
+    background-color: $tableBackground;
+    border-spacing: 0;
+    margin-bottom: $baseLineHeight;
+    border: 1px solid $tableBorder;
     border-left: 0;
-    @include border-radius(4px);
+    border-collapse: separate; // Done so we can round those corners!
+    @include border-radius($baseBorderRadius);
+
+    table { // Nested tables
+        background-color: $bodyBackground;
+    }
 }
 
-thead:first-child tr:first-child th,
-thead:first-child tr:first-child td {
-    border-top: 0;
-}
-
+// Cells
 th,
 td {
     padding: 4px 5px;
-    line-height: 20px;
+    line-height: $baseLineHeight;
     text-align: left;
     vertical-align: top;
-    border-top: 1px solid #dddddd;
-    border-left: 1px solid #dddddd;
+    border-top: 1px solid $tableBorder;
+    border-left: 1px solid $tableBorder;
 }
 
 th {
+    font-weight: bold;
+}
+
+// Bottom align for column headings
+thead th {
     vertical-align: bottom;
 }
 
+// Borders
+// Account for multiple tbody instances
+tbody + tbody {
+    border-top: 2px solid $tableBorder;
+}
+
+// Prevent a double border
+caption + thead tr:first-child th,
+caption + thead tr:first-child td,
+caption + tbody tr:first-child th,
+caption + tbody tr:first-child td,
+colgroup + thead tr:first-child th,
+colgroup + thead tr:first-child td,
+colgroup + tbody tr:first-child th,
+colgroup + tbody tr:first-child td,
 thead:first-child tr:first-child th,
+thead:first-child tr:first-child td,
 tbody:first-child tr:first-child th,
 tbody:first-child tr:first-child td {
     border-top: 0;
 }
 
+// For first th/td in the first row in the first thead or tbody
 thead:first-child tr:first-child > th:first-child,
 tbody:first-child tr:first-child > td:first-child,
 tbody:first-child tr:first-child > th:first-child {
-    border-top-left-radius: 4px;
+    border-top-left-radius: $baseBorderRadius;
 }
 
+// For last th/td in the first row in the first thead or tbody
 thead:first-child tr:first-child > th:last-child,
 tbody:first-child tr:first-child > td:last-child,
 tbody:first-child tr:first-child > th:last-child {
-    border-top-right-radius: 4px;
+    border-top-right-radius: $baseBorderRadius;
 }
 
+// For first th/td (can be either) in the last row in the last thead, tbody, and tfoot
 thead:last-child tr:last-child > th:first-child,
 tbody:last-child tr:last-child > td:first-child,
 tbody:last-child tr:last-child > th:first-child,
 tfoot:last-child tr:last-child > td:first-child,
 tfoot:last-child tr:last-child > th:first-child {
-    border-bottom-left-radius: 4px;
+    border-bottom-left-radius: $baseBorderRadius;
 }
 
+// For last th/td (can be either) in the last row in the last thead, tbody, and tfoot
 thead:last-child tr:last-child > th:last-child,
 tbody:last-child tr:last-child > td:last-child,
 tbody:last-child tr:last-child > th:last-child,
 tfoot:last-child tr:last-child > td:last-child,
 tfoot:last-child tr:last-child > th:last-child {
-    border-bottom-right-radius: 4px;
+    border-bottom-right-radius: $baseBorderRadius;
 }
 
+  // Clear border-radius for first and last td in the last row in the last tbody for table with tfoot
 tfoot + tbody:last-child tr:last-child td:first-child {
     border-bottom-left-radius: 0;
 }
@@ -81,71 +110,116 @@ tfoot + tbody:last-child tr:last-child td:last-child {
     border-bottom-right-radius: 0;
 }
 
-tbody tr.success > td {
-    background-color: #dff0d8;
+// Special fixes to round the left border on the first td/th
+caption + thead tr:first-child th:first-child,
+caption + tbody tr:first-child td:first-child,
+colgroup + thead tr:first-child th:first-child,
+colgroup + tbody tr:first-child td:first-child {
+    border-top-left-radius: $baseBorderRadius;
 }
 
-tbody tr.error > td {
-    background-color: #f2dede;
+caption + thead tr:first-child th:last-child,
+caption + tbody tr:first-child td:last-child,
+colgroup + thead tr:first-child th:last-child,
+colgroup + tbody tr:first-child td:last-child {
+    border-top-right-radius: $baseBorderRadius;
 }
 
-tbody tr.warning > td {
-    background-color: #fcf8e3;
+// ZEBRA-STRIPING
+// --------------
+
+// Default zebra-stripe styles (alternating gray and transparent backgrounds)
+.table-striped {
+    tbody {
+        > tr:nth-child(odd) > td,
+        > tr:nth-child(odd) > th {
+            background-color: $tableBackgroundAccent;
+        }
+    }
 }
 
-tbody tr.info > td {
-    background-color: #d9edf7;
+// HOVER EFFECT
+// ------------
+// Placed here since it has to come after the potential zebra striping
+.table-hover {
+    tbody {
+        tr:hover > td,
+        tr:hover > th {
+            background-color: $tableBackgroundHover;
+        }
+    }
 }
 
-/* Highlight table rows on hover */
+// TABLE BACKGROUNDS
+// -----------------
+// Exact selectors below required to override .table-striped
 
-.table-hover tbody tr:hover > td,
-.table-hover tbody tr:hover > th {
-    background-color: #f5f5f5;
+tbody tr {
+    &.success > td {
+        background-color: $successBackground;
+    }
+
+    &.error > td,
+    &.alert > td {
+        background-color: $errorBackground;
+    }
+
+    &.warning > td {
+        background-color: $warningBackground;
+    }
+
+    &.info > td {
+        background-color: $infoBackground;
+    }
 }
 
-.table-hover tbody tr.success:hover > td {
-    background-color: #d0e9c6;
-}
+// Hover states for .table-hover
+.table-hover tbody tr {
+    &.success:hover > td {
+        background-color: darken($successBackground, 5%);
+    }
 
-.table-hover tbody tr.error:hover > td {
-    background-color: #ebcccc;
-}
+    &.error:hover > td,
+    &.alert:hover > td {
+        background-color: darken($errorBackground, 5%);
+    }
 
-.table-hover tbody tr.warning:hover > td {
-    background-color: #faf2cc;
-}
+    &.warning:hover > td {
+        background-color: darken($warningBackground, 5%);
+    }
 
-.table-hover tbody tr.info:hover > td {
-    background-color: #c4e3f3;
+    &.info:hover > td {
+        background-color: darken($infoBackground, 5%);
+    }
 }
 
 // Responsive tables
 
 .rt-table-dropdown {
-  max-width: 300px !important;
+    max-width: 300px !important;
 
-  input {
-    display: inline-block;
-    margin-right: 0.5em;
-  }
-  label {
-    display: block;
-    padding: 1em;
-  }
+    input {
+        display: inline-block;
+        margin-right: 0.5em;
+    }
+
+    label {
+        display: block;
+        padding: 1em;
+    }
 }
 
 .rt-table-menu {
-  margin-bottom: 1em;
-}
+    margin-bottom: 1em;
 
-.rt-table-menu + table {
-  // Menus that are generated by JS are placed right above the table w/o enough space between
-  margin-top: 1em;
+    & + table {
+        // Menus that are generated by JS are placed right above the table w/o enough space between
+        margin-top: 1em;
+    }
 }
 
 .touch .rt-table-menu > a.button {
-  // More padding on touch devices
-  padding-bottom: 0.9375em;
-  padding-top: 1.125em;
+    // More padding on touch devices
+    padding-bottom: 0.9375em;
+    padding-top: 1.125em;
 }
