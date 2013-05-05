@@ -3,7 +3,7 @@
 // Do not change the order of these files:
 @import "compass";
 @import "breakpoint";
-$breakpoint-no-queries: false;
+$breakpoint-no-queries: true;
 $breakpoint-no-query-wrappers: false;
 @import "excelsior/_variables.scss";
 @import "excelsior/_mixins.scss";

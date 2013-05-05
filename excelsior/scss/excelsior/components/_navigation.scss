@@ -246,7 +246,7 @@
     }
 
     a.site-logo.two-line-title {
-        @include breakpoint($mobile-desktop-split) {
+        @include breakpoint($mobile-desktop-split, $no-query: true) {
             font-size: 1.5em;
 
             span {
@@ -259,8 +259,6 @@
             }
         }
     }
-
-
 
     .site-functions {
         position: absolute;
@@ -332,7 +330,6 @@
                 text-indent: -9999px;
                 padding-bottom: 0.69em;
             }
-
         }
 
         .site-button {
@@ -344,7 +341,7 @@
             width: 14%;
             height: 100%;
         }
-    }
+    } // end .site-functions
 
     .mobile-functions {
         float: right;

@@ -97,7 +97,7 @@ ul, ol, dl {
 }
 
 .margin-top-small {
-    @include breakpoint(48em) {
+    @include breakpoint(48em, $no-query: true) {
         margin-top: 1em;
     }
 }
