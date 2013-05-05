@@ -316,29 +316,3 @@ section .title a,
     }
 }
 
-// Labels (same colors as alerts)
-.label {
-    color: $grayDark;
-    text-shadow: 0 1px 0 rgba(255,255,255,.5);
-    background-color: #e6e6e6;
-    border: 1px solid $buttonBorder;
-    @include border-radius($baseBorderRadius);
-
-    &.secondary {
-        background-color: $infoBackground;
-        border-color: $infoBorder;
-        color: $infoText;
-    }
-
-    &.alert {
-        background-color: $errorBackground;
-        border-color: $errorBorder;
-        color: $errorText;
-    }
-
-    &.success {
-        background-color: $successBackground;
-        border-color: $successBorder;
-        color: $successText;
-    }
-}
