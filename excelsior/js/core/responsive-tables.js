@@ -20,6 +20,7 @@
 
     // Set up the widget
     _create: function() {
+
       var $table = $(this.element),
           $thead = $table.find('thead'),
           $tbody = $table.find('tbody'),
@@ -28,7 +29,7 @@
           $bodyRows = $tbody.find('tr'),
           tableId = $table.attr('id'),
           totalMinWidth = 0,
-          opts = self.options,
+          opts = this.options,
           $dropdown;
 
       /**
