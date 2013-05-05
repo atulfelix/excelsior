@@ -1,14 +1,29 @@
 // Foundation Overrides
-.split.button span {
-    border-left-color: #c3c3c3;
+.split.button {
+    span {
+        border-left-color: #c3c3c3;
 
-    &:before {
-        border-color: #444 transparent transparent transparent;
+        &:before {
+            top: 0.825em;
+            border-color: #444 transparent transparent transparent;
+        }
     }
-}
 
-.split.button.secondary span {
-    border-left-color: #1e728c;
+    &.secondary span {
+        border-left-color: #1e728c;
+    }
+
+    &.tiny span:before {
+        top: 1.175em;
+    }
+
+    &.small span:before {
+        top: 0.6em;
+    }
+
+    &.large span:before {
+        top: 0.8125em;
+    }
 }
 
 ul.f-dropdown li {
