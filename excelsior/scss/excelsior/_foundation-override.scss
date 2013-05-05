@@ -238,10 +238,8 @@ section .title a,
     padding-right: 26px; // width of chevron plus its right position offset
 }
 
-.accordion *.auto .title:after,
-.accordion *.section .title:after,
-.accordion section.auto .title:after,
-.accordion section.section .title:after {
+.accordion *.auto .title:after, // Needs the asterisk for specificity
+.accordion *.section .title:after {
     content: $icon-down-open;
     position: absolute;
     top: 6px;
@@ -249,13 +247,10 @@ section .title a,
     font-family: $font-icons;
     font-style: normal;
     font-weight: normal;
-    //@include rotate(90deg);
 }
 
 .accordion *.auto.active .title:after,
-.accordion *.section.active .title:after,
-.accordion section.auto.active .title:after,
-.accordion section.section.active .title:after {
+.accordion *.section.active .title:after {
     top: 8px;
     right: 18px;
     @include rotate(180deg);
@@ -268,9 +263,7 @@ section .title a,
 
     // Same styles as above
     .auto *.auto .title:after,
-    .auto *.section .title:after,
-    .auto section.auto .title:after,
-    .auto section.section .title:after {
+    .auto *.section .title:after {
         content: $icon-down-open;
         position: absolute;
         top: 8px;
@@ -281,9 +274,7 @@ section .title a,
     }
 
     .auto *.auto.active .title:after,
-    .auto *.section.active .title:after,
-    .auto section.auto.active .title:after,
-    .auto section.section.active .title:after {
+    .auto *.section.active .title:after {
         top: 6px;
         right: 18px;
         @include rotate(180deg);
