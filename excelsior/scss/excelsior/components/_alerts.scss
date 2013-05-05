@@ -3,65 +3,60 @@
 .alert-box {
     padding: 8px 35px 8px 14px;
     margin-bottom: $baseLineHeight;
-    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
     background-color: $warningBackground;
     border: 1px solid $warningBorder;
     @include border-radius($baseBorderRadius);
-}
 
-.alert-box,
-.alert-box h4 {
-    // Specified for the h4 to prevent conflicts of changing $headingsColor
-    color: $warningText;
-}
-
-.alert-box h4 {
-    margin: 0;
-}
-
-// Adjust close link position
-.alert-box .close {
-    text-decoration: none;
-
-    &:hover {
-        text-decoration: none;
+    &,
+    & h4 { // Specified for the h4 to prevent conflicts of changing $headingsColor
+        color: $warningText;
     }
-}
 
+    h4 {
+        margin: 0;
+    }
 
-// Alternate styles
-// -------------------------
+    // Adjust close link position
+    .close {
+        text-decoration: none;
 
-.alert-box.success {
-    background-color: $successBackground;
-    border-color: $successBorder;
-    color: $successText;
-}
+        &:hover {
+            text-decoration: none;
+        }
+    }
 
-.alert-box.success h4 {
-    color: $successText;
-}
+    // Alternate styles
+    // -------------------------
+    &.success {
+        background-color: $successBackground;
+        border-color: $successBorder;
+        color: $successText;
+        h4 {
+            color: $successText;
+        }
+    }
 
-.alert-box.alert,
-.alert-box.error {
-    background-color: $errorBackground;
-    border-color: $errorBorder;
-    color: $errorText;
-}
+    &.alert,
+    &.error {
+        background-color: $errorBackground;
+        border-color: $errorBorder;
+        color: $errorText;
 
-.alert-box.alert h4,
-.alert-box.error h4 {
-    color: $errorText;
-}
+        h4 {
+            color: $errorText;
+        }
+    }
 
-.alert-box.secondary {
-    background-color: $infoBackground;
-    border-color: $infoBorder;
-    color: $infoText;
-}
+    &.secondary {
+        background-color: $infoBackground;
+        border-color: $infoBorder;
+        color: $infoText;
 
-.alert-box.secondary h4 {
-    color: $infoText;
+        h4 {
+            color: $infoText;
+        }
+    }
 }
 
 
@@ -71,13 +66,13 @@
 .alert-block {
     padding-top: 14px;
     padding-bottom: 14px;
-}
 
-.alert-block > p,
-.alert-block > ul {
-    margin-bottom: 0;
-}
+    & > p,
+    & > ul {
+        margin-bottom: 0;
+    }
 
-.alert-block p + p {
-    margin-top: 5px;
+    p + p {
+        margin-top: 5px;
+    }
 }
