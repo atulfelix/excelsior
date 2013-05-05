@@ -33,11 +33,6 @@
     }
 
     ResponsiveTable.prototype.init = function () {
-        // Place initialization logic here
-        // You already have access to the DOM element and
-        // the options via the instance, e.g. this.element
-        // and this.options
-
         var $table = $(this.element),
             $thead = $table.find('thead'),
             $tbody = $table.find('tbody'),
@@ -281,12 +276,3 @@
     };
 
 })(jQuery, window, document);
-
-$(function(){
-    // By defaylt, run the plugin on all tables when this file is included
-    $('table').responsiveTable();
-
-    // If you want to pass custom options to different tables, call them separately instead:
-    //     $('#myTable').responsiveTable({dropdownLabel: "My Label"});
-    //     $('#otherTable').responsiveTable({dropdownLabel: "Other Label"});
-});
