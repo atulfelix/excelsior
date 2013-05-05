@@ -316,3 +316,22 @@ section .title a,
     }
 }
 
+// Progress meters
+
+.progress {
+    .meter {
+        background: $infoText;
+    }
+
+    &.success .meter {
+        background: $successText;
+    }
+
+    &.alert .meter {
+        background: $errorText;
+    }
+
+    &.secondary .meter {
+        background: $grayLight;
+    }
+}
