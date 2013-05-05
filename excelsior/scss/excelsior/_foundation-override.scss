@@ -238,8 +238,8 @@ section .title a,
     padding-right: 26px; // width of chevron plus its right position offset
 }
 
-.accordion div.auto .title:after,
-.accordion div.section .title:after,
+.accordion *.auto .title:after,
+.accordion *.section .title:after,
 .accordion section.auto .title:after,
 .accordion section.section .title:after {
     content: $icon-down-open;
@@ -252,8 +252,8 @@ section .title a,
     //@include rotate(90deg);
 }
 
-.accordion div.auto.active .title:after,
-.accordion div.section.active .title:after,
+.accordion *.auto.active .title:after,
+.accordion *.section.active .title:after,
 .accordion section.auto.active .title:after,
 .accordion section.section.active .title:after {
     top: 8px;
@@ -262,14 +262,13 @@ section .title a,
 }
 
 @media screen and (max-width: 47.9em) {
-
     .auto section {
         margin-bottom: 0.5em;
     }
 
     // Same styles as above
-    .auto div.auto .title:after,
-    .auto div.section .title:after,
+    .auto *.auto .title:after,
+    .auto *.section .title:after,
     .auto section.auto .title:after,
     .auto section.section .title:after {
         content: $icon-down-open;
@@ -281,8 +280,8 @@ section .title a,
         font-weight: normal;
     }
 
-    .auto div.auto.active .title:after,
-    .auto div.section.active .title:after,
+    .auto *.auto.active .title:after,
+    .auto *.section.active .title:after,
     .auto section.auto.active .title:after,
     .auto section.section.active .title:after {
         top: 6px;
@@ -296,24 +295,6 @@ section .title a,
 .touch .orbit-container .orbit-prev,
 .touch .orbit-container .orbit-next {
     display: inherit;
-}
-
-// Clearing (Lightbox)
-
-.clearing-blackout {
-    top: 48px;
-
-    @include breakpoint(48em, $no-query: true) {
-        top: 0;
-    }
-}
-
-.clearing-close {
-    text-decoration: none;
-
-    &:hover {
-        text-decoration: none;
-    }
 }
 
 // Progress meters
