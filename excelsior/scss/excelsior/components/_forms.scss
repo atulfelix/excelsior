@@ -232,6 +232,11 @@ input[type="file"]:focus {
     @include tab-focus();
 }
 
+.prefix,
+.postfix {
+    font-size: 16px; // Foundation override
+}
+
 
 // // Grid style input sizes
 // input[class*="small-"],
