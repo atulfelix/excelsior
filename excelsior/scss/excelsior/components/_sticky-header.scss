@@ -1,23 +1,24 @@
-.sticky-header .pull-down-container {
-	position: fixed;
-	top: 0;
-	z-index: 3005;
-}
+.sticky-header {
+    .pull-down-container {
+        position: fixed;
+        top: 0;
+        z-index: 3005;
+    }
 
-.sticky-header .gov-bar {
-	position: fixed;
-	top: 0;
-}
+    .gov-bar {
+        position: fixed;
+        top: 0;
+    }
 
-.sticky-header .page {
-	top: 48px;
-}
+    .page {
+        top: 48px;
+    }
 
-/* Active Gov Bar Styles */
-.sticky-header.active-gov-bar .site-bar {
-	top: 88px !important;
-}
+    &.active-gov-bar .site-bar {
+        top: 88px !important;
+    }
 
-.sticky-header.active-gov-bar .pull-down-container {
-	top: 88px;
+    &.active-gov-bar .pull-down-container {
+        top: 88px;
+    }
 }

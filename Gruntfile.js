@@ -161,6 +161,14 @@ module.exports = function(grunt) {
                             'excelsior/css/excelsior.css'
                         ],
                         dest: 'excelsior/css/excelsior.css'
+                    },
+                    {
+                        src: [
+                            'excelsior/scss/foundation/normalize.css',
+                            'excelsior/scss/foundation/foundation.css',
+                            'excelsior/css/excelsior.oldie.css'
+                        ],
+                        dest: 'excelsior/css/excelsior.oldie.css'
                     }
                 ]
             },

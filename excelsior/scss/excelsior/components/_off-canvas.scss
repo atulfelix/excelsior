@@ -7,7 +7,7 @@ body {
 body.off-canvas {
     padding-top: $nav-bar-height;
 
-    @include breakpoint($off-canvas-medium-width) {
+    @include breakpoint($off-canvas-medium-width, $no-query: true) {
         padding-top: 0;
     }
 }
@@ -45,7 +45,7 @@ body.off-canvas {
         width: 100%;
         z-index: 0;
 
-        @include breakpoint($off-canvas-medium-width) {
+        @include breakpoint($off-canvas-medium-width, $no-query: true) {
             height: 46px;
             overflow: visible;
             z-index: 30;
@@ -65,7 +65,7 @@ body.off-canvas {
             height: inherit;
             overflow-y: scroll;
 
-            @include breakpoint($off-canvas-medium-width) {
+            @include breakpoint($off-canvas-medium-width, $no-query: true) {
                 overflow: hidden;
 
                 ul {
@@ -73,14 +73,14 @@ body.off-canvas {
                 }
             }
 
-            @include breakpoint($off-canvas-large-width) {
+            @include breakpoint($off-canvas-large-width, $no-query: true) {
                 @include border-radius(4px);
             }
 
             & > ul {
                 min-height: 1000px;
 
-                @include breakpoint($off-canvas-medium-width) {
+                @include breakpoint($off-canvas-medium-width, $no-query: true) {
                     min-height: auto;
                 }
             }
@@ -89,14 +89,14 @@ body.off-canvas {
         ul {
             margin-left: 16%;
 
-            @include breakpoint($off-canvas-medium-width) {
+            @include breakpoint($off-canvas-medium-width, $no-query: true) {
                 margin-left: 0;
             }
 
             li {
                 padding-left: 3%;
 
-                @include breakpoint($off-canvas-medium-width) {
+                @include breakpoint($off-canvas-medium-width, $no-query: true) {
                     padding-left: 0;
                 }
             }
@@ -111,7 +111,7 @@ body.off-canvas {
                 background: #333 !important;
                 @include transition(left 0.2s ease);
 
-                @include breakpoint($off-canvas-medium-width) {
+                @include breakpoint($off-canvas-medium-width, $no-query: true) {
                     position: absolute;
                     top: 50px !important;
                     left: 0;
@@ -122,7 +122,7 @@ body.off-canvas {
                     @include transition(left 0s ease);
                 }
 
-                @include breakpoint($off-canvas-large-width) {
+                @include breakpoint($off-canvas-large-width, $no-query: true) {
                     border-radius: 4px !important; /* Do not use mixin here */
                     background-clip: padding-box !important;
                 }
@@ -130,19 +130,19 @@ body.off-canvas {
                 li {
                     padding-left: 2% !important;
 
-                    @include breakpoint($off-canvas-medium-width) {
+                    @include breakpoint($off-canvas-medium-width, $no-query: true) {
                         border-right: 1px solid #000;
                         border-left: 1px solid #666;
                     }
 
                     &:first {
-                        @include breakpoint($off-canvas-medium-width) {
+                        @include breakpoint($off-canvas-medium-width, $no-query: true) {
                             border-left: none;
                         }
                     }
                 }
 
-                @include breakpoint($off-canvas-medium-width) {
+                @include breakpoint($off-canvas-medium-width, $no-query: true) {
                     &.active-menu {
                         visibility: visible;
 
@@ -157,7 +157,7 @@ body.off-canvas {
         .menu-controls {
             height: 53px;
 
-            @include breakpoint($off-canvas-medium-width) {
+            @include breakpoint($off-canvas-medium-width, $no-query: true) {
                 display: none;
             }
 
@@ -178,7 +178,7 @@ body.off-canvas {
             z-index: 1;
 
             li {
-                @include breakpoint($off-canvas-medium-width) {
+                @include breakpoint($off-canvas-medium-width, $no-query: true) {
                     padding-left: 0;
                     border-bottom: 0;
 
@@ -202,7 +202,7 @@ body.off-canvas {
         top: 0;
         width: 100%;
 
-        @include breakpoint($off-canvas-medium-width) {
+        @include breakpoint($off-canvas-medium-width, $no-query: true) {
             min-height: auto;
             top: -23px;
             left: 0;
@@ -221,7 +221,7 @@ body.off-canvas {
     .site-bar,
     .global-nav,
     .page {
-        @include breakpoint($off-canvas-medium-width) {
+        @include breakpoint($off-canvas-medium-width, $no-query: true) {
             position: relative;
         }
     }
@@ -233,7 +233,7 @@ body.off-canvas {
         }
 
         .site-bar {
-            @include breakpoint($off-canvas-medium-width) {
+            @include breakpoint($off-canvas-medium-width, $no-query: true) {
                 top: 0;
             }
         }
@@ -253,7 +253,7 @@ body.off-canvas {
         .site-bar,
         .global-nav,
         .page {
-            @include breakpoint($off-canvas-medium-width) {
+            @include breakpoint($off-canvas-medium-width, $no-query: true) {
                 left: auto;
                 position: relative;
             }
@@ -264,7 +264,7 @@ body.off-canvas {
             position: absolute;
             right: 5%;
 
-            @include breakpoint($off-canvas-medium-width) {
+            @include breakpoint($off-canvas-medium-width, $no-query: true) {
                 position: relative;
                 right: auto;
             }
@@ -277,7 +277,7 @@ body.off-canvas {
         .page {
             box-shadow: 5px 49px 8px #000;
 
-            @include breakpoint($off-canvas-medium-width) {
+            @include breakpoint($off-canvas-medium-width, $no-query: true) {
                 box-shadow: none;
             }
         }
@@ -285,7 +285,7 @@ body.off-canvas {
         .footer {
             left: -82%;
 
-            @include breakpoint($off-canvas-medium-width) {
+            @include breakpoint($off-canvas-medium-width, $no-query: true) {
                 left: auto;
             }
         }
