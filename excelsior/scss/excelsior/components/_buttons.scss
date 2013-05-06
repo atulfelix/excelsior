@@ -88,9 +88,7 @@ button.button {
     }
 }
 
-.button.tiny
-
-// Mini
+// Tiny
 .button.tiny {
     padding: $paddingTiny;
     font-size: $fontSizeTiny;
@@ -107,16 +105,16 @@ button.button {
 // -------------------------
 
 .button-block {
-      display: block;
-      width: 100%;
-      padding-left: 0;
-      padding-right: 0;
-      @include box-sizing(border-box);
-}
+    display: block;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    @include box-sizing(border-box);
 
-// Vertically space out multiple block buttons
-.button-block + .button-block {
-    margin-top: 5px;
+    // Vertically space out multiple block buttons
+    & + .button-block {
+        margin-top: 5px;
+    }
 }
 
 // Specificity overrides
@@ -161,7 +159,8 @@ input[type="button"] {
     text-decoration: none;
 }
 
-// Button Group
+
+// Button Groups
 // -------------------------------
 
 .button-group {
@@ -243,6 +242,7 @@ input[type="button"] {
         &:before {
             top: 0.825em;
             border-color: #444 transparent transparent transparent;
+            border-color: rgba(0, 0, 0, 0.8) transparent transparent transparent;
         }
     }
 
@@ -251,11 +251,11 @@ input[type="button"] {
     }
 
     &.secondary span {
-        border-left-color: $infoText; //#1e728c;
+        border-left-color: $infoText;
     }
 
     &.alert span {
-        border-left-color: $errorText; //#1e728c;
+        border-left-color: $errorText;
     }
 
     &.tiny span:before {
@@ -269,4 +269,18 @@ input[type="button"] {
     &.large span:before {
         top: 0.8125em;
     }
+}
+
+// Dropdown buttons
+// ---------------------------
+
+.dropdown.button.tiny:before,
+.dropdown.button.small:before,
+.dropdown.button.large:before {
+    border-color: #444 transparent transparent transparent;
+    border-color: rgba(0, 0, 0, 0.8) transparent transparent transparent;
+}
+
+.dropdown.button.tiny:before {
+    top: 40%;
 }

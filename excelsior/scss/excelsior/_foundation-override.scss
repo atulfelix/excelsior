@@ -10,12 +10,6 @@ li.hide-for-small {
     list-style-type: disc;
 }
 
-.dropdown.button.tiny:before,
-.dropdown.button.small:before,
-.dropdown.button.large:before {
-    border-color: black transparent transparent transparent;
-}
-
 // Panels
 
 .panel {
@@ -285,4 +279,32 @@ section .title a,
     &.secondary .meter {
         background: $grayLight;
     }
+}
+
+// Joyride
+
+.joyride-tip-guide {
+    background: #dedede;
+    color: #333333;
+    text-shadow: none;
+    box-shadow: 0 0 4px #666;
+
+    .joyride-nub.top {
+        border-color: transparent transparent #DEDEDE;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: #333333;
+        margin-bottom: 0.5em;
+    }
+}
+
+body .joyride-close-tip:hover,
+.joyride-close-tip:focus {
+    color: #000;
 }
