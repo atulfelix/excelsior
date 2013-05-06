@@ -156,7 +156,7 @@ section .title a,
 .section-container .section .content,
 .section-container.auto section .content,
 .section-container.auto .section .content {
-    background-color: transparent; // Bleeds over the border radius
+    //background-color: transparent; // Bleeds over the border radius
     border-top-right-radius: $baseBorderRadius;
     border-bottom-left-radius: $baseBorderRadius;
     border-bottom-right-radius: $baseBorderRadius;
@@ -211,7 +211,6 @@ section .title a,
 
 .accordion section.auto > .title,
 .accordion section.section > .title {
-    position: relative;
     padding-right: 26px; // width of chevron plus its right position offset
 }
 
