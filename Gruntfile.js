@@ -132,6 +132,7 @@ module.exports = function(grunt) {
                             '!package.json',
                             '!.sass-cache/**',
                             '!node_modules/**',
+                            '!test/**',
                             '!excelsior/.sass-cache/**',
                             '!excelsior/scss/**',
                             '!excelsior/images/excelsior-long-500.png',
@@ -196,33 +197,25 @@ module.exports = function(grunt) {
             excelsior: {
                 files: [
                     {
-                        cwd: 'excelsior/css/',
-                        src: [
-                            '*.css',
-                            '!*.min.css'
-                        ],
-                        dest: 'excelsior/css/',
-                        expand: true,
-                        ext: '.min.css'
+                        src: ['excelsior/css/excelsior.css'],
+                        dest: 'excelsior/css/excelsior.min.css'
+                    },
+                    {
+                        src: ['excelsior/css/excelsior.oldie.css'],
+                        dest: 'excelsior/css/excelsior.oldie.min.css'
                     }
                 ]
 
             },
-            project: {
+            /*project: {
                 files: [
                     {
-                        cwd: 'project-assets/css/',
-                        src: [
-                            '*.css',
-                            '!*.min.css'
-                        ],
-                        dest: 'project-assets/css/',
-                        expand: true,
-                        ext: '.min.css'
+                        src: ['project-assets/css/excelsior.css'],
+                        dest: 'project-assets/css/excelsior.min.css'
                     }
                 ]
 
-            }
+            }*/
         },
         clean: {
             generatedFiles: {
