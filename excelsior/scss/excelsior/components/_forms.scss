@@ -237,6 +237,14 @@ input[type="file"]:focus {
     font-size: 16px; // Foundation override
 }
 
+span.postfix {
+    margin-left: -2px; // Cover border-radius of input field
+    border-left: 1px solid #ccc; // Foundation override
+    @include border-radius($inputBorderRadius);
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
 
 // // Grid style input sizes
 // input[class*="small-"],
