@@ -112,7 +112,7 @@ ul, ol, dl {
 }
 
 .radius {
-    @include border-radius(0.25em); // 4px
+    @include border-radius($baseBorderRadius);
 }
 
 .unsupported-browser-message {

@@ -139,15 +139,6 @@
     background-clip: padding-box;
 }
 
-// Gradient Bar Colors for buttons and alerts
-@mixin gradientBar($primaryColor, $secondaryColor, $textColor: #fff, $textShadow: 0 -1px 0 rgba(0,0,0,.25)) {
-    color: $textColor;
-    text-shadow: $textShadow;
-    @include gradient-vertical($primaryColor, $secondaryColor);
-    border-color: $secondaryColor $secondaryColor darken($secondaryColor, 15%);
-    border-color: rgba(0,0,0,.1) rgba(0,0,0,.1) fade-in(rgba(0,0,0,.1), 0.15);
-}
-
 // GRADIENTS
 // --------------------------------------------------
 
@@ -190,6 +181,15 @@
     background-color: $color;
     background-image: -webkit-linear-gradient($angle, rgba(255,255,255,.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.15) 50%, rgba(255,255,255,.15) 75%, transparent 75%, transparent);
     background-image: linear-gradient($angle, rgba(255,255,255,.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.15) 50%, rgba(255,255,255,.15) 75%, transparent 75%, transparent);
+}
+
+// Gradient Bar Colors for buttons and alerts
+@mixin gradientBar($primaryColor, $secondaryColor, $textColor: #fff, $textShadow: 0 -1px 0 rgba(0,0,0,.25)) {
+    color: $textColor;
+    text-shadow: $textShadow;
+    @include gradient-vertical($primaryColor, $secondaryColor);
+    border-color: $secondaryColor $secondaryColor darken($secondaryColor, 15%);
+    border-color: rgba(0,0,0,.1) rgba(0,0,0,.1) fade-in(rgba(0,0,0,.1), 0.15);
 }
 
 // FORMS
@@ -273,6 +273,7 @@
 @mixin button() {
     display: inline-block;
     margin-bottom: 0; // For input.button
+    padding: 6px 12px;
     font-size: $baseFontSize;
     line-height: $baseLineHeight;
     text-align: center;
