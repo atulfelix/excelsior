@@ -72,6 +72,10 @@ li.hide-for-small {
 // Pagination
 
 .pagination {
+    a {
+        @include font-sans();
+    }
+
     li.current a,
     li.current a {
         text-decoration: none;
