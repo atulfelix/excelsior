@@ -119,6 +119,10 @@ li.hide-for-small {
 
 // Breadcrumbs
 
+.breadcrumbs > * {
+    font-size: 0.8em;
+}
+
 .breadcrumbs li a,
 .breadcrumbs li span {
     text-transform: none;
