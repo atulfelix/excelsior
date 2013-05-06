@@ -6,7 +6,7 @@ module.exports = function(grunt) {
         uglify: {
             options: {
                 mangle: false, // Don't change variable and function names
-                report: 'gzip' // Print size savings to the command line
+                report: 'min' // Print size savings to the command line
             },
             excelsior: {
                 files: [
