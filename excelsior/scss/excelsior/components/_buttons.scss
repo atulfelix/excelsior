@@ -14,76 +14,8 @@ button.button {
     font-size: 75%;
 }
 
-// Button Sizes
-// --------------------------------------------------
 
-// Large
-.button.large {
-    padding: $paddingLarge;
-    padding-left: 1.5em;
-    padding-right: 1.5em;
-    font-size: $fontSizeLarge;
-    @include border-radius($borderRadiusLarge);
-}
-
-.button.large [class^="icon-"],
-.button.large [class*=" icon-"] {
-    margin-top: 4px;
-}
-
-// Small
-.button.small {
-    padding: $paddingSmall;
-    font-size: $fontSizeSmall;
-    @include border-radius($borderRadiusSmall);
-}
-
-.button.small [class^="icon-"],
-.button.small [class*=" icon-"] {
-    margin-top: 0;
-}
-
-.button.tiny [class^="icon-"],
-.button.tiny [class*=" icon-"] {
-    margin-top: -1px;
-}
-
-// Mini
-.button.tiny {
-    padding: $paddingTiny;
-    font-size: $fontSizeTiny;
-    @include border-radius($borderRadiusSmall);
-}
-
-
-// Block button
-// -------------------------
-
-.button-block {
-      display: block;
-      width: 100%;
-      padding-left: 0;
-      padding-right: 0;
-      @include box-sizing(border-box);
-}
-
-// Vertically space out multiple block buttons
-.button-block + .button-block {
-    margin-top: 5px;
-}
-
-// Specificity overrides
-input[type="submit"],
-input[type="reset"],
-input[type="button"] {
-    &.button-block {
-        width: 100%;
-    }
-}
-
-
-
-// Alternate buttons
+// Alternate button colors
 // --------------------------------------------------
 
 // Provide *some* extra contrast for those who can get it
@@ -93,7 +25,7 @@ input[type="button"] {
 .button.success.active,
 .button.info.active,
 .button.inverse.active {
-    color: rgba(255,255,255,.75);
+    color: rgba(255, 255, 255, 0.75);
 }
 
 // Set the backgrounds
@@ -125,6 +57,75 @@ input[type="button"] {
 // Inverse appears as dark gray
 .button.inverse {
     @include buttonBackground($btnInverseBackground, $btnInverseBackgroundHighlight);
+}
+
+// Button Sizes
+// --------------------------------------------------
+
+// Large
+.button.large {
+    padding: $paddingLarge;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    font-size: $fontSizeLarge;
+    @include border-radius($borderRadiusLarge);
+
+    [class^="icon-"],
+    [class*=" icon-"] {
+        margin-top: 4px;
+    }
+}
+
+// Small
+.button.small {
+    padding: $paddingSmall;
+    font-size: $fontSizeSmall;
+    @include border-radius($borderRadiusSmall);
+
+    [class^="icon-"],
+    [class*=" icon-"] {
+        margin-top: 0;
+    }
+}
+
+.button.tiny
+
+// Mini
+.button.tiny {
+    padding: $paddingTiny;
+    font-size: $fontSizeTiny;
+    @include border-radius($borderRadiusSmall);
+
+    [class^="icon-"],
+    [class*=" icon-"] {
+        margin-top: -1px;
+    }
+}
+
+
+// Block button
+// -------------------------
+
+.button-block {
+      display: block;
+      width: 100%;
+      padding-left: 0;
+      padding-right: 0;
+      @include box-sizing(border-box);
+}
+
+// Vertically space out multiple block buttons
+.button-block + .button-block {
+    margin-top: 5px;
+}
+
+// Specificity overrides
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+    &.button-block {
+        width: 100%;
+    }
 }
 
 
