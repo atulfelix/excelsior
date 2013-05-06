@@ -43,15 +43,15 @@ button.button {
     margin-top: 0;
 }
 
-.button.mini [class^="icon-"],
-.button.mini [class*=" icon-"] {
+.button.tiny [class^="icon-"],
+.button.tiny [class*=" icon-"] {
     margin-top: -1px;
 }
 
 // Mini
-.button.mini {
-    padding: $paddingMini;
-    font-size: $fontSizeMini;
+.button.tiny {
+    padding: $paddingTiny;
+    font-size: $fontSizeTiny;
     @include border-radius($borderRadiusSmall);
 }
 

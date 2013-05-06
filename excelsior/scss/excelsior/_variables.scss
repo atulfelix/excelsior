@@ -79,11 +79,11 @@ $linkColorHover:        darken($linkColor, 15%) !default;
 
 $fontSizeLarge:         $baseFontSize * 1.25 !default; // ~18px
 $fontSizeSmall:         $baseFontSize * 0.85 !default; // ~12px
-$fontSizeMini:          $baseFontSize * 0.75 !default; // ~11px
+$fontSizeTiny:          $baseFontSize * 0.75 !default; // ~11px
 
 $paddingLarge:          11px 19px !default; // 44px
 $paddingSmall:          2px 10px !default;  // 26px
-$paddingMini:           0px 6px !default;   // 22px
+$paddingTiny:           0px 6px !default;   // 22px
 
 $baseBorderRadius:      0.25em !default;
 $borderRadiusLarge:     0.375em !default;
