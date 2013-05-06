@@ -159,3 +159,80 @@ input[type="button"] {
     color: $grayDark;
     text-decoration: none;
 }
+
+// Button Group
+// -------------------------------
+
+.button-group {
+    // No spacing between buttons
+    & > * {
+        margin: 0 0 0 -2px;
+    }
+
+    // No rounded corners on buttons in a group by default
+    & > *,
+    & > * > a,
+    & > * > button,
+    & > * > .button,
+    &.radius > *,
+    &.radius > * > a,
+    &.radius > * > button,
+    &.radius > * > .button {
+        border-radius: 0;
+    }
+
+    // Rounded corners on the first button in a group
+    & > *:first-child,
+    & > *:first-child > a,
+    & > *:first-child > button,
+    & > *:first-child > .button,
+    &.radius > *:first-child,
+    &.radius > *:first-child > a,
+    &.radius > *:first-child > button,
+    &.radius > *:first-child > .button {
+        border-bottom-left-radius: $baseBorderRadius;
+        border-top-left-radius: $baseBorderRadius;
+    }
+
+    // Round corners on the last button in a group
+    & > *:last-child,
+    & > *:last-child > a,
+    & > *:last-child > button,
+    & > *:last-child > .button,
+    &.radius > *:last-child,
+    &.radius > *:last-child > a,
+    &.radius > *:last-child > button,
+    &.radius > *:last-child > .button {
+        border-top-right-radius: $baseBorderRadius;
+        border-bottom-right-radius: $baseBorderRadius;
+    }
+
+    // Extra-rounded corners
+    &.round > *,
+    &.round > * > a,
+    &.round > * > button,
+    &.round > * > .button {
+        border-radius: 0;
+    }
+
+    &.round > *:first-child,
+    &.round > *:first-child > a,
+    &.round > *:first-child > button,
+    &.round > *:first-child > .button {
+        border-bottom-left-radius: $borderRadiusRound;
+        border-top-left-radius: $borderRadiusRound;
+    }
+
+    &.round > *:last-child,
+    &.round > *:last-child > a,
+    &.round > *:last-child > button,
+    &.round > *:last-child > .button {
+        border-top-right-radius: $borderRadiusRound;
+        border-bottom-right-radius: $borderRadiusRound;
+    }
+}
+
+
+
+
+
