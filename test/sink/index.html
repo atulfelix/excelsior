@@ -533,10 +533,10 @@
 
                 <div class="row">
                   <div class="large-3 columns">
-                    <div class="section-container vertical-nav" data-section="vertical-nav">
-                      <section class="section">
-                        <p class="title"><a href="#">Section 1</a></p>
-                        <div class="content">
+                    <div class="section-container vertical-nav" data-section="vertical-nav" data-options="one_up: false;">
+                      <section>
+                        <p class="title" data-section-title><a href="#">Section 1</a></p>
+                        <div class="content" data-section-content>
                           <ul class="side-nav">
                             <li><a href="#">Link 1</a></li>
                             <li><a href="#">Link 2</a></li>
@@ -546,9 +546,9 @@
                           </ul>
                         </div>
                       </section>
-                      <section class="section">
-                        <p class="title"><a href="#">Section 2</a></p>
-                        <div class="content">
+                      <section>
+                        <p class="title" data-section-title><a href="#">Section 2</a></p>
+                        <div class="content" data-section-content>
                           <ul class="side-nav">
                             <li><a href="#">Link 1</a></li>
                             <li><a href="#">Link 2</a></li>
@@ -559,12 +559,12 @@
                         </div>
                       </section>
                     </div>
-                  </div>
+                </div>
                   <div class="large-9 columns">
-                    <div class="section-container horizontal-nav" data-section="horizontal-nav">
-                      <section class="section">
-                        <p class="title"><a href="#">Section 1</a></p>
-                        <div class="content">
+                    <div class="section-container horizontal-nav" data-section="horizontal-nav" data-options="one_up: false;">
+                      <section>
+                        <p class="title" data-section-title><a href="#">Section 1</a></p>
+                        <div class="content" data-section-content>
                           <ul class="side-nav">
                             <li><a href="#">Link 1</a></li>
                             <li><a href="#">Link 2</a></li>
@@ -574,9 +574,9 @@
                           </ul>
                         </div>
                       </section>
-                      <section class="section">
-                        <p class="title"><a href="#">Section 2</a></p>
-                        <div class="content">
+                      <section>
+                        <p class="title" data-section-title><a href="#">Section 2</a></p>
+                        <div class="content" data-section-content>
                           <ul class="side-nav">
                             <li><a href="#">Link 1</a></li>
                             <li><a href="#">Link 2</a></li>
@@ -587,86 +587,66 @@
                         </div>
                       </section>
                     </div>
-                    <div class="section-container auto" data-section data-options="deep_linking: true;">
-                      <section class="section">
-                        <p class="title"><a href="#panel1">Section 1</a></p>
-                        <div class="content" data-slug="panel1">
-                          <p>Section 1. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                        </div>
-                      </section>
-                      <section class="section">
-                        <p class="title"><a href="#panel2">Section 2</a></p>
-                        <div class="content" data-slug="panel2">
-                          <p>Section 2. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                        </div>
-                      </section>
-                      <div class="section">
-                        <p class="title"><a href="#panel3">Section 3</a></p>
-                        <div class="content" data-slug="panel3">
-                          <form>
-                            <div class="row collapse">
-                              <div class="large-2 columns">
-                                <label class="inline">Your Name</label>
-                              </div>
-                              <div class="large-10 columns">
-                                <input type="text" id="yourName" placeholder="Jane Smith">
-                              </div>
-                            </div>
-                            <div class="row collapse">
-                              <div class="large-2 columns">
-                                <label class="inline"> Your Email</label>
-                              </div>
-                              <div class="large-10 columns">
-                                <input type="text" id="yourEmail" placeholder="jane@smithco.com">
-                              </div>
-                            </div>
-                            <label>What's up?</label>
-                            <textarea rows="4"></textarea>
-                            <button type="submit" class="radius button">Submit</button>
-                          </form>
-                        </div>
-                      </div>
-                    </div>
+</div>
+</div>
+<div class="row">
+    <div class="large-12 columns">
+                    <div class="section-container auto" data-section>
+  <section>
+    <p class="title" data-section-title><a href="#panel1">Section 1</a></p>
+    <div class="content" data-section-content>
+      <p>Content of section 1.</p>
+    </div>
+  </section>
+  <section>
+    <p class="title" data-section-title><a href="#panel2">Section 2</a></p>
+    <div class="content" data-section-content>
+      <p>Content of section 2.</p>
+    </div>
+  </section>
+</div>
+</div>
+</div>
+<div class="row">
+    <div class="large-12 columns">
                     <div class="section-container accordion" data-section="accordion">
-                      <section class="section">
-                        <p class="title"><a href="#panel1">Section 1</a></p>
-                        <div class="content" data-slug="panel1">
-                          <p>Section 1. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                        </div>
-                      </section>
-                      <section class="section">
-                        <p class="title"><a href="#panel2">Section 2</a></p>
-                        <div class="content" data-slug="panel2">
-                          <p>Section 2. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                        </div>
-                      </section>
-                      <section class="section">
-                        <p class="title"><a href="#panel3">Section 3</a></p>
-                        <div class="content" data-slug="panel3">
-                          <p>Section 3. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                        </div>
-                      </section>
-                    </div>
-                    <div class="section-container tabs" data-section="tabs">
-                      <section class="section">
-                        <p class="title"><a href="#panel1">Section 1</a></p>
-                        <div class="content" data-slug="panel1">
-                          <p>Section 1. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                        </div>
-                      </section>
-                      <section class="section">
-                        <p class="title"><a href="#panel2">Section 2</a></p>
-                        <div class="content" data-slug="panel2">
-                          <p>Section 2. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                        </div>
-                      </section>
-                      <section class="section">
-                        <p class="title"><a href="#panel3">Section 3</a></p>
-                        <div class="content" data-slug="panel3">
-                          <p>Section 3. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                        </div>
-                      </section>
-                    </div>
+  <section>
+    <p class="title" data-section-title><a href="#">Section 1</a></p>
+    <div class="content" data-section-content>
+      <p>Content of section 1.</p>
+    </div>
+  </section>
+  <section>
+    <p class="title" data-section-title><a href="#">Section 2</a></p>
+    <div class="content" data-section-content>
+      <p>Content of section 2.</p>
+    </div>
+  </section>
+</div>
+</div>
+</div>
+<div class="row">
+    <div class="large-12 columns">
+                    <div class="section-container vertical-tabs" data-section="vertical-tabs">
+  <section>
+    <p class="title" data-section-title><a href="#">Section 1</a></p>
+    <div class="content" data-section-content>
+      <p>Content of section 1.</p>
+    </div>
+  </section>
+  <section>
+    <p class="title" data-section-title><a href="#">Section 2</a></p>
+    <div class="content" data-section-content>
+      <p>Content of section 2.</p>
+    </div>
+  </section>
+  <section>
+    <p class="title" data-section-title><a href="#">Section 3</a></p>
+    <div class="content" data-section-content>
+      <p>Content of section 3.</p>
+    </div>
+  </section>
+</div>
                   </div>
                 </div>
 
@@ -1423,7 +1403,7 @@
     -->
 
     <script src="../../excelsior/js/vendor/jquery.min.js"></script>
-    <!-- <script src="../../excelsior/js/vendor/zepto.min.js"></script> -->
+    <script src="../../excelsior/js/vendor/zepto.min.js"></script>
     <script src="../../excelsior/js/core/excelsior.min.js"></script>
     <script src="../../excelsior/js/core/off-canvas.min.js"></script>
     <script src="../../excelsior/js/foundation/foundation.min.js"></script>

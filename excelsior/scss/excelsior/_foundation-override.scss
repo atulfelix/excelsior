@@ -124,8 +124,7 @@ section .title a,
     }
 }
 
-.section-container.tabs section .title,
-.section-container.tabs .section .title{
+.section-container.tabs section .title {
       font-family: $font-sans-bold;
       font-weight: normal;
       border-top-left-radius: 6px;
@@ -133,8 +132,7 @@ section .title a,
       background-clip: padding-box;
 }
 
-.section-container.auto section .title,
-.section-container.auto .section .title{
+.section-container.auto section .title {
       border-top-left-radius: 0;
       border-top-right-radius: 0;
       background-clip: padding-box;
@@ -142,8 +140,7 @@ section .title a,
 
 // Same styles as above
 @media screen and (min-width: 48em) {
-    .section-container.auto section .title,
-    .section-container.auto .section .title {
+    .section-container.auto section .title {
         font-family: $font-sans-bold;
         font-weight: normal;
         border-top-left-radius: 6px;
@@ -153,9 +150,7 @@ section .title a,
 }
 
 .section-container section .content,
-.section-container .section .content,
-.section-container.auto section .content,
-.section-container.auto .section .content {
+.section-container.auto section .content {
     //background-color: transparent; // Bleeds over the border radius
     border-top-right-radius: $baseBorderRadius;
     border-bottom-left-radius: $baseBorderRadius;
@@ -164,9 +159,7 @@ section .title a,
 }
 
 .section-container section .title a,
-.section-container .section .title a,
-.section-container.auto section .title a,
-.section-container.auto .section .title a {
+.section-container.auto section .title a {
     padding: 8px 14px;
 }
 
@@ -177,30 +170,28 @@ section .title a,
 
 @media (max-width: 47.9em) {
     .section-container > section,
-    .section-container > .section,
-    .section-container.auto > section,
-    .section-container.auto > .section {
+    .section-container.auto > section {
         border: 1px solid #cccccc; // instead of just border-top
     }
 }
 
 // Accordion
 
-.section-container.accordion section .title,
-.section-container.accordion .section .title {
+.section-container.accordion section .title {
     font-family: $font-sans;
 }
 
-.auto .section,
-.accordion .section {
+.auto section,
+.accordion section {
     @include border-radius($baseBorderRadius);
     border-left: 1px solid #cccccc;
     border-right: 1px solid #cccccc;
     border-bottom: 1px solid #cccccc;
+    margin-bottom: 0.5em;
 }
 
-.auto section.section:last-child,
-.accordion section.section:last-child {
+.auto section:last-child,
+.accordion section:last-child {
     margin-bottom: 0;
 }
 
@@ -214,8 +205,8 @@ section .title a,
     padding-right: 26px; // width of chevron plus its right position offset
 }
 
-.accordion *.auto .title:after, // Needs the asterisk for specificity
-.accordion *.section .title:after {
+.auto .title:after, // Needs the asterisk for specificity
+.accordion .title:after {
     content: $icon-down-open;
     position: absolute;
     top: 6px;
@@ -225,36 +216,23 @@ section .title a,
     font-weight: normal;
 }
 
-.accordion *.auto.active .title:after,
-.accordion *.section.active .title:after {
+.auto .active .title:after,
+.accordion .active .title:after {
     top: 8px;
     right: 18px;
     @include rotate(180deg);
 }
 
-@media screen and (max-width: 47.9em) {
+@media screen and (min-width: 48em) {
     .auto section {
-        margin-bottom: 0.5em;
+        margin-bottom: 0em;
     }
 
     // Same styles as above
-    .auto *.auto .title:after,
-    .auto *.section .title:after {
-        content: $icon-down-open;
-        position: absolute;
-        top: 8px;
-        right: 18px;
-        font-family: $font-icons;
-        font-style: normal;
-        font-weight: normal;
+    .auto .title:after {
+        content: "";
     }
 
-    .auto *.auto.active .title:after,
-    .auto *.section.active .title:after {
-        top: 6px;
-        right: 18px;
-        @include rotate(180deg);
-    }
 }
 
 // Orbit
