@@ -1,9 +1,9 @@
 body {
     background: #282828;
-    height: 100%;
 }
 
 body.off-canvas {
+    height: 100%;
     padding-top: $nav-bar-height;
 
     @include breakpoint($off-canvas-medium-width, $no-query: true) {
