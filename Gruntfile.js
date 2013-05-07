@@ -1,6 +1,6 @@
 /*global module: false */
 module.exports = function(grunt) {
-    // Project configuration.
+    // Project configuration
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         uglify: {
@@ -206,16 +206,7 @@ module.exports = function(grunt) {
                     }
                 ]
 
-            },
-            /*project: {
-                files: [
-                    {
-                        src: ['project-assets/css/excelsior.css'],
-                        dest: 'project-assets/css/excelsior.min.css'
-                    }
-                ]
-
-            }*/
+            }
         },
         clean: {
             generatedFiles: {
