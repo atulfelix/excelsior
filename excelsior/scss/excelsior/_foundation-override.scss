@@ -41,8 +41,8 @@ li.hide-for-small {
 
         &:hover {
             @include border-radius($borderRadiusRound);
-            background: #999;
-            color: #fff;
+            background: $grayLight;
+            color: $white;
         }
     }
 
@@ -54,7 +54,7 @@ li.hide-for-small {
         &:hover {
             @include border-radius($borderRadiusRound);
             @include transition(background-position 0.1s linear);
-            color: #fff;
+            color: $white;
         }
     }
 }
@@ -179,8 +179,8 @@ section .title a {
 @media screen and (min-width: 48em) {
     .section-container.auto > section > .title,
     .section-container.tabs > section > .title {
-        border-left: 1px solid #cccccc;
-        border-top: 1px solid #cccccc;
+        border-left: 1px solid $grayLighter;
+        border-top: 1px solid $grayLighter;
     }
 }
 // Accordion
@@ -191,8 +191,12 @@ section .title a {
 
 .section-container section {
     @include border-radius($baseBorderRadius);
-    border: 1px solid #cccccc;
+    border: 1px solid $grayLighter;
     margin-bottom: 0.5em;
+
+    @include breakpoint (48em) {
+        margin-bottom:0;
+    }
 }
 
 .section-container section:last-child {
@@ -226,7 +230,7 @@ section .title a {
 .section-container.tabs .title:after,
 .section-container.vertical-nav .title:after,
 .section-container.horizontal-nav .title:after {
-        @include breakpoint(48em){
+        @include breakpoint(48em) {
             content: "";
         }
 }
@@ -238,18 +242,6 @@ section .title a {
 }
 
 @media screen and (min-width: 48em) {
-    .section-container section {
-        margin-bottom: 0em;
-    }
-
-    .section-container.auto > section > .title a,
-    .section-container.tabs > section > .title a,
-    .section-container.accordion > section > .title a,
-    .section-container.vertical-nav > section > .title a,
-    .section-container.horizontal-nav > section > .title a {
-        padding: 0.6em 1em;
-    }
-
     .vertical-nav section,
     .horizontal-nav section {
         border:0;
