@@ -115,8 +115,7 @@ li.hide-for-small {
 
 // Sections
 
-section .title a,
-.section .title a {
+section .title a {
     text-decoration: none;
 
     &:hover {
@@ -124,6 +123,9 @@ section .title a,
     }
 }
 
+.section-container, .section-container.auto {
+    border:0;
+}
 .section-container.tabs section .title {
       font-family: $font-sans-bold;
       font-weight: normal;
@@ -149,25 +151,29 @@ section .title a,
     }
 }
 
-.section-container section .content,
-.section-container.auto section .content {
-    //background-color: transparent; // Bleeds over the border radius
+.section-container section .content {
     border-top-right-radius: $baseBorderRadius;
     border-bottom-left-radius: $baseBorderRadius;
     border-bottom-right-radius: $baseBorderRadius;
     background-clip: padding-box;
 }
 
-.section-container section .title a,
-.section-container.auto section .title a {
-    padding: 8px 14px;
+.section-container > section > *.title{
+    border:0;
+
+    a {
+       padding: 0.6em 0.6em 0.6em 1em;
+    }
 }
 
-.section-container,
-.section-container.auto {
-    border: none;
-}
 
+
+@media screen and (min-width: 48em) {
+    .section-container.auto > section > .title {
+        border: 1px solid #cccccc;
+        //border: 1px solid #cccccc;
+    }
+}
 // Accordion
 
 .section-container .title {
@@ -176,9 +182,7 @@ section .title a,
 
 .section-container section {
     @include border-radius($baseBorderRadius);
-    border-left: 1px solid #cccccc;
-    border-right: 1px solid #cccccc;
-    border-bottom: 1px solid #cccccc;
+    border: 1px solid #cccccc;
     margin-bottom: 0.5em;
 }
 
@@ -216,9 +220,12 @@ section .title a,
         margin-bottom: 0em;
     }
 
-    .accordion section.active {
-        border-bottom-right-radius:0;
-        border-bottom-left-radius:0;
+    .section-container.tabs > section > .title a,
+    .section-container.auto > section > .title a,
+    .section-container.accordion > section > .title a,
+    .section-container.vertical-nav > section > .title a,
+    .section-container.horizontal-nav > section > .title a {
+        padding: 0.6em;
     }
 
     .vertical-nav section,
@@ -271,4 +278,18 @@ section .title a,
 
 .pricing-table .cta-button {
     padding: 1.25em 1.25em;
+}
+
+// Custom Form
+
+form.custom .custom.checkbox.checked:before { // newest Foundation is giving a weird unicode error, this makes it a nice X.
+    content: "x";
+    margin-top: -3px;
+    margin-left: 2px;
+    font-size: 1.3em;
+}
+
+// Dropdown
+.f-dropdown {
+    top:-99999px;
 }
