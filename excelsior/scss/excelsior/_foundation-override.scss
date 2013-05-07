@@ -168,21 +168,13 @@ section .title a,
     border: none;
 }
 
-@media (max-width: 47.9em) {
-    .section-container > section,
-    .section-container.auto > section {
-        border: 1px solid #cccccc; // instead of just border-top
-    }
-}
-
 // Accordion
 
-.section-container.accordion section .title {
+.section-container .title {
     font-family: $font-sans;
 }
 
-.auto section,
-.accordion section {
+.section-container section {
     @include border-radius($baseBorderRadius);
     border-left: 1px solid #cccccc;
     border-right: 1px solid #cccccc;
@@ -190,8 +182,7 @@ section .title a,
     margin-bottom: 0.5em;
 }
 
-.auto section:last-child,
-.accordion section:last-child {
+.section-container section:last-child {
     margin-bottom: 0;
 }
 
@@ -200,13 +191,11 @@ section .title a,
     overflow: hidden;
 }
 
-.accordion section.auto > .title,
-.accordion section.section > .title {
+.section-container > .title {
     padding-right: 26px; // width of chevron plus its right position offset
 }
 
-.auto .title:after, // Needs the asterisk for specificity
-.accordion .title:after {
+.section-container .title:after {
     content: $icon-down-open;
     position: absolute;
     top: 6px;
@@ -216,20 +205,36 @@ section .title a,
     font-weight: normal;
 }
 
-.auto .active .title:after,
-.accordion .active .title:after {
+.section-container .active .title:after {
     top: 8px;
     right: 18px;
     @include rotate(180deg);
 }
 
 @media screen and (min-width: 48em) {
-    .auto section {
+    .section-container section {
         margin-bottom: 0em;
     }
 
+    .accordion section.active {
+        border-bottom-right-radius:0;
+        border-bottom-left-radius:0;
+    }
+
+    .vertical-nav section,
+    .horizontal-nav section {
+        border:0;
+
+        .content {
+            border-radius:0;
+        }
+    }
+
     // Same styles as above
-    .auto .title:after {
+    .auto .title:after,
+    .vertical-nav .title:after,
+    .horizontal-nav .title:after,
+    .tabs .title:after {
         content: "";
     }
 
