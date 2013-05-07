@@ -157,21 +157,30 @@ section .title a {
     border-bottom-right-radius: $baseBorderRadius;
     background-clip: padding-box;
 }
-
-.section-container > section > *.title{
+.section-container.auto > section > .title,
+.section-container > section > .title{
     border:0;
-
-    a {
-       padding: 0.6em 0.6em 0.6em 1em;
-    }
 }
 
+.section-container.auto > section > .title a,
+.section-container.accordion > section > .title a,
+.section-container.vertical-nav > section > .title a,
+.section-container.horizontal-nav > section > .title a {
+    padding: 0.6em 0.6em 0.6em 1em;
 
+    @include breakpoint(48em) {
+        padding: 0.6em 1em;
+    }
+}
+.section-container.tabs > section > .title a {
+    padding: 0.6em 1em;
+}
 
 @media screen and (min-width: 48em) {
-    .section-container.auto > section > .title {
-        border: 1px solid #cccccc;
-        //border: 1px solid #cccccc;
+    .section-container.auto > section > .title,
+    .section-container.tabs > section > .title {
+        border-left: 1px solid #cccccc;
+        border-top: 1px solid #cccccc;
     }
 }
 // Accordion
@@ -209,6 +218,19 @@ section .title a {
     font-weight: normal;
 }
 
+.section-container.tabs .title:after {
+    content: "";
+}
+
+.section-container.auto .title:after,
+.section-container.tabs .title:after,
+.section-container.vertical-nav .title:after,
+.section-container.horizontal-nav .title:after {
+        @include breakpoint(48em){
+            content: "";
+        }
+}
+
 .section-container .active .title:after {
     top: 8px;
     right: 18px;
@@ -220,12 +242,12 @@ section .title a {
         margin-bottom: 0em;
     }
 
-    .section-container.tabs > section > .title a,
     .section-container.auto > section > .title a,
+    .section-container.tabs > section > .title a,
     .section-container.accordion > section > .title a,
     .section-container.vertical-nav > section > .title a,
     .section-container.horizontal-nav > section > .title a {
-        padding: 0.6em;
+        padding: 0.6em 1em;
     }
 
     .vertical-nav section,
@@ -236,15 +258,6 @@ section .title a {
             border-radius:0;
         }
     }
-
-    // Same styles as above
-    .auto .title:after,
-    .vertical-nav .title:after,
-    .horizontal-nav .title:after,
-    .tabs .title:after {
-        content: "";
-    }
-
 }
 
 // Orbit
