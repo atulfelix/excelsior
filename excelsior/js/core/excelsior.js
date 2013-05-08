@@ -397,12 +397,6 @@ $(document).ready(function(){
 
           // Remove this click event
           EWF.$body.off(EWF.activateEventName);
-
-          // Prevent Defaults
-          e.preventDefault();
-
-          // Stop the click from moving up.
-          e.stopPropagation();
         }
       });
     }
