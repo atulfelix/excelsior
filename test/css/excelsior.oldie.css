@@ -6842,24 +6842,22 @@ body.off-canvas {
 /* line 26, ../scss/excelsior/components/_off-canvas.scss */
 .off-canvas .gov-bar {
   position: absolute;
-  height: 88px;
-  margin-top: -88px;
   width: 100%; }
-  /* line 32, ../scss/excelsior/components/_off-canvas.scss */
+  /* line 30, ../scss/excelsior/components/_off-canvas.scss */
   .off-canvas .gov-bar form {
     margin: 0; }
-/* line 37, ../scss/excelsior/components/_off-canvas.scss */
+/* line 35, ../scss/excelsior/components/_off-canvas.scss */
 .off-canvas .site-bar {
   position: absolute;
   width: 100%; }
-/* line 42, ../scss/excelsior/components/_off-canvas.scss */
+/* line 40, ../scss/excelsior/components/_off-canvas.scss */
 .off-canvas .global-nav {
   position: fixed;
   top: 0;
   height: 100%;
   width: 100%;
   z-index: 0; }
-  /* line 55, ../scss/excelsior/components/_off-canvas.scss */
+  /* line 53, ../scss/excelsior/components/_off-canvas.scss */
   .off-canvas .global-nav .sub-menu-title {
     display: inline-block;
     color: #AAA;
@@ -6868,20 +6866,20 @@ body.off-canvas {
     left: 20%;
     line-height: 48px;
     padding-top: 0.15em; }
-  /* line 65, ../scss/excelsior/components/_off-canvas.scss */
+  /* line 63, ../scss/excelsior/components/_off-canvas.scss */
   .off-canvas .global-nav .nav-container {
     height: inherit;
     overflow-y: scroll; }
-    /* line 81, ../scss/excelsior/components/_off-canvas.scss */
+    /* line 79, ../scss/excelsior/components/_off-canvas.scss */
     .off-canvas .global-nav .nav-container > ul {
       min-height: 1000px; }
-  /* line 90, ../scss/excelsior/components/_off-canvas.scss */
+  /* line 88, ../scss/excelsior/components/_off-canvas.scss */
   .off-canvas .global-nav ul {
     margin-left: 16%; }
-    /* line 97, ../scss/excelsior/components/_off-canvas.scss */
+    /* line 95, ../scss/excelsior/components/_off-canvas.scss */
     .off-canvas .global-nav ul li {
       padding-left: 3%; }
-    /* line 105, ../scss/excelsior/components/_off-canvas.scss */
+    /* line 103, ../scss/excelsior/components/_off-canvas.scss */
     .off-canvas .global-nav ul ul {
       position: fixed;
       top: 53px;
@@ -6892,13 +6890,13 @@ body.off-canvas {
       background: #333 !important;
       -webkit-transition: left 0.2s ease;
       transition: left 0.2s ease; }
-      /* line 131, ../scss/excelsior/components/_off-canvas.scss */
+      /* line 129, ../scss/excelsior/components/_off-canvas.scss */
       .off-canvas .global-nav ul ul li {
         padding-left: 2% !important; }
-  /* line 158, ../scss/excelsior/components/_off-canvas.scss */
+  /* line 156, ../scss/excelsior/components/_off-canvas.scss */
   .off-canvas .global-nav .menu-controls {
     height: 53px; }
-    /* line 165, ../scss/excelsior/components/_off-canvas.scss */
+    /* line 163, ../scss/excelsior/components/_off-canvas.scss */
     .off-canvas .global-nav .menu-controls .menu-back {
       background-color: #7b7b7b;
       background-image: -webkit-linear-gradient(top, #999999, #505050);
@@ -6912,36 +6910,33 @@ body.off-canvas {
       position: absolute;
       right: 0;
       visibility: hidden; }
-  /* line 177, ../scss/excelsior/components/_off-canvas.scss */
+  /* line 175, ../scss/excelsior/components/_off-canvas.scss */
   .off-canvas .global-nav .active-menu {
     left: 0;
     z-index: 1; }
-/* line 195, ../scss/excelsior/components/_off-canvas.scss */
+/* line 193, ../scss/excelsior/components/_off-canvas.scss */
 .off-canvas.active-sub-menu .global-nav .menu-controls .menu-back {
   visibility: visible; }
-/* line 199, ../scss/excelsior/components/_off-canvas.scss */
+/* line 197, ../scss/excelsior/components/_off-canvas.scss */
 .off-canvas .page {
   position: relative;
   height: auto;
   min-height: 100%;
   top: 0;
   width: 100%; }
-/* line 217, ../scss/excelsior/components/_off-canvas.scss */
+/* line 215, ../scss/excelsior/components/_off-canvas.scss */
 .off-canvas .pull-down,
 .off-canvas .pull-down-container,
 .off-canvas .gov-bar,
 .off-canvas .site-bar,
 .off-canvas .page {
-  -webkit-transition: top 0.2s ease, left 0.2s ease, height 0.2s ease, margin-top 0.2s ease;
-  transition: top 0.2s ease, left 0.2s ease, height 0.2s ease, margin-top 0.2s ease; }
-/* line 232, ../scss/excelsior/components/_off-canvas.scss */
-.off-canvas.active-gov-bar .gov-bar {
-  margin-top: 0; }
-/* line 237, ../scss/excelsior/components/_off-canvas.scss */
+  -webkit-transition: top 0.2s ease, left 0.2s ease, height 0.2s ease;
+  transition: top 0.2s ease, left 0.2s ease, height 0.2s ease; }
+/* line 231, ../scss/excelsior/components/_off-canvas.scss */
 .off-canvas.active-gov-bar .pull-down-container,
 .off-canvas.active-gov-bar .site-bar {
   top: 88px; }
-/* line 253, ../scss/excelsior/components/_off-canvas.scss */
+/* line 247, ../scss/excelsior/components/_off-canvas.scss */
 .off-canvas.active-site-menu .pull-down,
 .off-canvas.active-site-menu .pull-down-container,
 .off-canvas.active-site-menu .gov-bar,
@@ -6949,18 +6944,18 @@ body.off-canvas {
 .off-canvas.active-site-menu .page {
   position: fixed;
   left: -82%; }
-/* line 268, ../scss/excelsior/components/_off-canvas.scss */
+/* line 262, ../scss/excelsior/components/_off-canvas.scss */
 .off-canvas.active-site-menu .global-nav .icon-right-open:before {
   padding-top: 3px;
   position: absolute;
   right: 5%; }
-/* line 279, ../scss/excelsior/components/_off-canvas.scss */
+/* line 273, ../scss/excelsior/components/_off-canvas.scss */
 .off-canvas.active-site-menu .mobile-menu-button {
   box-shadow: inset 6px 0px 8px -2px #000; }
-/* line 283, ../scss/excelsior/components/_off-canvas.scss */
+/* line 277, ../scss/excelsior/components/_off-canvas.scss */
 .off-canvas.active-site-menu .page {
   box-shadow: 5px 49px 8px #000; }
-/* line 291, ../scss/excelsior/components/_off-canvas.scss */
+/* line 285, ../scss/excelsior/components/_off-canvas.scss */
 .off-canvas.active-site-menu .footer {
   left: -82%; }
 
