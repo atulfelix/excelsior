@@ -395,7 +395,9 @@ $(document).ready(function(){
                 location = $(e.target).attr('href');
             }
 
-                console.log(e);
+          }
+
+    console.log(e);
     $(".show-events").prepend(document.createTextNode(EWF.activateEventName + " " + e.currentTarget));
 
           // Since we have an active element get the body class we need
