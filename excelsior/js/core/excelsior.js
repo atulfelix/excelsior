@@ -338,8 +338,13 @@ $(document).ready(function(){
      * @param {object} activeElm The active element
      */
     function specialEvents(activeElm) {
+
       if (activeElm === 'active-site-search') {
         $('#site-search-box').focus();
+      }
+
+      if (activeElm === 'active-gov-bar') {
+        $('#state-search').focus();
       }
 
       if (activeElm === 'active-site-menu') {
