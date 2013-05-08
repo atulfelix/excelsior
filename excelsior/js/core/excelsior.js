@@ -148,6 +148,7 @@ EWF.fixImagePath = function _fixImagePath() {
 
         $(document.body)
           .bind('touchstart', function(e){
+            e.preventDefault();
             now = Date.now();
             if (!e.touches && e.originalEvent && e.originalEvent.touches) {
               e.touches = e.originalEvent.touches; // jQuery compatibility
