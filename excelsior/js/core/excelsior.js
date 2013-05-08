@@ -313,7 +313,8 @@ $(document).ready(function(){
         selectedClass = 'active';
 
     // Show event
-    $(".show-events").prepend(document.createTextNode(EWF.activateEventName));
+    console.log(e);
+    $(".show-events").prepend(document.createTextNode(EWF.activateEventName + " " + e.currentTarget));
 
     /**
      * Closes pre-existing active items
