@@ -25,6 +25,8 @@ body.off-canvas {
 
     .gov-bar {
         position: absolute;
+        height: 88px;
+        margin-top: -88px;
         width: 100%;
 
         form {
@@ -213,7 +215,7 @@ body.off-canvas {
     .gov-bar,
     .site-bar,
     .page {
-        @include transition(top 0.2s ease, left 0.2s ease, height 0.2s ease);
+        @include transition(top 0.2s ease, left 0.2s ease, height 0.2s ease, margin-top 0.2s ease);
     }
 
     .gov-bar,
@@ -226,6 +228,10 @@ body.off-canvas {
     }
 
     &.active-gov-bar {
+
+        .gov-bar {
+            margin-top: 0;
+        }
 
         .pull-down-container,
         .site-bar {
