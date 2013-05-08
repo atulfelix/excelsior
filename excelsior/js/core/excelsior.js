@@ -292,6 +292,8 @@ $(document).ready(function(){
     EWF.$body = $('body');
   }
 
+  //EWF.activateEventName = 'click';
+
   // Standard Gov Banner display code
   $('#gov-link-3').on(EWF.activateEventName, function(e) {
     e.preventDefault();
@@ -299,13 +301,7 @@ $(document).ready(function(){
   });
 
   // Active Elements
-  $('[data-active]').on(EWF.activateEventName, function(e) {
-
-    // Prevent Defaults
-    e.preventDefault();
-
-    // Stop the click from moving up.
-    e.stopPropagation();
+  $('[data-active]').one(EWF.activateEventName, function(e) {
 
     // Active attribute class
     var $clickedElm = $(this),
@@ -401,6 +397,13 @@ $(document).ready(function(){
 
     // Check to see if anything special has to happen based on data-active value
     specialEvents(activeClass);
+
+    // Prevent Defaults
+    e.preventDefault();
+
+    // Stop the click from moving up.
+    e.stopPropagation();
+
   });
 });
 
