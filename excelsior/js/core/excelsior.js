@@ -306,6 +306,12 @@ $(document).ready(function(){
   // Active Elements
   $('[data-active]').on(EWF.activateEventName, function(e) {
 
+    // Prevent Defaults
+    e.preventDefault();
+
+    // Stop the click from moving up.
+    e.stopPropagation();
+
     // Active attribute class
     var $clickedElm = $(this),
         activeClass = $clickedElm.attr('data-active'),
@@ -363,12 +369,14 @@ $(document).ready(function(){
 
     // Check to see if the item is active
     if (EWF.$body.hasClass(activeClass)) {
+
       // Remove active state class from header
       EWF.$body.removeClass(activeClass);
       // Remove active state class from the clicked element
       $clickedElm.removeClass(selectedClass);
       // Remove any stray body click event
       EWF.$body.off(EWF.activateEventName);
+
     }
     else {
       // Add active state class from header
@@ -406,12 +414,6 @@ $(document).ready(function(){
 
     // Check to see if anything special has to happen based on data-active value
     specialEvents(activeClass);
-
-    // Prevent Defaults
-    e.preventDefault();
-
-    // Stop the click from moving up.
-    e.stopPropagation();
 
   });
 });
