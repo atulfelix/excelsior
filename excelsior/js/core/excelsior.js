@@ -343,10 +343,6 @@ $(document).ready(function(){
         $('#site-search-box').focus();
       }
 
-      if (activeElm === 'active-gov-bar') {
-        $('#state-search').focus();
-      }
-
       if (activeElm === 'active-site-menu') {
         // Check to see if off canvas is being used
         if (EWF.$body.hasClass('off-canvas') && EWF.$body.hasClass('active-site-menu')) {
