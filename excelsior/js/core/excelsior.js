@@ -411,7 +411,7 @@ $(document).ready(function(){
 
         } else if (e.target.tagName === "INPUT" &&  $(e.target).attr('type') === "submit" ) {
 
-            this.form.submit();
+            $(e.target).parents('form').submit();
 
         }
 
