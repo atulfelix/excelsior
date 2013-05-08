@@ -6551,7 +6551,7 @@ a.label:hover, a.label:focus {
     float: left;
     margin: 0; }
     /* line 180, ../scss/excelsior/components/_navigation.scss */
-    .gov-bar input[type="search"] {
+    .gov-bar input[type="text"] {
       border-radius: 5px 0 0 5px;
       background-clip: padding-box;
       padding-left: 10px;
