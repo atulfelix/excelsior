@@ -312,10 +312,6 @@ $(document).ready(function(){
         $activeElm = $('.active'),
         selectedClass = 'active';
 
-    // Show event
-    console.log(e);
-    $(".show-events").prepend(document.createTextNode(EWF.activateEventName + " " + e.currentTarget));
-
     /**
      * Closes pre-existing active items
      * @param {object} active The active element
@@ -398,6 +394,7 @@ $(document).ready(function(){
             if ($(e.target).attr('href') !== "#") {
                 location = $(e.target).attr('href');
             }
+
           }
 
           // Since we have an active element get the body class we need
@@ -411,7 +408,13 @@ $(document).ready(function(){
 
           // Remove this click event
           EWF.$body.off(EWF.activateEventName);
+
+        } else if (e.target.tagName === "INPUT" &&  $(e.target).attr('type') === "submit" ) {
+
+            $(e.target).parents('form').submit();
+
         }
+
       });
     }
 
