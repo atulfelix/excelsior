@@ -292,7 +292,7 @@ $(document).ready(function(){
     EWF.$body = $('body');
   }
 
-  //EWF.activateEventName = 'click';
+  EWF.activateEventName = 'click';
 
   // Standard Gov Banner display code
   $('#gov-link-3').on(EWF.activateEventName, function(e) {
