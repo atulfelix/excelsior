@@ -306,12 +306,6 @@ $(document).ready(function(){
   // Active Elements
   $('[data-active]').on(EWF.activateEventName, function(e) {
 
-    // Prevent Defaults
-    e.preventDefault();
-
-    // Stop the click from moving up.
-    e.stopPropagation();
-
     // Active attribute class
     var $clickedElm = $(this),
         activeClass = $clickedElm.attr('data-active'),
@@ -369,14 +363,12 @@ $(document).ready(function(){
 
     // Check to see if the item is active
     if (EWF.$body.hasClass(activeClass)) {
-
       // Remove active state class from header
       EWF.$body.removeClass(activeClass);
       // Remove active state class from the clicked element
       $clickedElm.removeClass(selectedClass);
       // Remove any stray body click event
       EWF.$body.off(EWF.activateEventName);
-
     }
     else {
       // Add active state class from header
@@ -391,10 +383,19 @@ $(document).ready(function(){
             clicked = $(this);
 
         console.log(e);
-        $(".show-events").prepend(document.createTextNode(EWF.activateEventName + " " + e.currentTarget));
 
         // Check for active elements
         if (activeElm.length > 0 && e.target.tagName !== "INPUT") {
+
+          // Check to see if the currently clicked items is an anchor tag, if it is make sure we go to the link instead of ignoring the action
+          if (e.target.tagName === "A" &&  $(e.target).attr('href') !== undefined) {
+
+            // Check to see if the href is not just "#"
+            if ($(e.target).attr('href') !== "#") {
+                location = $(e.target).attr('href');
+            }
+
+          }
 
           // Since we have an active element get the body class we need
           var activeClass = activeElm.attr('data-active');
@@ -407,6 +408,11 @@ $(document).ready(function(){
 
           // Remove this click event
           EWF.$body.off(EWF.activateEventName);
+
+        } else if (e.target.tagName === "INPUT" &&  $(e.target).attr('type') === "submit" ) {
+
+            this.form.submit();
+
         }
 
       });
@@ -414,6 +420,12 @@ $(document).ready(function(){
 
     // Check to see if anything special has to happen based on data-active value
     specialEvents(activeClass);
+
+    // Prevent Defaults
+    e.preventDefault();
+
+    // Stop the click from moving up.
+    e.stopPropagation();
 
   });
 });
