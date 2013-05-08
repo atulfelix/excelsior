@@ -301,7 +301,7 @@ $(document).ready(function(){
   });
 
   // Active Elements
-  $('[data-active]').one(EWF.activateEventName, function(e) {
+  $('[data-active]').on(EWF.activateEventName, function(e) {
 
     // Active attribute class
     var $clickedElm = $(this),
