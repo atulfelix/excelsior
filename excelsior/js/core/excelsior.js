@@ -293,8 +293,6 @@ $(document).ready(function(){
     EWF.$body = $('body');
   }
 
-  EWF.activateEventName = 'click';
-
   // Standard Gov Banner display code
   $('#gov-link-3').on(EWF.activateEventName, function(e) {
     e.preventDefault();
@@ -309,6 +307,9 @@ $(document).ready(function(){
         activeClass = $clickedElm.attr('data-active'),
         $activeElm = $('.active'),
         selectedClass = 'active';
+
+    // Show event
+    $(".show-events").prepend(document.createTextNode(EWF.activateEventName));
 
     /**
      * Closes pre-existing active items
