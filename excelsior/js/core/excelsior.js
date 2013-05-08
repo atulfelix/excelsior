@@ -313,7 +313,7 @@ $(document).ready(function(){
         selectedClass = 'active';
 
     // Show event
-    //console.log(e);
+    console.log(e);
     $(".show-events").prepend(document.createTextNode(EWF.activateEventName + " " + e.currentTarget));
 
     /**
@@ -390,8 +390,21 @@ $(document).ready(function(){
         var activeElm = $('.active'),
             clicked = $(this);
 
+        console.log(e);
+
         // Check for active elements
         if (activeElm.length > 0 && e.target.tagName !== "INPUT") {
+
+          // Check to see if the currently clicked items is an anchor tag, if it is make sure we go to the link instead of ignoring the action
+          if (e.target.tagName === "A" &&  $(e.target).attr('href') !== undefined) {
+
+            // Check to see if the href is not just "#"
+            if ($(e.target).attr('href') !== "#") {
+                location = $(e.target).attr('href');
+            }
+
+          }
+
           // Since we have an active element get the body class we need
           var activeClass = activeElm.attr('data-active');
 
