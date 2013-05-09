@@ -15,7 +15,6 @@
  * @namespace
  */
 var EWF = {
-    activateEventName: 'click',
     ua: navigator.userAgent,
     iOS: false,
     $body: null,
@@ -98,141 +97,6 @@ EWF.fixImagePath = function _fixImagePath() {
 (function () {
   // Determine click type
   if (Modernizr.touch) {
-    EWF.activateEventName = 'tap';
-
-    // Zepto.js Touch Events
-    // (c) 2010-2012 Thomas Fuchs
-    // Zepto.js may be freely distributed under the MIT license.
-    // Modified to work with jQuery 1.9.1 by NYS-ITS
-    (function(){
-      var touch = {},
-          touchTimeout, tapTimeout, swipeTimeout,
-          longTapDelay = 750, longTapTimeout;
-
-      function parentIfText(node) {
-        return 'tagName' in node ? node : node.parentNode;
-      }
-
-      function swipeDirection(x1, x2, y1, y2) {
-        var xDelta = Math.abs(x1 - x2),
-            yDelta = Math.abs(y1 - y2);
-        return xDelta >= yDelta ? (x1 - x2 > 0 ? 'Left' : 'Right') : (y1 - y2 > 0 ? 'Up' : 'Down');
-      }
-
-      function longTap() {
-        longTapTimeout = null;
-        if (touch.last) {
-          touch.el.trigger('longTap');
-          touch = {};
-        }
-      }
-
-      function cancelLongTap() {
-        if (longTapTimeout) {
-          clearTimeout(longTapTimeout);
-        }
-        longTapTimeout = null;
-      }
-
-      function cancelAll() {
-        if (touchTimeout) { clearTimeout(touchTimeout); }
-        if (tapTimeout) { clearTimeout(tapTimeout); }
-        if (swipeTimeout) { clearTimeout(swipeTimeout); }
-        if (longTapTimeout) { clearTimeout(longTapTimeout); }
-        touchTimeout = tapTimeout = swipeTimeout = longTapTimeout = null;
-        touch = {};
-      }
-
-      $(document).ready(function(){
-        var now, delta;
-
-        $(document.body)
-          .bind('touchstart', function(e){
-            now = Date.now();
-            if (!e.touches && e.originalEvent && e.originalEvent.touches) {
-              e.touches = e.originalEvent.touches; // jQuery compatibility
-            }
-            delta = now - (touch.last || now);
-            touch.el = $(parentIfText(e.touches[0].target));
-            if (touchTimeout) {
-              clearTimeout(touchTimeout);
-            }
-            touch.x1 = e.touches[0].pageX;
-            touch.y1 = e.touches[0].pageY;
-            if (delta > 0 && delta <= 250) {
-              touch.isDoubleTap = true;
-            }
-            touch.last = now;
-            longTapTimeout = setTimeout(longTap, longTapDelay);
-          })
-          .bind('touchmove', function(e){
-            cancelLongTap();
-            if (!e.touches && e.originalEvent && e.originalEvent.touches) {
-              e.touches = e.originalEvent.touches; // jQuery compatibility
-            }
-            touch.x2 = e.touches[0].pageX;
-            touch.y2 = e.touches[0].pageY;
-            if (Math.abs(touch.x1 - touch.x2) > 10) {
-              e.preventDefault();
-            }
-          })
-          .bind('touchend', function(e){
-             cancelLongTap();
-
-            // swipe
-            if ((touch.x2 && Math.abs(touch.x1 - touch.x2) > 30) ||
-                (touch.y2 && Math.abs(touch.y1 - touch.y2) > 30)) {
-
-              swipeTimeout = setTimeout(function() {
-                touch.el.trigger('swipe');
-                touch.el.trigger('swipe' + (swipeDirection(touch.x1, touch.x2, touch.y1, touch.y2)));
-                touch = {};
-              }, 0);
-            }
-            // normal tap
-            else if ('last' in touch) {
-
-              // delay by one tick so we can cancel the 'tap' event if 'scroll' fires
-              // ('tap' fires before 'scroll')
-              tapTimeout = setTimeout(function() {
-
-                // trigger universal 'tap' with the option to cancelTouch()
-                // (cancelTouch cancels processing of single vs double taps for faster 'tap' response)
-                var event = $.Event('tap');
-                event.cancelTouch = cancelAll;
-                touch.el.trigger(event);
-
-                // trigger double tap immediately
-                if (touch.isDoubleTap) {
-                  touch.el.trigger('doubleTap');
-                  touch = {};
-                }
-
-                // trigger single tap after 250ms of inactivity
-                else {
-                  touchTimeout = setTimeout(function(){
-                    touchTimeout = null;
-                    touch.el.trigger('singleTap');
-                    touch = {};
-                  }, 250);
-                }
-
-              }, 0);
-            }
-          })
-          .bind('touchcancel', cancelAll);
-
-        $(window).bind('scroll', cancelAll);
-      });
-
-      ['swipe', 'swipeLeft', 'swipeRight', 'swipeUp', 'swipeDown', 'doubleTap', 'tap', 'singleTap', 'longTap'].forEach(function(m){
-        $.fn[m] = function(callback){ return this.bind(m, callback); };
-      });
-    })();
-    // End Zepto.js
-
-
-    (function($){var x,y,t;window.addEventListener('touchstart',function(e){x=e.touches[0].clientX;y=e.touches[0].clientY;},true);window.addEventListener('touchmove',function(e){x=e.touches[0].clientX;y=e.touches[0].clientY;},true);window.addEventListener('touchend',function(e){t=new Date();},true);$(window).on('tap doubleTap',function(e){if(!e.defaultPrevented){t=0;}});window.addEventListener('click',function(e){var time_threshold=1000,space_threshold=30;if(new Date()-t<=time_threshold&&Math.abs(e.clientX-x)<=space_threshold&&Math.abs(e.clientY-y)<=space_threshold){e.stopPropagation();e.preventDefault();}},true);}(Zepto));
 
 
   } // end if(Modernizr.touch)
@@ -298,13 +162,13 @@ $(document).ready(function(){
   }
 
   // Standard Gov Banner display code
-  $('#gov-link-3').on(EWF.activateEventName, function(e) {
+  $('#gov-link-3').on('click', function(e) {
     e.preventDefault();
     EWF.$body.addClass('active-gov-bar-search');
   });
 
   // Active Elements
-  $('[data-active]').on(EWF.activateEventName, function(e) {
+  $('[data-active]').on('click', function(e) {
 
     // Active attribute class
     var $clickedElm = $(this),
@@ -368,7 +232,7 @@ $(document).ready(function(){
       // Remove active state class from the clicked element
       $clickedElm.removeClass(selectedClass);
       // Remove any stray body click event
-      EWF.$body.off(EWF.activateEventName);
+      EWF.$body.off('click');
     }
     else {
       // Add active state class from header
@@ -378,7 +242,7 @@ $(document).ready(function(){
       $clickedElm.addClass(selectedClass);
 
       // Setup the on click function to close open drop down if the user clicks outside the active element.
-      EWF.$body.on(EWF.activateEventName, function(e) {
+      EWF.$body.on('click', function(e) {
         var activeElm = $('.active'),
             clicked = $(this);
 
@@ -407,7 +271,7 @@ $(document).ready(function(){
           activeElm.removeClass('active');
 
           // Remove this click event
-          EWF.$body.off(EWF.activateEventName);
+          EWF.$body.off('click');
 
         } else if (e.target.tagName === "INPUT" &&  $(e.target).attr('type') === "submit" ) {
 
