@@ -1,6 +1,7 @@
 /*global module: false */
 module.exports = function(grunt) {
-        var globule = require('globule');
+
+    var globule = require('globule'); // Declare globule for use in the Gruntfile
 
     // Project configuration
     grunt.initConfig({
@@ -11,45 +12,40 @@ module.exports = function(grunt) {
                 report: 'min' // Print size savings to the command line
             },
             excelsior: {
-                files: [
+                files:
+                    globule.findMapping(
+                    [
+                         'excelsior/js/core/*.js', // Source files to find
+                        '!excelsior/js/core/*.min.js' // Source files to exclude
+                    ],
                     {
-                        cwd: 'excelsior/js/core/',
-                        src: [
-                            '*.js',
-                            '!*.min.js'
-                        ],
-                        expand: true,
-                        dest:'excelsior/js/core/',
-                        ext: '.min.js'
-                    }
-                ]
+                        ext: '.min.js', // Give them a .min.js extension
+                        extDot: 'last'  // Fixes the issue of finding multiple dots in a filename
+                    })
             },
             foundation: {
-                files: globule.findMapping(['excelsior/js/foundation/*.js', '!excelsior/js/foundation/*.min.js'], {ext: '.min.js', extDot: 'last'})
-                        // expand: true,
-                        // cwd: 'excelsior/js/foundation/',
-                        // src: [
-                            // '**/*.js',
-                            // '!*.min.js'
-                        // ],
-                        // dest:'excelsior/js/foundation/',
-                        // ext: '.min.js',
-                        // extDot: "last"
-
+                files:
+                    globule.findMapping(
+                    [
+                         'excelsior/js/foundation/*.js', // Source files to find
+                        '!excelsior/js/foundation/*.min.js' // Source files to exclude
+                    ],
+                    {
+                        ext: '.min.js', // Give them a .min.js extension
+                        extDot: 'last'  // Fixes the issue of finding multiple dots in a filename
+                    })
             },
             project: {
-                files: [
+                files:
+                    globule.findMapping(
+                    [
+                         'project-assets/js/*.js', // Source files to find
+                        '!project-assets/js/*.min.js' // Source files to exclude
+                    ],
                     {
-                        cwd: 'project-assets/js/',
-                        src: [
-                            '*.js',
-                            '!*.min.js'
-                        ],
-                        expand: true,
-                        dest:'project-assets/js/',
-                        ext: '.min.js'
-                    }
-                ]
+                        ext: '.min.js', // Give them a .min.js extension
+                        extDot: 'last'  // Fixes the issue of finding multiple dots in a filename
+                    })
             }
         },
         jshint: {
