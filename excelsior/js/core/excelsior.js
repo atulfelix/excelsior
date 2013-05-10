@@ -98,6 +98,10 @@ EWF.fixImagePath = function _fixImagePath() {
   // Determine click type
   if (Modernizr.touch) {
 
+    // Setup fastclick
+    (function() {
+        FastClick.attach(document.body);
+    })();
 
   } // end if(Modernizr.touch)
 
@@ -157,141 +161,132 @@ EWF.fixImagePath = function _fixImagePath() {
  */
 $(document).ready(function(){
 
-  if (!EWF.$body) {
-    EWF.$body = $('body');
-  }
-
-  // Standard Gov Banner display code
-  $('#gov-link-3').on('click', function(e) {
-    e.preventDefault();
-    EWF.$body.addClass('active-gov-bar-search');
-  });
-
-  // Active Elements
-  $('[data-active]').on('click', function(e) {
-
-    // Active attribute class
-    var $clickedElm = $(this),
-        activeClass = $clickedElm.attr('data-active'),
-        $activeElm = $('.active'),
-        selectedClass = 'active';
-
-    /**
-     * Closes pre-existing active items
-     * @param {object} active The active element
-     */
-    function removeOtherActive(active) {
-
-      // Get the old active class to remove from the body tag
-      var activeClass = active.attr('data-active');
-
-      // Remove the old active class
-      EWF.$body.removeClass(activeClass);
-
-      // Remove the active class from the old active item
-      active.removeClass('active');
-
+    if (!EWF.$body) {
+        EWF.$body = $('body');
     }
 
-    /**
-     * Special functionality determined by the data-active value
-     * @param {object} activeElm The active element
-     */
-    function specialEvents(activeElm) {
+    // Standard Gov Banner display code
+    $('#gov-link-3').on('click', function(e) {
+        e.preventDefault();
+        EWF.$body.addClass('active-gov-bar-search');
+    });
 
-      if (activeElm === 'active-site-search') {
-        $('#site-search-box').focus();
-      }
+    // Active Elements
+    $('[data-active]').on('click', function(e) {
 
-      if (activeElm === 'active-site-menu') {
-        // Check to see if off canvas is being used
-        if (EWF.$body.hasClass('off-canvas') && EWF.$body.hasClass('active-site-menu')) {
-          // Get the screen size and set it has a min-height
-          //document.getElementsByTagName("body").style.minHeight = screen.height + "px";
-          EWF.$body.css('min-height',screen.height+'px');
+        // Active attribute class
+        var $clickedElm = $(this),
+            activeClass = $clickedElm.attr('data-active'),
+            $activeElm = $('.active'),
+            selectedClass = 'active';
+
+        /**
+        * Closes pre-existing active items
+        * @param {object} active The active element
+        */
+        function removeOtherActive(active) {
+
+            // Get the old active class to remove from the body tag
+            var activeClass = active.attr('data-active');
+
+            // Remove the old active class
+            EWF.$body.removeClass(activeClass);
+
+            // Remove the active class from the old active item
+            active.removeClass('active');
+
         }
-        else {
-          // Remove min height
-          EWF.$body.css('min-height','');
-        }
-      }
-    }
 
-    // Check to see if there is already and active item
-    if ($activeElm.length > 0) {
-      // Check to make sure its not the same as the currently clicked item
-      if ($activeElm.attr('data-active') !== $clickedElm.attr('data-active')) {
-        removeOtherActive($activeElm);
-      }
-    }
+        /**
+        * Special functionality determined by the data-active value
+        * @param {object} activeElm The active element
+        */
+        function specialEvents(activeElm) {
 
-    // Check to see if the item is active
-    if (EWF.$body.hasClass(activeClass)) {
-      // Remove active state class from header
-      EWF.$body.removeClass(activeClass);
-      // Remove active state class from the clicked element
-      $clickedElm.removeClass(selectedClass);
-      // Remove any stray body click event
-      EWF.$body.off('click');
-    }
-    else {
-      // Add active state class from header
-      EWF.$body.addClass(activeClass);
-
-      // Add active state class from clicked element
-      $clickedElm.addClass(selectedClass);
-
-      // Setup the on click function to close open drop down if the user clicks outside the active element.
-      EWF.$body.on('click', function(e) {
-        var activeElm = $('.active'),
-            clicked = $(this);
-
-        console.log(e);
-
-        // Check for active elements
-        if (activeElm.length > 0 && e.target.tagName !== "INPUT") {
-
-          // Check to see if the currently clicked items is an anchor tag, if it is make sure we go to the link instead of ignoring the action
-          if (e.target.tagName === "A" &&  $(e.target).attr('href') !== undefined) {
-
-            // Check to see if the href is not just "#"
-            if ($(e.target).attr('href') !== "#") {
-                location = $(e.target).attr('href');
+            if (activeElm === 'active-site-search') {
+                $('#site-search-box').focus();
             }
 
-          }
+            if (activeElm === 'active-site-menu') {
 
-          // Since we have an active element get the body class we need
-          var activeClass = activeElm.attr('data-active');
+                // Check to see if off canvas is being used
+                if (EWF.$body.hasClass('off-canvas') && EWF.$body.hasClass('active-site-menu')) {
+                    // Get the screen size and set it has a min-height
+                    //document.getElementsByTagName("body").style.minHeight = screen.height + "px";
+                    EWF.$body.css('min-height',screen.height+'px');
+                } else {
+                    // Remove min height
+                    EWF.$body.css('min-height','');
+                }
+            }
+        }
 
-          // Remove the active element class
-          EWF.$body.removeClass(activeClass);
+        // Check to see if there is already and active item
+        if ($activeElm.length > 0) {
 
-          // Remove active from the active element
-          activeElm.removeClass('active');
-
-          // Remove this click event
-          EWF.$body.off('click');
-
-        } else if (e.target.tagName === "INPUT" &&  $(e.target).attr('type') === "submit" ) {
-
-            $(e.target).parents('form').submit();
+            // Check to make sure its not the same as the currently clicked item
+            if ($activeElm.attr('data-active') !== $clickedElm.attr('data-active')) {
+                removeOtherActive($activeElm);
+            }
 
         }
 
-      });
-    }
+        // Check to see if the item is active
+        if (EWF.$body.hasClass(activeClass)) {
 
-    // Check to see if anything special has to happen based on data-active value
-    specialEvents(activeClass);
+            // Remove active state class from header
+            EWF.$body.removeClass(activeClass);
 
-    // Prevent Defaults
-    e.preventDefault();
+            // Remove active state class from the clicked element
+            $clickedElm.removeClass(selectedClass);
 
-    // Stop the click from moving up.
-    e.stopPropagation();
+            // Remove any stray body click event
+            EWF.$body.off('click');
 
-  });
+        } else {
+            // Add active state class from header
+            EWF.$body.addClass(activeClass);
+
+            // Add active state class from clicked element
+            $clickedElm.addClass(selectedClass);
+
+            // Setup the on click function to close open drop down if the user clicks outside the active element.
+            EWF.$body.on('click', function(e) {
+                var activeElm = $('.active'),
+                clicked = $(this);
+
+                // Check for active elements
+                if (activeElm.length > 0 && e.target.tagName !== "INPUT") {
+
+                    // Since we have an active element get the body class we need
+                    var activeClass = activeElm.attr('data-active');
+
+                    // Remove the active element class
+                    EWF.$body.removeClass(activeClass);
+
+                    // Remove active from the active element
+                    activeElm.removeClass('active');
+
+                    // Remove this click event
+                    EWF.$body.off('click');
+
+                }
+
+            });
+
+            // Check to see if anything special has to happen based on data-active value
+            specialEvents(activeClass);
+
+            // Prevent Defaults
+            e.preventDefault();
+
+            // Stop the click from moving up.
+            e.stopPropagation();
+
+        }
+
+    });
+
 });
 
 /**
