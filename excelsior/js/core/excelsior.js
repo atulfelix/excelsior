@@ -73,14 +73,14 @@ $(document).ready(function(){EWF.init();});
  */
 EWF.fixImagePath = function _fixImagePath() {
     var currentUrl = document.location.pathname,
-        slashRegex = /\//g,
-        index, numSubDirectories, i;
-
-    index = currentUrl.indexOf(EWF.projectRoot);
+        slashRegex, index, numSubDirectories, i;
 
     if (currentUrl < 0) { // Cannot determine relative path
         return false;
     }
+
+    index = currentUrl.indexOf(EWF.projectRoot);
+    slashRegex = /\//g;
 
     // Trim path down to just the Excelsior
     currentUrl = currentUrl.substr(index);
