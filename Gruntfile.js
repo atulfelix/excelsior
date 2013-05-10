@@ -8,8 +8,8 @@ module.exports = function(grunt) {
         pkg: grunt.file.readJSON('package.json'),
         uglify: {
             options: {
-                mangle: false, // Don't change variable and function names
-                report: 'min' // Print size savings to the command line
+                mangle: false//, // Don't change variable and function names
+                //report: 'min' // Print size savings to the command line
             },
             excelsior: {
                 files:
@@ -23,6 +23,23 @@ module.exports = function(grunt) {
                         extDot: 'last'  // Fixes the issue of finding multiple dots in a filename
                     })
             },
+        // The following pattern will be easily usable once @cowboy upstreams his node-globule
+        // patch into Grunt Core: https://github.com/gruntjs/grunt/pull/750#issuecomment-17495530
+        // Until then, we're forced to use the globule method above to not skip over files
+        // with multiple dots in their filenames. - Eric 5/10/13
+            /*  files: [
+                    {
+                        cwd: 'excelsior/js/core/',
+                        src: [
+                            '*.js',
+                            '!*.min.js'
+                        ],
+                        expand: true,
+                        dest:'excelsior/js/core/',
+                        ext: '.min.js'
+                    }
+                ]
+            },*/
             foundation: {
                 files:
                     globule.findMapping(
@@ -35,6 +52,19 @@ module.exports = function(grunt) {
                         extDot: 'last'  // Fixes the issue of finding multiple dots in a filename
                     })
             },
+            /*  files: [
+                    {
+                        cwd: 'excelsior/js/foundation/',
+                        src: [
+                            '*.js',
+                            '!*.min.js'
+                        ],
+                        expand: true,
+                        dest:'excelsior/js/foundation/',
+                        ext: '.min.js'
+                    }
+                ]
+            },*/
             project: {
                 files:
                     globule.findMapping(
@@ -47,6 +77,19 @@ module.exports = function(grunt) {
                         extDot: 'last'  // Fixes the issue of finding multiple dots in a filename
                     })
             }
+            /*  files: [
+                    {
+                        cwd: 'project-assets/js/',
+                        src: [
+                            '*.js',
+                            '!*.min.js'
+                        ],
+                        expand: true,
+                        dest:'project-assets/js/',
+                        ext: '.min.js'
+                    }
+                ]
+            }*/
         },
         jshint: {
             options: {
@@ -202,9 +245,9 @@ module.exports = function(grunt) {
             }
         },
         cssmin: {
-            options: {
+            /*options: {
                 report: 'min'
-            },
+            },*/
             excelsior: {
                 files: [
                     {
