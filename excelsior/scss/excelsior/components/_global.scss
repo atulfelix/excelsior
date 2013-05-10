@@ -1,6 +1,10 @@
 // Base styles
 // -----------------------
 
+html {
+    -ms-overflow-style: scrollbar; // Stops IE10 from plopping a scroller over your content
+}
+
 body {
     font-family: $font-sans;
 }
