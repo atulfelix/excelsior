@@ -1,5 +1,7 @@
 /*global module: false */
 module.exports = function(grunt) {
+        var globule = require('globule');
+
     // Project configuration
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
@@ -23,18 +25,17 @@ module.exports = function(grunt) {
                 ]
             },
             foundation: {
-                files: [
-                    {
-                        expand: true,
-                        cwd: 'excelsior/js/foundation/',
-                        src: [
-                            '**/*.js',
-                            '!*.min.js'
-                        ],
-                        dest:'excelsior/js/foundation/',
-                        ext: '.min.js'
-                    }
-                ]
+                files: globule.findMapping(['excelsior/js/foundation/*.js', '!excelsior/js/foundation/*.min.js'], {ext: '.min.js', extDot: 'last'})
+                        // expand: true,
+                        // cwd: 'excelsior/js/foundation/',
+                        // src: [
+                            // '**/*.js',
+                            // '!*.min.js'
+                        // ],
+                        // dest:'excelsior/js/foundation/',
+                        // ext: '.min.js',
+                        // extDot: "last"
+
             },
             project: {
                 files: [
