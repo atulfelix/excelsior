@@ -1,15 +1,33 @@
 /*global module: false */
 module.exports = function(grunt) {
+
+    var globule = require('globule'); // Declare globule for use in the Gruntfile
+
     // Project configuration
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         uglify: {
             options: {
-                mangle: false, // Don't change variable and function names
-                report: 'min' // Print size savings to the command line
+                mangle: false//, // Don't change variable and function names
+                //report: 'min' // Print size savings to the command line
             },
             excelsior: {
-                files: [
+                files:
+                    globule.findMapping(
+                    [
+                         'excelsior/js/core/*.js', // Source files to find
+                        '!excelsior/js/core/*.min.js' // Source files to exclude
+                    ],
+                    {
+                        ext: '.min.js', // Give them a .min.js extension
+                        extDot: 'last'  // Fixes the issue of finding multiple dots in a filename
+                    })
+            },
+        // The following pattern will be easily usable once @cowboy upstreams his node-globule
+        // patch into Grunt Core: https://github.com/gruntjs/grunt/pull/750#issuecomment-17495530
+        // Until then, we're forced to use the globule method above to not skip over files
+        // with multiple dots in their filenames. - Eric 5/10/13
+            /*  files: [
                     {
                         cwd: 'excelsior/js/core/',
                         src: [
@@ -21,9 +39,45 @@ module.exports = function(grunt) {
                         ext: '.min.js'
                     }
                 ]
+            },*/
+            foundation: {
+                files:
+                    globule.findMapping(
+                    [
+                         'excelsior/js/foundation/*.js', // Source files to find
+                        '!excelsior/js/foundation/*.min.js' // Source files to exclude
+                    ],
+                    {
+                        ext: '.min.js', // Give them a .min.js extension
+                        extDot: 'last'  // Fixes the issue of finding multiple dots in a filename
+                    })
             },
+            /*  files: [
+                    {
+                        cwd: 'excelsior/js/foundation/',
+                        src: [
+                            '*.js',
+                            '!*.min.js'
+                        ],
+                        expand: true,
+                        dest:'excelsior/js/foundation/',
+                        ext: '.min.js'
+                    }
+                ]
+            },*/
             project: {
-                files: [
+                files:
+                    globule.findMapping(
+                    [
+                         'project-assets/js/*.js', // Source files to find
+                        '!project-assets/js/*.min.js' // Source files to exclude
+                    ],
+                    {
+                        ext: '.min.js', // Give them a .min.js extension
+                        extDot: 'last'  // Fixes the issue of finding multiple dots in a filename
+                    })
+            }
+            /*  files: [
                     {
                         cwd: 'project-assets/js/',
                         src: [
@@ -35,7 +89,7 @@ module.exports = function(grunt) {
                         ext: '.min.js'
                     }
                 ]
-            }
+            }*/
         },
         jshint: {
             options: {
@@ -191,9 +245,9 @@ module.exports = function(grunt) {
             }
         },
         cssmin: {
-            options: {
+            /*options: {
                 report: 'min'
-            },
+            },*/
             excelsior: {
                 files: [
                     {
@@ -239,7 +293,7 @@ module.exports = function(grunt) {
     grunt.registerTask('prod', 'Production build',
         [
             'compass', // Clean old sass cache and generate Excelsior & Project css
-            'uglify', // minify Excelsior and Project Asset js
+            'uglify', // minify Excelsior, Foundation and Project Asset js
             'concat:excelsior', // Combine excelsior.css with foundation and normalize
             'cssmin', // minify the Excelsior & Project css
             'concat:addBanner' // add the Excelsior banner to css and JS files
@@ -252,7 +306,7 @@ module.exports = function(grunt) {
             'clean', // clean up generated files
             'compass:clean', // clean compas cache
             'compass:excelsior', // Create Excelsior CSS files
-            'uglify', // minify Excelsior JS
+            'uglify', // minify Excelsior, and Foundation JS
             'concat:excelsior', // Combine excelsior.css with foundation and normalize
             'cssmin:excelsior', // minify the excelsior css
             'concat:addBanner', // add the Excelsior banner to css and JS files

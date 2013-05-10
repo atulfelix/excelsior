@@ -15,7 +15,6 @@
  * @namespace
  */
 var EWF = {
-    activateEventName: 'click',
     ua: navigator.userAgent,
     iOS: false,
     $body: null,
@@ -74,17 +73,17 @@ $(document).ready(function(){EWF.init();});
  */
 EWF.fixImagePath = function _fixImagePath() {
     var currentUrl = document.location.pathname,
-        slashRegex = /\//g,
-        index, numSubDirectories, i;
-
-    index = currentUrl.indexOf(EWF.projectRoot);
+        slashRegex, index, numSubDirectories, i;
 
     if (currentUrl < 0) { // Cannot determine relative path
         return false;
     }
 
     // Trim path down to just the Excelsior
+    index = currentUrl.indexOf(EWF.projectRoot);
     currentUrl = currentUrl.substr(index);
+
+    slashRegex = /\//g;
 
     if (slashRegex.test(currentUrl)) {
         // Add a dot-dot-slash for each sub directory we're in
@@ -98,142 +97,11 @@ EWF.fixImagePath = function _fixImagePath() {
 (function () {
   // Determine click type
   if (Modernizr.touch) {
-    EWF.activateEventName = 'tap';
 
-    // Zepto.js Touch Events
-    // (c) 2010-2012 Thomas Fuchs
-    // Zepto.js may be freely distributed under the MIT license.
-    // Modified to work with jQuery 1.9.1 by NYS-ITS
-    (function(){
-      var touch = {},
-          touchTimeout, tapTimeout, swipeTimeout,
-          longTapDelay = 750, longTapTimeout;
-
-      function parentIfText(node) {
-        return 'tagName' in node ? node : node.parentNode;
-      }
-
-      function swipeDirection(x1, x2, y1, y2) {
-        var xDelta = Math.abs(x1 - x2),
-            yDelta = Math.abs(y1 - y2);
-        return xDelta >= yDelta ? (x1 - x2 > 0 ? 'Left' : 'Right') : (y1 - y2 > 0 ? 'Up' : 'Down');
-      }
-
-      function longTap() {
-        longTapTimeout = null;
-        if (touch.last) {
-          touch.el.trigger('longTap');
-          touch = {};
-        }
-      }
-
-      function cancelLongTap() {
-        if (longTapTimeout) {
-          clearTimeout(longTapTimeout);
-        }
-        longTapTimeout = null;
-      }
-
-      function cancelAll() {
-        if (touchTimeout) { clearTimeout(touchTimeout); }
-        if (tapTimeout) { clearTimeout(tapTimeout); }
-        if (swipeTimeout) { clearTimeout(swipeTimeout); }
-        if (longTapTimeout) { clearTimeout(longTapTimeout); }
-        touchTimeout = tapTimeout = swipeTimeout = longTapTimeout = null;
-        touch = {};
-      }
-
-      $(document).ready(function(){
-        var now, delta;
-
-        $(document.body)
-          .bind('touchstart', function(e){
-            now = Date.now();
-            if (!e.touches && e.originalEvent && e.originalEvent.touches) {
-              e.touches = e.originalEvent.touches; // jQuery compatibility
-            }
-            delta = now - (touch.last || now);
-            touch.el = $(parentIfText(e.touches[0].target));
-            if (touchTimeout) {
-              clearTimeout(touchTimeout);
-            }
-            touch.x1 = e.touches[0].pageX;
-            touch.y1 = e.touches[0].pageY;
-            if (delta > 0 && delta <= 250) {
-              touch.isDoubleTap = true;
-            }
-            touch.last = now;
-            longTapTimeout = setTimeout(longTap, longTapDelay);
-          })
-          .bind('touchmove', function(e){
-            cancelLongTap();
-            if (!e.touches && e.originalEvent && e.originalEvent.touches) {
-              e.touches = e.originalEvent.touches; // jQuery compatibility
-            }
-            touch.x2 = e.touches[0].pageX;
-            touch.y2 = e.touches[0].pageY;
-            if (Math.abs(touch.x1 - touch.x2) > 10) {
-              e.preventDefault();
-            }
-          })
-          .bind('touchend', function(e){
-             cancelLongTap();
-
-            // swipe
-            if ((touch.x2 && Math.abs(touch.x1 - touch.x2) > 30) ||
-                (touch.y2 && Math.abs(touch.y1 - touch.y2) > 30)) {
-
-              swipeTimeout = setTimeout(function() {
-                touch.el.trigger('swipe');
-                touch.el.trigger('swipe' + (swipeDirection(touch.x1, touch.x2, touch.y1, touch.y2)));
-                touch = {};
-              }, 0);
-            }
-            // normal tap
-            else if ('last' in touch) {
-
-              // delay by one tick so we can cancel the 'tap' event if 'scroll' fires
-              // ('tap' fires before 'scroll')
-              tapTimeout = setTimeout(function() {
-
-                // trigger universal 'tap' with the option to cancelTouch()
-                // (cancelTouch cancels processing of single vs double taps for faster 'tap' response)
-                var event = $.Event('tap');
-                event.cancelTouch = cancelAll;
-                touch.el.trigger(event);
-
-                // trigger double tap immediately
-                if (touch.isDoubleTap) {
-                  touch.el.trigger('doubleTap');
-                  touch = {};
-                }
-
-                // trigger single tap after 250ms of inactivity
-                else {
-                  touchTimeout = setTimeout(function(){
-                    touchTimeout = null;
-                    touch.el.trigger('singleTap');
-                    touch = {};
-                  }, 250);
-                }
-
-              }, 0);
-            }
-          })
-          .bind('touchcancel', cancelAll);
-
-        $(window).bind('scroll', cancelAll);
-      });
-
-      ['swipe', 'swipeLeft', 'swipeRight', 'swipeUp', 'swipeDown', 'doubleTap', 'tap', 'singleTap', 'longTap'].forEach(function(m){
-        $.fn[m] = function(callback){ return this.bind(m, callback); };
-      });
+    // Setup fastclick
+    (function() {
+        FastClick.attach(document.body);
     })();
-    // End Zepto.js
-
-
-    (function($){var x,y,t;window.addEventListener('touchstart',function(e){x=e.touches[0].clientX;y=e.touches[0].clientY;},true);window.addEventListener('touchmove',function(e){x=e.touches[0].clientX;y=e.touches[0].clientY;},true);window.addEventListener('touchend',function(e){t=new Date();},true);$(window).on('tap doubleTap',function(e){if(!e.defaultPrevented){t=0;}});window.addEventListener('click',function(e){var time_threshold=1000,space_threshold=30;if(new Date()-t<=time_threshold&&Math.abs(e.clientX-x)<=space_threshold&&Math.abs(e.clientY-y)<=space_threshold){e.stopPropagation();e.preventDefault();}},true);}(Zepto));
-
 
   } // end if(Modernizr.touch)
 
@@ -293,141 +161,132 @@ EWF.fixImagePath = function _fixImagePath() {
  */
 $(document).ready(function(){
 
-  if (!EWF.$body) {
-    EWF.$body = $('body');
-  }
-
-  // Standard Gov Banner display code
-  $('#gov-link-3').on(EWF.activateEventName, function(e) {
-    e.preventDefault();
-    EWF.$body.addClass('active-gov-bar-search');
-  });
-
-  // Active Elements
-  $('[data-active]').on(EWF.activateEventName, function(e) {
-
-    // Active attribute class
-    var $clickedElm = $(this),
-        activeClass = $clickedElm.attr('data-active'),
-        $activeElm = $('.active'),
-        selectedClass = 'active';
-
-    /**
-     * Closes pre-existing active items
-     * @param {object} active The active element
-     */
-    function removeOtherActive(active) {
-
-      // Get the old active class to remove from the body tag
-      var activeClass = active.attr('data-active');
-
-      // Remove the old active class
-      EWF.$body.removeClass(activeClass);
-
-      // Remove the active class from the old active item
-      active.removeClass('active');
-
+    if (!EWF.$body) {
+        EWF.$body = $('body');
     }
 
-    /**
-     * Special functionality determined by the data-active value
-     * @param {object} activeElm The active element
-     */
-    function specialEvents(activeElm) {
+    // Standard Gov Banner display code
+    $('#gov-link-3').on('click', function(e) {
+        e.preventDefault();
+        EWF.$body.addClass('active-gov-bar-search');
+    });
 
-      if (activeElm === 'active-site-search') {
-        $('#site-search-box').focus();
-      }
+    // Active Elements
+    $('[data-active]').on('click', function(e) {
 
-      if (activeElm === 'active-site-menu') {
-        // Check to see if off canvas is being used
-        if (EWF.$body.hasClass('off-canvas') && EWF.$body.hasClass('active-site-menu')) {
-          // Get the screen size and set it has a min-height
-          //document.getElementsByTagName("body").style.minHeight = screen.height + "px";
-          EWF.$body.css('min-height',screen.height+'px');
+        // Active attribute class
+        var $clickedElm = $(this),
+            activeClass = $clickedElm.attr('data-active'),
+            $activeElm = $('.active'),
+            selectedClass = 'active';
+
+        /**
+        * Closes pre-existing active items
+        * @param {object} active The active element
+        */
+        function removeOtherActive(active) {
+
+            // Get the old active class to remove from the body tag
+            var activeClass = active.attr('data-active');
+
+            // Remove the old active class
+            EWF.$body.removeClass(activeClass);
+
+            // Remove the active class from the old active item
+            active.removeClass('active');
+
         }
-        else {
-          // Remove min height
-          EWF.$body.css('min-height','');
-        }
-      }
-    }
 
-    // Check to see if there is already and active item
-    if ($activeElm.length > 0) {
-      // Check to make sure its not the same as the currently clicked item
-      if ($activeElm.attr('data-active') !== $clickedElm.attr('data-active')) {
-        removeOtherActive($activeElm);
-      }
-    }
+        /**
+        * Special functionality determined by the data-active value
+        * @param {object} activeElm The active element
+        */
+        function specialEvents(activeElm) {
 
-    // Check to see if the item is active
-    if (EWF.$body.hasClass(activeClass)) {
-      // Remove active state class from header
-      EWF.$body.removeClass(activeClass);
-      // Remove active state class from the clicked element
-      $clickedElm.removeClass(selectedClass);
-      // Remove any stray body click event
-      EWF.$body.off(EWF.activateEventName);
-    }
-    else {
-      // Add active state class from header
-      EWF.$body.addClass(activeClass);
-
-      // Add active state class from clicked element
-      $clickedElm.addClass(selectedClass);
-
-      // Setup the on click function to close open drop down if the user clicks outside the active element.
-      EWF.$body.on(EWF.activateEventName, function(e) {
-        var activeElm = $('.active'),
-            clicked = $(this);
-
-        console.log(e);
-
-        // Check for active elements
-        if (activeElm.length > 0 && e.target.tagName !== "INPUT") {
-
-          // Check to see if the currently clicked items is an anchor tag, if it is make sure we go to the link instead of ignoring the action
-          if (e.target.tagName === "A" &&  $(e.target).attr('href') !== undefined) {
-
-            // Check to see if the href is not just "#"
-            if ($(e.target).attr('href') !== "#") {
-                location = $(e.target).attr('href');
+            if (activeElm === 'active-site-search') {
+                $('#site-search-box').focus();
             }
 
-          }
+            if (activeElm === 'active-site-menu') {
 
-          // Since we have an active element get the body class we need
-          var activeClass = activeElm.attr('data-active');
+                // Check to see if off canvas is being used
+                if (EWF.$body.hasClass('off-canvas') && EWF.$body.hasClass('active-site-menu')) {
+                    // Get the screen size and set it has a min-height
+                    //document.getElementsByTagName("body").style.minHeight = screen.height + "px";
+                    EWF.$body.css('min-height',screen.height+'px');
+                } else {
+                    // Remove min height
+                    EWF.$body.css('min-height','');
+                }
+            }
+        }
 
-          // Remove the active element class
-          EWF.$body.removeClass(activeClass);
+        // Check to see if there is already and active item
+        if ($activeElm.length > 0) {
 
-          // Remove active from the active element
-          activeElm.removeClass('active');
-
-          // Remove this click event
-          EWF.$body.off(EWF.activateEventName);
-
-        } else if (e.target.tagName === "INPUT" &&  $(e.target).attr('type') === "submit" ) {
-
-            $(e.target).parents('form').submit();
+            // Check to make sure its not the same as the currently clicked item
+            if ($activeElm.attr('data-active') !== $clickedElm.attr('data-active')) {
+                removeOtherActive($activeElm);
+            }
 
         }
 
-      });
-    }
+        // Check to see if the item is active
+        if (EWF.$body.hasClass(activeClass)) {
 
-    // Check to see if anything special has to happen based on data-active value
-    specialEvents(activeClass);
+            // Remove active state class from header
+            EWF.$body.removeClass(activeClass);
 
-    // Prevent Defaults
-    e.preventDefault();
+            // Remove active state class from the clicked element
+            $clickedElm.removeClass(selectedClass);
 
-    // Stop the click from moving up.
-    e.stopPropagation();
+            // Remove any stray body click event
+            EWF.$body.off('click');
 
-  });
+        } else {
+            // Add active state class from header
+            EWF.$body.addClass(activeClass);
+
+            // Add active state class from clicked element
+            $clickedElm.addClass(selectedClass);
+
+            // Setup the on click function to close open drop down if the user clicks outside the active element.
+            EWF.$body.on('click', function(e) {
+                var activeElm = $('.active'),
+                clicked = $(this);
+
+                // Check for active elements
+                if (activeElm.length > 0 && e.target.tagName !== "INPUT") {
+
+                    // Since we have an active element get the body class we need
+                    var activeClass = activeElm.attr('data-active');
+
+                    // Remove the active element class
+                    EWF.$body.removeClass(activeClass);
+
+                    // Remove active from the active element
+                    activeElm.removeClass('active');
+
+                    // Remove this click event
+                    EWF.$body.off('click');
+
+                }
+
+            });
+
+            // Check to see if anything special has to happen based on data-active value
+            specialEvents(activeClass);
+
+            // Prevent Defaults
+            e.preventDefault();
+
+            // Stop the click from moving up.
+            e.stopPropagation();
+
+        }
+
+    });
+
 });
 
 /**

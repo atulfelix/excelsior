@@ -30,7 +30,7 @@ $(document).ready(function() {
             $link.addClass('icon-right-open');
 
             // We have a sub menu item so create the click event
-            $link.on(EWF.activateEventName, function (e) {
+            $link.on('click', function (e) {
                 var menuCheck;
 
                 // Prevent default link action
@@ -69,7 +69,7 @@ $(document).ready(function() {
                     EWF.$body.addClass('active-sub-menu');
 
                     // Add click off event handler on body
-                    EWF.$body.on(EWF.activateEventName, function () {
+                    EWF.$body.on('click', function () {
                         // Find all occurances off active menu, active and active-sub-menu and remove them
                         EWF.$body.removeClass('active-sub-menu');
                         $('#global-nav .active').removeClass('active');
@@ -93,7 +93,7 @@ $(document).ready(function() {
     });
 
     // Bind for menu-back
-    $('#menu-back').on(EWF.activateEventName, function (e) {
+    $('#menu-back').on('click', function (e) {
         var $numberOfSubs;
 
         // Prevent element default action
