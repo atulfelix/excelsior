@@ -22,6 +22,20 @@ module.exports = function(grunt) {
                     }
                 ]
             },
+            foundation: {
+                files: [
+                    {
+                        expand: true,
+                        cwd: 'excelsior/js/foundation/',
+                        src: [
+                            '**/*.js',
+                            '!*.min.js'
+                        ],
+                        dest:'excelsior/js/foundation/',
+                        ext: '.min.js'
+                    }
+                ]
+            },
             project: {
                 files: [
                     {
@@ -239,7 +253,7 @@ module.exports = function(grunt) {
     grunt.registerTask('prod', 'Production build',
         [
             'compass', // Clean old sass cache and generate Excelsior & Project css
-            'uglify', // minify Excelsior and Project Asset js
+            'uglify', // minify Excelsior, Foundation and Project Asset js
             'concat:excelsior', // Combine excelsior.css with foundation and normalize
             'cssmin', // minify the Excelsior & Project css
             'concat:addBanner' // add the Excelsior banner to css and JS files
@@ -252,7 +266,7 @@ module.exports = function(grunt) {
             'clean', // clean up generated files
             'compass:clean', // clean compas cache
             'compass:excelsior', // Create Excelsior CSS files
-            'uglify', // minify Excelsior JS
+            'uglify', // minify Excelsior, and Foundation JS
             'concat:excelsior', // Combine excelsior.css with foundation and normalize
             'cssmin:excelsior', // minify the excelsior css
             'concat:addBanner', // add the Excelsior banner to css and JS files
