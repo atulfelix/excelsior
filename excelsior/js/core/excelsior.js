@@ -79,11 +79,11 @@ EWF.fixImagePath = function _fixImagePath() {
         return false;
     }
 
-    index = currentUrl.indexOf(EWF.projectRoot);
-    slashRegex = /\//g;
-
     // Trim path down to just the Excelsior
+    index = currentUrl.indexOf(EWF.projectRoot);
     currentUrl = currentUrl.substr(index);
+
+    slashRegex = /\//g;
 
     if (slashRegex.test(currentUrl)) {
         // Add a dot-dot-slash for each sub directory we're in
