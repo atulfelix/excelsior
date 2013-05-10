@@ -1,3 +1,13 @@
+// Enable GPU with transitions
+* {
+    -webkit-transform: translatez(0);
+    -moz-transform: translatez(0);
+    -ms-transform: translatez(0);
+    -o-transform: translatez(0);
+    transform: translatez(0);
+}
+
+
 // Sub menu item arrows
 .icon-sub-menu:after {
     content: $icon-right-open;
