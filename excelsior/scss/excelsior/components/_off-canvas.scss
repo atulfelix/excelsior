@@ -122,7 +122,7 @@ body.off-canvas {
                 }
 
                 @include breakpoint($off-canvas-large-width, $no-query: true) {
-                    border-radius: 4px !important; /* Do not use mixin here */
+                    border-radius: 4px !important; /* Do not use mixin here */
                     background-clip: padding-box !important;
                 }
 

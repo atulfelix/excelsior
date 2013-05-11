@@ -26,5 +26,5 @@ $breakpoint-no-query-wrappers: false;
 @import "excelsior/components/_navigation.scss";
 @import "excelsior/components/_sticky-header.scss";
 
-// Must be loaded at the bottom
+// Do not change the order of these files:
 @import "excelsior/components/_off-canvas.scss";
