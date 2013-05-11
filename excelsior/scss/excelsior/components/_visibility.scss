@@ -1,17 +1,44 @@
-// Touch-enabled device targeting
-.show-for-no-touch { display: none !important; }
-.hide-for-no-touch { display: inherit !important; }
-.hide-for-no-touch li, li.hide-for-no-touch { display: list-item !important; }
-.no-touch .show-for-no-touch { display: inherit !important; }
-.no-touch .show-for-no-touch li, .no-touch li.show-for-no-touch { display: list-item !important; }
-.no-touch .hide-for-no-touch { display: none !important; }
-
 // Off-screen
 .hide-off-screen {
     display: block !important;
     position: absolute !important;
     left: -9999em !important;
     top: -9999em !important;
+}
+
+// Touch-enabled device targeting
+.show-for-no-touch {
+    display: inherit !important;
+
+    @include enhance-with(touch) {
+        display: none !important;
+    }
+}
+
+.show-for-no-touch li,
+li.show-for-no-touch {
+    display: list-item !important;
+
+    @include enhance-with(touch) {
+        display: none !important;
+    }
+}
+
+.hide-for-no-touch {
+    display: none !important;
+
+    @include enhance-with(touch) {
+        display: inherit !important;
+    }
+}
+
+.hide-for-no-touch li,
+li.hide-for-no-touch {
+    display: none !important;
+
+    @include enhance-with(touch) {
+        display: list-item !important;
+    }
 }
 
 // Monitor sizes
