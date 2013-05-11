@@ -172,7 +172,7 @@
             }
 
             $dropdown.prepend('<a href="#" data-dropdown="drop-' + tableId + '" class="small button dropdown radius">' + opts.dropdownLabel + '</a>');
-            $dropdown.append('<ul id="drop-' + tableId + '" class="f-dropdown rt-table-dropdown"></ul>');
+            $dropdown.append('<ul id="drop-' + tableId + '" class="f-dropdown rt-table-dropdown" style="position:absolute;top:0;left:-99999px;max-width:none;"></ul>');
         }
 
         /**
