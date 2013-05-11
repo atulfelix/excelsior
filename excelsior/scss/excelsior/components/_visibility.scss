@@ -45,41 +45,155 @@ li.hide-for-no-touch {
 // Only one of the following will be present and it is not affected by resizing or orientation change
 
 // Up to and including 480px
-.show-for-screen-max-mini { display: none !important; }
-.hide-for-screen-max-mini { display: inherit !important; }
-.hide-for-screen-max-mini li, li.hide-for-screen-max-mini { display: list-item !important; }
-.screen-max-tiny .show-for-screen-max-mini { display: inherit !important; }
-.screen-max-tiny .show-for-screen-max-mini li, .screen-max-tiny li.show-for-screen-max-mini { display: list-item !important; }
-.screen-max-tiny .hide-for-screen-max-mini { display: none !important; }
+.show-for-screen-max-mini {
+    display: none !important;
+
+    @include enhance-with(screen-max-tiny) {
+        display: inherit !important;
+    }
+}
+
+.show-for-screen-max-mini li,
+li.show-for-screen-max-mini {
+    @include enhance-with(screen-max-tiny) {
+        display: list-item !important;
+    }
+}
+
+.hide-for-screen-max-mini {
+    display: inherit !important;
+
+    @include enhance-with(screen-max-tiny) {
+        display: none !important;
+    }
+}
+
+.hide-for-screen-max-mini li,
+li.hide-for-screen-max-mini {
+    @include enhance-with(screen-max-tiny) {
+        display: list-item !important;
+    }
+}
 
 // Up to 767px (only `small-` classes will apply)
-.show-for-screen-max-medium { display: none !important; }
-.hide-for-screen-max-medium { display: inherit !important; }
-.hide-for-screen-max-medium li, li.hide-for-screen-max-medium { display: list-item !important; }
-.screen-max-small .show-for-screen-max-medium { display: inherit !important; }
-.screen-max-small .show-for-screen-max-medium li, .screen-max-small li.show-for-screen-max-medium { display: list-item !important; }
-.screen-max-small .hide-for-screen-max-medium { display: none !important; }
+.show-for-screen-max-medium {
+    display: none !important;
+
+    @include enhance-with(screen-max-small) {
+        display: inherit !important;
+    }
+}
+
+.show-for-screen-max-medium li,
+li.show-for-screen-max-medium {
+    @include enhance-with(screen-max-small) {
+        display: list-item !important;
+    }
+}
+
+.hide-for-screen-max-medium {
+    display: inherit !important;
+
+    @include enhance-with(screen-max-small) {
+        display: none !important;
+    }
+}
+
+.hide-for-screen-max-medium li,
+li.hide-for-screen-max-medium {
+    @include enhance-with(screen-max-small) {
+        display: list-item !important;
+    }
+}
 
 // 768px and higher (can show effects of both `small-` and `large-` classes)
-.show-for-screen-max-large { display: none !important; }
-.hide-for-screen-max-large { display: inherit !important; }
-.hide-for-screen-max-large li, li.hide-for-screen-max-large { display: list-item !important; }
-.screen-max-large .show-for-screen-max-large { display: inherit !important; }
-.screen-max-large .show-for-screen-max-large li, .screen-max-large li.show-for-screen-max-large { display: list-item !important; }
-.screen-max-large .hide-for-screen-max-large { display: none !important; }
+.show-for-screen-max-large {
+    display: none !important;
+
+    @include enhance-with(screen-max-large) {
+        display: inherit !important;
+    }
+}
+
+.show-for-screen-max-large li,
+li.show-for-screen-max-large {
+    @include enhance-with(screen-max-large) {
+        display: list-item !important;
+    }
+}
+
+.hide-for-screen-max-large {
+    display: inherit !important;
+
+    @include enhance-with(screen-max-large) {
+        display: none !important;
+    }
+}
+
+.hide-for-screen-max-large li,
+li.hide-for-screen-max-large {
+    display: list-item !important;
+}
+
 
 // IE classes
-.lt-ie9 .hide-for-lt-ie9 { display: none !important; }
-.show-for-lt-ie9 { display: none !important; }
-.lt-ie9 .show-for-lt-ie9 { display: inherit !important; }
-.lt-ie9 .show-for-lt-ie9 li, .lt-ie9 li.show-for-lt-ie9 { display: list-item !important; }
+.show-for-lt-ie9 {
+    display: none !important;
 
-.ie9 .hide-for-ie9 { display: none !important; }
-.show-for-ie9 { display: none !important; }
-.ie9 .show-for-ie9 { display: inherit !important; }
-.ie9 .show-for-ie9 li, .ie9 li.show-for-ie9 { display: list-item !important; }
+    @include enhance-with(lt-ie9) {
+        display: inherit !important;
+    }
+}
 
-.oldie .hide-for-oldie { display: none !important; }
-.show-for-oldie { display: none !important; }
-.oldie .show-for-oldie { display: inherit !important; }
-.oldie .show-for-oldie li, li.hide-for-oldie { display: list-item !important; }
+.show-for-lt-ie9 li,
+li.show-for-lt-ie9 {
+    @include enhance-with(lt-ie9) {
+        display: list-item !important;
+    }
+}
+
+.show-for-ie9 {
+    display: none !important;
+
+    @include enhance-with(ie9) {
+        display: inherit !important;
+    }
+}
+
+.show-for-ie9 li,
+li.show-for-ie9 {
+    @include enhance-with(ie9) {
+        display: list-item !important;
+    }
+}
+
+.hide-for-lt-ie9 {
+    display: inherit !important;
+
+    @include enhance-with(ie9) {
+        display: none !important;
+    }
+}
+
+.show-for-oldie {
+    display: none !important;
+
+    @include enhance-with(oldie) {
+        display: inherit !important;
+    }
+}
+
+.show-for-oldie li,
+li.show-for-oldie {
+    @include enhance-with(oldie) {
+        display: list-item !important;
+    }
+}
+
+.hide-for-oldie {
+    display: inherit !important;
+
+    @include enhance-with(oldie) {
+        display: none !important;
+    }
+}
