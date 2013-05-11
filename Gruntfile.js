@@ -65,6 +65,18 @@ module.exports = function(grunt) {
                     }
                 ]
             },*/
+            vendor: {
+                files:
+                    globule.findMapping(
+                    [
+                         'excelsior/js/vendor/*.js', // Source files to find
+                        '!excelsior/js/vendor/*.min.js' // Source files to exclude
+                    ],
+                    {
+                        ext: '.min.js', // Give them a .min.js extension
+                        extDot: 'last'  // Fixes the issue of finding multiple dots in a filename
+                    })
+            },
             project: {
                 files:
                     globule.findMapping(
@@ -181,6 +193,9 @@ module.exports = function(grunt) {
                             '!.git/**',
                             '!.gitignore',
                             '!.editorconfig',
+                            '!.lastBuilt',
+                            '!.travis-build.sh',
+                            '!.travis.yml',
                             '!excelsior.zip',
                             '!Gruntfile.js',
                             '!package.json',
@@ -190,8 +205,11 @@ module.exports = function(grunt) {
                             '!excelsior/.sass-cache/**',
                             '!excelsior/scss/**',
                             '!excelsior/images/excelsior-long-500.png',
-                            '!excelsior/images/source/**'
-
+                            '!excelsior/images/source/**',
+                            '!excelsior/js/**', // Exclude all the JS files
+                            'excelsior/js/**/*.min.js', // Include just the Min JS files
+                            '!excelsior/css/**', // Exclude all the CSS files
+                            'excelsior/css/**/*.min.css' // Include just the Min CSS files
                         ],
                         dest: 'excelsior/',
                         dot: true // be sure to grab dotfiles
