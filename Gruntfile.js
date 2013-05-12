@@ -293,8 +293,8 @@ module.exports = function(grunt) {
                         cwd: 'excelsior/',
                         src: [
                             'css/*.min.css',
-                            'js/core/*.min.js'.
-                            'js*.min.js'
+                            'js/core/*.min.js',
+                            'js/*.min.js'
                         ],
                         expand: true,
                         dest: 'excelsior/'
