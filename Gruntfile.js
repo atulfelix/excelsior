@@ -367,7 +367,9 @@ module.exports = function(grunt) {
             'compass:clean', // clean compas cache
             'compass:excelsior', // Create Excelsior CSS files
             'uglify', // minify Excelsior, and Foundation JS
-            'concat:excelsior', // Combine excelsior.css with foundation and normalize
+            'concat:excelsiorCSS', // Combine excelsior.css with foundation and normalize
+            'concat:excelsiorJS', // Combine the core js used on all exccelsior pages.
+            'concat:excelsiorProdJS', // Combine the core js used on all exccelsior pages.
             'cssmin:excelsior', // minify the excelsior css
             'concat:addBanner', // add the Excelsior banner to css and JS files
             'compress' // create zip file
