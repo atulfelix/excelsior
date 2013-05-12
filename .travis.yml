@@ -10,6 +10,8 @@ before_script:
 - gem install toolkit
 - npm install -g grunt-cli
 script:
+- grunt
+- grunt prod
 - grunt package
 after_success:
 - chmod -R 777 .travis-build.sh
