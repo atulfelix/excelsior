@@ -151,7 +151,8 @@ module.exports = function(grunt) {
             options: {
                 require: [
                     'breakpoint',
-                    'sass-media_query_combiner'
+                    'sass-media_query_combiner',
+                    'toolkit'
                 ],
                 cssDir: 'css',
                 sassDir: 'scss',
