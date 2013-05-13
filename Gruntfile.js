@@ -89,18 +89,6 @@ module.exports = function(grunt) {
                         extDot: 'last'  // Fixes the issue of finding multiple dots in a filename
                     })
             }
-            /*
-            excelsiorFULL: {
-                files:
-                    globule.findMapping(
-                    [
-                         'excelsior/js/excelsior.js' // Source files to find
-                    ],
-                    {
-                        ext: '.min.js', // Give them a .min.js extension
-                        extDot: 'last'  // Fixes the issue of finding multiple dots in a filename
-                    })
-            }
             /*  files: [
                     {
                         cwd: 'project-assets/js/',
@@ -264,8 +252,7 @@ module.exports = function(grunt) {
                         src: [
                             'excelsior/js/vendor/jquery.js',
                             'excelsior/js/vendor/fastclick.js',
-                            'excelsior/js/core/excelsior.js',
-                            'excelsior/js/foundation/foundation.min.js'
+                            'excelsior/js/core/excelsior.js'
                         ],
                         dest: 'excelsior/js/excelsior.js'
                     }
@@ -277,8 +264,7 @@ module.exports = function(grunt) {
                         src: [
                             'excelsior/js/vendor/jquery.min.js',
                             'excelsior/js/vendor/fastclick.min.js',
-                            'excelsior/js/core/excelsior.min.js',
-                            'excelsior/js/foundation/foundation.min.js'
+                            'excelsior/js/core/excelsior.min.js'
                         ],
                         dest: 'excelsior/js/excelsior.min.js'
                     }
