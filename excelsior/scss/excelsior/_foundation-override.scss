@@ -254,9 +254,11 @@ section .title a {
 
 // Orbit
 
-.touch .orbit-container .orbit-prev,
-.touch .orbit-container .orbit-next {
-    display: inherit;
+.orbit-container .orbit-prev,
+.orbit-container .orbit-next {
+    @include enhance-with(touch) {
+        display: inherit;
+    }
 }
 
 // Progress meters

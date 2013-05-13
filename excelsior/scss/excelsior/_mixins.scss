@@ -32,8 +32,9 @@
             transition: $transition;
 
             /* Kick in the GPU if possible */
-            -webkit-transform: translate3d(0, 0, 0);
-            transform: transale3d(0,0,0);
+            /* This breaks  the top nav dropdown on chrome */
+           // -webkit-transform: translate3d(0, 0, 0);
+          //  transform: transale3d(0,0,0);
 }
 
 @mixin transition-delay($transition-delay) {
