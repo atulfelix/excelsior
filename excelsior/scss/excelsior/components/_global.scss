@@ -1,10 +1,8 @@
 // Base styles
 // -----------------------
 
-html {
-    @include degrade-from(touch) {
-        -ms-overflow-style: scrollbar; // Stops IE10 from plopping a scroller over your content
-    }
+html.no-touch {
+    -ms-overflow-style: scrollbar; // Stops IE10 from plopping a scroller over your content
 }
 
 body {
