@@ -18,7 +18,6 @@
     }
 
     // Foundation override: hide the URL for certain links
-    .site-bar a.site-logo,
     a.close,
     .pagination a {
         &:after {
