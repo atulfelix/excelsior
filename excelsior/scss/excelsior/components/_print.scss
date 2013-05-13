@@ -1,10 +1,18 @@
 @media print {
-    // Make the site title more prominent
-    .site-bar a.site-logo {
-        font-size: 2.5em;
-        margin-left: 0;
+    // Hide navigation and banner
+    nav,
+    .site-bar,
+    .pull-down-container {
+        display: none !important;
+        visibility: hidden !important;
     }
 
+    .mobile-functions * {
+        // These borders appear even at desktop size
+        border: none !important;
+    }
+
+    // Make alerts more legible
     .alert-box {
         text-shadow: none !important;
     }
@@ -16,15 +24,5 @@
         &:after {
             content: "";
         }
-    }
-
-    .mobile-functions * {
-        // These borders appear even at desktop size
-        border: none !important;
-    }
-
-    nav {
-        display: none !important;
-        visibility: hidden !important;
     }
 }
