@@ -4,7 +4,7 @@
     float: right;
     font-size: 1.2em;
     line-height: inherit;
-    margin: -0.3em 0 0 8px;
+    margin: 3em 0 0 8px;
 }
 
 .skip-to {
@@ -414,6 +414,7 @@
                 padding: 11px 12px 9px 12px;
                 text-shadow: 1px 1px 1px #111;
             }
+
         }
     }
 }
@@ -627,39 +628,44 @@
         position: relative;
         top: 0;
         margin-top: -24px;
-    }
 
-    .global-nav .nav-container {
-        height: auto;
-        background: #666;
-    }
+        .nav-container {
+            height: auto;
+            background: #666;
+        }
 
-    .global-nav ul li {
-        border-right: 1px solid #333;
-        border-left: 1px solid #888;
-        border-bottom: none;
-        float: left;
-    }
+        ul li {
+            border-right: 1px solid #333;
+            border-left: 1px solid #888;
+            border-bottom: none;
+            float: left;
 
-    .global-nav ul li:first-child {
-        border-left: none;
-    }
+            &:first-child {
+                border-left: none;
 
-    .global-nav ul li:first-child a {
-        padding: 13px 12px 9px 14px;
-    }
+                & a {
+                    padding: 13px 12px 9px 14px;
+                }
+            }
 
-    .global-nav ul li a {
-        background: #666;
-        font-size: 1em;
-        text-shadow: none;
-        padding-top: 13px;
+            a {
+                background: #666;
+                display: inline-block;
+                font-size: 1em;
+                text-shadow: none;
+                padding-top: 13px;
+            }
+
+        }
+
     }
 
     .global-nav .icon-right-open:before {
         float: right;
+        display: inline-block;
         padding-top: 3px;
         padding-left: 5px;
+        margin-top: 2px;
     }
 
     .global-nav .icon-right-open.active:before {
@@ -733,19 +739,5 @@
     .global-nav,
     .global-nav .nav-container {
         @include border-radius(5px);
-    }
-}
-
-/* Large Displays: 1280px - 1440px */
-@media only screen and (min-width: 80em) {
-    .gov-bar {
-        background: #036;
-    }
-}
-
-/* X-Large Displays: 1400px and up */
-@media only screen and (min-width: 90em) {
-    .gov-bar {
-        background: #036;
     }
 }
