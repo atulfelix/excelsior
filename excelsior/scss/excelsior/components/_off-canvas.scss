@@ -135,6 +135,14 @@ body.off-canvas {
                     @include breakpoint($off-canvas-medium-width, $no-query: true) {
                         border-right: 1px solid #000;
                         border-left: 1px solid #666;
+
+                        &:first-child {
+                            border-left: none;
+                        }
+
+                        &:last-child {
+                            border-right: none;
+                        }
                     }
 
                     &:first {
