@@ -258,8 +258,7 @@ module.exports = function(grunt) {
                         src: [
                             'excelsior/js/vendor/jquery.js',
                             'excelsior/js/vendor/fastclick.js',
-                            'excelsior/js/core/excelsior.js',
-                            'excelsior/js/foundation/foundation.min.js'
+                            'excelsior/js/core/excelsior.js'
                         ],
                         dest: 'excelsior/js/excelsior.js'
                     }
@@ -271,8 +270,7 @@ module.exports = function(grunt) {
                         src: [
                             'excelsior/js/vendor/jquery.min.js',
                             'excelsior/js/vendor/fastclick.min.js',
-                            'excelsior/js/core/excelsior.min.js',
-                            'excelsior/js/foundation/foundation.min.js'
+                            'excelsior/js/core/excelsior.min.js'
                         ],
                         dest: 'excelsior/js/excelsior.min.js'
                     }
