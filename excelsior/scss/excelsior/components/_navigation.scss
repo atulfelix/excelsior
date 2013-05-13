@@ -124,7 +124,8 @@
 
         &.gov-link-2 {
             float: right;
-            background: url(../images/hamburger-no-dots.svg) no-repeat 2px 0px transparent;
+            background: url(../images/hamburger-no-dots.png) no-repeat 2px 0px transparent;
+            background-image: none, url(../images/hamburger-no-dots.svg);
             background-size: 24px;
             color: #FFF;
             font-size: 1em;
@@ -319,7 +320,8 @@
             }
 
             input[type="submit"] {
-                background: url(../images/search.svg) no-repeat center center transparent;
+                background: url(../images/search.png) no-repeat center center transparent;
+                background-image: none, url(../images/search.svg);
                 background-size: 24px 24px;
                 border: 0;
                 height: 100%;
@@ -354,12 +356,14 @@
         }
 
         .mobile-search-button {
-            background: url(../images/search.svg) no-repeat 12px 12px transparent;
+            background: url(../images/search.png) no-repeat 12px 12px transparent;
+            background-image: none, url(../images/search.svg);
             background-size: 24px 24px;
         }
 
         .mobile-menu-button {
-            background: url(../images/hamburger.svg) no-repeat 12px 12px transparent;
+            background: url(../images/hamburger.png) no-repeat 12px 12px transparent;
+            background-image: none, url(../images/hamburger.svg);
             background-size: 24px 24px;
         }
 
@@ -440,19 +444,22 @@
 }
 
 .active-gov-bar .pull-down {
-    background: url(../images/close.svg) no-repeat 5px 7px transparent;
+    background: url(../images/close.png) no-repeat 5px 7px transparent;
+    background-image: none, url(../images/close.svg);
     background-size: 28px 28px;
 }
 
 /* Active Site Search */
 .active-site-search .site-bar .mobile-functions .mobile-icons.active {
-    background: url(../images/close-x-gray.svg) no-repeat 10px 12px #fff;
+    background: url(../images/close-x-gray.png) no-repeat 10px 12px #fff;
+    background-image: none, url(../images/close-x-gray.svg);
     background-size: 28px 28px;
 }
 
 /* Active Menu */
 .active-site-menu .site-bar .mobile-functions .mobile-icons.active {
-    background: url(../images/close.svg) no-repeat 10px 12px #333;
+    background: url(../images/close.png) no-repeat 10px 12px #333;
+    background-image: none, url(../images/close.svg);
     background-size: 28px 28px;
 }
 
