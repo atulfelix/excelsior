@@ -212,8 +212,6 @@ module.exports = function(grunt) {
                             '!excelsior/js/core/excelsior.*',
                             '!excelsior/js/vendor/fastclick.*',
                             '!excelsior/js/vendor/jquery.*',
-                            '!excelsior/js/vendor/zepto.*',
-                            '!excelsior/js/foundation/foundation.min.js',
                             '!excelsior/',
                             '!excelsior/css/**', // Exclude all the CSS files
                             'excelsior/css/**/*.min.css' // Include just the Min CSS files
