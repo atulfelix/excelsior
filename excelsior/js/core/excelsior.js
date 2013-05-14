@@ -174,8 +174,6 @@ $(document).ready(function(){
     // Active Elements
     $('[data-active]').on('click', function(e) {
 
-        console.log('clicked');
-
         // Prevent Defaults
         e.preventDefault();
 
