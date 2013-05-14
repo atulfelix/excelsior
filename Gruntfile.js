@@ -16,7 +16,9 @@ module.exports = function(grunt) {
                     globule.findMapping(
                     [
                         'excelsior/js/core/*.js', // Source files to find
-                        '!excelsior/js/core/*.min.js' // Source files to exclude
+                        '!excelsior/js/core/*.min.js', // Source files to exclude
+                        '!excelsior/js/vendor/zepto.js', // Source files to exclude
+                        '!excelsior/js/vendor/jquery.js' // Source files to exclude
                     ],
                     {
                         ext: '.min.js', // Give them a .min.js extension
@@ -254,7 +256,7 @@ module.exports = function(grunt) {
                 files: [
                     {
                         src: [
-                            'excelsior/js/vendor/jquery.js',
+                            'excelsior/js/vendor/jquery.min.js',
                             'excelsior/js/vendor/fastclick.js',
                             'excelsior/js/core/excelsior.js'
                         ],
@@ -314,6 +316,8 @@ module.exports = function(grunt) {
             generatedFiles: {
                 src: [
                     'excelsior/js/**/*.min.js',
+                    '!excelsior/js/vendor/jquery.min.js',
+                    '!excelsior/js/vendor/zepto.min.js',
                     'excelsior/js/excelsior.js',
                     'excelsior/css/*',
                     'excelsior/.sass-cache/',
