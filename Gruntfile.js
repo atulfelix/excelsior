@@ -319,7 +319,8 @@ module.exports = function(grunt) {
                     'excelsior/js/excelsior.js',
                     'excelsior/css/*',
                     'excelsior/.sass-cache/',
-                    'project-assets/.sass-cache/'
+                    'project-assets/.sass-cache/',
+                    'excelsior.zip'
                     ]
             }
         }
