@@ -254,7 +254,7 @@ module.exports = function(grunt) {
                 files: [
                     {
                         src: [
-                            'excelsior/js/vendor/jquery.js',
+                            'excelsior/js/vendor/jquery.min.js',
                             'excelsior/js/vendor/fastclick.js',
                             'excelsior/js/core/excelsior.js'
                         ],
@@ -314,6 +314,8 @@ module.exports = function(grunt) {
             generatedFiles: {
                 src: [
                     'excelsior/js/**/*.min.js',
+                    '!excelsior/js/vendor/jquery.min.js',
+                    '!excelsior/js/vendor/zepto.min.js',
                     'excelsior/js/excelsior.js',
                     'excelsior/css/*',
                     'excelsior/.sass-cache/',
