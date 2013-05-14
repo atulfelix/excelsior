@@ -10501,6 +10501,12 @@ $(document).ready(function(){
     // Active Elements
     $('[data-active]').on('click', function(e) {
 
+        // Prevent Defaults
+        e.preventDefault();
+
+        // Stop the click from moving up.
+        e.stopPropagation();
+
         // Active attribute class
         var $clickedElm = $(this),
             activeClass = $clickedElm.attr('data-active'),
@@ -10603,12 +10609,6 @@ $(document).ready(function(){
 
             // Check to see if anything special has to happen based on data-active value
             specialEvents(activeClass);
-
-            // Prevent Defaults
-            e.preventDefault();
-
-            // Stop the click from moving up.
-            e.stopPropagation();
 
         }
 

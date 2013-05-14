@@ -29,22 +29,20 @@
 // Transitions
 @mixin transition($transition...) {
     -webkit-transition: $transition;
-            transition: $transition;
-
-            /* Kick in the GPU if possible */
-            /* This breaks  the top nav dropdown on chrome */
-           // -webkit-transform: translate3d(0, 0, 0);
-          //  transform: transale3d(0,0,0);
+    -moz-transition: $transition;
+        transition: $transition;
 }
 
 @mixin transition-delay($transition-delay) {
     -webkit-transition-delay: $transition-delay;
+    -moz-transition-delay: $transition-delay;
             transition-delay: $transition-delay;
 }
 
 @mixin transition-duration($transition-duration) {
     -webkit-transition-duration: $transition-duration;
-            transition-duration: $transition-duration;
+    -moz-transition-duration: $transition-duration;
+        transition-duration: $transition-duration;
 }
 
 // Transformations
@@ -81,7 +79,10 @@
 
 @mixin translate3d($x, $y, $z) {
     -webkit-transform: translate3d($x, $y, $z);
-            transform: translate3d($x, $y, $z);
+    -moz-transform: translate3d($x, $y, $z);
+    -ms-transform: translate3d($x, $y, $z);
+    -o-transform: translate3d($x, $y, $z);
+        transform: translate3d($x, $y, $z);
 }
 
 // Backface visibility

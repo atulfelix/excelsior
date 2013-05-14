@@ -109,6 +109,7 @@ body.off-canvas {
                 width: 100%;
                 background: #333 !important;
                 @include transition(left 0.2s ease);
+                @include translate3d(0,0,0);
 
                 @include breakpoint($off-canvas-medium-width, $no-query: true) {
                     position: absolute;
@@ -119,6 +120,8 @@ body.off-canvas {
                     overflow: hidden;
                     visibility: hidden;
                     @include transition(left 0s ease);
+                    @include translate3d(0,0,0);
+
                 }
 
                 @include breakpoint($off-canvas-large-width, $no-query: true) {
@@ -132,6 +135,14 @@ body.off-canvas {
                     @include breakpoint($off-canvas-medium-width, $no-query: true) {
                         border-right: 1px solid #000;
                         border-left: 1px solid #666;
+
+                        &:first-child {
+                            border-left: none;
+                        }
+
+                        &:last-child {
+                            border-right: none;
+                        }
                     }
 
                     &:first {
@@ -174,7 +185,7 @@ body.off-canvas {
 
         .active-menu {
             left: 0;
-            top: 0;
+            top: 53px;
             z-index: 1;
 
             li {
@@ -215,6 +226,7 @@ body.off-canvas {
     .site-bar,
     .page {
         @include transition(top 0.2s ease, left 0.2s ease, height 0.2s ease);
+        @include translate3d(0,0,0);
     }
 
     .gov-bar,
