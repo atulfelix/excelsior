@@ -1,0 +1,56 @@
+@media print {
+    // Hide navigation and banner
+    .skip-to,
+    .pull-down-container,
+    .pull-down,
+    .gripper,
+    .gov-bar,
+    .gov-wrap,
+    .site-bar,
+    .site-wrap,
+    .site-title,
+    .site-functions,
+    .mobile-functions,
+    .mobile-functions ul,
+    .mobile-functions li,
+    .mobile-functions a,
+    .global-nav *,
+    .off-canvas .global-nav,
+    .global-nav .nav-container,
+    .nav-container,
+    .nav-container ul,
+    .nav-container li,
+    .nav-container a,
+    footer {
+        display: none !important;
+        visibility: hidden !important;
+        overflow:hidden !important;
+        border:none !important;
+        border-radius:0 !important;
+        height: 0px !important;
+        margin-top: -100px !important;
+        top: -100px !important;
+        background: #FFF !important;
+        width: 0 !important;
+        z-index: 0 !important;
+        position: static !important;
+        color: #FFF !important;
+    }
+
+    .page {
+        position:static;
+    }
+
+    // Make alerts more legible
+    .alert-box {
+        text-shadow: none !important;
+    }
+
+    // Foundation override: hide the URL for certain links
+    a.close,
+    .pagination a {
+        &:after {
+            content: "";
+        }
+    }
+}

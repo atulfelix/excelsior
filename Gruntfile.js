@@ -15,8 +15,10 @@ module.exports = function(grunt) {
                 files:
                     globule.findMapping(
                     [
-                         'excelsior/js/core/*.js', // Source files to find
-                        '!excelsior/js/core/*.min.js' // Source files to exclude
+                        'excelsior/js/core/*.js', // Source files to find
+                        '!excelsior/js/core/*.min.js', // Source files to exclude
+                        '!excelsior/js/vendor/zepto.js', // Source files to exclude
+                        '!excelsior/js/vendor/jquery.js' // Source files to exclude
                     ],
                     {
                         ext: '.min.js', // Give them a .min.js extension
@@ -65,6 +67,18 @@ module.exports = function(grunt) {
                     }
                 ]
             },*/
+            vendor: {
+                files:
+                    globule.findMapping(
+                    [
+                         'excelsior/js/vendor/*.js', // Source files to find
+                        '!excelsior/js/vendor/*.min.js' // Source files to exclude
+                    ],
+                    {
+                        ext: '.min.js', // Give them a .min.js extension
+                        extDot: 'last'  // Fixes the issue of finding multiple dots in a filename
+                    })
+            },
             project: {
                 files:
                     globule.findMapping(
@@ -131,7 +145,7 @@ module.exports = function(grunt) {
                 tasks: [
                     'compass:excelsior',
                     'compass:project',
-                    'concat:excelsior'
+                    'concat:excelsiorCSS'
                 ]
             }
         },
@@ -139,7 +153,8 @@ module.exports = function(grunt) {
             options: {
                 require: [
                     'breakpoint',
-                    'sass-media_query_combiner'
+                    'sass-media_query_combiner',
+                    'toolkit'
                 ],
                 cssDir: 'css',
                 sassDir: 'scss',
@@ -181,6 +196,9 @@ module.exports = function(grunt) {
                             '!.git/**',
                             '!.gitignore',
                             '!.editorconfig',
+                            '!.lastBuilt',
+                            '!.travis-build.sh',
+                            '!.travis.yml',
                             '!excelsior.zip',
                             '!Gruntfile.js',
                             '!package.json',
@@ -190,8 +208,15 @@ module.exports = function(grunt) {
                             '!excelsior/.sass-cache/**',
                             '!excelsior/scss/**',
                             '!excelsior/images/excelsior-long-500.png',
-                            '!excelsior/images/source/**'
-
+                            '!excelsior/images/source/**',
+                            '!excelsior/js/**', // Exclude all the JS files
+                            'excelsior/js/**/*.min.js', // Include just the Min JS files
+                            '!excelsior/js/core/excelsior.*',
+                            '!excelsior/js/vendor/fastclick.*',
+                            '!excelsior/js/vendor/jquery.*',
+                            '!excelsior/',
+                            '!excelsior/css/**', // Exclude all the CSS files
+                            'excelsior/css/**/*.min.css' // Include just the Min CSS files
                         ],
                         dest: 'excelsior/',
                         dot: true // be sure to grab dotfiles
@@ -207,7 +232,7 @@ module.exports = function(grunt) {
             }
         },
         concat: {
-            excelsior: {
+            excelsiorCSS: {
                 files: [
                     {
                         src: [
@@ -227,6 +252,30 @@ module.exports = function(grunt) {
                     }
                 ]
             },
+            excelsiorJS: {
+                files: [
+                    {
+                        src: [
+                            'excelsior/js/vendor/jquery.min.js',
+                            'excelsior/js/vendor/fastclick.js',
+                            'excelsior/js/core/excelsior.js'
+                        ],
+                        dest: 'excelsior/js/excelsior.js'
+                    }
+                ]
+            },
+            excelsiorProdJS: {
+                files: [
+                    {
+                        src: [
+                            'excelsior/js/vendor/jquery.min.js',
+                            'excelsior/js/vendor/fastclick.min.js',
+                            'excelsior/js/core/excelsior.min.js'
+                        ],
+                        dest: 'excelsior/js/excelsior.min.js'
+                    }
+                ]
+            },
             addBanner: {
                 options: {
                     banner: '/*! <%= pkg.title %> v<%= pkg.version %> | (c) <%= grunt.template.today("yyyy") %> NYS ITS | <%= pkg.repository.url %> | License (<%= pkg.license.type %>): <%= pkg.license.url %> */\n\n'
@@ -236,7 +285,8 @@ module.exports = function(grunt) {
                         cwd: 'excelsior/',
                         src: [
                             'css/*.min.css',
-                            'js/core/*.min.js'
+                            'js/core/*.min.js',
+                            'js/*.min.js'
                         ],
                         expand: true,
                         dest: 'excelsior/'
@@ -264,7 +314,16 @@ module.exports = function(grunt) {
         },
         clean: {
             generatedFiles: {
-                src: ['excelsior/js/core/*.min.js', 'excelsior/css/*', 'excelsior/.sass-cache/', 'project-assets/.sass-cache/', 'excelsior.zip']
+                src: [
+                    'excelsior/js/**/*.min.js',
+                    '!excelsior/js/vendor/jquery.min.js',
+                    '!excelsior/js/vendor/zepto.min.js',
+                    'excelsior/js/excelsior.js',
+                    'excelsior/css/*',
+                    'excelsior/.sass-cache/',
+                    'project-assets/.sass-cache/',
+                    'excelsior.zip'
+                    ]
             }
         }
     });
@@ -285,7 +344,8 @@ module.exports = function(grunt) {
             'compass:excelsior', // Create Excelsior CSS files
             'compass:project', // Create Project CSS files
             'jshint', // detect errors in Excelsior & Project JS
-            'concat:excelsior' // Combine excelsior.css with foundation and normalize
+            'concat:excelsiorCSS', // Combine excelsior.css with foundation and normalize
+            'concat:excelsiorJS' // Combine the cor js used on all Excelsior pages.
         ]
     );
 
@@ -294,7 +354,8 @@ module.exports = function(grunt) {
         [
             'compass', // Clean old sass cache and generate Excelsior & Project css
             'uglify', // minify Excelsior, Foundation and Project Asset js
-            'concat:excelsior', // Combine excelsior.css with foundation and normalize
+            'concat:excelsiorProdJS', // Combine the core js used on all Excelsior pages.
+            'concat:excelsiorCSS', // Combine excelsior.css with foundation and normalize
             'cssmin', // minify the Excelsior & Project css
             'concat:addBanner' // add the Excelsior banner to css and JS files
         ]
@@ -307,7 +368,9 @@ module.exports = function(grunt) {
             'compass:clean', // clean compas cache
             'compass:excelsior', // Create Excelsior CSS files
             'uglify', // minify Excelsior, and Foundation JS
-            'concat:excelsior', // Combine excelsior.css with foundation and normalize
+            'concat:excelsiorCSS', // Combine excelsior.css with foundation and normalize
+            'concat:excelsiorJS', // Combine the core js used on all Excelsior pages.
+            'concat:excelsiorProdJS', // Combine the core js used on all Excelsior pages.
             'cssmin:excelsior', // minify the excelsior css
             'concat:addBanner', // add the Excelsior banner to css and JS files
             'compress' // create zip file

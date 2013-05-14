@@ -22,6 +22,7 @@
     <link rel="shortcut icon" href="../../excelsior/images/apple-touch-icon.png">
     <link rel="icon" href="../../excelsior/images/favicon.ico">
     <script src="../../excelsior/js/vendor/custom.modernizr.js"></script>
+    <!--[if lte IE 8]><script src="../../excelsior/js/vendor/respond.min.js"></script><![endif]-->
 </head>
 <body class="off-canvas">
     <a href="#global-nav" class="skip-to">Skip to Navigation</a>
@@ -1331,9 +1332,7 @@
 
     <!-- === End Modal(s) and Content Here === -->
 
-    <script src="../../excelsior/js/vendor/jquery.min.js"></script>
-    <script src="../../excelsior/js/vendor/fastclick.js"></script>
-    <script src="../../excelsior/js/core/excelsior.min.js"></script>
+    <script src="../../excelsior/js/excelsior.min.js"></script>
     <script src="../../excelsior/js/core/off-canvas.min.js"></script>
     <script src="../../excelsior/js/foundation/foundation.min.js"></script>
 
@@ -1355,11 +1354,14 @@
 
     <!-- Charting -->
     <script src="../../excelsior/js/vendor/chart.min.js"></script>
-    <script src="../../excelsior/js/core/respCharts.min.js"></script>
+    <script src="../../excelsior/js/core/responsive-chart.min.js"></script>
+
 
     <!-- Responsive Tables -->
     <script src="../../excelsior/js/core/responsive-table.min.js"></script>
     <script>$(function(){ $('table').responsiveTable(); });</script>
+
+    <script>$(document).foundation();</script>
 
     <script src="../js/forms.js"></script>
     <script src="../js/touch.js"></script>
