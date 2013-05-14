@@ -16,7 +16,9 @@ module.exports = function(grunt) {
                     globule.findMapping(
                     [
                         'excelsior/js/core/*.js', // Source files to find
-                        '!excelsior/js/core/*.min.js' // Source files to exclude
+                        '!excelsior/js/core/*.min.js', // Source files to exclude
+                        '!excelsior/js/vendor/zepto.js', // Source files to exclude
+                        '!excelsior/js/vendor/jquery.js' // Source files to exclude
                     ],
                     {
                         ext: '.min.js', // Give them a .min.js extension
