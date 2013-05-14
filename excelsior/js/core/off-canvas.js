@@ -72,6 +72,7 @@ $(document).ready(function() {
                     EWF.$body.on('click', function () {
                         // Find all occurances off active menu, active and active-sub-menu and remove them
                         EWF.$body.removeClass('active-sub-menu');
+                        EWF.$body.removeClass('active-site-menu');
                         $('#global-nav .active').removeClass('active');
                         $('#global-nav .active-menu').removeClass('active-menu');
                     });
