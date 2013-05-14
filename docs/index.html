@@ -127,11 +127,25 @@
             <!-- === Place Page Content Here === -->
             <div class="row">
                 <div class="large-3 columns">
-                        <div data-magellan-expedition="fixed" style="width:18%; min-width:10%">
-                      <ul class="side-nav">
-                        <li data-magellan-arrival="build"><a href="#build">Build with HTML</a></li>
-                        <li data-magellan-arrival="js"><a href="#js">Arrival 2</a></li>
-                      </ul>
+                    <div data-magellan-expedition="fixed" data-magellan-top-offset="130">
+                        <div class="section-container accordion" data-section="accordion">
+                        <section>
+                            <p class="title" data-section-title><a href="#">Section 1</a></p>
+                            <div class="content" data-section-content>
+                                <p>Content of section 1.</p>
+                            </div>
+                        </section>
+                        <section>
+                            <p class="title" data-section-title><a href="#">Section 2</a></p>
+                            <div class="content" data-section-content>
+                                <p>Content of section 2.</p>
+                            </div>
+                        </section>
+                    </div>
+                    <ul class="side-nav large-3">
+                            <li data-magellan-arrival="build"><a href="#build">Build with HTML</a></li>
+                            <li data-magellan-arrival="js"><a href="#js">Arrival 2</a></li>
+                        </ul>
                     </div>
                 </div><div class="large-9 columns">
                     <h3 data-magellan-destination="build">Built with Build:</h3>
