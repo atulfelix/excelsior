@@ -6466,12 +6466,7 @@ a.label:hover, a.label:focus {
   z-index: 35;
   -webkit-transition: top 0.2s ease;
   -moz-transition: top 0.2s ease;
-  transition: top 0.2s ease;
-  -webkit-transform: translate3d(0, 0, 0);
-  -moz-transform: translate3d(0, 0, 0);
-  -ms-transform: translate3d(0, 0, 0);
-  -o-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0); }
+  transition: top 0.2s ease; }
   /* line 21, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
   .no-no-rgba .pull-down-container {
     height: 40px; }
@@ -6490,12 +6485,7 @@ a.label:hover, a.label:focus {
   z-index: 50;
   -webkit-transition: top 0.2s ease;
   -moz-transition: top 0.2s ease;
-  transition: top 0.2s ease;
-  -webkit-transform: translate3d(0, 0, 0);
-  -moz-transform: translate3d(0, 0, 0);
-  -ms-transform: translate3d(0, 0, 0);
-  -o-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0); }
+  transition: top 0.2s ease; }
   /* line 21, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
   .no-no-rgba .pull-down {
     margin-top: 0;
@@ -6546,11 +6536,6 @@ a.label:hover, a.label:focus {
   -webkit-transition: height 0.2s ease;
   -moz-transition: height 0.2s ease;
   transition: height 0.2s ease;
-  -webkit-transform: translate3d(0, 0, 0);
-  -moz-transform: translate3d(0, 0, 0);
-  -ms-transform: translate3d(0, 0, 0);
-  -o-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
   width: 100%;
   z-index: 40; }
   /* line 117, ../scss/excelsior/components/_navigation.scss */
@@ -6657,12 +6642,7 @@ a.label:hover, a.label:focus {
   z-index: 30;
   -webkit-transition: top 0.2s ease;
   -moz-transition: top 0.2s ease;
-  transition: top 0.2s ease;
-  -webkit-transform: translate3d(0, 0, 0);
-  -moz-transform: translate3d(0, 0, 0);
-  -ms-transform: translate3d(0, 0, 0);
-  -o-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0); }
+  transition: top 0.2s ease; }
   /* line 230, ../scss/excelsior/components/_navigation.scss */
   .site-bar a.site-logo {
     color: #fff;
@@ -6706,12 +6686,7 @@ a.label:hover, a.label:focus {
       z-index: 15;
       -webkit-transition: height 0.2s ease;
       -moz-transition: height 0.2s ease;
-      transition: height 0.2s ease;
-      -webkit-transform: translate3d(0, 0, 0);
-      -moz-transform: translate3d(0, 0, 0);
-      -ms-transform: translate3d(0, 0, 0);
-      -o-transform: translate3d(0, 0, 0);
-      transform: translate3d(0, 0, 0); }
+      transition: height 0.2s ease; }
       /* line 292, ../scss/excelsior/components/_navigation.scss */
       .site-bar .site-functions .site-search .search-container {
         height: 37px;
@@ -6977,12 +6952,7 @@ body.off-canvas {
       background: #333 !important;
       -webkit-transition: left 0.2s ease;
       -moz-transition: left 0.2s ease;
-      transition: left 0.2s ease;
-      -webkit-transform: translate3d(0, 0, 0);
-      -moz-transform: translate3d(0, 0, 0);
-      -ms-transform: translate3d(0, 0, 0);
-      -o-transform: translate3d(0, 0, 0);
-      transform: translate3d(0, 0, 0); }
+      transition: left 0.2s ease; }
       /* line 132, ../scss/excelsior/components/_off-canvas.scss */
       .off-canvas .global-nav ul ul li {
         padding-left: 2% !important; }
@@ -7026,12 +6996,7 @@ body.off-canvas {
 .off-canvas .page {
   -webkit-transition: top 0.2s ease, left 0.2s ease, height 0.2s ease;
   -moz-transition: top 0.2s ease, left 0.2s ease, height 0.2s ease;
-  transition: top 0.2s ease, left 0.2s ease, height 0.2s ease;
-  -webkit-transform: translate3d(0, 0, 0);
-  -moz-transform: translate3d(0, 0, 0);
-  -ms-transform: translate3d(0, 0, 0);
-  -o-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0); }
+  transition: top 0.2s ease, left 0.2s ease, height 0.2s ease; }
 /* line 244, ../scss/excelsior/components/_off-canvas.scss */
 .off-canvas.active-gov-bar .pull-down-container,
 .off-canvas.active-gov-bar .site-bar {
@@ -7117,12 +7082,7 @@ body.off-canvas {
     position: relative;
     -webkit-transition: height 0s ease;
     -moz-transition: height 0s ease;
-    transition: height 0s ease;
-    -webkit-transform: translate3d(0, 0, 0);
-    -moz-transform: translate3d(0, 0, 0);
-    -ms-transform: translate3d(0, 0, 0);
-    -o-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0); }
+    transition: height 0s ease; }
     /* line 502, ../scss/excelsior/components/_navigation.scss */
     .gov-bar input[type="search"] {
       height: 23px;
@@ -7217,11 +7177,6 @@ body.off-canvas {
     -webkit-transition: top 0s ease;
     -moz-transition: top 0s ease;
     transition: top 0s ease;
-    -webkit-transform: translate3d(0, 0, 0);
-    -moz-transform: translate3d(0, 0, 0);
-    -ms-transform: translate3d(0, 0, 0);
-    -o-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
     z-index: 0; }
 
   /* line 597, ../scss/excelsior/components/_navigation.scss */
