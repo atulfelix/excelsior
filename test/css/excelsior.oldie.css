@@ -4593,19 +4593,18 @@ li.hide-for-small {
   background-repeat: repeat-x;
   border-color: #0044cc #0044cc #002a80;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25); }
-  /* line 333, ../scss/excelsior/_mixins.scss */
+  /* line 334, ../scss/excelsior/_mixins.scss */
   .panel.callout:hover, .panel.callout:focus, .panel.callout:active, .panel.callout.active, .panel.callout.disabled, .panel.callout[disabled] {
     color: white;
     background-color: #0044cc; }
-  /* line 340, ../scss/excelsior/_mixins.scss */
+  /* line 341, ../scss/excelsior/_mixins.scss */
   .panel.callout:active, .panel.callout.active {
     background-color: #003399 \9; }
   /* line 21, ../scss/excelsior/_foundation-override.scss */
   .panel.callout:hover {
     -webkit-transition: background-position 0.1s linear;
-    transition: background-position 0.1s linear;
-    /* Kick in the GPU if possible */
-    /* This breaks  the top nav dropdown on chrome */ }
+    -moz-transition: background-position 0.1s linear;
+    transition: background-position 0.1s linear; }
 /* line 26, ../scss/excelsior/_foundation-override.scss */
 .panel h4 a {
   text-decoration: none; }
@@ -4613,32 +4612,20 @@ li.hide-for-small {
   .panel h4 a:hover {
     text-decoration: none; }
 
-/* line 40, ../scss/excelsior/_foundation-override.scss */
+/* line 39, ../scss/excelsior/_foundation-override.scss */
 .sub-nav dt:not(.active) a,
-.sub-nav dd:not(.active) a,
-.sub-nav li:not(.active) a, .side-nav dt:not(.active) a,
-.side-nav dd:not(.active) a,
-.side-nav li:not(.active) a {
+.sub-nav dd:not(.active) a {
   padding: 0.1875em 0.5625em; }
-  /* line 43, ../scss/excelsior/_foundation-override.scss */
+  /* line 42, ../scss/excelsior/_foundation-override.scss */
   .sub-nav dt:not(.active) a:hover,
-  .sub-nav dd:not(.active) a:hover,
-  .sub-nav li:not(.active) a:hover, .side-nav dt:not(.active) a:hover,
-  .side-nav dd:not(.active) a:hover,
-  .side-nav li:not(.active) a:hover {
+  .sub-nav dd:not(.active) a:hover {
     border-radius: 1000em;
     background-clip: padding-box;
     background: #999999;
     color: white; }
-/* line 53, ../scss/excelsior/_foundation-override.scss */
+/* line 50, ../scss/excelsior/_foundation-override.scss */
 .sub-nav dt.active a,
-.sub-nav dd.active a,
-.sub-nav li.active a,
-.sub-nav li.active > a:first-child, .side-nav dt.active a,
-.side-nav dd.active a,
-.side-nav li.active a,
-.side-nav li.active > a:first-child {
-  color: white;
+.sub-nav dd.active a {
   padding: 0.1875em 0.5625em;
   color: white;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
@@ -4648,90 +4635,44 @@ li.hide-for-small {
   background-repeat: repeat-x;
   border-color: #0044cc #0044cc #002a80;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25); }
-  /* line 333, ../scss/excelsior/_mixins.scss */
+  /* line 334, ../scss/excelsior/_mixins.scss */
   .sub-nav dt.active a:hover, .sub-nav dt.active a:focus, .sub-nav dt.active a:active, .sub-nav dt.active a.active, .sub-nav dt.active a.disabled, .sub-nav dt.active a[disabled],
   .sub-nav dd.active a:hover,
   .sub-nav dd.active a:focus,
   .sub-nav dd.active a:active,
   .sub-nav dd.active a.active,
   .sub-nav dd.active a.disabled,
-  .sub-nav dd.active a[disabled],
-  .sub-nav li.active a:hover,
-  .sub-nav li.active a:focus,
-  .sub-nav li.active a:active,
-  .sub-nav li.active a.active,
-  .sub-nav li.active a.disabled,
-  .sub-nav li.active a[disabled],
-  .sub-nav li.active > a:first-child:hover,
-  .sub-nav li.active > a:first-child:focus,
-  .sub-nav li.active > a:first-child:active,
-  .sub-nav li.active > a:first-child.active,
-  .sub-nav li.active > a:first-child.disabled,
-  .sub-nav li.active > a:first-child[disabled], .side-nav dt.active a:hover, .side-nav dt.active a:focus, .side-nav dt.active a:active, .side-nav dt.active a.active, .side-nav dt.active a.disabled, .side-nav dt.active a[disabled],
-  .side-nav dd.active a:hover,
-  .side-nav dd.active a:focus,
-  .side-nav dd.active a:active,
-  .side-nav dd.active a.active,
-  .side-nav dd.active a.disabled,
-  .side-nav dd.active a[disabled],
-  .side-nav li.active a:hover,
-  .side-nav li.active a:focus,
-  .side-nav li.active a:active,
-  .side-nav li.active a.active,
-  .side-nav li.active a.disabled,
-  .side-nav li.active a[disabled],
-  .side-nav li.active > a:first-child:hover,
-  .side-nav li.active > a:first-child:focus,
-  .side-nav li.active > a:first-child:active,
-  .side-nav li.active > a:first-child.active,
-  .side-nav li.active > a:first-child.disabled,
-  .side-nav li.active > a:first-child[disabled] {
+  .sub-nav dd.active a[disabled] {
     color: white;
     background-color: #0044cc; }
-  /* line 340, ../scss/excelsior/_mixins.scss */
+  /* line 341, ../scss/excelsior/_mixins.scss */
   .sub-nav dt.active a:active, .sub-nav dt.active a.active,
   .sub-nav dd.active a:active,
-  .sub-nav dd.active a.active,
-  .sub-nav li.active a:active,
-  .sub-nav li.active a.active,
-  .sub-nav li.active > a:first-child:active,
-  .sub-nav li.active > a:first-child.active, .side-nav dt.active a:active, .side-nav dt.active a.active,
-  .side-nav dd.active a:active,
-  .side-nav dd.active a.active,
-  .side-nav li.active a:active,
-  .side-nav li.active a.active,
-  .side-nav li.active > a:first-child:active,
-  .side-nav li.active > a:first-child.active {
+  .sub-nav dd.active a.active {
     background-color: #003399 \9; }
-  /* line 58, ../scss/excelsior/_foundation-override.scss */
+  /* line 54, ../scss/excelsior/_foundation-override.scss */
   .sub-nav dt.active a:hover,
-  .sub-nav dd.active a:hover,
-  .sub-nav li.active a:hover,
-  .sub-nav li.active > a:first-child:hover, .side-nav dt.active a:hover,
-  .side-nav dd.active a:hover,
-  .side-nav li.active a:hover,
-  .side-nav li.active > a:first-child:hover {
+  .sub-nav dd.active a:hover {
     border-radius: 1000em;
     background-clip: padding-box;
     -webkit-transition: background-position 0.1s linear;
+    -moz-transition: background-position 0.1s linear;
     transition: background-position 0.1s linear;
-    /* Kick in the GPU if possible */
-    /* This breaks  the top nav dropdown on chrome */
     color: white; }
 
-/* line 68, ../scss/excelsior/_foundation-override.scss */
+/* line 64, ../scss/excelsior/_foundation-override.scss */
 .close-reveal-modal {
   text-decoration: none; }
-  /* line 71, ../scss/excelsior/_foundation-override.scss */
+  /* line 67, ../scss/excelsior/_foundation-override.scss */
   .close-reveal-modal:hover {
     text-decoration: none; }
 
-/* line 79, ../scss/excelsior/_foundation-override.scss */
+/* line 75, ../scss/excelsior/_foundation-override.scss */
 .pagination a {
   font-family: "SourceSansPro", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-weight: normal !important;
   font-style: normal !important; }
-/* line 84, ../scss/excelsior/_foundation-override.scss */
+/* line 80, ../scss/excelsior/_foundation-override.scss */
 .pagination li.current a,
 .pagination li.current a {
   text-decoration: none;
@@ -4745,7 +4686,7 @@ li.hide-for-small {
   background-repeat: repeat-x;
   border-color: #0044cc #0044cc #002a80;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25); }
-  /* line 333, ../scss/excelsior/_mixins.scss */
+  /* line 334, ../scss/excelsior/_mixins.scss */
   .pagination li.current a:hover, .pagination li.current a:focus, .pagination li.current a:active, .pagination li.current a.active, .pagination li.current a.disabled, .pagination li.current a[disabled],
   .pagination li.current a:hover,
   .pagination li.current a:focus,
@@ -4755,50 +4696,49 @@ li.hide-for-small {
   .pagination li.current a[disabled] {
     color: white;
     background-color: #0044cc; }
-  /* line 340, ../scss/excelsior/_mixins.scss */
+  /* line 341, ../scss/excelsior/_mixins.scss */
   .pagination li.current a:active, .pagination li.current a.active,
   .pagination li.current a:active,
   .pagination li.current a.active {
     background-color: #003399 \9; }
-  /* line 90, ../scss/excelsior/_foundation-override.scss */
+  /* line 86, ../scss/excelsior/_foundation-override.scss */
   .pagination li.current a:hover, .pagination li.current a:focus,
   .pagination li.current a:hover,
   .pagination li.current a:focus {
     text-decoration: none;
     -webkit-transition: background-position 0.1s linear;
-    transition: background-position 0.1s linear;
-    /* Kick in the GPU if possible */
-    /* This breaks  the top nav dropdown on chrome */ }
+    -moz-transition: background-position 0.1s linear;
+    transition: background-position 0.1s linear; }
 
-/* line 99, ../scss/excelsior/_foundation-override.scss */
+/* line 95, ../scss/excelsior/_foundation-override.scss */
 .breadcrumbs > * {
   font-size: 0.9em; }
 
-/* line 104, ../scss/excelsior/_foundation-override.scss */
+/* line 100, ../scss/excelsior/_foundation-override.scss */
 .breadcrumbs li a,
 .breadcrumbs li span {
   text-transform: none; }
 
-/* line 109, ../scss/excelsior/_foundation-override.scss */
+/* line 105, ../scss/excelsior/_foundation-override.scss */
 .breadcrumbs li a:hover {
   text-decoration: none; }
-/* line 114, ../scss/excelsior/_foundation-override.scss */
+/* line 110, ../scss/excelsior/_foundation-override.scss */
 .breadcrumbs li a[href="#"], .breadcrumbs li a[href="#"]:hover {
   cursor: default;
   text-decoration: none; }
 
-/* line 122, ../scss/excelsior/_foundation-override.scss */
+/* line 118, ../scss/excelsior/_foundation-override.scss */
 section .title a {
   text-decoration: none; }
-  /* line 125, ../scss/excelsior/_foundation-override.scss */
+  /* line 121, ../scss/excelsior/_foundation-override.scss */
   section .title a:hover {
     text-decoration: none; }
 
-/* line 130, ../scss/excelsior/_foundation-override.scss */
+/* line 126, ../scss/excelsior/_foundation-override.scss */
 .section-container, .section-container.auto {
   border: 0; }
 
-/* line 133, ../scss/excelsior/_foundation-override.scss */
+/* line 129, ../scss/excelsior/_foundation-override.scss */
 .section-container.tabs section .title {
   font-family: "SourceSansProBold", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-weight: normal;
@@ -4806,58 +4746,58 @@ section .title a {
   border-top-right-radius: 6px;
   background-clip: padding-box; }
 
-/* line 141, ../scss/excelsior/_foundation-override.scss */
+/* line 137, ../scss/excelsior/_foundation-override.scss */
 .section-container.auto section .title {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   background-clip: padding-box; }
-/* line 158, ../scss/excelsior/_foundation-override.scss */
+/* line 154, ../scss/excelsior/_foundation-override.scss */
 .section-container section .content {
   border-top-right-radius: 0.25em;
   border-bottom-left-radius: 0.25em;
   border-bottom-right-radius: 0.25em;
   background-clip: padding-box; }
 
-/* line 165, ../scss/excelsior/_foundation-override.scss */
+/* line 161, ../scss/excelsior/_foundation-override.scss */
 .section-container.auto > section > .title,
 .section-container > section > .title {
   border: 0; }
 
-/* line 172, ../scss/excelsior/_foundation-override.scss */
+/* line 168, ../scss/excelsior/_foundation-override.scss */
 .section-container.auto > section > .title a,
 .section-container.accordion > section > .title a,
 .section-container.vertical-nav > section > .title a,
 .section-container.horizontal-nav > section > .title a {
   padding: 0.6em 0.6em 0.6em 1em; }
 
-/* line 179, ../scss/excelsior/_foundation-override.scss */
+/* line 175, ../scss/excelsior/_foundation-override.scss */
 .section-container.tabs > section > .title a {
   padding: 0.6em 1em; }
-/* line 192, ../scss/excelsior/_foundation-override.scss */
+/* line 188, ../scss/excelsior/_foundation-override.scss */
 .section-container .title {
   font-family: "SourceSansPro", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
 
-/* line 196, ../scss/excelsior/_foundation-override.scss */
+/* line 192, ../scss/excelsior/_foundation-override.scss */
 .section-container section {
   border-radius: 0.25em;
   background-clip: padding-box;
   border: 1px solid #cccccc;
   margin-bottom: 0.5em; }
 
-/* line 206, ../scss/excelsior/_foundation-override.scss */
+/* line 202, ../scss/excelsior/_foundation-override.scss */
 .section-container section:last-child {
   margin-bottom: 0; }
 
-/* line 210, ../scss/excelsior/_foundation-override.scss */
+/* line 206, ../scss/excelsior/_foundation-override.scss */
 .title a {
   text-overflow: ellipsis;
   overflow: hidden; }
 
-/* line 215, ../scss/excelsior/_foundation-override.scss */
+/* line 211, ../scss/excelsior/_foundation-override.scss */
 .section-container > .title {
   padding-right: 26px; }
 
-/* line 219, ../scss/excelsior/_foundation-override.scss */
+/* line 215, ../scss/excelsior/_foundation-override.scss */
 .section-container .title:after {
   content: "\e75c";
   position: absolute;
@@ -4867,11 +4807,11 @@ section .title a {
   font-style: normal;
   font-weight: normal; }
 
-/* line 229, ../scss/excelsior/_foundation-override.scss */
+/* line 225, ../scss/excelsior/_foundation-override.scss */
 .section-container.tabs .title:after {
   content: ""; }
 
-/* line 242, ../scss/excelsior/_foundation-override.scss */
+/* line 238, ../scss/excelsior/_foundation-override.scss */
 .section-container .active .title:after {
   top: 8px;
   right: 18px;
@@ -4883,31 +4823,31 @@ section .title a {
 .orbit-container .orbit-next {
   display: inherit; }
 
-/* line 271, ../scss/excelsior/_foundation-override.scss */
+/* line 267, ../scss/excelsior/_foundation-override.scss */
 .progress .meter {
   background: #3a87ad; }
-/* line 275, ../scss/excelsior/_foundation-override.scss */
+/* line 271, ../scss/excelsior/_foundation-override.scss */
 .progress.success .meter {
   background: #468847; }
-/* line 279, ../scss/excelsior/_foundation-override.scss */
+/* line 275, ../scss/excelsior/_foundation-override.scss */
 .progress.alert .meter {
   background: #b94a48; }
-/* line 283, ../scss/excelsior/_foundation-override.scss */
+/* line 279, ../scss/excelsior/_foundation-override.scss */
 .progress.secondary .meter {
   background: #999999; }
 
-/* line 290, ../scss/excelsior/_foundation-override.scss */
+/* line 286, ../scss/excelsior/_foundation-override.scss */
 .pricing-table .cta-button {
   padding: 1.25em 1.25em; }
 
-/* line 296, ../scss/excelsior/_foundation-override.scss */
+/* line 292, ../scss/excelsior/_foundation-override.scss */
 form.custom .custom.checkbox.checked:before {
   content: "x";
   margin-top: -3px;
   margin-left: 2px;
   font-size: 1.3em; }
 
-/* line 304, ../scss/excelsior/_foundation-override.scss */
+/* line 300, ../scss/excelsior/_foundation-override.scss */
 .f-dropdown {
   top: -99999px; }
 
@@ -5560,7 +5500,7 @@ button.button {
   padding: 6px 12px;
   font-family: "SourceSansPro", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-weight: normal !important; }
-  /* line 333, ../scss/excelsior/_mixins.scss */
+  /* line 334, ../scss/excelsior/_mixins.scss */
   .button:hover, .button:focus, .button:active, .button.active, .button.disabled, .button[disabled],
   input.button:hover,
   input.button:focus,
@@ -5576,14 +5516,14 @@ button.button {
   button.button[disabled] {
     color: #333333;
     background-color: #e6e6e6; }
-  /* line 340, ../scss/excelsior/_mixins.scss */
+  /* line 341, ../scss/excelsior/_mixins.scss */
   .button:active, .button.active,
   input.button:active,
   input.button.active,
   button.button:active,
   button.button.active {
     background-color: #cccccc \9; }
-  /* line 295, ../scss/excelsior/_mixins.scss */
+  /* line 296, ../scss/excelsior/_mixins.scss */
   .button:hover, .button:focus,
   input.button:hover,
   input.button:focus,
@@ -5593,17 +5533,16 @@ button.button {
     text-decoration: none;
     background-position: 0 -15px;
     -webkit-transition: background-position 0.1s linear;
-    transition: background-position 0.1s linear;
-    /* Kick in the GPU if possible */
-    /* This breaks  the top nav dropdown on chrome */ }
-  /* line 306, ../scss/excelsior/_mixins.scss */
+    -moz-transition: background-position 0.1s linear;
+    transition: background-position 0.1s linear; }
+  /* line 307, ../scss/excelsior/_mixins.scss */
   .button:focus,
   input.button:focus,
   button.button:focus {
     outline: thin dotted #333;
     outline: 5px auto -webkit-focus-ring-color;
     outline-offset: -2px; }
-  /* line 312, ../scss/excelsior/_mixins.scss */
+  /* line 313, ../scss/excelsior/_mixins.scss */
   .button.active, .button:active,
   input.button.active,
   input.button:active,
@@ -5612,7 +5551,7 @@ button.button {
     background-image: none;
     outline: 0;
     box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05); }
-  /* line 320, ../scss/excelsior/_mixins.scss */
+  /* line 321, ../scss/excelsior/_mixins.scss */
   .button.disabled, .button[disabled],
   input.button.disabled,
   input.button[disabled],
@@ -5646,11 +5585,11 @@ button.button {
   background-repeat: repeat-x;
   border-color: #0044cc #0044cc #002a80;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25); }
-  /* line 333, ../scss/excelsior/_mixins.scss */
+  /* line 334, ../scss/excelsior/_mixins.scss */
   .button.secondary:hover, .button.secondary:focus, .button.secondary:active, .button.secondary.active, .button.secondary.disabled, .button.secondary[disabled] {
     color: white;
     background-color: #0044cc; }
-  /* line 340, ../scss/excelsior/_mixins.scss */
+  /* line 341, ../scss/excelsior/_mixins.scss */
   .button.secondary:active, .button.secondary.active {
     background-color: #003399 \9; }
 
@@ -5664,11 +5603,11 @@ button.button {
   background-repeat: repeat-x;
   border-color: #f89406 #f89406 #ad6704;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25); }
-  /* line 333, ../scss/excelsior/_mixins.scss */
+  /* line 334, ../scss/excelsior/_mixins.scss */
   .button.warning:hover, .button.warning:focus, .button.warning:active, .button.warning.active, .button.warning.disabled, .button.warning[disabled] {
     color: white;
     background-color: #f89406; }
-  /* line 340, ../scss/excelsior/_mixins.scss */
+  /* line 341, ../scss/excelsior/_mixins.scss */
   .button.warning:active, .button.warning.active {
     background-color: #c67605 \9; }
 
@@ -5682,11 +5621,11 @@ button.button {
   background-repeat: repeat-x;
   border-color: #bd362f #bd362f #802420;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25); }
-  /* line 333, ../scss/excelsior/_mixins.scss */
+  /* line 334, ../scss/excelsior/_mixins.scss */
   .button.alert:hover, .button.alert:focus, .button.alert:active, .button.alert.active, .button.alert.disabled, .button.alert[disabled] {
     color: white;
     background-color: #bd362f; }
-  /* line 340, ../scss/excelsior/_mixins.scss */
+  /* line 341, ../scss/excelsior/_mixins.scss */
   .button.alert:active, .button.alert.active {
     background-color: #942a25 \9; }
 
@@ -5700,11 +5639,11 @@ button.button {
   background-repeat: repeat-x;
   border-color: #51a351 #51a351 #387038;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25); }
-  /* line 333, ../scss/excelsior/_mixins.scss */
+  /* line 334, ../scss/excelsior/_mixins.scss */
   .button.success:hover, .button.success:focus, .button.success:active, .button.success.active, .button.success.disabled, .button.success[disabled] {
     color: white;
     background-color: #51a351; }
-  /* line 340, ../scss/excelsior/_mixins.scss */
+  /* line 341, ../scss/excelsior/_mixins.scss */
   .button.success:active, .button.success.active {
     background-color: #408140 \9; }
 
@@ -5718,11 +5657,11 @@ button.button {
   background-repeat: repeat-x;
   border-color: #2f96b4 #2f96b4 #1f6377;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25); }
-  /* line 333, ../scss/excelsior/_mixins.scss */
+  /* line 334, ../scss/excelsior/_mixins.scss */
   .button.info:hover, .button.info:focus, .button.info:active, .button.info.active, .button.info.disabled, .button.info[disabled] {
     color: white;
     background-color: #2f96b4; }
-  /* line 340, ../scss/excelsior/_mixins.scss */
+  /* line 341, ../scss/excelsior/_mixins.scss */
   .button.info:active, .button.info.active {
     background-color: #24748c \9; }
 
@@ -5736,11 +5675,11 @@ button.button {
   background-repeat: repeat-x;
   border-color: #282828 #282828 #020202;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25); }
-  /* line 333, ../scss/excelsior/_mixins.scss */
+  /* line 334, ../scss/excelsior/_mixins.scss */
   .button.inverse:hover, .button.inverse:focus, .button.inverse:active, .button.inverse.active, .button.inverse.disabled, .button.inverse[disabled] {
     color: white;
     background-color: #282828; }
-  /* line 340, ../scss/excelsior/_mixins.scss */
+  /* line 341, ../scss/excelsior/_mixins.scss */
   .button.inverse:active, .button.inverse.active {
     background-color: #0e0e0e \9; }
 
@@ -6000,9 +5939,8 @@ input[type="color"],
   border: 1px solid #cccccc;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
-  transition: border linear 0.2s, box-shadow linear 0.2s;
-  /* Kick in the GPU if possible */
-  /* This breaks  the top nav dropdown on chrome */ }
+  -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
+  transition: border linear 0.2s, box-shadow linear 0.2s; }
   /* line 124, ../scss/excelsior/components/_forms.scss */
   textarea:focus,
   input[type="text"]:focus,
@@ -6329,33 +6267,32 @@ a.label:hover, a.label:focus {
       background-image: -webkit-linear-gradient(top, white, #e6e6e6);
       background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
       background-repeat: repeat-x; }
-      /* line 333, ../scss/excelsior/_mixins.scss */
+      /* line 334, ../scss/excelsior/_mixins.scss */
       .touch .link-buttons-list a:hover, .touch .link-buttons-list a:focus, .touch .link-buttons-list a:active, .touch .link-buttons-list a.active, .touch .link-buttons-list a.disabled, .touch .link-buttons-list a[disabled] {
         color: #333333;
         background-color: #e6e6e6; }
-      /* line 340, ../scss/excelsior/_mixins.scss */
+      /* line 341, ../scss/excelsior/_mixins.scss */
       .touch .link-buttons-list a:active, .touch .link-buttons-list a.active {
         background-color: #cccccc \9; }
-      /* line 295, ../scss/excelsior/_mixins.scss */
+      /* line 296, ../scss/excelsior/_mixins.scss */
       .touch .link-buttons-list a:hover, .touch .link-buttons-list a:focus {
         color: #333333;
         text-decoration: none;
         background-position: 0 -15px;
         -webkit-transition: background-position 0.1s linear;
-        transition: background-position 0.1s linear;
-        /* Kick in the GPU if possible */
-        /* This breaks  the top nav dropdown on chrome */ }
-      /* line 306, ../scss/excelsior/_mixins.scss */
+        -moz-transition: background-position 0.1s linear;
+        transition: background-position 0.1s linear; }
+      /* line 307, ../scss/excelsior/_mixins.scss */
       .touch .link-buttons-list a:focus {
         outline: thin dotted #333;
         outline: 5px auto -webkit-focus-ring-color;
         outline-offset: -2px; }
-      /* line 312, ../scss/excelsior/_mixins.scss */
+      /* line 313, ../scss/excelsior/_mixins.scss */
       .touch .link-buttons-list a.active, .touch .link-buttons-list a:active {
         background-image: none;
         outline: 0;
         box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05); }
-      /* line 320, ../scss/excelsior/_mixins.scss */
+      /* line 321, ../scss/excelsior/_mixins.scss */
       .touch .link-buttons-list a.disabled, .touch .link-buttons-list a[disabled] {
         cursor: default;
         background-image: none;
@@ -6406,9 +6343,8 @@ a.label:hover, a.label:focus {
   padding: 5px;
   background-color: transparent;
   -webkit-transition: background-color 0.2s ease;
-  transition: background-color 0.2s ease;
-  /* Kick in the GPU if possible */
-  /* This breaks  the top nav dropdown on chrome */ }
+  -moz-transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease; }
   /* line 49, ../scss/excelsior/components/_images.scss */
   .img-list li > a:hover {
     background-color: rgba(217, 237, 247, 0.4); }
@@ -6495,7 +6431,7 @@ a.label:hover, a.label:focus {
   float: right;
   font-size: 1.2em;
   line-height: inherit;
-  margin: -0.3em 0 0 8px; }
+  margin: 3em 0 0 8px; }
 
 /* line 10, ../scss/excelsior/components/_navigation.scss */
 .skip-to {
@@ -6529,14 +6465,18 @@ a.label:hover, a.label:focus {
   position: relative;
   z-index: 35;
   -webkit-transition: top 0.2s ease;
+  -moz-transition: top 0.2s ease;
   transition: top 0.2s ease;
-  /* Kick in the GPU if possible */
-  /* This breaks  the top nav dropdown on chrome */ }
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
   /* line 21, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
   .no-no-rgba .pull-down-container {
     height: 40px; }
 
-/* line 46, ../scss/excelsior/components/_navigation.scss */
+/* line 47, ../scss/excelsior/components/_navigation.scss */
 .pull-down {
   position: relative;
   top: 0;
@@ -6549,25 +6489,29 @@ a.label:hover, a.label:focus {
   border-top: none;
   z-index: 50;
   -webkit-transition: top 0.2s ease;
+  -moz-transition: top 0.2s ease;
   transition: top 0.2s ease;
-  /* Kick in the GPU if possible */
-  /* This breaks  the top nav dropdown on chrome */ }
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
   /* line 21, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
   .no-no-rgba .pull-down {
     margin-top: 0;
     position: absolute; }
-  /* line 64, ../scss/excelsior/components/_navigation.scss */
+  /* line 66, ../scss/excelsior/components/_navigation.scss */
   .pull-down .accessibility-text {
     text-indent: -9999px;
     position: absolute; }
-  /* line 69, ../scss/excelsior/components/_navigation.scss */
+  /* line 71, ../scss/excelsior/components/_navigation.scss */
   .pull-down .gripper, .pull-down .gripper span {
     background-color: #09223d;
     background-color: rgba(0, 0, 0, 0.4);
     height: 1px;
     position: absolute;
     width: 81%; }
-    /* line 75, ../scss/excelsior/components/_navigation.scss */
+    /* line 77, ../scss/excelsior/components/_navigation.scss */
     .pull-down .gripper:after, .pull-down .gripper span:after {
       background-color: #144e8c;
       background-color: rgba(255, 255, 255, 0.15);
@@ -6577,18 +6521,18 @@ a.label:hover, a.label:focus {
       position: absolute;
       top: 1px;
       width: 100%; }
-  /* line 86, ../scss/excelsior/components/_navigation.scss */
+  /* line 88, ../scss/excelsior/components/_navigation.scss */
   .pull-down .gripper {
     top: 39px; }
     /* line 21, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
     .no-no-rgba .pull-down .gripper {
       display: none; }
-    /* line 94, ../scss/excelsior/components/_navigation.scss */
+    /* line 96, ../scss/excelsior/components/_navigation.scss */
     .pull-down .gripper span {
       top: 4px;
       width: 100%; }
 
-/* line 102, ../scss/excelsior/components/_navigation.scss */
+/* line 104, ../scss/excelsior/components/_navigation.scss */
 .gov-bar {
   position: absolute;
   top: 0;
@@ -6600,15 +6544,19 @@ a.label:hover, a.label:focus {
   background-repeat: repeat-x;
   overflow: hidden;
   -webkit-transition: height 0.2s ease;
+  -moz-transition: height 0.2s ease;
   transition: height 0.2s ease;
-  /* Kick in the GPU if possible */
-  /* This breaks  the top nav dropdown on chrome */
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
   width: 100%;
   z-index: 40; }
-  /* line 113, ../scss/excelsior/components/_navigation.scss */
+  /* line 117, ../scss/excelsior/components/_navigation.scss */
   .gov-bar a {
     color: #FFF; }
-    /* line 116, ../scss/excelsior/components/_navigation.scss */
+    /* line 120, ../scss/excelsior/components/_navigation.scss */
     .gov-bar a.gov-link-1 {
       float: left;
       font-size: 1.3em;
@@ -6616,7 +6564,7 @@ a.label:hover, a.label:focus {
       padding-bottom: 5px;
       margin: 12px 0.2em 0 0.5em;
       -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
-    /* line 125, ../scss/excelsior/components/_navigation.scss */
+    /* line 129, ../scss/excelsior/components/_navigation.scss */
     .gov-bar a.gov-link-2 {
       float: right;
       background: url(../images/hamburger-no-dots.png) no-repeat 2px 0px transparent;
@@ -6627,32 +6575,32 @@ a.label:hover, a.label:focus {
       margin: 5px 0.4em;
       padding: 6px 0.2em 2px 32px;
       -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
-    /* line 137, ../scss/excelsior/components/_navigation.scss */
+    /* line 141, ../scss/excelsior/components/_navigation.scss */
     .gov-bar a.gov-link-3 {
       display: none;
       text-indent: -9999px; }
-  /* line 143, ../scss/excelsior/components/_navigation.scss */
+  /* line 147, ../scss/excelsior/components/_navigation.scss */
   .gov-bar .state-links {
     overflow: auto; }
-  /* line 147, ../scss/excelsior/components/_navigation.scss */
+  /* line 151, ../scss/excelsior/components/_navigation.scss */
   .gov-bar form {
     padding: 0.1em 0.5em 0 0.5em;
     width: 100%; }
-    /* line 151, ../scss/excelsior/components/_navigation.scss */
+    /* line 155, ../scss/excelsior/components/_navigation.scss */
     .gov-bar form .gov-search-button {
       float: right;
       font-size: 0.95em;
       width: 26%; }
-    /* line 158, ../scss/excelsior/components/_navigation.scss */
+    /* line 162, ../scss/excelsior/components/_navigation.scss */
     .gov-bar form legend,
     .gov-bar form label {
       display: none; }
-    /* line 162, ../scss/excelsior/components/_navigation.scss */
+    /* line 166, ../scss/excelsior/components/_navigation.scss */
     .gov-bar form fieldset {
       border: 0;
       margin: 0;
       padding: 0; }
-  /* line 169, ../scss/excelsior/components/_navigation.scss */
+  /* line 173, ../scss/excelsior/components/_navigation.scss */
   .gov-bar input {
     border-radius: 4px;
     background-clip: padding-box;
@@ -6662,7 +6610,7 @@ a.label:hover, a.label:focus {
     display: block;
     float: left;
     margin: 0; }
-    /* line 178, ../scss/excelsior/components/_navigation.scss */
+    /* line 182, ../scss/excelsior/components/_navigation.scss */
     .gov-bar input[type="search"] {
       border-radius: 5px 0 0 5px;
       background-clip: padding-box;
@@ -6673,7 +6621,7 @@ a.label:hover, a.label:focus {
       box-sizing: border-box;
       height: 37px;
       line-height: 37px; }
-    /* line 193, ../scss/excelsior/components/_navigation.scss */
+    /* line 197, ../scss/excelsior/components/_navigation.scss */
     .gov-bar input[type="submit"] {
       background-color: #505050;
       background-color: #7b7b7b;
@@ -6689,13 +6637,13 @@ a.label:hover, a.label:focus {
       line-height: 37px;
       width: 30%;
       margin-top: 0; }
-  /* line 208, ../scss/excelsior/components/_navigation.scss */
+  /* line 212, ../scss/excelsior/components/_navigation.scss */
   .gov-bar .search-container {
     height: 37px;
     margin: 1px 2px 0 0; }
 
 /* Site Header */
-/* line 215, ../scss/excelsior/components/_navigation.scss */
+/* line 219, ../scss/excelsior/components/_navigation.scss */
 .site-bar {
   background: #454545;
   background-color: #494949;
@@ -6708,10 +6656,14 @@ a.label:hover, a.label:focus {
   width: 100%;
   z-index: 30;
   -webkit-transition: top 0.2s ease;
+  -moz-transition: top 0.2s ease;
   transition: top 0.2s ease;
-  /* Kick in the GPU if possible */
-  /* This breaks  the top nav dropdown on chrome */ }
-  /* line 225, ../scss/excelsior/components/_navigation.scss */
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
+  /* line 230, ../scss/excelsior/components/_navigation.scss */
   .site-bar a.site-logo {
     color: #fff;
     float: left;
@@ -6720,26 +6672,26 @@ a.label:hover, a.label:focus {
     margin: -2px 0 0 52px;
     padding: 0.1em 0 0 0.3em;
     line-height: 48px; }
-  /* line 235, ../scss/excelsior/components/_navigation.scss */
+  /* line 240, ../scss/excelsior/components/_navigation.scss */
   .site-bar a.site-logo.two-line-title {
     display: block;
     height: 48px; }
-    /* line 239, ../scss/excelsior/components/_navigation.scss */
+    /* line 244, ../scss/excelsior/components/_navigation.scss */
     .site-bar a.site-logo.two-line-title span:first-of-type {
       margin-top: -8px; }
-    /* line 243, ../scss/excelsior/components/_navigation.scss */
+    /* line 248, ../scss/excelsior/components/_navigation.scss */
     .site-bar a.site-logo.two-line-title span {
       display: block;
       float: left;
       height: 16px;
       width: 100%; }
-  /* line 266, ../scss/excelsior/components/_navigation.scss */
+  /* line 271, ../scss/excelsior/components/_navigation.scss */
   .site-bar .site-functions {
     position: absolute;
     top: -1px;
     right: 0;
     width: 100%; }
-    /* line 272, ../scss/excelsior/components/_navigation.scss */
+    /* line 277, ../scss/excelsior/components/_navigation.scss */
     .site-bar .site-functions .site-search {
       background: #fff;
       border-bottom: 1px solid #666;
@@ -6753,34 +6705,38 @@ a.label:hover, a.label:focus {
       width: 100%;
       z-index: 15;
       -webkit-transition: height 0.2s ease;
+      -moz-transition: height 0.2s ease;
       transition: height 0.2s ease;
-      /* Kick in the GPU if possible */
-      /* This breaks  the top nav dropdown on chrome */ }
-      /* line 286, ../scss/excelsior/components/_navigation.scss */
+      -webkit-transform: translate3d(0, 0, 0);
+      -moz-transform: translate3d(0, 0, 0);
+      -ms-transform: translate3d(0, 0, 0);
+      -o-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0); }
+      /* line 292, ../scss/excelsior/components/_navigation.scss */
       .site-bar .site-functions .site-search .search-container {
         height: 37px;
         padding: 0 0.3em !important; }
-      /* line 291, ../scss/excelsior/components/_navigation.scss */
+      /* line 297, ../scss/excelsior/components/_navigation.scss */
       .site-bar .site-functions .site-search form {
         margin: 3px 0 0 0;
         padding: 5px 8px;
         width: 100%; }
-        /* line 296, ../scss/excelsior/components/_navigation.scss */
+        /* line 302, ../scss/excelsior/components/_navigation.scss */
         .site-bar .site-functions .site-search form legend, .site-bar .site-functions .site-search form label {
           display: none; }
-        /* line 300, ../scss/excelsior/components/_navigation.scss */
+        /* line 306, ../scss/excelsior/components/_navigation.scss */
         .site-bar .site-functions .site-search form fieldset {
           border: 0;
           margin: 0;
           padding: 0; }
-      /* line 308, ../scss/excelsior/components/_navigation.scss */
+      /* line 314, ../scss/excelsior/components/_navigation.scss */
       .site-bar .site-functions .site-search input {
         -webkit-appearance: none;
         padding: 0;
         display: block;
         float: left;
         margin: 0; }
-      /* line 316, ../scss/excelsior/components/_navigation.scss */
+      /* line 322, ../scss/excelsior/components/_navigation.scss */
       .site-bar .site-functions .site-search input[type="search"] {
         float: left;
         border-radius: 5px 0 0 5px;
@@ -6793,7 +6749,7 @@ a.label:hover, a.label:focus {
         color: #333;
         -moz-box-sizing: border-box;
         box-sizing: border-box; }
-      /* line 332, ../scss/excelsior/components/_navigation.scss */
+      /* line 338, ../scss/excelsior/components/_navigation.scss */
       .site-bar .site-functions .site-search input[type="submit"] {
         background: url(../images/search.png) no-repeat center center transparent;
         background-image: none, url(../images/search.svg);
@@ -6804,7 +6760,7 @@ a.label:hover, a.label:focus {
         color: #fff;
         text-indent: -9999px;
         padding-bottom: 0.69em; }
-    /* line 345, ../scss/excelsior/components/_navigation.scss */
+    /* line 351, ../scss/excelsior/components/_navigation.scss */
     .site-bar .site-functions .site-button {
       float: left;
       background-color: #505050;
@@ -6817,12 +6773,12 @@ a.label:hover, a.label:focus {
       border-color: #999;
       width: 14%;
       height: 100%; }
-  /* line 356, ../scss/excelsior/components/_navigation.scss */
+  /* line 362, ../scss/excelsior/components/_navigation.scss */
   .site-bar .mobile-functions {
     float: right;
     list-style: none;
     margin: 0; }
-    /* line 361, ../scss/excelsior/components/_navigation.scss */
+    /* line 367, ../scss/excelsior/components/_navigation.scss */
     .site-bar .mobile-functions li {
       background: #454545;
       border-left: 1px solid #666;
@@ -6831,17 +6787,17 @@ a.label:hover, a.label:focus {
       background-image: linear-gradient(to bottom, #5f5f5f, #282828);
       background-repeat: repeat-x;
       float: left; }
-    /* line 368, ../scss/excelsior/components/_navigation.scss */
+    /* line 374, ../scss/excelsior/components/_navigation.scss */
     .site-bar .mobile-functions .mobile-search-button {
       background: url(../images/search.png) no-repeat 12px 12px transparent;
       background-image: none, url(../images/search.svg);
       background-size: 24px 24px; }
-    /* line 374, ../scss/excelsior/components/_navigation.scss */
+    /* line 380, ../scss/excelsior/components/_navigation.scss */
     .site-bar .mobile-functions .mobile-menu-button {
       background: url(../images/hamburger.png) no-repeat 12px 12px transparent;
       background-image: none, url(../images/hamburger.svg);
       background-size: 24px 24px; }
-    /* line 380, ../scss/excelsior/components/_navigation.scss */
+    /* line 386, ../scss/excelsior/components/_navigation.scss */
     .site-bar .mobile-functions .mobile-icons {
       display: inline-block;
       height: 48px;
@@ -6849,32 +6805,31 @@ a.label:hover, a.label:focus {
       width: 48px;
       -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
 
-/* line 394, ../scss/excelsior/components/_navigation.scss */
+/* line 400, ../scss/excelsior/components/_navigation.scss */
 .global-nav {
   background: #333;
   position: absolute;
   top: 48px;
   width: 100%;
   z-index: 20; }
-  /* line 401, ../scss/excelsior/components/_navigation.scss */
+  /* line 407, ../scss/excelsior/components/_navigation.scss */
   .global-nav .nav-container {
     border-bottom: 1px solid #505050;
     height: 0;
     overflow: hidden;
     -webkit-transition: height 0.2s ease;
-    transition: height 0.2s ease;
-    /* Kick in the GPU if possible */
-    /* This breaks  the top nav dropdown on chrome */ }
-  /* line 408, ../scss/excelsior/components/_navigation.scss */
+    -moz-transition: height 0.2s ease;
+    transition: height 0.2s ease; }
+  /* line 414, ../scss/excelsior/components/_navigation.scss */
   .global-nav ul {
     list-style: none;
     margin: 0;
     padding: 0; }
-    /* line 413, ../scss/excelsior/components/_navigation.scss */
+    /* line 419, ../scss/excelsior/components/_navigation.scss */
     .global-nav ul li {
       border-right: 1px solid #444;
       border-bottom: 1px solid #444; }
-      /* line 417, ../scss/excelsior/components/_navigation.scss */
+      /* line 423, ../scss/excelsior/components/_navigation.scss */
       .global-nav ul li a {
         background: #333;
         color: #FFF;
@@ -6883,7 +6838,7 @@ a.label:hover, a.label:focus {
         padding: 11px 12px 9px 12px;
         text-shadow: 1px 1px 1px #111; }
 
-/* line 432, ../scss/excelsior/components/_navigation.scss */
+/* line 439, ../scss/excelsior/components/_navigation.scss */
 .page {
   background: #282828;
   height: 100%;
@@ -6891,51 +6846,51 @@ a.label:hover, a.label:focus {
   overflow: visible;
   top: 0;
   z-index: 10; }
-  /* line 440, ../scss/excelsior/components/_navigation.scss */
+  /* line 447, ../scss/excelsior/components/_navigation.scss */
   .page .content-section {
     background: #FFF;
     padding: 1em 0; }
 
 /* Active Govenor Banner */
-/* line 447, ../scss/excelsior/components/_navigation.scss */
+/* line 454, ../scss/excelsior/components/_navigation.scss */
 .active-gov-bar .gov-bar {
   height: 88px; }
 
-/* line 452, ../scss/excelsior/components/_navigation.scss */
+/* line 459, ../scss/excelsior/components/_navigation.scss */
 .active-gov-bar .site-bar,
 .active-gov-bar .pull-down-container {
   top: 88px; }
 
-/* line 456, ../scss/excelsior/components/_navigation.scss */
+/* line 463, ../scss/excelsior/components/_navigation.scss */
 .active-gov-bar .pull-down {
   background: url(../images/close.png) no-repeat 5px 7px transparent;
   background-image: none, url(../images/close.svg);
   background-size: 28px 28px; }
 
 /* Active Site Search */
-/* line 463, ../scss/excelsior/components/_navigation.scss */
+/* line 470, ../scss/excelsior/components/_navigation.scss */
 .active-site-search .site-bar .mobile-functions .mobile-icons.active {
   background: url(../images/close-x-gray.png) no-repeat 10px 12px white;
   background-image: none, url(../images/close-x-gray.svg);
   background-size: 28px 28px; }
 
 /* Active Menu */
-/* line 470, ../scss/excelsior/components/_navigation.scss */
+/* line 477, ../scss/excelsior/components/_navigation.scss */
 .active-site-menu .site-bar .mobile-functions .mobile-icons.active {
   background: url(../images/close.png) no-repeat 10px 12px #333333;
   background-image: none, url(../images/close.svg);
   background-size: 28px 28px; }
 
-/* line 476, ../scss/excelsior/components/_navigation.scss */
+/* line 483, ../scss/excelsior/components/_navigation.scss */
 .active-site-search .site-functions .site-search {
   height: 53px; }
 
 /* Active Site Menu */
-/* line 481, ../scss/excelsior/components/_navigation.scss */
+/* line 488, ../scss/excelsior/components/_navigation.scss */
 .active-site-menu .global-nav .nav-container {
   height: 343px; }
 
-/* Medium Displays: 768px - 1279px *//* Page Lock at 960px *//* Large Displays: 1280px - 1440px *//* X-Large Displays: 1400px and up *//* line 2, ../scss/excelsior/components/_sticky-header.scss */
+/* Medium Displays: 768px - 1279px *//* Page Lock at 960px *//* line 2, ../scss/excelsior/components/_sticky-header.scss */
 .sticky-header .pull-down-container {
   position: fixed;
   top: 0;
@@ -7021,16 +6976,20 @@ body.off-canvas {
       width: 100%;
       background: #333 !important;
       -webkit-transition: left 0.2s ease;
+      -moz-transition: left 0.2s ease;
       transition: left 0.2s ease;
-      /* Kick in the GPU if possible */
-      /* This breaks  the top nav dropdown on chrome */ }
-      /* line 129, ../scss/excelsior/components/_off-canvas.scss */
+      -webkit-transform: translate3d(0, 0, 0);
+      -moz-transform: translate3d(0, 0, 0);
+      -ms-transform: translate3d(0, 0, 0);
+      -o-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0); }
+      /* line 132, ../scss/excelsior/components/_off-canvas.scss */
       .off-canvas .global-nav ul ul li {
         padding-left: 2% !important; }
-  /* line 156, ../scss/excelsior/components/_off-canvas.scss */
+  /* line 167, ../scss/excelsior/components/_off-canvas.scss */
   .off-canvas .global-nav .menu-controls {
     height: 53px; }
-    /* line 163, ../scss/excelsior/components/_off-canvas.scss */
+    /* line 174, ../scss/excelsior/components/_off-canvas.scss */
     .off-canvas .global-nav .menu-controls .menu-back {
       background-color: #7b7b7b;
       background-image: -webkit-linear-gradient(top, #999999, #505050);
@@ -7044,36 +7003,40 @@ body.off-canvas {
       position: absolute;
       right: 0;
       visibility: hidden; }
-  /* line 175, ../scss/excelsior/components/_off-canvas.scss */
+  /* line 186, ../scss/excelsior/components/_off-canvas.scss */
   .off-canvas .global-nav .active-menu {
     left: 0;
-    top: 0;
+    top: 53px;
     z-index: 1; }
-/* line 194, ../scss/excelsior/components/_off-canvas.scss */
+/* line 205, ../scss/excelsior/components/_off-canvas.scss */
 .off-canvas.active-sub-menu .global-nav .menu-controls .menu-back {
   visibility: visible; }
-/* line 198, ../scss/excelsior/components/_off-canvas.scss */
+/* line 209, ../scss/excelsior/components/_off-canvas.scss */
 .off-canvas .page {
   position: relative;
   height: auto;
   min-height: 100%;
   top: 0;
   width: 100%; }
-/* line 216, ../scss/excelsior/components/_off-canvas.scss */
+/* line 227, ../scss/excelsior/components/_off-canvas.scss */
 .off-canvas .pull-down,
 .off-canvas .pull-down-container,
 .off-canvas .gov-bar,
 .off-canvas .site-bar,
 .off-canvas .page {
   -webkit-transition: top 0.2s ease, left 0.2s ease, height 0.2s ease;
+  -moz-transition: top 0.2s ease, left 0.2s ease, height 0.2s ease;
   transition: top 0.2s ease, left 0.2s ease, height 0.2s ease;
-  /* Kick in the GPU if possible */
-  /* This breaks  the top nav dropdown on chrome */ }
-/* line 232, ../scss/excelsior/components/_off-canvas.scss */
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
+/* line 244, ../scss/excelsior/components/_off-canvas.scss */
 .off-canvas.active-gov-bar .pull-down-container,
 .off-canvas.active-gov-bar .site-bar {
   top: 88px; }
-/* line 248, ../scss/excelsior/components/_off-canvas.scss */
+/* line 260, ../scss/excelsior/components/_off-canvas.scss */
 .off-canvas.active-site-menu .pull-down,
 .off-canvas.active-site-menu .pull-down-container,
 .off-canvas.active-site-menu .gov-bar,
@@ -7081,39 +7044,39 @@ body.off-canvas {
 .off-canvas.active-site-menu .page {
   position: fixed;
   left: -82%; }
-/* line 263, ../scss/excelsior/components/_off-canvas.scss */
+/* line 275, ../scss/excelsior/components/_off-canvas.scss */
 .off-canvas.active-site-menu .global-nav .icon-right-open:before {
   padding-top: 3px;
   position: absolute;
   right: 5%; }
-/* line 274, ../scss/excelsior/components/_off-canvas.scss */
+/* line 286, ../scss/excelsior/components/_off-canvas.scss */
 .off-canvas.active-site-menu .mobile-menu-button {
   box-shadow: inset 6px 0px 8px -2px #000; }
-/* line 278, ../scss/excelsior/components/_off-canvas.scss */
+/* line 290, ../scss/excelsior/components/_off-canvas.scss */
 .off-canvas.active-site-menu .page {
   box-shadow: 5px 49px 8px #000; }
-/* line 286, ../scss/excelsior/components/_off-canvas.scss */
+/* line 298, ../scss/excelsior/components/_off-canvas.scss */
 .off-canvas.active-site-menu .footer {
   left: -82%; }
 
 @media screen and (min-width: 48em) {
-  /* line 149, ../scss/excelsior/_foundation-override.scss */
+  /* line 145, ../scss/excelsior/_foundation-override.scss */
   .section-container.auto section .title {
     font-family: "SourceSansProBold", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
     font-weight: normal;
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
     background-clip: padding-box; } 
-  /* line 185, ../scss/excelsior/_foundation-override.scss */
+  /* line 181, ../scss/excelsior/_foundation-override.scss */
   .section-container.auto > section > .title,
   .section-container.tabs > section > .title {
     border-left: 1px solid #cccccc;
     border-top: 1px solid #cccccc; } 
-  /* line 250, ../scss/excelsior/_foundation-override.scss */
+  /* line 246, ../scss/excelsior/_foundation-override.scss */
   .vertical-nav section,
   .horizontal-nav section {
     border: 0; }
-    /* line 253, ../scss/excelsior/_foundation-override.scss */
+    /* line 249, ../scss/excelsior/_foundation-override.scss */
     .vertical-nav section .content,
     .horizontal-nav section .content {
       border-radius: 0; } }
@@ -7147,38 +7110,42 @@ body.off-canvas {
     max-width: none; } }
 
 @media only screen and (min-width: 48em) {
-  /* line 488, ../scss/excelsior/components/_navigation.scss */
+  /* line 495, ../scss/excelsior/components/_navigation.scss */
   .gov-bar {
     background: #036;
     border-bottom: 1px solid #555;
     position: relative;
     -webkit-transition: height 0s ease;
+    -moz-transition: height 0s ease;
     transition: height 0s ease;
-    /* Kick in the GPU if possible */
-    /* This breaks  the top nav dropdown on chrome */ }
-    /* line 494, ../scss/excelsior/components/_navigation.scss */
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); }
+    /* line 502, ../scss/excelsior/components/_navigation.scss */
     .gov-bar input[type="search"] {
       height: 23px;
       margin-top: 1px; }
-    /* line 499, ../scss/excelsior/components/_navigation.scss */
+    /* line 507, ../scss/excelsior/components/_navigation.scss */
     .gov-bar input[type="submit"] {
       height: 23px;
       font-size: 1.2em;
       line-height: 1.7em;
       margin-top: 1px; }
 
-  /* line 509, ../scss/excelsior/components/_navigation.scss */
+  /* line 517, ../scss/excelsior/components/_navigation.scss */
   .gov-bar,
   .active-gov-bar .gov-bar,
   .gov-bar a {
     height: 28px; }
 
-  /* line 513, ../scss/excelsior/components/_navigation.scss */
+  /* line 521, ../scss/excelsior/components/_navigation.scss */
   .gov-bar .state-links {
     display: inline-block;
     float: left; }
 
-  /* line 518, ../scss/excelsior/components/_navigation.scss */
+  /* line 526, ../scss/excelsior/components/_navigation.scss */
   .gov-bar a.gov-link-1 {
     background: url(../images/nys-banner-img.png) no-repeat 0 0 transparent;
     display: inline-block;
@@ -7187,7 +7154,7 @@ body.off-canvas {
     text-indent: -9999px;
     width: 185px; }
 
-  /* line 528, ../scss/excelsior/components/_navigation.scss */
+  /* line 536, ../scss/excelsior/components/_navigation.scss */
   .gov-bar a.gov-link-2,
   .gov-bar a.gov-link-2:hover {
     background: url(../images/nys-banner-img.png) no-repeat 0 -28px transparent;
@@ -7198,11 +7165,11 @@ body.off-canvas {
     text-indent: -9999px;
     width: 130px; }
 
-  /* line 538, ../scss/excelsior/components/_navigation.scss */
+  /* line 546, ../scss/excelsior/components/_navigation.scss */
   .gov-bar a.gov-link-2:hover {
     background-color: transparent; }
 
-  /* line 542, ../scss/excelsior/components/_navigation.scss */
+  /* line 550, ../scss/excelsior/components/_navigation.scss */
   .gov-bar a.gov-link-3 {
     background: url(../images/nys-banner-img.png) no-repeat 0 -56px transparent;
     display: inline-block;
@@ -7210,11 +7177,11 @@ body.off-canvas {
     margin-right: 8px;
     width: 150px; }
 
-  /* line 550, ../scss/excelsior/components/_navigation.scss */
+  /* line 558, ../scss/excelsior/components/_navigation.scss */
   .gov-bar .search-container {
     margin-right: 9px; }
 
-  /* line 554, ../scss/excelsior/components/_navigation.scss */
+  /* line 562, ../scss/excelsior/components/_navigation.scss */
   .gov-bar form {
     display: none;
     float: right;
@@ -7224,16 +7191,16 @@ body.off-canvas {
     margin: 2px 5px 0 0; }
 
   /* Active Gov Bar Search Box */
-  /* line 564, ../scss/excelsior/components/_navigation.scss */
+  /* line 572, ../scss/excelsior/components/_navigation.scss */
   .active-gov-bar-search a.gov-link-3 {
     display: none; }
 
-  /* line 568, ../scss/excelsior/components/_navigation.scss */
+  /* line 576, ../scss/excelsior/components/_navigation.scss */
   .active-gov-bar-search .gov-bar form {
     display: block; }
 
   /* Site Header */
-  /* line 574, ../scss/excelsior/components/_navigation.scss */
+  /* line 582, ../scss/excelsior/components/_navigation.scss */
   .site-bar {
     background-color: #303030;
     background-image: -webkit-linear-gradient(top, #363636, #282828);
@@ -7243,32 +7210,36 @@ body.off-canvas {
     position: relative;
     width: 100%; }
 
-  /* line 582, ../scss/excelsior/components/_navigation.scss */
+  /* line 590, ../scss/excelsior/components/_navigation.scss */
   .site-bar,
   .active-gov-bar .site-bar {
     top: 0;
     -webkit-transition: top 0s ease;
+    -moz-transition: top 0s ease;
     transition: top 0s ease;
-    /* Kick in the GPU if possible */
-    /* This breaks  the top nav dropdown on chrome */
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
     z-index: 0; }
 
-  /* line 588, ../scss/excelsior/components/_navigation.scss */
+  /* line 597, ../scss/excelsior/components/_navigation.scss */
   .site-bar a.site-logo {
     font-size: 2em;
     margin: 0 0 0 .3em;
     padding: 0.4em 0 0 4px; }
 
-  /* line 594, ../scss/excelsior/components/_navigation.scss */
+  /* line 603, ../scss/excelsior/components/_navigation.scss */
   .site-bar .site-functions {
     height: 100%; }
 
-  /* line 598, ../scss/excelsior/components/_navigation.scss */
+  /* line 607, ../scss/excelsior/components/_navigation.scss */
   .site-bar .mobile-functions {
     display: none !important;
     speak: none; }
 
-  /* line 603, ../scss/excelsior/components/_navigation.scss */
+  /* line 612, ../scss/excelsior/components/_navigation.scss */
   .site-bar .site-functions .site-search {
     border-bottom: none;
     background: transparent;
@@ -7281,23 +7252,23 @@ body.off-canvas {
     margin-top: -36px;
     width: 15em; }
 
-  /* line 616, ../scss/excelsior/components/_navigation.scss */
+  /* line 625, ../scss/excelsior/components/_navigation.scss */
   .site-bar .site-functions .site-search .search-container {
     margin: 0 2px 0 0; }
 
-  /* line 620, ../scss/excelsior/components/_navigation.scss */
+  /* line 629, ../scss/excelsior/components/_navigation.scss */
   .site-bar .site-functions .site-search form {
     margin: 0; }
 
-  /* line 624, ../scss/excelsior/components/_navigation.scss */
+  /* line 633, ../scss/excelsior/components/_navigation.scss */
   .site-bar .site-functions .site-search input[type="search"] {
     width: 82%; }
 
-  /* line 628, ../scss/excelsior/components/_navigation.scss */
+  /* line 637, ../scss/excelsior/components/_navigation.scss */
   .site-bar .site-functions .site-button {
     width: 18%; }
 
-  /* line 632, ../scss/excelsior/components/_navigation.scss */
+  /* line 641, ../scss/excelsior/components/_navigation.scss */
   .global-nav {
     display: block;
     height: 46px;
@@ -7305,54 +7276,52 @@ body.off-canvas {
     position: relative;
     top: 0;
     margin-top: -24px; }
+    /* line 649, ../scss/excelsior/components/_navigation.scss */
+    .global-nav .nav-container {
+      height: auto;
+      background: #666; }
+    /* line 654, ../scss/excelsior/components/_navigation.scss */
+    .global-nav ul li {
+      border-right: 1px solid #333;
+      border-left: 1px solid #888;
+      border-bottom: none;
+      float: left; }
+      /* line 660, ../scss/excelsior/components/_navigation.scss */
+      .global-nav ul li:first-child {
+        border-left: none; }
+        /* line 663, ../scss/excelsior/components/_navigation.scss */
+        .global-nav ul li:first-child a {
+          padding: 13px 12px 9px 14px; }
+      /* line 668, ../scss/excelsior/components/_navigation.scss */
+      .global-nav ul li a {
+        background: #666;
+        display: inline-block;
+        font-size: 1em;
+        text-shadow: none;
+        padding-top: 13px; }
 
-  /* line 641, ../scss/excelsior/components/_navigation.scss */
-  .global-nav .nav-container {
-    height: auto;
-    background: #666; }
-
-  /* line 646, ../scss/excelsior/components/_navigation.scss */
-  .global-nav ul li {
-    border-right: 1px solid #333;
-    border-left: 1px solid #888;
-    border-bottom: none;
-    float: left; }
-
-  /* line 653, ../scss/excelsior/components/_navigation.scss */
-  .global-nav ul li:first-child {
-    border-left: none; }
-
-  /* line 657, ../scss/excelsior/components/_navigation.scss */
-  .global-nav ul li:first-child a {
-    padding: 13px 12px 9px 14px; }
-
-  /* line 661, ../scss/excelsior/components/_navigation.scss */
-  .global-nav ul li a {
-    background: #666;
-    font-size: 1em;
-    text-shadow: none;
-    padding-top: 13px; }
-
-  /* line 668, ../scss/excelsior/components/_navigation.scss */
+  /* line 680, ../scss/excelsior/components/_navigation.scss */
   .global-nav .icon-right-open:before {
     float: right;
+    display: inline-block;
     padding-top: 3px;
-    padding-left: 5px; }
+    padding-left: 5px;
+    margin-top: 2px; }
 
-  /* line 674, ../scss/excelsior/components/_navigation.scss */
+  /* line 688, ../scss/excelsior/components/_navigation.scss */
   .global-nav .icon-right-open.active:before {
     content: "\e75c"; }
 
-  /* line 678, ../scss/excelsior/components/_navigation.scss */
+  /* line 692, ../scss/excelsior/components/_navigation.scss */
   .global-nav .nav-container ul li a.active {
     border: none;
     background-color: #888; }
 
-  /* line 683, ../scss/excelsior/components/_navigation.scss */
+  /* line 697, ../scss/excelsior/components/_navigation.scss */
   .global-nav .nav-container ul li a:hover {
     background: #888; }
 
-  /* line 687, ../scss/excelsior/components/_navigation.scss */
+  /* line 701, ../scss/excelsior/components/_navigation.scss */
   .global-nav .nav-container ul li a.active:after {
     border-right: 10px solid transparent;
     border-left: 10px solid transparent;
@@ -7364,32 +7333,32 @@ body.off-canvas {
     top: 41px;
     width: 0; }
 
-  /* line 699, ../scss/excelsior/components/_navigation.scss */
+  /* line 713, ../scss/excelsior/components/_navigation.scss */
   .global-nav ul ul li {
     border-right: 1px solid transparent;
     border-left: 1px solid transparent;
     border-bottom: none; }
 
-  /* line 705, ../scss/excelsior/components/_navigation.scss */
+  /* line 719, ../scss/excelsior/components/_navigation.scss */
   .global-nav .nav-container ul ul li a:hover {
     background-color: #393939 !important; }
 
-  /* line 709, ../scss/excelsior/components/_navigation.scss */
+  /* line 723, ../scss/excelsior/components/_navigation.scss */
   .page {
     background: #FFF;
     position: relative;
     top: -23px; }
 
-  /* line 715, ../scss/excelsior/components/_navigation.scss */
+  /* line 729, ../scss/excelsior/components/_navigation.scss */
   .page .content-section {
     padding: 2em 0; } }
 
 @media only screen and (min-width: 60em) {
-  /* line 723, ../scss/excelsior/components/_navigation.scss */
+  /* line 737, ../scss/excelsior/components/_navigation.scss */
   .gov-bar {
     background: #036; }
 
-  /* line 731, ../scss/excelsior/components/_navigation.scss */
+  /* line 745, ../scss/excelsior/components/_navigation.scss */
   .gov-bar .gov-wrap,
   .site-bar .site-wrap,
   .global-nav,
@@ -7400,25 +7369,15 @@ body.off-canvas {
     margin-right: auto;
     width: 60em !important; }
 
-  /* line 738, ../scss/excelsior/components/_navigation.scss */
+  /* line 752, ../scss/excelsior/components/_navigation.scss */
   .site-bar .site-wrap {
     position: relative; }
 
-  /* line 743, ../scss/excelsior/components/_navigation.scss */
+  /* line 757, ../scss/excelsior/components/_navigation.scss */
   .global-nav,
   .global-nav .nav-container {
     border-radius: 5px;
     background-clip: padding-box; } }
-
-@media only screen and (min-width: 80em) {
-  /* line 750, ../scss/excelsior/components/_navigation.scss */
-  .gov-bar {
-    background: #036; } }
-
-@media only screen and (min-width: 90em) {
-  /* line 757, ../scss/excelsior/components/_navigation.scss */
-  .gov-bar {
-    background: #036; } }
 
 @media print {
   /* line 24, ../scss/excelsior/components/_print.scss */
