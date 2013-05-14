@@ -37,7 +37,7 @@
     position: relative;
     z-index: 35;
     @include transition(top 0.2s ease);
-    @include translate3d(0,0,0);
+    //@include translate3d(0,0,0);
 
     @include degrade-from(no-rgba, $no-js: false) {
         height: 40px
@@ -56,7 +56,7 @@
     border-top: none;
     z-index: 50;
     @include transition(top 0.2s ease);
-    @include translate3d(0,0,0);
+    //@include translate3d(0,0,0);
 
     @include degrade-from(no-rgba, $no-js: false) {
         margin-top: 0;
@@ -109,7 +109,7 @@
     @include gradient-vertical(#002851, #036);
     overflow: hidden;
     @include transition(height 0.2s ease);
-    @include translate3d(0,0,0);
+    //@include translate3d(0,0,0);
 
     width: 100%;
     z-index: 40;
@@ -225,7 +225,7 @@
     width: 100%;
     z-index: 30;
     @include transition(top 0.2s ease);
-    @include translate3d(0,0,0);
+    //@include translate3d(0,0,0);
 
     a.site-logo {
         color: #fff;
@@ -287,7 +287,7 @@
             width: 100%;
             z-index: 15;
             @include transition(height 0.2s ease);
-            @include translate3d(0,0,0);
+            //@include translate3d(0,0,0);
 
             .search-container {
               height: 37px;
@@ -497,7 +497,7 @@
         border-bottom: 1px solid #555;
         position: relative;
         @include transition(height 0s ease);
-        @include translate3d(0,0,0);
+        //@include translate3d(0,0,0);
 
         input[type="search"] {
             height: 23px;
@@ -590,7 +590,7 @@
     .active-gov-bar .site-bar {
         top: 0;
         @include transition(top 0s ease);
-        @include translate3d(0,0,0);
+        //@include translate3d(0,0,0);
         z-index: 0;
     }
 
