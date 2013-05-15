@@ -249,7 +249,7 @@ module.exports = function(grunt) {
                     {
                         src: [
                             'excelsior/js/vendor/jquery.min.js',
-                            'excelsior/js/vendor/fastclick.js',
+                            'excelsior/js/vendor/fastclick.min.js',
                             'excelsior/js/core/excelsior.js'
                         ],
                         dest: 'excelsior/js/excelsior.js'
@@ -300,6 +300,13 @@ module.exports = function(grunt) {
 
             }
         },
+        copy: {
+            docsCSS: {
+                files: [
+                    {expand: true, cwd: 'excelsior/css', src: ['*'], dest: 'test/css/', filter: 'isFile'}
+                ]
+            }
+        },
         clean: {
             generatedFiles: {
                 src: [
@@ -325,33 +332,45 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-contrib-copy');
 
     // Development
-    grunt.registerTask('dev', 'Development build',
-        [
+    grunt.registerTask('dev', 'Development build', function(args) {
+        grunt.task.run([
             'compass:excelsior', // Create Excelsior CSS files
             'compass:project', // Create Project CSS files
             'jshint', // detect errors in Excelsior & Project JS
             'concat:excelsiorCSS', // Combine excelsior.css with foundation and normalize
-            'concat:excelsiorJS' // Combine the cor js used on all Excelsior pages.
-        ]
-    );
+            'concat:excelsiorJS', // Combine the cor js used on all Excelsior pages.
+            'copy:docsCSS'
+        ]);
+    });
+
+    // Only prep vendor files after they have been updated, not every time.
+    grunt.registerTask('vendorprep', 'Prep Vendor Files', function(args) {
+        grunt.task.run([
+            'uglify:vendor', // Minify Vendor JS
+            'uglify:foundation' // Minify Foundation JS
+        ]);
+    });
 
     // Production
-    grunt.registerTask('prod', 'Production build',
-        [
+    grunt.registerTask('prod', 'Production build', function(args) {
+        grunt.task.run([
             'compass', // Clean old sass cache and generate Excelsior & Project css
-            'uglify', // minify Excelsior, Foundation and Project Asset js
+            'uglify:excelsior', // minify Excelsior JS
+            'uglify:project', // Minify Project Asset js
             'concat:excelsiorProdJS', // Combine the core js used on all Excelsior pages.
             'concat:excelsiorCSS', // Combine excelsior.css with foundation and normalize
             'cssmin', // minify the Excelsior & Project css
-            'concat:addBanner' // add the Excelsior banner to css and JS files
-        ]
-    );
+            'concat:addBanner', // add the Excelsior banner to css and JS files
+            'copy:docsCSS'
+        ]);
+    });
 
     // Package Zip File for Distribution
-    grunt.registerTask('package', 'Package up the project',
-        [
+    grunt.registerTask('package', 'Package up the project', function(args) {
+        grunt.task.run([
             'clean', // clean up generated files
             'compass:clean', // clean compas cache
             'compass:excelsior', // Create Excelsior CSS files
@@ -361,9 +380,11 @@ module.exports = function(grunt) {
             'concat:excelsiorProdJS', // Combine the core js used on all Excelsior pages.
             'cssmin:excelsior', // minify the excelsior css
             'concat:addBanner', // add the Excelsior banner to css and JS files
-            'compress' // create zip file
-        ]
-    );
+            'compress', // create zip file
+            'copy:docsCSS'
+
+        ]);
+    });
 
     // Default task (Force to development build)
     grunt.registerTask('default', 'dev');
