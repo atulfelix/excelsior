@@ -46,7 +46,7 @@
 
 .pull-down {
     position: relative;
-    top: 0;
+    top: 4px;
     display: block;
     width: 100%;
     height: 100%;
@@ -71,7 +71,7 @@
         @include rgba-fallback($pulldown-line-dark, rgba(0,0,0, 0.4));
         height: 1px;
         position: absolute;
-        width: 81%;
+        width: 100%;
 
         &:after {
             @include rgba-fallback($pulldown-line-light, rgba(255,255,255, 0.15));
@@ -220,7 +220,7 @@
     @include gradient-vertical(#5f5f5f, #282828);
     height: 48px;
     position: absolute;
-    top: -4px;
+    top: 0;
     width: 100%;
     z-index: 30;
     @include transition(top 0.2s ease);
@@ -440,6 +440,7 @@
     position: relative;
     overflow: visible;
     top: 0;
+    margin-top: -13px;
     z-index: 10;
 
     .content-section {
@@ -449,19 +450,21 @@
 }
 
 /* Active Govenor Banner */
-.active-gov-bar .gov-bar {
-    height: 88px;
-}
+.active-gov-bar {
+    .gov-bar {
+        height: 88px;
+    }
 
-.active-gov-bar .site-bar,
-.active-gov-bar .pull-down-container {
-    top: 88px;
-}
+    .site-bar, .pull-down-container {
+        top: 88px;
+    }
 
-.active-gov-bar .pull-down {
-    background: url(../images/close.png) no-repeat 5px 7px transparent;
-    background-image: none, url(../images/close.svg);
-    background-size: 28px 28px;
+    .pull-down {
+        background: url(../images/close.png) no-repeat 5px 7px transparent;
+        background-image: none, url(../images/close.svg);
+        background-size: 28px 28px;
+    }
+
 }
 
 /* Active Site Search */
@@ -484,7 +487,7 @@
 
 /* Active Site Menu */
 .active-site-menu .global-nav .nav-container {
-    height: 343px;
+    height: 147px;
 }
 
 /* Medium Displays: 768px - 1279px */
