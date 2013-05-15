@@ -210,12 +210,12 @@ body.off-canvas {
         position: relative;
         height: auto;
         min-height: 100%;
-        top: 0;
+        top: 13px;
         width: 100%;
 
         @include breakpoint($off-canvas-medium-width, $no-query: true) {
             min-height: auto;
-            top: -22px;
+            top: -9px;
             left: 0;
         }
     }
