@@ -274,7 +274,6 @@ section .title a {
             }
             &:after {
                 content: "";
-                position: static;
             }
         }
     }
@@ -282,20 +281,18 @@ section .title a {
     section.active > .title {
         &:after {
             content: "";
-            position: static;
         }
         @include breakpoint($mobile-desktop-split) {
-            max-width: 10.65em;
-            border-top-right-radius: $baseBorderRadius;
-            border-bottom-right-radius: $baseBorderRadius;
+            max-width: 10.5em;
         }
 
     }
 
     @include breakpoint($mobile-desktop-split) {
-       padding: 0;
+        padding: 0;
         border: none;
         background: transparent;
+        position:relative;
 
         &.f-dropdown {
             top: auto;
