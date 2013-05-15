@@ -256,6 +256,44 @@ section .title a {
     }
 }
 
+[data-magellan-expedition].section-container.vertical-tabs {
+    border:none;
+    background:transparent;
+    padding:0;
+    margin:1em 0;
+    height:auto;
+
+    @include breakpoint($mobile-desktop-split){
+        section:first-of-type .title {
+            border-top-left-radius:$baseBorderRadius;
+            border-top-right-radius:$baseBorderRadius;
+            }
+        section:last-of-type .title {
+            border-bottom-left-radius:$baseBorderRadius;
+            border-bottom-right-radius:$baseBorderRadius;
+            }
+
+        section > .title {
+            max-width:10.5em;
+
+            &:after {
+                content: "";
+                position:static;
+            }
+
+        }
+        section.active > .title {
+            max-width:10.65em;
+            border-top-right-radius:$baseBorderRadius;
+            border-bottom-right-radius:$baseBorderRadius;
+
+            &:after {
+                content: "";
+                position:static;
+            }
+        }
+    }
+}
 // Orbit
 
 .orbit-container .orbit-prev,
