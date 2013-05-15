@@ -933,7 +933,7 @@ $(document).ready(function(){
             EWF.$body.removeClass(activeClass);
 
             // Remove the active class from the old active item
-            active.removeClass('active');
+            $('header').find('.active').removeClass('active');
 
         }
 
@@ -961,12 +961,8 @@ $(document).ready(function(){
             }
         }
 
-        console.log($activeElm.length);
-
         // Check to see if there is already and active item
         if ($activeElm.length > 0) {
-
-            console.log('active-element-exists');
 
             // Check to make sure its not the same as the currently clicked item
             if ($activeElm.attr('data-active') !== $clickedElm.attr('data-active')) {

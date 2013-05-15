@@ -46,11 +46,10 @@
 
 .pull-down {
     position: relative;
-    top: 0;
+    top: 4px;
     display: block;
     width: 100%;
     height: 100%;
-    margin-top: 4px;
     background: url(../images/nys-small.png) no-repeat 1px 4px transparent;
     background-size: 32px 32px;
     border-top: none;
@@ -72,7 +71,7 @@
         @include rgba-fallback($pulldown-line-dark, rgba(0,0,0, 0.4));
         height: 1px;
         position: absolute;
-        width: 81%;
+        width: 100%;
 
         &:after {
             @include rgba-fallback($pulldown-line-light, rgba(255,255,255, 0.15));
@@ -400,7 +399,7 @@
 .global-nav {
     background: #333;
     position: absolute;
-    top: 48px;
+    top: 43px;
     width: 100%;
     z-index: 20;
 
@@ -438,10 +437,10 @@
 
 .page {
     background: #282828;
-    height: 100%;
     position: relative;
     overflow: visible;
     top: 0;
+    margin-top: -13px;
     z-index: 10;
 
     .content-section {
@@ -451,19 +450,21 @@
 }
 
 /* Active Govenor Banner */
-.active-gov-bar .gov-bar {
-    height: 88px;
-}
+.active-gov-bar {
+    .gov-bar {
+        height: 88px;
+    }
 
-.active-gov-bar .site-bar,
-.active-gov-bar .pull-down-container {
-    top: 88px;
-}
+    .site-bar, .pull-down-container {
+        top: 88px;
+    }
 
-.active-gov-bar .pull-down {
-    background: url(../images/close.png) no-repeat 5px 7px transparent;
-    background-image: none, url(../images/close.svg);
-    background-size: 28px 28px;
+    .pull-down {
+        background: url(../images/close.png) no-repeat 5px 7px transparent;
+        background-image: none, url(../images/close.svg);
+        background-size: 28px 28px;
+    }
+
 }
 
 /* Active Site Search */
@@ -486,7 +487,7 @@
 
 /* Active Site Menu */
 .active-site-menu .global-nav .nav-container {
-    height: 343px;
+    height: 147px;
 }
 
 /* Medium Displays: 768px - 1279px */
@@ -743,7 +744,6 @@
     .global-nav,
     .page .content-section,
     .footer .footer-contents {
-        height: 100%;
         margin-left: auto;
         margin-right: auto;
         width: 60em !important;
@@ -751,6 +751,7 @@
 
     .site-bar .site-wrap {
         position: relative;
+        height: 90px;
     }
 
     .global-nav,
