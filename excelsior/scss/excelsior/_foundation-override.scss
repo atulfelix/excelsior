@@ -257,41 +257,65 @@ section .title a {
 }
 
 [data-magellan-expedition].section-container.vertical-tabs {
-    border:none;
-    background:transparent;
-    padding:0;
-    margin:1em 0;
-    height:auto!important;
+    margin: 0.5em 0;
+    border: 1px solid $grayLighter;
+    min-width:0;
 
-    @include breakpoint($mobile-desktop-split){
+    &.open {
+        display: block !important;
+        height: auto !important;
+    }
+    section {
+        margin-bottom: 0.25em;
+
+        > .title {
+            @include breakpoint($mobile-desktop-split) {
+                max-width: 10.5em;
+            }
+            &:after {
+                content: "";
+                position: static;
+            }
+        }
+    }
+
+    section.active > .title {
+        &:after {
+            content: "";
+            position: static;
+        }
+        @include breakpoint($mobile-desktop-split) {
+            max-width: 10.65em;
+            border-top-right-radius: $baseBorderRadius;
+            border-bottom-right-radius: $baseBorderRadius;
+        }
+
+    }
+
+    @include breakpoint($mobile-desktop-split) {
+       padding: 0;
+        border: none;
+        background: transparent;
+
+        &.f-dropdown {
+            top: auto;
+
+            &:before, &:after {
+                border: 0;
+            }
+
+        }
+
         section:first-of-type .title {
-            border-top-left-radius:$baseBorderRadius;
-            border-top-right-radius:$baseBorderRadius;
-            }
+            border-top-left-radius: $baseBorderRadius;
+            border-top-right-radius: $baseBorderRadius;
+        }
+
         section:last-of-type .title {
-            border-bottom-left-radius:$baseBorderRadius;
-            border-bottom-right-radius:$baseBorderRadius;
-            }
-
-        section > .title {
-            max-width:10.5em;
-
-            &:after {
-                content: "";
-                position:static;
-            }
-
+            border-bottom-left-radius: $baseBorderRadius;
+            border-bottom-right-radius: $baseBorderRadius;
         }
-        section.active > .title {
-            max-width:10.65em;
-            border-top-right-radius:$baseBorderRadius;
-            border-bottom-right-radius:$baseBorderRadius;
 
-            &:after {
-                content: "";
-                position:static;
-            }
-        }
     }
 }
 // Orbit
