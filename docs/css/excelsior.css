@@ -4561,7 +4561,18 @@ a.th {
   .f-dropdown.large {
     max-width: 800px; }
 
-@charset "UTF-8";
+/* line 6, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_border-box.scss */
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  *behavior: url('../behaviors/box-sizing/boxsizing.php'); }
+
+/* line 4, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_fluid-media.scss */
+img, video {
+  max-width: 100%;
+  height: auto; }
+
 /* line 4, ../scss/excelsior/_foundation-override.scss */
 ul.f-dropdown li {
   padding: 0; }
@@ -4582,16 +4593,17 @@ li.hide-for-small {
   background-repeat: repeat-x;
   border-color: #0044cc #0044cc #002a80;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25); }
-  /* line 328, ../scss/excelsior/_mixins.scss */
+  /* line 334, ../scss/excelsior/_mixins.scss */
   .panel.callout:hover, .panel.callout:focus, .panel.callout:active, .panel.callout.active, .panel.callout.disabled, .panel.callout[disabled] {
     color: white;
     background-color: #0044cc; }
-  /* line 335, ../scss/excelsior/_mixins.scss */
+  /* line 341, ../scss/excelsior/_mixins.scss */
   .panel.callout:active, .panel.callout.active {
     background-color: #003399 \9; }
   /* line 21, ../scss/excelsior/_foundation-override.scss */
   .panel.callout:hover {
     -webkit-transition: background-position 0.1s linear;
+    -moz-transition: background-position 0.1s linear;
     transition: background-position 0.1s linear; }
 /* line 26, ../scss/excelsior/_foundation-override.scss */
 .panel h4 a {
@@ -4600,20 +4612,32 @@ li.hide-for-small {
   .panel h4 a:hover {
     text-decoration: none; }
 
-/* line 39, ../scss/excelsior/_foundation-override.scss */
+/* line 40, ../scss/excelsior/_foundation-override.scss */
 .sub-nav dt:not(.active) a,
-.sub-nav dd:not(.active) a {
+.sub-nav dd:not(.active) a,
+.sub-nav li:not(.active) a, .side-nav dt:not(.active) a,
+.side-nav dd:not(.active) a,
+.side-nav li:not(.active) a {
   padding: 0.1875em 0.5625em; }
-  /* line 42, ../scss/excelsior/_foundation-override.scss */
+  /* line 43, ../scss/excelsior/_foundation-override.scss */
   .sub-nav dt:not(.active) a:hover,
-  .sub-nav dd:not(.active) a:hover {
+  .sub-nav dd:not(.active) a:hover,
+  .sub-nav li:not(.active) a:hover, .side-nav dt:not(.active) a:hover,
+  .side-nav dd:not(.active) a:hover,
+  .side-nav li:not(.active) a:hover {
     border-radius: 1000em;
     background-clip: padding-box;
     background: #999999;
     color: white; }
-/* line 50, ../scss/excelsior/_foundation-override.scss */
+/* line 53, ../scss/excelsior/_foundation-override.scss */
 .sub-nav dt.active a,
-.sub-nav dd.active a {
+.sub-nav dd.active a,
+.sub-nav li.active a,
+.sub-nav li.active > a:first-child, .side-nav dt.active a,
+.side-nav dd.active a,
+.side-nav li.active a,
+.side-nav li.active > a:first-child {
+  color: white;
   padding: 0.1875em 0.5625em;
   color: white;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
@@ -4623,43 +4647,89 @@ li.hide-for-small {
   background-repeat: repeat-x;
   border-color: #0044cc #0044cc #002a80;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25); }
-  /* line 328, ../scss/excelsior/_mixins.scss */
+  /* line 334, ../scss/excelsior/_mixins.scss */
   .sub-nav dt.active a:hover, .sub-nav dt.active a:focus, .sub-nav dt.active a:active, .sub-nav dt.active a.active, .sub-nav dt.active a.disabled, .sub-nav dt.active a[disabled],
   .sub-nav dd.active a:hover,
   .sub-nav dd.active a:focus,
   .sub-nav dd.active a:active,
   .sub-nav dd.active a.active,
   .sub-nav dd.active a.disabled,
-  .sub-nav dd.active a[disabled] {
+  .sub-nav dd.active a[disabled],
+  .sub-nav li.active a:hover,
+  .sub-nav li.active a:focus,
+  .sub-nav li.active a:active,
+  .sub-nav li.active a.active,
+  .sub-nav li.active a.disabled,
+  .sub-nav li.active a[disabled],
+  .sub-nav li.active > a:first-child:hover,
+  .sub-nav li.active > a:first-child:focus,
+  .sub-nav li.active > a:first-child:active,
+  .sub-nav li.active > a:first-child.active,
+  .sub-nav li.active > a:first-child.disabled,
+  .sub-nav li.active > a:first-child[disabled], .side-nav dt.active a:hover, .side-nav dt.active a:focus, .side-nav dt.active a:active, .side-nav dt.active a.active, .side-nav dt.active a.disabled, .side-nav dt.active a[disabled],
+  .side-nav dd.active a:hover,
+  .side-nav dd.active a:focus,
+  .side-nav dd.active a:active,
+  .side-nav dd.active a.active,
+  .side-nav dd.active a.disabled,
+  .side-nav dd.active a[disabled],
+  .side-nav li.active a:hover,
+  .side-nav li.active a:focus,
+  .side-nav li.active a:active,
+  .side-nav li.active a.active,
+  .side-nav li.active a.disabled,
+  .side-nav li.active a[disabled],
+  .side-nav li.active > a:first-child:hover,
+  .side-nav li.active > a:first-child:focus,
+  .side-nav li.active > a:first-child:active,
+  .side-nav li.active > a:first-child.active,
+  .side-nav li.active > a:first-child.disabled,
+  .side-nav li.active > a:first-child[disabled] {
     color: white;
     background-color: #0044cc; }
-  /* line 335, ../scss/excelsior/_mixins.scss */
+  /* line 341, ../scss/excelsior/_mixins.scss */
   .sub-nav dt.active a:active, .sub-nav dt.active a.active,
   .sub-nav dd.active a:active,
-  .sub-nav dd.active a.active {
+  .sub-nav dd.active a.active,
+  .sub-nav li.active a:active,
+  .sub-nav li.active a.active,
+  .sub-nav li.active > a:first-child:active,
+  .sub-nav li.active > a:first-child.active, .side-nav dt.active a:active, .side-nav dt.active a.active,
+  .side-nav dd.active a:active,
+  .side-nav dd.active a.active,
+  .side-nav li.active a:active,
+  .side-nav li.active a.active,
+  .side-nav li.active > a:first-child:active,
+  .side-nav li.active > a:first-child.active {
     background-color: #003399 \9; }
-  /* line 54, ../scss/excelsior/_foundation-override.scss */
+  /* line 58, ../scss/excelsior/_foundation-override.scss */
   .sub-nav dt.active a:hover,
-  .sub-nav dd.active a:hover {
+  .sub-nav dd.active a:hover,
+  .sub-nav li.active a:hover,
+  .sub-nav li.active > a:first-child:hover, .side-nav dt.active a:hover,
+  .side-nav dd.active a:hover,
+  .side-nav li.active a:hover,
+  .side-nav li.active > a:first-child:hover {
     border-radius: 1000em;
     background-clip: padding-box;
     -webkit-transition: background-position 0.1s linear;
+    -moz-transition: background-position 0.1s linear;
     transition: background-position 0.1s linear;
     color: white; }
 
-/* line 64, ../scss/excelsior/_foundation-override.scss */
+/* line 68, ../scss/excelsior/_foundation-override.scss */
 .close-reveal-modal {
   text-decoration: none; }
-  /* line 67, ../scss/excelsior/_foundation-override.scss */
+  /* line 71, ../scss/excelsior/_foundation-override.scss */
   .close-reveal-modal:hover {
     text-decoration: none; }
 
-/* line 75, ../scss/excelsior/_foundation-override.scss */
+/* line 79, ../scss/excelsior/_foundation-override.scss */
 .pagination a {
   font-family: "SourceSansPro", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-weight: normal !important;
   font-style: normal !important; }
-/* line 80, ../scss/excelsior/_foundation-override.scss */
+/* line 84, ../scss/excelsior/_foundation-override.scss */
 .pagination li.current a,
 .pagination li.current a {
   text-decoration: none;
@@ -4673,7 +4743,7 @@ li.hide-for-small {
   background-repeat: repeat-x;
   border-color: #0044cc #0044cc #002a80;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25); }
-  /* line 328, ../scss/excelsior/_mixins.scss */
+  /* line 334, ../scss/excelsior/_mixins.scss */
   .pagination li.current a:hover, .pagination li.current a:focus, .pagination li.current a:active, .pagination li.current a.active, .pagination li.current a.disabled, .pagination li.current a[disabled],
   .pagination li.current a:hover,
   .pagination li.current a:focus,
@@ -4683,48 +4753,49 @@ li.hide-for-small {
   .pagination li.current a[disabled] {
     color: white;
     background-color: #0044cc; }
-  /* line 335, ../scss/excelsior/_mixins.scss */
+  /* line 341, ../scss/excelsior/_mixins.scss */
   .pagination li.current a:active, .pagination li.current a.active,
   .pagination li.current a:active,
   .pagination li.current a.active {
     background-color: #003399 \9; }
-  /* line 86, ../scss/excelsior/_foundation-override.scss */
+  /* line 90, ../scss/excelsior/_foundation-override.scss */
   .pagination li.current a:hover, .pagination li.current a:focus,
   .pagination li.current a:hover,
   .pagination li.current a:focus {
     text-decoration: none;
     -webkit-transition: background-position 0.1s linear;
+    -moz-transition: background-position 0.1s linear;
     transition: background-position 0.1s linear; }
 
-/* line 95, ../scss/excelsior/_foundation-override.scss */
+/* line 99, ../scss/excelsior/_foundation-override.scss */
 .breadcrumbs > * {
   font-size: 0.9em; }
 
-/* line 100, ../scss/excelsior/_foundation-override.scss */
+/* line 104, ../scss/excelsior/_foundation-override.scss */
 .breadcrumbs li a,
 .breadcrumbs li span {
   text-transform: none; }
 
-/* line 105, ../scss/excelsior/_foundation-override.scss */
+/* line 109, ../scss/excelsior/_foundation-override.scss */
 .breadcrumbs li a:hover {
   text-decoration: none; }
-/* line 110, ../scss/excelsior/_foundation-override.scss */
+/* line 114, ../scss/excelsior/_foundation-override.scss */
 .breadcrumbs li a[href="#"], .breadcrumbs li a[href="#"]:hover {
   cursor: default;
   text-decoration: none; }
 
-/* line 118, ../scss/excelsior/_foundation-override.scss */
+/* line 122, ../scss/excelsior/_foundation-override.scss */
 section .title a {
   text-decoration: none; }
-  /* line 121, ../scss/excelsior/_foundation-override.scss */
+  /* line 125, ../scss/excelsior/_foundation-override.scss */
   section .title a:hover {
     text-decoration: none; }
 
-/* line 126, ../scss/excelsior/_foundation-override.scss */
+/* line 130, ../scss/excelsior/_foundation-override.scss */
 .section-container, .section-container.auto {
   border: 0; }
 
-/* line 129, ../scss/excelsior/_foundation-override.scss */
+/* line 133, ../scss/excelsior/_foundation-override.scss */
 .section-container.tabs section .title {
   font-family: "SourceSansProBold", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-weight: normal;
@@ -4732,58 +4803,58 @@ section .title a {
   border-top-right-radius: 6px;
   background-clip: padding-box; }
 
-/* line 137, ../scss/excelsior/_foundation-override.scss */
+/* line 141, ../scss/excelsior/_foundation-override.scss */
 .section-container.auto section .title {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   background-clip: padding-box; }
-/* line 154, ../scss/excelsior/_foundation-override.scss */
+/* line 158, ../scss/excelsior/_foundation-override.scss */
 .section-container section .content {
   border-top-right-radius: 0.25em;
   border-bottom-left-radius: 0.25em;
   border-bottom-right-radius: 0.25em;
   background-clip: padding-box; }
 
-/* line 161, ../scss/excelsior/_foundation-override.scss */
+/* line 165, ../scss/excelsior/_foundation-override.scss */
 .section-container.auto > section > .title,
 .section-container > section > .title {
   border: 0; }
 
-/* line 168, ../scss/excelsior/_foundation-override.scss */
+/* line 172, ../scss/excelsior/_foundation-override.scss */
 .section-container.auto > section > .title a,
 .section-container.accordion > section > .title a,
 .section-container.vertical-nav > section > .title a,
 .section-container.horizontal-nav > section > .title a {
   padding: 0.6em 0.6em 0.6em 1em; }
   
-/* line 175, ../scss/excelsior/_foundation-override.scss */
+/* line 179, ../scss/excelsior/_foundation-override.scss */
 .section-container.tabs > section > .title a {
   padding: 0.6em 1em; }
-/* line 188, ../scss/excelsior/_foundation-override.scss */
+/* line 192, ../scss/excelsior/_foundation-override.scss */
 .section-container .title {
   font-family: "SourceSansPro", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
 
-/* line 192, ../scss/excelsior/_foundation-override.scss */
+/* line 196, ../scss/excelsior/_foundation-override.scss */
 .section-container section {
   border-radius: 0.25em;
   background-clip: padding-box;
   border: 1px solid #cccccc;
   margin-bottom: 0.5em; }
   
-/* line 202, ../scss/excelsior/_foundation-override.scss */
+/* line 206, ../scss/excelsior/_foundation-override.scss */
 .section-container section:last-child {
   margin-bottom: 0; }
 
-/* line 206, ../scss/excelsior/_foundation-override.scss */
+/* line 210, ../scss/excelsior/_foundation-override.scss */
 .title a {
   text-overflow: ellipsis;
   overflow: hidden; }
 
-/* line 211, ../scss/excelsior/_foundation-override.scss */
+/* line 215, ../scss/excelsior/_foundation-override.scss */
 .section-container > .title {
   padding-right: 26px; }
 
-/* line 215, ../scss/excelsior/_foundation-override.scss */
+/* line 219, ../scss/excelsior/_foundation-override.scss */
 .section-container .title:after {
   content: "\e75c";
   position: absolute;
@@ -4793,62 +4864,85 @@ section .title a {
   font-style: normal;
   font-weight: normal; }
 
-/* line 225, ../scss/excelsior/_foundation-override.scss */
+/* line 229, ../scss/excelsior/_foundation-override.scss */
 .section-container.tabs .title:after {
   content: ""; }
 
-/* line 238, ../scss/excelsior/_foundation-override.scss */
+/* line 242, ../scss/excelsior/_foundation-override.scss */
 .section-container .active .title:after {
   top: 8px;
   right: 18px;
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg); }
-/* line 258, ../scss/excelsior/_foundation-override.scss */
-.touch .orbit-container .orbit-prev,
-.touch .orbit-container .orbit-next {
+/* line 259, ../scss/excelsior/_foundation-override.scss */
+[data-magellan-expedition].section-container.vertical-tabs {
+  margin: 0.5em 0;
+  border: 1px solid #cccccc;
+  min-width: 0; }
+  /* line 264, ../scss/excelsior/_foundation-override.scss */
+  [data-magellan-expedition].section-container.vertical-tabs.open {
+    display: block !important;
+    height: auto !important; }
+  /* line 268, ../scss/excelsior/_foundation-override.scss */
+  [data-magellan-expedition].section-container.vertical-tabs section {
+    margin-bottom: 0.25em; }
+        /* line 275, ../scss/excelsior/_foundation-override.scss */
+    [data-magellan-expedition].section-container.vertical-tabs section > .title:after {
+      content: ""; }
+  /* line 282, ../scss/excelsior/_foundation-override.scss */
+  [data-magellan-expedition].section-container.vertical-tabs section.active > .title:after {
+    content: ""; }
+    
+/* line 9, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
+.touch .orbit-container .orbit-prev, .touch
+.orbit-container .orbit-next {
   display: inherit; }
 
-/* line 265, ../scss/excelsior/_foundation-override.scss */
+/* line 330, ../scss/excelsior/_foundation-override.scss */
 .progress .meter {
   background: #3a87ad; }
-/* line 269, ../scss/excelsior/_foundation-override.scss */
+/* line 334, ../scss/excelsior/_foundation-override.scss */
 .progress.success .meter {
   background: #468847; }
-/* line 273, ../scss/excelsior/_foundation-override.scss */
+/* line 338, ../scss/excelsior/_foundation-override.scss */
 .progress.alert .meter {
   background: #b94a48; }
-/* line 277, ../scss/excelsior/_foundation-override.scss */
+/* line 342, ../scss/excelsior/_foundation-override.scss */
 .progress.secondary .meter {
   background: #999999; }
 
-/* line 284, ../scss/excelsior/_foundation-override.scss */
+/* line 349, ../scss/excelsior/_foundation-override.scss */
 .pricing-table .cta-button {
   padding: 1.25em 1.25em; }
 
-/* line 290, ../scss/excelsior/_foundation-override.scss */
+/* line 355, ../scss/excelsior/_foundation-override.scss */
 form.custom .custom.checkbox.checked:before {
   content: "x";
   margin-top: -3px;
   margin-left: 2px;
   font-size: 1.3em; }
 
-/* line 298, ../scss/excelsior/_foundation-override.scss */
+/* line 363, ../scss/excelsior/_foundation-override.scss */
 .f-dropdown {
   top: -99999px; }
 
 /* line 4, ../scss/excelsior/components/_global.scss */
+html.no-touch {
+  -ms-overflow-style: scrollbar; }
+
+/* line 8, ../scss/excelsior/components/_global.scss */
 body {
   font-family: "SourceSansPro", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
 
-/* line 8, ../scss/excelsior/components/_global.scss */
+/* line 12, ../scss/excelsior/components/_global.scss */
 a {
   text-decoration: underline; }
-  /* line 11, ../scss/excelsior/components/_global.scss */
+  /* line 15, ../scss/excelsior/components/_global.scss */
   a:hover {
     text-decoration: none; }
 
-/* line 22, ../scss/excelsior/components/_global.scss */
+/* line 26, ../scss/excelsior/components/_global.scss */
 .pull-down-container a,
 .pull-down-container a:hover,
 .pull-down-container a:active,
@@ -4863,7 +4957,7 @@ nav a:hover,
 nav a:active {
   text-decoration: none; }
 
-/* line 27, ../scss/excelsior/components/_global.scss */
+/* line 31, ../scss/excelsior/components/_global.scss */
 h1, h2, h3, h4, h5, h6 {
   font-family: "SourceSansProBold", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-weight: normal;
@@ -4871,101 +4965,101 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: normal !important;
   font-style: normal !important; }
 
-/* line 32, ../scss/excelsior/components/_global.scss */
+/* line 36, ../scss/excelsior/components/_global.scss */
 h1 {
   font-size: 2em; }
 
-/* line 36, ../scss/excelsior/components/_global.scss */
+/* line 40, ../scss/excelsior/components/_global.scss */
 h2 {
   font-size: 1.75em; }
 
-/* line 40, ../scss/excelsior/components/_global.scss */
+/* line 44, ../scss/excelsior/components/_global.scss */
 h3 {
   font-size: 1.5em; }
 
-/* line 44, ../scss/excelsior/components/_global.scss */
+/* line 48, ../scss/excelsior/components/_global.scss */
 h4 {
   font-size: 1.25em; }
 
-/* line 48, ../scss/excelsior/components/_global.scss */
+/* line 52, ../scss/excelsior/components/_global.scss */
 h5 {
   font-size: 1.125em; }
 
-/* line 52, ../scss/excelsior/components/_global.scss */
+/* line 56, ../scss/excelsior/components/_global.scss */
 h6 {
   font-size: 1em; }
 
-/* line 56, ../scss/excelsior/components/_global.scss */
+/* line 60, ../scss/excelsior/components/_global.scss */
 p {
   font-family: "SourceSansPro", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
 
-/* line 61, ../scss/excelsior/components/_global.scss */
+/* line 65, ../scss/excelsior/components/_global.scss */
 em,
 i {
   font-family: "SourceSansProItalic", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-style: normal; }
 
-/* line 66, ../scss/excelsior/components/_global.scss */
+/* line 70, ../scss/excelsior/components/_global.scss */
 strong,
 b {
   font-family: "SourceSansProBold", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-weight: normal; }
 
-/* line 71, ../scss/excelsior/components/_global.scss */
+/* line 75, ../scss/excelsior/components/_global.scss */
 strong em,
 em strong {
   font-family: "SourceSansProBoldItalic", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-style: normal; }
 
-/* line 75, ../scss/excelsior/components/_global.scss */
+/* line 79, ../scss/excelsior/components/_global.scss */
 ul, ol, dl {
   font-family: inherit; }
 
-/* line 81, ../scss/excelsior/components/_global.scss */
+/* line 85, ../scss/excelsior/components/_global.scss */
 .no-wrap {
   white-space: nowrap; }
 
-/* line 85, ../scss/excelsior/components/_global.scss */
+/* line 89, ../scss/excelsior/components/_global.scss */
 .align-center {
   text-align: center; }
 
-/* line 89, ../scss/excelsior/components/_global.scss */
+/* line 93, ../scss/excelsior/components/_global.scss */
 .bulleted-list {
   list-style-position: outside;
   margin-left: 1em; }
 
-/* line 94, ../scss/excelsior/components/_global.scss */
+/* line 98, ../scss/excelsior/components/_global.scss */
 .padding-sides-none {
   padding-left: 0 !important;
   padding-right: 0 !important; }
 
-/* line 105, ../scss/excelsior/components/_global.scss */
+/* line 109, ../scss/excelsior/components/_global.scss */
 .margin-top-xlarge {
   margin-top: 2em; }
 
-/* line 109, ../scss/excelsior/components/_global.scss */
+/* line 113, ../scss/excelsior/components/_global.scss */
 .scrollable-x {
   overflow-x: scroll;
   -webkit-overflow-scrolling: touch; }
 
-/* line 114, ../scss/excelsior/components/_global.scss */
+/* line 118, ../scss/excelsior/components/_global.scss */
 .radius {
   border-radius: 0.25em;
   background-clip: padding-box; }
 
-/* line 118, ../scss/excelsior/components/_global.scss */
+/* line 122, ../scss/excelsior/components/_global.scss */
 .unsupported-browser-message {
   margin: 1em 0 0.5em 0;
   text-align: center;
   font-size: 110%;
   line-height: 120%; }
 
-/* line 125, ../scss/excelsior/components/_global.scss */
+/* line 129, ../scss/excelsior/components/_global.scss */
 .row {
   padding-bottom: 1em; }
 
-/* line 130, ../scss/excelsior/components/_global.scss */
+/* line 134, ../scss/excelsior/components/_global.scss */
 .unselectable {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -4977,155 +5071,165 @@ ul, ol, dl {
   width: device-width; }
 
 /* line 2, ../scss/excelsior/components/_visibility.scss */
-.show-for-no-touch {
-  display: none !important; }
-
-/* line 3, ../scss/excelsior/components/_visibility.scss */
-.hide-for-no-touch {
-  display: inherit !important; }
-
-/* line 4, ../scss/excelsior/components/_visibility.scss */
-.hide-for-no-touch li, li.hide-for-no-touch {
-  display: list-item !important; }
-
-/* line 5, ../scss/excelsior/components/_visibility.scss */
-.no-touch .show-for-no-touch {
-  display: inherit !important; }
-
-/* line 6, ../scss/excelsior/components/_visibility.scss */
-.no-touch .show-for-no-touch li, .no-touch li.show-for-no-touch {
-  display: list-item !important; }
-
-/* line 7, ../scss/excelsior/components/_visibility.scss */
-.no-touch .hide-for-no-touch {
-  display: none !important; }
-
-/* line 10, ../scss/excelsior/components/_visibility.scss */
 .hide-off-screen {
   display: block !important;
   position: absolute !important;
   left: -9999em !important;
   top: -9999em !important; }
 
-/* line 21, ../scss/excelsior/components/_visibility.scss */
-.show-for-screen-max-mini {
-  display: none !important; }
-
-/* line 22, ../scss/excelsior/components/_visibility.scss */
-.hide-for-screen-max-mini {
+/* line 10, ../scss/excelsior/components/_visibility.scss */
+.show-for-no-touch {
   display: inherit !important; }
+  /* line 9, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
+  .touch .show-for-no-touch {
+    display: none !important; }
 
-/* line 23, ../scss/excelsior/components/_visibility.scss */
-.hide-for-screen-max-mini li, li.hide-for-screen-max-mini {
+/* line 19, ../scss/excelsior/components/_visibility.scss */
+.show-for-no-touch li,
+li.show-for-no-touch {
   display: list-item !important; }
+  /* line 9, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
+  .touch .show-for-no-touch li, .touch
+  li.show-for-no-touch {
+    display: none !important; }
 
-/* line 24, ../scss/excelsior/components/_visibility.scss */
-.screen-max-tiny .show-for-screen-max-mini {
-  display: inherit !important; }
-
-/* line 25, ../scss/excelsior/components/_visibility.scss */
-.screen-max-tiny .show-for-screen-max-mini li, .screen-max-tiny li.show-for-screen-max-mini {
-  display: list-item !important; }
-
-/* line 26, ../scss/excelsior/components/_visibility.scss */
-.screen-max-tiny .hide-for-screen-max-mini {
+/* line 27, ../scss/excelsior/components/_visibility.scss */
+.hide-for-no-touch {
   display: none !important; }
+  /* line 9, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
+  .touch .hide-for-no-touch {
+    display: inherit !important; }
 
-/* line 29, ../scss/excelsior/components/_visibility.scss */
-.show-for-screen-max-medium {
+/* line 36, ../scss/excelsior/components/_visibility.scss */
+.hide-for-no-touch li,
+li.hide-for-no-touch {
   display: none !important; }
-
-/* line 30, ../scss/excelsior/components/_visibility.scss */
-.hide-for-screen-max-medium {
-  display: inherit !important; }
-
-/* line 31, ../scss/excelsior/components/_visibility.scss */
-.hide-for-screen-max-medium li, li.hide-for-screen-max-medium {
-  display: list-item !important; }
-
-/* line 32, ../scss/excelsior/components/_visibility.scss */
-.screen-max-small .show-for-screen-max-medium {
-  display: inherit !important; }
-
-/* line 33, ../scss/excelsior/components/_visibility.scss */
-.screen-max-small .show-for-screen-max-medium li, .screen-max-small li.show-for-screen-max-medium {
-  display: list-item !important; }
-
-/* line 34, ../scss/excelsior/components/_visibility.scss */
-.screen-max-small .hide-for-screen-max-medium {
-  display: none !important; }
-
-/* line 37, ../scss/excelsior/components/_visibility.scss */
-.show-for-screen-max-large {
-  display: none !important; }
-
-/* line 38, ../scss/excelsior/components/_visibility.scss */
-.hide-for-screen-max-large {
-  display: inherit !important; }
-
-/* line 39, ../scss/excelsior/components/_visibility.scss */
-.hide-for-screen-max-large li, li.hide-for-screen-max-large {
-  display: list-item !important; }
-
-/* line 40, ../scss/excelsior/components/_visibility.scss */
-.screen-max-large .show-for-screen-max-large {
-  display: inherit !important; }
-
-/* line 41, ../scss/excelsior/components/_visibility.scss */
-.screen-max-large .show-for-screen-max-large li, .screen-max-large li.show-for-screen-max-large {
-  display: list-item !important; }
-
-/* line 42, ../scss/excelsior/components/_visibility.scss */
-.screen-max-large .hide-for-screen-max-large {
-  display: none !important; }
-
-/* line 45, ../scss/excelsior/components/_visibility.scss */
-.lt-ie9 .hide-for-lt-ie9 {
-  display: none !important; }
-
-/* line 46, ../scss/excelsior/components/_visibility.scss */
-.show-for-lt-ie9 {
-  display: none !important; }
-
-/* line 47, ../scss/excelsior/components/_visibility.scss */
-.lt-ie9 .show-for-lt-ie9 {
-  display: inherit !important; }
+  /* line 9, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
+  .touch .hide-for-no-touch li, .touch
+  li.hide-for-no-touch {
+    display: list-item !important; }
 
 /* line 48, ../scss/excelsior/components/_visibility.scss */
-.lt-ie9 .show-for-lt-ie9 li, .lt-ie9 li.show-for-lt-ie9 {
+.show-for-screen-max-mini {
+  display: none !important; }
+  /* line 9, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
+  .screen-max-tiny .show-for-screen-max-mini {
+    display: inherit !important; }
+
+/* line 9, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
+.screen-max-tiny .show-for-screen-max-mini li, .screen-max-tiny
+li.show-for-screen-max-mini {
   display: list-item !important; }
 
-/* line 50, ../scss/excelsior/components/_visibility.scss */
-.ie9 .hide-for-ie9 {
-  display: none !important; }
+/* line 63, ../scss/excelsior/components/_visibility.scss */
+.hide-for-screen-max-mini {
+  display: inherit !important; }
+  /* line 9, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
+  .screen-max-tiny .hide-for-screen-max-mini {
+    display: none !important; }
 
-/* line 51, ../scss/excelsior/components/_visibility.scss */
+/* line 9, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
+.screen-max-tiny .hide-for-screen-max-mini li, .screen-max-tiny
+li.hide-for-screen-max-mini {
+  display: list-item !important; }
+
+/* line 79, ../scss/excelsior/components/_visibility.scss */
+.show-for-screen-max-medium {
+  display: none !important; }
+  /* line 9, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
+  .screen-max-small .show-for-screen-max-medium {
+    display: inherit !important; }
+
+/* line 9, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
+.screen-max-small .show-for-screen-max-medium li, .screen-max-small
+li.show-for-screen-max-medium {
+  display: list-item !important; }
+
+/* line 94, ../scss/excelsior/components/_visibility.scss */
+.hide-for-screen-max-medium {
+  display: inherit !important; }
+  /* line 9, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
+  .screen-max-small .hide-for-screen-max-medium {
+    display: none !important; }
+
+/* line 9, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
+.screen-max-small .hide-for-screen-max-medium li, .screen-max-small
+li.hide-for-screen-max-medium {
+  display: list-item !important; }
+
+/* line 110, ../scss/excelsior/components/_visibility.scss */
+.show-for-screen-max-large {
+  display: none !important; }
+  /* line 9, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
+  .screen-max-large .show-for-screen-max-large {
+    display: inherit !important; }
+
+/* line 9, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
+.screen-max-large .show-for-screen-max-large li, .screen-max-large
+li.show-for-screen-max-large {
+  display: list-item !important; }
+
+/* line 125, ../scss/excelsior/components/_visibility.scss */
+.hide-for-screen-max-large {
+  display: inherit !important; }
+  /* line 9, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
+  .screen-max-large .hide-for-screen-max-large {
+    display: none !important; }
+
+/* line 134, ../scss/excelsior/components/_visibility.scss */
+.hide-for-screen-max-large li,
+li.hide-for-screen-max-large {
+  display: list-item !important; }
+
+/* line 140, ../scss/excelsior/components/_visibility.scss */
+.show-for-lt-ie9 {
+  display: none !important; }
+  /* line 9, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
+  .lt-ie9 .show-for-lt-ie9 {
+    display: inherit !important; }
+
+/* line 9, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
+.lt-ie9 .show-for-lt-ie9 li, .lt-ie9
+li.show-for-lt-ie9 {
+  display: list-item !important; }
+
+/* line 155, ../scss/excelsior/components/_visibility.scss */
 .show-for-ie9 {
   display: none !important; }
+  /* line 9, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
+  .ie9 .show-for-ie9 {
+    display: inherit !important; }
 
-/* line 52, ../scss/excelsior/components/_visibility.scss */
-.ie9 .show-for-ie9 {
-  display: inherit !important; }
-
-/* line 53, ../scss/excelsior/components/_visibility.scss */
-.ie9 .show-for-ie9 li, .ie9 li.show-for-ie9 {
+/* line 9, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
+.ie9 .show-for-ie9 li, .ie9
+li.show-for-ie9 {
   display: list-item !important; }
 
-/* line 55, ../scss/excelsior/components/_visibility.scss */
-.oldie .hide-for-oldie {
-  display: none !important; }
+/* line 170, ../scss/excelsior/components/_visibility.scss */
+.hide-for-lt-ie9 {
+  display: inherit !important; }
+  /* line 9, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
+  .ie9 .hide-for-lt-ie9 {
+    display: none !important; }
 
-/* line 56, ../scss/excelsior/components/_visibility.scss */
+/* line 178, ../scss/excelsior/components/_visibility.scss */
 .show-for-oldie {
   display: none !important; }
+  /* line 9, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
+  .oldie .show-for-oldie {
+    display: inherit !important; }
 
-/* line 57, ../scss/excelsior/components/_visibility.scss */
-.oldie .show-for-oldie {
-  display: inherit !important; }
-
-/* line 58, ../scss/excelsior/components/_visibility.scss */
-.oldie .show-for-oldie li, li.hide-for-oldie {
+/* line 9, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
+.oldie .show-for-oldie li, .oldie
+li.show-for-oldie {
   display: list-item !important; }
+
+/* line 193, ../scss/excelsior/components/_visibility.scss */
+.hide-for-oldie {
+  display: inherit !important; }
+  /* line 9, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
+  .oldie .hide-for-oldie {
+    display: none !important; }
 
 @font-face {
   font-family: "SourceSansPro";
@@ -5381,11 +5485,10 @@ tbody tr.info > td {
   /* line 204, ../scss/excelsior/components/_tables.scss */
   .rt-table-menu + table {
     margin-top: 1em; }
-
-/* line 210, ../scss/excelsior/components/_tables.scss */
-.touch .rt-table-menu > a.button {
-  padding-bottom: 0.9375em;
-  padding-top: 1.125em; }
+  /* line 9, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
+  .touch .rt-table-menu > a.button {
+    padding-bottom: 0.9375em;
+    padding-top: 1.125em; }
 
 /* line 3, ../scss/excelsior/components/_alerts.scss */
 .alert-box {
@@ -5394,53 +5497,54 @@ tbody tr.info > td {
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
   background-color: #fcf8e3;
   border: 1px solid #fbeed5;
+  font-weight: normal;
   border-radius: 0.25em;
   background-clip: padding-box; }
-  /* line 12, ../scss/excelsior/components/_alerts.scss */
+  /* line 13, ../scss/excelsior/components/_alerts.scss */
   .alert-box, .alert-box h4 {
     color: #c09853; }
-  /* line 16, ../scss/excelsior/components/_alerts.scss */
+  /* line 17, ../scss/excelsior/components/_alerts.scss */
   .alert-box h4 {
     margin: 0; }
-  /* line 21, ../scss/excelsior/components/_alerts.scss */
+  /* line 22, ../scss/excelsior/components/_alerts.scss */
   .alert-box .close {
     text-decoration: none; }
-    /* line 24, ../scss/excelsior/components/_alerts.scss */
+    /* line 25, ../scss/excelsior/components/_alerts.scss */
     .alert-box .close:hover {
       text-decoration: none; }
-  /* line 31, ../scss/excelsior/components/_alerts.scss */
+  /* line 32, ../scss/excelsior/components/_alerts.scss */
   .alert-box.success {
     background-color: #dff0d8;
     border-color: #d6e9c6;
     color: #468847; }
-    /* line 35, ../scss/excelsior/components/_alerts.scss */
+    /* line 36, ../scss/excelsior/components/_alerts.scss */
     .alert-box.success h4 {
       color: #468847; }
-  /* line 41, ../scss/excelsior/components/_alerts.scss */
+  /* line 42, ../scss/excelsior/components/_alerts.scss */
   .alert-box.alert, .alert-box.error {
     background-color: #f2dede;
     border-color: #eed3d7;
     color: #b94a48; }
-    /* line 46, ../scss/excelsior/components/_alerts.scss */
+    /* line 47, ../scss/excelsior/components/_alerts.scss */
     .alert-box.alert h4, .alert-box.error h4 {
       color: #b94a48; }
-  /* line 51, ../scss/excelsior/components/_alerts.scss */
+  /* line 52, ../scss/excelsior/components/_alerts.scss */
   .alert-box.secondary {
     background-color: #d9edf7;
     border-color: #bce8f1;
     color: #3a87ad; }
-    /* line 56, ../scss/excelsior/components/_alerts.scss */
+    /* line 57, ../scss/excelsior/components/_alerts.scss */
     .alert-box.secondary h4 {
       color: #3a87ad; }
 
-/* line 66, ../scss/excelsior/components/_alerts.scss */
+/* line 67, ../scss/excelsior/components/_alerts.scss */
 .alert-block {
   padding-top: 14px;
   padding-bottom: 14px; }
-  /* line 71, ../scss/excelsior/components/_alerts.scss */
+  /* line 72, ../scss/excelsior/components/_alerts.scss */
   .alert-block > p, .alert-block > ul {
     margin-bottom: 0; }
-  /* line 75, ../scss/excelsior/components/_alerts.scss */
+  /* line 76, ../scss/excelsior/components/_alerts.scss */
   .alert-block p + p {
     margin-top: 5px; }
 
@@ -5474,7 +5578,7 @@ button.button {
   padding: 6px 12px;
   font-family: "SourceSansPro", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-weight: normal !important; }
-  /* line 328, ../scss/excelsior/_mixins.scss */
+  /* line 334, ../scss/excelsior/_mixins.scss */
   .button:hover, .button:focus, .button:active, .button.active, .button.disabled, .button[disabled],
   input.button:hover,
   input.button:focus,
@@ -5490,14 +5594,14 @@ button.button {
   button.button[disabled] {
     color: #333333;
     background-color: #e6e6e6; }
-  /* line 335, ../scss/excelsior/_mixins.scss */
+  /* line 341, ../scss/excelsior/_mixins.scss */
   .button:active, .button.active,
   input.button:active,
   input.button.active,
   button.button:active,
   button.button.active {
     background-color: #cccccc \9; }
-  /* line 290, ../scss/excelsior/_mixins.scss */
+  /* line 296, ../scss/excelsior/_mixins.scss */
   .button:hover, .button:focus,
   input.button:hover,
   input.button:focus,
@@ -5507,15 +5611,16 @@ button.button {
     text-decoration: none;
     background-position: 0 -15px;
     -webkit-transition: background-position 0.1s linear;
+    -moz-transition: background-position 0.1s linear;
     transition: background-position 0.1s linear; }
-  /* line 301, ../scss/excelsior/_mixins.scss */
+  /* line 307, ../scss/excelsior/_mixins.scss */
   .button:focus,
   input.button:focus,
   button.button:focus {
     outline: thin dotted #333;
     outline: 5px auto -webkit-focus-ring-color;
     outline-offset: -2px; }
-  /* line 307, ../scss/excelsior/_mixins.scss */
+  /* line 313, ../scss/excelsior/_mixins.scss */
   .button.active, .button:active,
   input.button.active,
   input.button:active,
@@ -5524,7 +5629,7 @@ button.button {
     background-image: none;
     outline: 0;
     box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05); }
-  /* line 315, ../scss/excelsior/_mixins.scss */
+  /* line 321, ../scss/excelsior/_mixins.scss */
   .button.disabled, .button[disabled],
   input.button.disabled,
   input.button[disabled],
@@ -5558,11 +5663,11 @@ button.button {
   background-repeat: repeat-x;
   border-color: #0044cc #0044cc #002a80;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25); }
-  /* line 328, ../scss/excelsior/_mixins.scss */
+  /* line 334, ../scss/excelsior/_mixins.scss */
   .button.secondary:hover, .button.secondary:focus, .button.secondary:active, .button.secondary.active, .button.secondary.disabled, .button.secondary[disabled] {
     color: white;
     background-color: #0044cc; }
-  /* line 335, ../scss/excelsior/_mixins.scss */
+  /* line 341, ../scss/excelsior/_mixins.scss */
   .button.secondary:active, .button.secondary.active {
     background-color: #003399 \9; }
 
@@ -5576,11 +5681,11 @@ button.button {
   background-repeat: repeat-x;
   border-color: #f89406 #f89406 #ad6704;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25); }
-  /* line 328, ../scss/excelsior/_mixins.scss */
+  /* line 334, ../scss/excelsior/_mixins.scss */
   .button.warning:hover, .button.warning:focus, .button.warning:active, .button.warning.active, .button.warning.disabled, .button.warning[disabled] {
     color: white;
     background-color: #f89406; }
-  /* line 335, ../scss/excelsior/_mixins.scss */
+  /* line 341, ../scss/excelsior/_mixins.scss */
   .button.warning:active, .button.warning.active {
     background-color: #c67605 \9; }
 
@@ -5594,11 +5699,11 @@ button.button {
   background-repeat: repeat-x;
   border-color: #bd362f #bd362f #802420;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25); }
-  /* line 328, ../scss/excelsior/_mixins.scss */
+  /* line 334, ../scss/excelsior/_mixins.scss */
   .button.alert:hover, .button.alert:focus, .button.alert:active, .button.alert.active, .button.alert.disabled, .button.alert[disabled] {
     color: white;
     background-color: #bd362f; }
-  /* line 335, ../scss/excelsior/_mixins.scss */
+  /* line 341, ../scss/excelsior/_mixins.scss */
   .button.alert:active, .button.alert.active {
     background-color: #942a25 \9; }
 
@@ -5612,11 +5717,11 @@ button.button {
   background-repeat: repeat-x;
   border-color: #51a351 #51a351 #387038;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25); }
-  /* line 328, ../scss/excelsior/_mixins.scss */
+  /* line 334, ../scss/excelsior/_mixins.scss */
   .button.success:hover, .button.success:focus, .button.success:active, .button.success.active, .button.success.disabled, .button.success[disabled] {
     color: white;
     background-color: #51a351; }
-  /* line 335, ../scss/excelsior/_mixins.scss */
+  /* line 341, ../scss/excelsior/_mixins.scss */
   .button.success:active, .button.success.active {
     background-color: #408140 \9; }
 
@@ -5630,11 +5735,11 @@ button.button {
   background-repeat: repeat-x;
   border-color: #2f96b4 #2f96b4 #1f6377;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25); }
-  /* line 328, ../scss/excelsior/_mixins.scss */
+  /* line 334, ../scss/excelsior/_mixins.scss */
   .button.info:hover, .button.info:focus, .button.info:active, .button.info.active, .button.info.disabled, .button.info[disabled] {
     color: white;
     background-color: #2f96b4; }
-  /* line 335, ../scss/excelsior/_mixins.scss */
+  /* line 341, ../scss/excelsior/_mixins.scss */
   .button.info:active, .button.info.active {
     background-color: #24748c \9; }
 
@@ -5648,11 +5753,11 @@ button.button {
   background-repeat: repeat-x;
   border-color: #282828 #282828 #020202;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25); }
-  /* line 328, ../scss/excelsior/_mixins.scss */
+  /* line 334, ../scss/excelsior/_mixins.scss */
   .button.inverse:hover, .button.inverse:focus, .button.inverse:active, .button.inverse.active, .button.inverse.disabled, .button.inverse[disabled] {
     color: white;
     background-color: #282828; }
-  /* line 335, ../scss/excelsior/_mixins.scss */
+  /* line 341, ../scss/excelsior/_mixins.scss */
   .button.inverse:active, .button.inverse.active {
     background-color: #0e0e0e \9; }
 
@@ -5827,13 +5932,13 @@ fieldset legend {
   border: 0;
   border-bottom: 1px solid #e5e5e5;
   background: transparent; }
-  /* line 34, ../scss/excelsior/components/_forms.scss */
+  /* line 33, ../scss/excelsior/components/_forms.scss */
   legend small,
   fieldset legend small {
     font-size: 15px;
     color: #999999; }
 
-/* line 45, ../scss/excelsior/components/_forms.scss */
+/* line 44, ../scss/excelsior/components/_forms.scss */
 label,
 input,
 button,
@@ -5842,7 +5947,7 @@ textarea {
   font-size: 16px;
   line-height: 20px; }
 
-/* line 53, ../scss/excelsior/components/_forms.scss */
+/* line 52, ../scss/excelsior/components/_forms.scss */
 input,
 button,
 select,
@@ -5853,12 +5958,12 @@ textarea {
   border-radius: 0.25em;
   background-clip: padding-box; }
 
-/* line 59, ../scss/excelsior/components/_forms.scss */
+/* line 58, ../scss/excelsior/components/_forms.scss */
 label {
   display: block;
   margin-bottom: 5px; }
 
-/* line 86, ../scss/excelsior/components/_forms.scss */
+/* line 85, ../scss/excelsior/components/_forms.scss */
 select,
 textarea,
 button,
@@ -5887,11 +5992,11 @@ input[type="color"] {
   vertical-align: middle;
   color: #555555; }
 
-/* line 98, ../scss/excelsior/components/_forms.scss */
+/* line 97, ../scss/excelsior/components/_forms.scss */
 textarea {
   height: auto; }
 
-/* line 118, ../scss/excelsior/components/_forms.scss */
+/* line 117, ../scss/excelsior/components/_forms.scss */
 textarea,
 input[type="text"],
 input[type="password"],
@@ -5912,8 +6017,9 @@ input[type="color"],
   border: 1px solid #cccccc;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+  -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
   transition: border linear 0.2s, box-shadow linear 0.2s; }
-  /* line 125, ../scss/excelsior/components/_forms.scss */
+  /* line 124, ../scss/excelsior/components/_forms.scss */
   textarea:focus,
   input[type="text"]:focus,
   input[type="password"]:focus,
@@ -5932,46 +6038,47 @@ input[type="color"],
   .uneditable-input:focus {
     border-color: rgba(82, 168, 236, 0.8);
     outline: 0;
-    outline: thin dotted \9;
-    /* IE6-9 */
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6); }
+  /* line 131, ../scss/excelsior/components/_forms.scss */
+  .ie9 textarea:focus, .ie9
+  input[type="text"]:focus, .ie9
+  input[type="password"]:focus, .ie9
+  input[type="datetime"]:focus, .ie9
+  input[type="datetime-local"]:focus, .ie9
+  input[type="date"]:focus, .ie9
+  input[type="month"]:focus, .ie9
+  input[type="time"]:focus, .ie9
+  input[type="week"]:focus, .ie9
+  input[type="number"]:focus, .ie9
+  input[type="email"]:focus, .ie9
+  input[type="url"]:focus, .ie9
+  input[type="search"]:focus, .ie9
+  input[type="tel"]:focus, .ie9
+  input[type="color"]:focus, .ie9
+  .uneditable-input:focus {
+    outline: thin dotted;
+    /* IE6-9 */ }
+  /* line 142, ../scss/excelsior/components/_forms.scss */
+  .lt-ie9 textarea:focus, .lt-ie9
+  input[type="text"]:focus, .lt-ie9
+  input[type="password"]:focus, .lt-ie9
+  input[type="datetime"]:focus, .lt-ie9
+  input[type="datetime-local"]:focus, .lt-ie9
+  input[type="date"]:focus, .lt-ie9
+  input[type="month"]:focus, .lt-ie9
+  input[type="time"]:focus, .lt-ie9
+  input[type="week"]:focus, .lt-ie9
+  input[type="number"]:focus, .lt-ie9
+  input[type="email"]:focus, .lt-ie9
+  input[type="url"]:focus, .lt-ie9
+  input[type="search"]:focus, .lt-ie9
+  input[type="tel"]:focus, .lt-ie9
+  input[type="color"]:focus, .lt-ie9
+  .uneditable-input:focus {
+    outline: thin dotted;
+    /* IE6-9 */ }
 
-/* line 157, ../scss/excelsior/components/_forms.scss */
-.ie9 textarea:focus,
-.ie9 input[type="text"]:focus,
-.ie9 input[type="password"]:focus,
-.ie9 input[type="datetime"]:focus,
-.ie9 input[type="datetime-local"]:focus,
-.ie9 input[type="date"]:focus,
-.ie9 input[type="month"]:focus,
-.ie9 input[type="time"]:focus,
-.ie9 input[type="week"]:focus,
-.ie9 input[type="number"]:focus,
-.ie9 input[type="email"]:focus,
-.ie9 input[type="url"]:focus,
-.ie9 input[type="search"]:focus,
-.ie9 input[type="tel"]:focus,
-.ie9 input[type="color"]:focus,
-.ie9 .uneditable-input:focus, .lt-ie9 textarea:focus,
-.lt-ie9 input[type="text"]:focus,
-.lt-ie9 input[type="password"]:focus,
-.lt-ie9 input[type="datetime"]:focus,
-.lt-ie9 input[type="datetime-local"]:focus,
-.lt-ie9 input[type="date"]:focus,
-.lt-ie9 input[type="month"]:focus,
-.lt-ie9 input[type="time"]:focus,
-.lt-ie9 input[type="week"]:focus,
-.lt-ie9 input[type="number"]:focus,
-.lt-ie9 input[type="email"]:focus,
-.lt-ie9 input[type="url"]:focus,
-.lt-ie9 input[type="search"]:focus,
-.lt-ie9 input[type="tel"]:focus,
-.lt-ie9 input[type="color"]:focus,
-.lt-ie9 .uneditable-input:focus {
-  outline: thin dotted;
-  /* IE6-9 */ }
-
-/* line 186, ../scss/excelsior/components/_forms.scss */
+/* line 178, ../scss/excelsior/components/_forms.scss */
 select,
 textarea,
 button,
@@ -5993,7 +6100,7 @@ input[type="color"] {
   font-family: "SourceSansPro", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-size: 16px; }
 
-/* line 196, ../scss/excelsior/components/_forms.scss */
+/* line 190, ../scss/excelsior/components/_forms.scss */
 input[type="file"],
 input[type="image"],
 input[type="submit"],
@@ -6001,42 +6108,42 @@ input[type="reset"],
 input[type="button"] {
   width: auto; }
 
-/* line 203, ../scss/excelsior/components/_forms.scss */
+/* line 195, ../scss/excelsior/components/_forms.scss */
 input[type="search"]::-webkit-search-decoration,
 input[type="search"]::-webkit-search-cancel-button {
   -webkit-appearance: none; }
 
-/* line 209, ../scss/excelsior/components/_forms.scss */
+/* line 201, ../scss/excelsior/components/_forms.scss */
 select,
 input[type="file"] {
   height: 30px;
   /* In IE7, the height of the select element cannot be changed by height, only font-size */
   line-height: 30px; }
 
-/* line 215, ../scss/excelsior/components/_forms.scss */
+/* line 207, ../scss/excelsior/components/_forms.scss */
 select {
   width: 220px;
   border: 1px solid #cccccc;
   background-color: white; }
 
-/* line 223, ../scss/excelsior/components/_forms.scss */
+/* line 215, ../scss/excelsior/components/_forms.scss */
 select[multiple],
 select[size] {
   height: auto; }
 
-/* line 229, ../scss/excelsior/components/_forms.scss */
+/* line 223, ../scss/excelsior/components/_forms.scss */
 select:focus,
 input[type="file"]:focus {
   outline: thin dotted #333;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px; }
 
-/* line 236, ../scss/excelsior/components/_forms.scss */
+/* line 228, ../scss/excelsior/components/_forms.scss */
 .prefix,
 .postfix {
   font-size: 16px; }
 
-/* line 240, ../scss/excelsior/components/_forms.scss */
+/* line 232, ../scss/excelsior/components/_forms.scss */
 span.postfix {
   margin-left: -2px;
   border-left: 1px solid #ccc;
@@ -6045,23 +6152,36 @@ span.postfix {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0; }
 
-/* line 364, ../scss/excelsior/components/_forms.scss */
+/* line 314, ../scss/excelsior/components/_forms.scss */
+input:focus:invalid,
+textarea:focus:invalid,
+select:focus:invalid {
+  color: #b94a48;
+  border-color: #ee5f5b; }
+  /* line 317, ../scss/excelsior/components/_forms.scss */
+  input:focus:invalid:focus,
+  textarea:focus:invalid:focus,
+  select:focus:invalid:focus {
+    border-color: #e9322d;
+    box-shadow: 0 0 6px #f8b9b7; }
+
+/* line 328, ../scss/excelsior/components/_forms.scss */
 .help-block,
 .help-inline {
   color: #595959; }
 
-/* line 368, ../scss/excelsior/components/_forms.scss */
+/* line 332, ../scss/excelsior/components/_forms.scss */
 .help-block {
   display: block;
   margin-bottom: 10px; }
 
-/* line 373, ../scss/excelsior/components/_forms.scss */
+/* line 337, ../scss/excelsior/components/_forms.scss */
 .help-inline {
   display: inline-block;
   vertical-align: middle;
   padding-left: 5px; }
 
-/* line 538, ../scss/excelsior/components/_forms.scss */
+/* line 503, ../scss/excelsior/components/_forms.scss */
 div.switch > span {
   box-shadow: 2px 0 10px 0 rgba(0, 0, 0, 0.07), 1000px 0 0 980px #dff0d8, -2px 0 10px 0 rgba(0, 0, 0, 0.07), -1000px 0 0 1000px whitesmoke; }
 
@@ -6162,14 +6282,10 @@ a.label:hover, a.label:focus {
     display: list-item;
     text-align: -webkit-match-parent; }
 
-/* line 15, ../scss/excelsior/components/_lightbox.scss */
-.clearing-blackout {
-  top: 48px; }
-  
-/* line 23, ../scss/excelsior/components/_lightbox.scss */
+/* line 22, ../scss/excelsior/components/_lightbox.scss */
 .clearing-close {
   text-decoration: none; }
-  /* line 26, ../scss/excelsior/components/_lightbox.scss */
+  /* line 25, ../scss/excelsior/components/_lightbox.scss */
   .clearing-close:hover {
     text-decoration: none; }
 
@@ -6194,71 +6310,71 @@ a.label:hover, a.label:focus {
   .link-buttons-list a {
     display: inline-block;
     margin: 0.5em; }
-
-/* line 74, ../scss/excelsior/components/_lists.scss */
-.touch .link-buttons-list a {
-  display: inline-block;
-  margin-bottom: 0;
-  padding: 6px 12px;
-  font-size: 16px;
-  line-height: 20px;
-  text-align: center;
-  vertical-align: middle;
-  cursor: pointer;
-  color: #333333;
-  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
-  background-color: whitesmoke;
-  background-image: -webkit-linear-gradient(top, white, #e6e6e6);
-  background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
-  background-repeat: repeat-x;
-  border-color: #e6e6e6 #e6e6e6 #bfbfbf;
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-  border: 1px solid #cccccc;
-  border-bottom-color: #b3b3b3;
-  border-radius: 0.25em;
-  background-clip: padding-box;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
-  line-height: 20px;
-  cursor: pointer;
-  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
-  text-decoration: none;
-  background-color: whitesmoke;
-  background-image: -webkit-linear-gradient(top, white, #e6e6e6);
-  background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
-  background-repeat: repeat-x; }
-  /* line 328, ../scss/excelsior/_mixins.scss */
-  .touch .link-buttons-list a:hover, .touch .link-buttons-list a:focus, .touch .link-buttons-list a:active, .touch .link-buttons-list a.active, .touch .link-buttons-list a.disabled, .touch .link-buttons-list a[disabled] {
-    color: #333333;
-    background-color: #e6e6e6; }
-  /* line 335, ../scss/excelsior/_mixins.scss */
-  .touch .link-buttons-list a:active, .touch .link-buttons-list a.active {
-    background-color: #cccccc \9; }
-  /* line 290, ../scss/excelsior/_mixins.scss */
-  .touch .link-buttons-list a:hover, .touch .link-buttons-list a:focus {
-    color: #333333;
-    text-decoration: none;
-    background-position: 0 -15px;
-    -webkit-transition: background-position 0.1s linear;
-    transition: background-position 0.1s linear; }
-  /* line 301, ../scss/excelsior/_mixins.scss */
-  .touch .link-buttons-list a:focus {
-    outline: thin dotted #333;
-    outline: 5px auto -webkit-focus-ring-color;
-    outline-offset: -2px; }
-  /* line 307, ../scss/excelsior/_mixins.scss */
-  .touch .link-buttons-list a.active, .touch .link-buttons-list a:active {
-    background-image: none;
-    outline: 0;
-    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05); }
-  /* line 315, ../scss/excelsior/_mixins.scss */
-  .touch .link-buttons-list a.disabled, .touch .link-buttons-list a[disabled] {
-    cursor: default;
-    background-image: none;
-    opacity: 0.65;
-    box-shadow: none; }
-  /* line 93, ../scss/excelsior/components/_lists.scss */
-  .touch .link-buttons-list a a:hover {
-    text-decoration: none; }
+    /* line 9, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
+    .touch .link-buttons-list a {
+      display: inline-block;
+      margin-bottom: 0;
+      padding: 6px 12px;
+      font-size: 16px;
+      line-height: 20px;
+      text-align: center;
+      vertical-align: middle;
+      cursor: pointer;
+      color: #333333;
+      text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+      background-color: whitesmoke;
+      background-image: -webkit-linear-gradient(top, white, #e6e6e6);
+      background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
+      background-repeat: repeat-x;
+      border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+      border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+      border: 1px solid #cccccc;
+      border-bottom-color: #b3b3b3;
+      border-radius: 0.25em;
+      background-clip: padding-box;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+      line-height: 20px;
+      cursor: pointer;
+      text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+      text-decoration: none;
+      background-color: whitesmoke;
+      background-image: -webkit-linear-gradient(top, white, #e6e6e6);
+      background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
+      background-repeat: repeat-x; }
+      /* line 334, ../scss/excelsior/_mixins.scss */
+      .touch .link-buttons-list a:hover, .touch .link-buttons-list a:focus, .touch .link-buttons-list a:active, .touch .link-buttons-list a.active, .touch .link-buttons-list a.disabled, .touch .link-buttons-list a[disabled] {
+        color: #333333;
+        background-color: #e6e6e6; }
+      /* line 341, ../scss/excelsior/_mixins.scss */
+      .touch .link-buttons-list a:active, .touch .link-buttons-list a.active {
+        background-color: #cccccc \9; }
+      /* line 296, ../scss/excelsior/_mixins.scss */
+      .touch .link-buttons-list a:hover, .touch .link-buttons-list a:focus {
+        color: #333333;
+        text-decoration: none;
+        background-position: 0 -15px;
+        -webkit-transition: background-position 0.1s linear;
+        -moz-transition: background-position 0.1s linear;
+        transition: background-position 0.1s linear; }
+      /* line 307, ../scss/excelsior/_mixins.scss */
+      .touch .link-buttons-list a:focus {
+        outline: thin dotted #333;
+        outline: 5px auto -webkit-focus-ring-color;
+        outline-offset: -2px; }
+      /* line 313, ../scss/excelsior/_mixins.scss */
+      .touch .link-buttons-list a.active, .touch .link-buttons-list a:active {
+        background-image: none;
+        outline: 0;
+        box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05); }
+      /* line 321, ../scss/excelsior/_mixins.scss */
+      .touch .link-buttons-list a.disabled, .touch .link-buttons-list a[disabled] {
+        cursor: default;
+        background-image: none;
+        opacity: 0.65;
+        box-shadow: none; }
+      /* line 80, ../scss/excelsior/components/_lists.scss */
+      .touch .link-buttons-list a a:hover {
+        text-decoration: none; }
 
 /* line 2, ../scss/excelsior/components/_images.scss */
 .thumbnail {
@@ -6301,6 +6417,7 @@ a.label:hover, a.label:focus {
   padding: 5px;
   background-color: transparent;
   -webkit-transition: background-color 0.2s ease;
+  -moz-transition: background-color 0.2s ease;
   transition: background-color 0.2s ease; }
   /* line 49, ../scss/excelsior/components/_images.scss */
   .img-list li > a:hover {
@@ -6388,7 +6505,7 @@ a.label:hover, a.label:focus {
   float: right;
   font-size: 1.2em;
   line-height: inherit;
-  margin: -0.3em 0 0 8px; }
+  margin: 3em 0 0 8px; }
 
 /* line 10, ../scss/excelsior/components/_navigation.scss */
 .skip-to {
@@ -6422,34 +6539,53 @@ a.label:hover, a.label:focus {
   position: relative;
   z-index: 35;
   -webkit-transition: top 0.2s ease;
-  transition: top 0.2s ease; }
+  -moz-transition: top 0.2s ease;
+  transition: top 0.2s ease;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
+  /* line 21, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
+  .no-no-rgba .pull-down-container {
+    height: 40px; }
 
-/* line 42, ../scss/excelsior/components/_navigation.scss */
+/* line 47, ../scss/excelsior/components/_navigation.scss */
 .pull-down {
+  position: relative;
+  top: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin-top: 4px;
   background: url(../images/nys-small.png) no-repeat 1px 4px transparent;
   background-size: 32px 32px;
   border-top: none;
-  display: block;
-  height: 100%;
-  margin-top: 4px;
-  position: relative;
-  top: 0px;
-  width: 100%;
   z-index: 50;
   -webkit-transition: top 0.2s ease;
-  transition: top 0.2s ease; }
-  /* line 55, ../scss/excelsior/components/_navigation.scss */
+  -moz-transition: top 0.2s ease;
+  transition: top 0.2s ease;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
+  /* line 21, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
+  .no-no-rgba .pull-down {
+    margin-top: 0;
+    position: absolute; }
+  /* line 66, ../scss/excelsior/components/_navigation.scss */
   .pull-down .accessibility-text {
     text-indent: -9999px;
     position: absolute; }
-  /* line 60, ../scss/excelsior/components/_navigation.scss */
+  /* line 71, ../scss/excelsior/components/_navigation.scss */
   .pull-down .gripper, .pull-down .gripper span {
     background-color: #09223d;
     background-color: rgba(0, 0, 0, 0.4);
     height: 1px;
     position: absolute;
     width: 81%; }
-    /* line 66, ../scss/excelsior/components/_navigation.scss */
+    /* line 77, ../scss/excelsior/components/_navigation.scss */
     .pull-down .gripper:after, .pull-down .gripper span:after {
       background-color: #144e8c;
       background-color: rgba(255, 255, 255, 0.15);
@@ -6459,24 +6595,16 @@ a.label:hover, a.label:focus {
       position: absolute;
       top: 1px;
       width: 100%; }
-  /* line 77, ../scss/excelsior/components/_navigation.scss */
+  /* line 88, ../scss/excelsior/components/_navigation.scss */
   .pull-down .gripper {
     top: 39px; }
-    /* line 81, ../scss/excelsior/components/_navigation.scss */
+    /* line 21, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
+    .no-no-rgba .pull-down .gripper {
+      display: none; }
+    /* line 96, ../scss/excelsior/components/_navigation.scss */
     .pull-down .gripper span {
       top: 4px;
       width: 100%; }
-
-/* line 90, ../scss/excelsior/components/_navigation.scss */
-.no-rgba .gripper {
-  display: none; }
-/* line 94, ../scss/excelsior/components/_navigation.scss */
-.no-rgba .pull-down-container {
-  height: 40px; }
-/* line 98, ../scss/excelsior/components/_navigation.scss */
-.no-rgba .pull-down {
-  margin-top: 0;
-  position: absolute; }
 
 /* line 104, ../scss/excelsior/components/_navigation.scss */
 .gov-bar {
@@ -6490,13 +6618,19 @@ a.label:hover, a.label:focus {
   background-repeat: repeat-x;
   overflow: hidden;
   -webkit-transition: height 0.2s ease;
+  -moz-transition: height 0.2s ease;
   transition: height 0.2s ease;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
   width: 100%;
   z-index: 40; }
-  /* line 115, ../scss/excelsior/components/_navigation.scss */
+  /* line 117, ../scss/excelsior/components/_navigation.scss */
   .gov-bar a {
     color: #FFF; }
-    /* line 118, ../scss/excelsior/components/_navigation.scss */
+    /* line 120, ../scss/excelsior/components/_navigation.scss */
     .gov-bar a.gov-link-1 {
       float: left;
       font-size: 1.3em;
@@ -6504,43 +6638,43 @@ a.label:hover, a.label:focus {
       padding-bottom: 5px;
       margin: 12px 0.2em 0 0.5em;
       -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
-    /* line 127, ../scss/excelsior/components/_navigation.scss */
+    /* line 129, ../scss/excelsior/components/_navigation.scss */
     .gov-bar a.gov-link-2 {
       float: right;
-      background: url(../images/hamburger-no-dots.svg) no-repeat 2px 0px transparent;
+      background: url(../images/hamburger-no-dots.png) no-repeat 2px 0px transparent;
+      background-image: none, url(../images/hamburger-no-dots.svg);
       background-size: 24px;
       color: #FFF;
       font-size: 1em;
       margin: 5px 0.4em;
       padding: 6px 0.2em 2px 32px;
       -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
-    /* line 138, ../scss/excelsior/components/_navigation.scss */
+    /* line 141, ../scss/excelsior/components/_navigation.scss */
     .gov-bar a.gov-link-3 {
       display: none;
       text-indent: -9999px; }
-  /* line 144, ../scss/excelsior/components/_navigation.scss */
+  /* line 147, ../scss/excelsior/components/_navigation.scss */
   .gov-bar .state-links {
     overflow: auto; }
-  /* line 148, ../scss/excelsior/components/_navigation.scss */
+  /* line 151, ../scss/excelsior/components/_navigation.scss */
   .gov-bar form {
-    overflow: auto;
     padding: 0.1em 0.5em 0 0.5em;
     width: 100%; }
-    /* line 153, ../scss/excelsior/components/_navigation.scss */
+    /* line 155, ../scss/excelsior/components/_navigation.scss */
     .gov-bar form .gov-search-button {
       float: right;
       font-size: 0.95em;
       width: 26%; }
-    /* line 160, ../scss/excelsior/components/_navigation.scss */
+    /* line 162, ../scss/excelsior/components/_navigation.scss */
     .gov-bar form legend,
     .gov-bar form label {
       display: none; }
-    /* line 164, ../scss/excelsior/components/_navigation.scss */
+    /* line 166, ../scss/excelsior/components/_navigation.scss */
     .gov-bar form fieldset {
       border: 0;
       margin: 0;
       padding: 0; }
-  /* line 171, ../scss/excelsior/components/_navigation.scss */
+  /* line 173, ../scss/excelsior/components/_navigation.scss */
   .gov-bar input {
     border-radius: 4px;
     background-clip: padding-box;
@@ -6550,7 +6684,7 @@ a.label:hover, a.label:focus {
     display: block;
     float: left;
     margin: 0; }
-    /* line 180, ../scss/excelsior/components/_navigation.scss */
+    /* line 182, ../scss/excelsior/components/_navigation.scss */
     .gov-bar input[type="search"] {
       border-radius: 5px 0 0 5px;
       background-clip: padding-box;
@@ -6559,8 +6693,9 @@ a.label:hover, a.label:focus {
       color: #333;
       -moz-box-sizing: border-box;
       box-sizing: border-box;
-      height: 37px; }
-    /* line 189, ../scss/excelsior/components/_navigation.scss */
+      height: 37px;
+      line-height: 37px; }
+          /* line 197, ../scss/excelsior/components/_navigation.scss */
     .gov-bar input[type="submit"] {
       background-color: #505050;
       background-color: #7b7b7b;
@@ -6576,13 +6711,13 @@ a.label:hover, a.label:focus {
       line-height: 37px;
       width: 30%;
       margin-top: 0; }
-  /* line 204, ../scss/excelsior/components/_navigation.scss */
+  /* line 212, ../scss/excelsior/components/_navigation.scss */
   .gov-bar .search-container {
     height: 37px;
     margin: 1px 2px 0 0; }
 
 /* Site Header */
-/* line 211, ../scss/excelsior/components/_navigation.scss */
+/* line 219, ../scss/excelsior/components/_navigation.scss */
 .site-bar {
   background: #454545;
   background-color: #494949;
@@ -6595,8 +6730,14 @@ a.label:hover, a.label:focus {
   width: 100%;
   z-index: 30;
   -webkit-transition: top 0.2s ease;
-  transition: top 0.2s ease; }
-  /* line 221, ../scss/excelsior/components/_navigation.scss */
+  -moz-transition: top 0.2s ease;
+  transition: top 0.2s ease;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
+  /* line 230, ../scss/excelsior/components/_navigation.scss */
   .site-bar a.site-logo {
     color: #fff;
     float: left;
@@ -6605,26 +6746,26 @@ a.label:hover, a.label:focus {
     margin: -2px 0 0 52px;
     padding: 0.1em 0 0 0.3em;
     line-height: 48px; }
-  /* line 231, ../scss/excelsior/components/_navigation.scss */
+  /* line 240, ../scss/excelsior/components/_navigation.scss */
   .site-bar a.site-logo.two-line-title {
     display: block;
     height: 48px; }
-    /* line 235, ../scss/excelsior/components/_navigation.scss */
+    /* line 244, ../scss/excelsior/components/_navigation.scss */
     .site-bar a.site-logo.two-line-title span:first-of-type {
       margin-top: -8px; }
-    /* line 239, ../scss/excelsior/components/_navigation.scss */
+    /* line 248, ../scss/excelsior/components/_navigation.scss */
     .site-bar a.site-logo.two-line-title span {
       display: block;
       float: left;
       height: 16px;
       width: 100%; }
-    /* line 262, ../scss/excelsior/components/_navigation.scss */
+    /* line 271, ../scss/excelsior/components/_navigation.scss */
   .site-bar .site-functions {
     position: absolute;
     top: -1px;
     right: 0;
     width: 100%; }
-    /* line 268, ../scss/excelsior/components/_navigation.scss */
+    /* line 277, ../scss/excelsior/components/_navigation.scss */
     .site-bar .site-functions .site-search {
       background: #fff;
       border-bottom: 1px solid #666;
@@ -6638,32 +6779,38 @@ a.label:hover, a.label:focus {
       width: 100%;
       z-index: 15;
       -webkit-transition: height 0.2s ease;
-      transition: height 0.2s ease; }
-      /* line 282, ../scss/excelsior/components/_navigation.scss */
+      -moz-transition: height 0.2s ease;
+      transition: height 0.2s ease;
+      -webkit-transform: translate3d(0, 0, 0);
+      -moz-transform: translate3d(0, 0, 0);
+      -ms-transform: translate3d(0, 0, 0);
+      -o-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0); }
+      /* line 292, ../scss/excelsior/components/_navigation.scss */
       .site-bar .site-functions .site-search .search-container {
         height: 37px;
         padding: 0 0.3em !important; }
-      /* line 287, ../scss/excelsior/components/_navigation.scss */
+      /* line 297, ../scss/excelsior/components/_navigation.scss */
       .site-bar .site-functions .site-search form {
         margin: 3px 0 0 0;
         padding: 5px 8px;
         width: 100%; }
-        /* line 292, ../scss/excelsior/components/_navigation.scss */
+        /* line 302, ../scss/excelsior/components/_navigation.scss */
         .site-bar .site-functions .site-search form legend, .site-bar .site-functions .site-search form label {
           display: none; }
-        /* line 296, ../scss/excelsior/components/_navigation.scss */
+        /* line 306, ../scss/excelsior/components/_navigation.scss */
         .site-bar .site-functions .site-search form fieldset {
           border: 0;
           margin: 0;
           padding: 0; }
-      /* line 304, ../scss/excelsior/components/_navigation.scss */
+      /* line 314, ../scss/excelsior/components/_navigation.scss */
       .site-bar .site-functions .site-search input {
         -webkit-appearance: none;
         padding: 0;
         display: block;
         float: left;
         margin: 0; }
-      /* line 312, ../scss/excelsior/components/_navigation.scss */
+      /* line 322, ../scss/excelsior/components/_navigation.scss */
       .site-bar .site-functions .site-search input[type="search"] {
         float: left;
         border-radius: 5px 0 0 5px;
@@ -6672,12 +6819,14 @@ a.label:hover, a.label:focus {
         width: 86%;
         border-color: #999;
         height: 37px;
+        line-height: 37px;
         color: #333;
         -moz-box-sizing: border-box;
         box-sizing: border-box; }
-      /* line 323, ../scss/excelsior/components/_navigation.scss */
+              /* line 338, ../scss/excelsior/components/_navigation.scss */
       .site-bar .site-functions .site-search input[type="submit"] {
-        background: url(../images/search.svg) no-repeat center center transparent;
+        background: url(../images/search.png) no-repeat center center transparent;
+        background-image: none, url(../images/search.svg);
         background-size: 24px 24px;
         border: 0;
         height: 100%;
@@ -6685,7 +6834,7 @@ a.label:hover, a.label:focus {
         color: #fff;
         text-indent: -9999px;
         padding-bottom: 0.69em; }
-    /* line 335, ../scss/excelsior/components/_navigation.scss */
+    /* line 351, ../scss/excelsior/components/_navigation.scss */
     .site-bar .site-functions .site-button {
       float: left;
       background-color: #505050;
@@ -6698,12 +6847,12 @@ a.label:hover, a.label:focus {
       border-color: #999;
       width: 14%;
       height: 100%; }
-  /* line 346, ../scss/excelsior/components/_navigation.scss */
+  /* line 362, ../scss/excelsior/components/_navigation.scss */
   .site-bar .mobile-functions {
     float: right;
     list-style: none;
     margin: 0; }
-    /* line 351, ../scss/excelsior/components/_navigation.scss */
+    /* line 367, ../scss/excelsior/components/_navigation.scss */
     .site-bar .mobile-functions li {
       background: #454545;
       border-left: 1px solid #666;
@@ -6712,15 +6861,17 @@ a.label:hover, a.label:focus {
       background-image: linear-gradient(to bottom, #5f5f5f, #282828);
       background-repeat: repeat-x;
       float: left; }
-    /* line 358, ../scss/excelsior/components/_navigation.scss */
+    /* line 374, ../scss/excelsior/components/_navigation.scss */
     .site-bar .mobile-functions .mobile-search-button {
-      background: url(../images/search.svg) no-repeat 12px 12px transparent;
+      background: url(../images/search.png) no-repeat 12px 12px transparent;
+      background-image: none, url(../images/search.svg);
       background-size: 24px 24px; }
-    /* line 363, ../scss/excelsior/components/_navigation.scss */
+    /* line 380, ../scss/excelsior/components/_navigation.scss */
     .site-bar .mobile-functions .mobile-menu-button {
-      background: url(../images/hamburger.svg) no-repeat 12px 12px transparent;
+      background: url(../images/hamburger.png) no-repeat 12px 12px transparent;
+      background-image: none, url(../images/hamburger.svg);
       background-size: 24px 24px; }
-    /* line 368, ../scss/excelsior/components/_navigation.scss */
+    /* line 386, ../scss/excelsior/components/_navigation.scss */
     .site-bar .mobile-functions .mobile-icons {
       display: inline-block;
       height: 48px;
@@ -6728,30 +6879,31 @@ a.label:hover, a.label:focus {
       width: 48px;
       -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
 
-/* line 382, ../scss/excelsior/components/_navigation.scss */
+/* line 400, ../scss/excelsior/components/_navigation.scss */
 .global-nav {
   background: #333;
   position: absolute;
   top: 48px;
   width: 100%;
   z-index: 20; }
-  /* line 389, ../scss/excelsior/components/_navigation.scss */
+  /* line 407, ../scss/excelsior/components/_navigation.scss */
   .global-nav .nav-container {
     border-bottom: 1px solid #505050;
     height: 0;
     overflow: hidden;
     -webkit-transition: height 0.2s ease;
+    -moz-transition: height 0.2s ease;
     transition: height 0.2s ease; }
-  /* line 396, ../scss/excelsior/components/_navigation.scss */
+  /* line 414, ../scss/excelsior/components/_navigation.scss */
   .global-nav ul {
     list-style: none;
     margin: 0;
     padding: 0; }
-    /* line 401, ../scss/excelsior/components/_navigation.scss */
+    /* line 419, ../scss/excelsior/components/_navigation.scss */
     .global-nav ul li {
       border-right: 1px solid #444;
       border-bottom: 1px solid #444; }
-      /* line 405, ../scss/excelsior/components/_navigation.scss */
+      /* line 423, ../scss/excelsior/components/_navigation.scss */
       .global-nav ul li a {
         background: #333;
         color: #FFF;
@@ -6760,7 +6912,7 @@ a.label:hover, a.label:focus {
         padding: 11px 12px 9px 12px;
         text-shadow: 1px 1px 1px #111; }
 
-/* line 420, ../scss/excelsior/components/_navigation.scss */
+/* line 439, ../scss/excelsior/components/_navigation.scss */
 .page {
   background: #282828;
   height: 100%;
@@ -6768,48 +6920,51 @@ a.label:hover, a.label:focus {
   overflow: visible;
   top: 0;
   z-index: 10; }
-  /* line 428, ../scss/excelsior/components/_navigation.scss */
+  /* line 447, ../scss/excelsior/components/_navigation.scss */
   .page .content-section {
     background: #FFF;
     padding: 1em 0; }
 
 /* Active Govenor Banner */
-/* line 435, ../scss/excelsior/components/_navigation.scss */
+/* line 454, ../scss/excelsior/components/_navigation.scss */
 .active-gov-bar .gov-bar {
   height: 88px; }
 
-/* line 440, ../scss/excelsior/components/_navigation.scss */
+/* line 459, ../scss/excelsior/components/_navigation.scss */
 .active-gov-bar .site-bar,
 .active-gov-bar .pull-down-container {
   top: 88px; }
 
-/* line 444, ../scss/excelsior/components/_navigation.scss */
+/* line 463, ../scss/excelsior/components/_navigation.scss */
 .active-gov-bar .pull-down {
-  background: url(../images/close.svg) no-repeat 5px 7px transparent;
+  background: url(../images/close.png) no-repeat 5px 7px transparent;
+  background-image: none, url(../images/close.svg);
   background-size: 28px 28px; }
 
 /* Active Site Search */
-/* line 450, ../scss/excelsior/components/_navigation.scss */
+/* line 470, ../scss/excelsior/components/_navigation.scss */
 .active-site-search .site-bar .mobile-functions .mobile-icons.active {
-  background: url(../images/close-x-gray.svg) no-repeat 10px 12px white;
+  background: url(../images/close-x-gray.png) no-repeat 10px 12px white;
+  background-image: none, url(../images/close-x-gray.svg);
   background-size: 28px 28px; }
 
 /* Active Menu */
-/* line 456, ../scss/excelsior/components/_navigation.scss */
+/* line 477, ../scss/excelsior/components/_navigation.scss */
 .active-site-menu .site-bar .mobile-functions .mobile-icons.active {
-  background: url(../images/close.svg) no-repeat 10px 12px #333333;
+  background: url(../images/close.png) no-repeat 10px 12px #333333;
+  background-image: none, url(../images/close.svg);
   background-size: 28px 28px; }
 
-/* line 461, ../scss/excelsior/components/_navigation.scss */
+/* line 483, ../scss/excelsior/components/_navigation.scss */
 .active-site-search .site-functions .site-search {
   height: 53px; }
 
 /* Active Site Menu */
-/* line 466, ../scss/excelsior/components/_navigation.scss */
+/* line 488, ../scss/excelsior/components/_navigation.scss */
 .active-site-menu .global-nav .nav-container {
   height: 343px; }
 
-/* Medium Displays: 768px - 1279px *//* Page Lock at 960px *//* Large Displays: 1280px - 1440px *//* X-Large Displays: 1400px and up *//* line 2, ../scss/excelsior/components/_sticky-header.scss */
+/* Medium Displays: 768px - 1279px *//* Page Lock at 960px *//* line 2, ../scss/excelsior/components/_sticky-header.scss */
 .sticky-header .pull-down-container {
   position: fixed;
   top: 0;
@@ -6895,14 +7050,20 @@ body.off-canvas {
       width: 100%;
       background: #333 !important;
       -webkit-transition: left 0.2s ease;
-      transition: left 0.2s ease; }
-                  /* line 129, ../scss/excelsior/components/_off-canvas.scss */
+      -moz-transition: left 0.2s ease;
+      transition: left 0.2s ease;
+      -webkit-transform: translate3d(0, 0, 0);
+      -moz-transform: translate3d(0, 0, 0);
+      -ms-transform: translate3d(0, 0, 0);
+      -o-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0); }
+                  /* line 132, ../scss/excelsior/components/_off-canvas.scss */
       .off-canvas .global-nav ul ul li {
         padding-left: 2% !important; }
-                        /* line 156, ../scss/excelsior/components/_off-canvas.scss */
+                        /* line 167, ../scss/excelsior/components/_off-canvas.scss */
   .off-canvas .global-nav .menu-controls {
     height: 53px; }
-        /* line 163, ../scss/excelsior/components/_off-canvas.scss */
+        /* line 174, ../scss/excelsior/components/_off-canvas.scss */
     .off-canvas .global-nav .menu-controls .menu-back {
       background-color: #7b7b7b;
       background-image: -webkit-linear-gradient(top, #999999, #505050);
@@ -6916,106 +7077,165 @@ body.off-canvas {
       position: absolute;
       right: 0;
       visibility: hidden; }
-  /* line 175, ../scss/excelsior/components/_off-canvas.scss */
+  /* line 186, ../scss/excelsior/components/_off-canvas.scss */
   .off-canvas .global-nav .active-menu {
     left: 0;
+    top: 53px;
     z-index: 1; }
-    /* line 193, ../scss/excelsior/components/_off-canvas.scss */
+    /* line 205, ../scss/excelsior/components/_off-canvas.scss */
 .off-canvas.active-sub-menu .global-nav .menu-controls .menu-back {
   visibility: visible; }
-/* line 197, ../scss/excelsior/components/_off-canvas.scss */
+/* line 209, ../scss/excelsior/components/_off-canvas.scss */
 .off-canvas .page {
   position: relative;
   height: auto;
   min-height: 100%;
   top: 0;
   width: 100%; }
-  /* line 215, ../scss/excelsior/components/_off-canvas.scss */
+  /* line 227, ../scss/excelsior/components/_off-canvas.scss */
 .off-canvas .pull-down,
 .off-canvas .pull-down-container,
 .off-canvas .gov-bar,
 .off-canvas .site-bar,
 .off-canvas .page {
   -webkit-transition: top 0.2s ease, left 0.2s ease, height 0.2s ease;
-  transition: top 0.2s ease, left 0.2s ease, height 0.2s ease; }/* line 231, ../scss/excelsior/components/_off-canvas.scss */
+  -moz-transition: top 0.2s ease, left 0.2s ease, height 0.2s ease;
+  transition: top 0.2s ease, left 0.2s ease, height 0.2s ease; }/* line 243, ../scss/excelsior/components/_off-canvas.scss */
 .off-canvas.active-gov-bar .pull-down-container,
 .off-canvas.active-gov-bar .site-bar {
-  top: 88px; }/* line 247, ../scss/excelsior/components/_off-canvas.scss */
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  top: 88px; }
+/* line 249, ../scss/excelsior/components/_off-canvas.scss */
+.off-canvas.active-gov-bar .gov-bar,
+.off-canvas.active-gov-bar .pull-down-container {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }/* line 265, ../scss/excelsior/components/_off-canvas.scss */
 .off-canvas.active-site-menu .pull-down,
 .off-canvas.active-site-menu .pull-down-container,
 .off-canvas.active-site-menu .gov-bar,
 .off-canvas.active-site-menu .site-bar,
 .off-canvas.active-site-menu .page {
   position: fixed;
-  left: -82%; }/* line 262, ../scss/excelsior/components/_off-canvas.scss */
+  left: -82%; }
+/* line 273, ../scss/excelsior/components/_off-canvas.scss */
+.off-canvas.active-site-menu .gov-bar,
+.off-canvas.active-site-menu .site-bar,
+.off-canvas.active-site-menu .global-nav,
+.off-canvas.active-site-menu .page {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
+  /* line 282, ../scss/excelsior/components/_off-canvas.scss */
 .off-canvas.active-site-menu .global-nav .icon-right-open:before {
   padding-top: 3px;
   position: absolute;
   right: 5%; }
-  /* line 273, ../scss/excelsior/components/_off-canvas.scss */
+  /* line 293, ../scss/excelsior/components/_off-canvas.scss */
 .off-canvas.active-site-menu .mobile-menu-button {
   box-shadow: inset 6px 0px 8px -2px #000; }
-/* line 277, ../scss/excelsior/components/_off-canvas.scss */
+/* line 297, ../scss/excelsior/components/_off-canvas.scss */
 .off-canvas.active-site-menu .page {
   box-shadow: 5px 49px 8px #000; }
-  /* line 285, ../scss/excelsior/components/_off-canvas.scss */
+  /* line 305, ../scss/excelsior/components/_off-canvas.scss */
 .off-canvas.active-site-menu .footer {
   left: -82%; }
   
 @media screen and (min-width: 48em) {
-  /* line 145, ../scss/excelsior/_foundation-override.scss */
+  /* line 149, ../scss/excelsior/_foundation-override.scss */
   .section-container.auto section .title {
     font-family: "SourceSansProBold", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
     font-weight: normal;
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
     background-clip: padding-box; } 
-  /* line 181, ../scss/excelsior/_foundation-override.scss */
+  /* line 185, ../scss/excelsior/_foundation-override.scss */
   .section-container.auto > section > .title,
   .section-container.tabs > section > .title {
     border-left: 1px solid #cccccc;
     border-top: 1px solid #cccccc; } 
-  /* line 246, ../scss/excelsior/_foundation-override.scss */
+  /* line 250, ../scss/excelsior/_foundation-override.scss */
   .vertical-nav section,
   .horizontal-nav section {
     border: 0; }
-    /* line 249, ../scss/excelsior/_foundation-override.scss */
+    /* line 253, ../scss/excelsior/_foundation-override.scss */
     .vertical-nav section .content,
     .horizontal-nav section .content {
       border-radius: 0; } }
 
 @media (min-width: 48em) {
-    /* line 168, ../scss/excelsior/_foundation-override.scss */
+    /* line 172, ../scss/excelsior/_foundation-override.scss */
     .section-container.auto > section > .title a,
     .section-container.accordion > section > .title a,
     .section-container.vertical-nav > section > .title a,
     .section-container.horizontal-nav > section > .title a {
       padding: 0.6em 1em; } 
-    /* line 192, ../scss/excelsior/_foundation-override.scss */
+    /* line 196, ../scss/excelsior/_foundation-override.scss */
     .section-container section {
       margin-bottom: 0; } 
-  /* line 232, ../scss/excelsior/_foundation-override.scss */
+  /* line 236, ../scss/excelsior/_foundation-override.scss */
   .section-container.auto .title:after,
   .section-container.tabs .title:after,
   .section-container.vertical-nav .title:after,
   .section-container.horizontal-nav .title:after {
     content: ""; } 
-  /* line 99, ../scss/excelsior/components/_global.scss */
+      /* line 271, ../scss/excelsior/_foundation-override.scss */
+      [data-magellan-expedition].section-container.vertical-tabs section > .title {
+        max-width: 10.5em; } 
+    /* line 281, ../scss/excelsior/_foundation-override.scss */
+    [data-magellan-expedition].section-container.vertical-tabs section.active > .title {
+      max-width: 10.5em; } 
+    /* line 259, ../scss/excelsior/_foundation-override.scss */
+    [data-magellan-expedition].section-container.vertical-tabs {
+      padding: 0;
+      border: none;
+      background: transparent;
+      position: relative; }
+      /* line 297, ../scss/excelsior/_foundation-override.scss */
+      [data-magellan-expedition].section-container.vertical-tabs.f-dropdown {
+        top: auto; }
+        /* line 300, ../scss/excelsior/_foundation-override.scss */
+        [data-magellan-expedition].section-container.vertical-tabs.f-dropdown:before, [data-magellan-expedition].section-container.vertical-tabs.f-dropdown:after {
+          border: 0; }
+      /* line 306, ../scss/excelsior/_foundation-override.scss */
+      [data-magellan-expedition].section-container.vertical-tabs section:first-of-type .title {
+        border-top-left-radius: 0.25em;
+        border-top-right-radius: 0.25em; }
+      /* line 311, ../scss/excelsior/_foundation-override.scss */
+      [data-magellan-expedition].section-container.vertical-tabs section:last-of-type .title {
+        border-bottom-left-radius: 0.25em;
+        border-bottom-right-radius: 0.25em; } 
+  /* line 103, ../scss/excelsior/components/_global.scss */
   .margin-top-small {
     margin-top: 1em; } 
-    /* line 15, ../scss/excelsior/components/_lightbox.scss */
-    .clearing-blackout {
-      top: 0; } 
-    /* line 247, ../scss/excelsior/components/_navigation.scss */
+  /* line 15, ../scss/excelsior/components/_lightbox.scss */
+  .clearing-blackout {
+    top: 0; } 
+        /* line 182, ../scss/excelsior/components/_navigation.scss */
+        .gov-bar input[type="search"] {
+          height: 23px;
+          line-height: 23px; } 
+    /* line 256, ../scss/excelsior/components/_navigation.scss */
     .site-bar a.site-logo.two-line-title {
       font-size: 1.5em; }
-      /* line 251, ../scss/excelsior/components/_navigation.scss */
+      /* line 260, ../scss/excelsior/components/_navigation.scss */
       .site-bar a.site-logo.two-line-title span {
         padding-bottom: 5px;
         height: 24px; }
-      /* line 256, ../scss/excelsior/components/_navigation.scss */
+      /* line 265, ../scss/excelsior/components/_navigation.scss */
       .site-bar a.site-logo.two-line-title span:first-of-type {
         margin-top: -12px; } 
+          /* line 322, ../scss/excelsior/components/_navigation.scss */
+          .site-bar .site-functions .site-search input[type="search"] {
+            line-height: 36px; } 
     /* line 6, ../scss/excelsior/components/_off-canvas.scss */
     body.off-canvas {
       padding-top: 0; } 
@@ -7050,60 +7270,72 @@ body.off-canvas {
           overflow: hidden;
           visibility: hidden;
           -webkit-transition: left 0s ease;
-          transition: left 0s ease; } 
-          /* line 129, ../scss/excelsior/components/_off-canvas.scss */
+          -moz-transition: left 0s ease;
+          transition: left 0s ease;
+          -webkit-transform: translate3d(0, 0, 0);
+          -moz-transform: translate3d(0, 0, 0);
+          -ms-transform: translate3d(0, 0, 0);
+          -o-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0); } 
+          /* line 132, ../scss/excelsior/components/_off-canvas.scss */
           .off-canvas .global-nav ul ul li {
             border-right: 1px solid #000;
-            border-left: 1px solid #666; } 
-          /* line 137, ../scss/excelsior/components/_off-canvas.scss */
+            border-left: 1px solid #666; }
+            /* line 139, ../scss/excelsior/components/_off-canvas.scss */
+            .off-canvas .global-nav ul ul li:first-child {
+              border-left: none; }
+            /* line 143, ../scss/excelsior/components/_off-canvas.scss */
+            .off-canvas .global-nav ul ul li:last-child {
+              border-right: none; } 
+          /* line 148, ../scss/excelsior/components/_off-canvas.scss */
           .off-canvas .global-nav ul ul li:first {
             border-left: none; } 
-        /* line 145, ../scss/excelsior/components/_off-canvas.scss */
+        /* line 156, ../scss/excelsior/components/_off-canvas.scss */
         .off-canvas .global-nav ul ul.active-menu {
           visibility: visible; }
-          /* line 148, ../scss/excelsior/components/_off-canvas.scss */
+          /* line 159, ../scss/excelsior/components/_off-canvas.scss */
           .off-canvas .global-nav ul ul.active-menu li {
             padding: 0 !important; } 
-      /* line 156, ../scss/excelsior/components/_off-canvas.scss */
+      /* line 167, ../scss/excelsior/components/_off-canvas.scss */
       .off-canvas .global-nav .menu-controls {
         display: none; } 
-      /* line 179, ../scss/excelsior/components/_off-canvas.scss */
+      /* line 191, ../scss/excelsior/components/_off-canvas.scss */
       .off-canvas .global-nav .active-menu li {
         padding-left: 0;
         border-bottom: 0; }
-        /* line 184, ../scss/excelsior/components/_off-canvas.scss */
+        /* line 196, ../scss/excelsior/components/_off-canvas.scss */
         .off-canvas .global-nav .active-menu li a {
           border-radius: 4px;
           background: #454545 !important; } 
-    /* line 197, ../scss/excelsior/components/_off-canvas.scss */
+    /* line 209, ../scss/excelsior/components/_off-canvas.scss */
     .off-canvas .page {
       min-height: auto;
-      top: -23px;
+      top: -22px;
       left: 0; } 
-  /* line 222, ../scss/excelsior/components/_off-canvas.scss */
+  /* line 234, ../scss/excelsior/components/_off-canvas.scss */
   .off-canvas .gov-bar,
   .off-canvas .site-bar,
   .off-canvas .global-nav,
   .off-canvas .page {
     position: relative; } 
-  /* line 235, ../scss/excelsior/components/_off-canvas.scss */
+  /* line 253, ../scss/excelsior/components/_off-canvas.scss */
   .off-canvas.active-gov-bar .site-bar {
     top: 0; } 
-  /* line 255, ../scss/excelsior/components/_off-canvas.scss */
-  .off-canvas.active-site-menu .gov-bar,
-  .off-canvas.active-site-menu .site-bar,
-  .off-canvas.active-site-menu .global-nav,
-  .off-canvas.active-site-menu .page {
-    left: auto;
-    position: relative; } 
-    /* line 262, ../scss/excelsior/components/_off-canvas.scss */
+    /* line 273, ../scss/excelsior/components/_off-canvas.scss */
+    .off-canvas.active-site-menu .gov-bar,
+    .off-canvas.active-site-menu .site-bar,
+    .off-canvas.active-site-menu .global-nav,
+    .off-canvas.active-site-menu .page {
+      left: auto;
+      position: relative; } 
+    /* line 282, ../scss/excelsior/components/_off-canvas.scss */
     .off-canvas.active-site-menu .global-nav .icon-right-open:before {
       position: relative;
       right: auto; } 
-    /* line 277, ../scss/excelsior/components/_off-canvas.scss */
+    /* line 297, ../scss/excelsior/components/_off-canvas.scss */
     .off-canvas.active-site-menu .page {
       box-shadow: none; } 
-    /* line 285, ../scss/excelsior/components/_off-canvas.scss */
+    /* line 305, ../scss/excelsior/components/_off-canvas.scss */
     .off-canvas.active-site-menu .footer {
       left: auto; } }
 
@@ -7152,36 +7384,42 @@ body.off-canvas {
   .crop .img2,
   .crop .img3 {
     margin-left: 0; } 
-  /* line 473, ../scss/excelsior/components/_navigation.scss */
+  /* line 495, ../scss/excelsior/components/_navigation.scss */
   .gov-bar {
     background: #036;
     border-bottom: 1px solid #555;
     position: relative;
     -webkit-transition: height 0s ease;
-    transition: height 0s ease; }
-    /* line 479, ../scss/excelsior/components/_navigation.scss */
+    -moz-transition: height 0s ease;
+    transition: height 0s ease;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); }
+    /* line 502, ../scss/excelsior/components/_navigation.scss */
     .gov-bar input[type="search"] {
       height: 23px;
       margin-top: 1px; }
-    /* line 484, ../scss/excelsior/components/_navigation.scss */
+    /* line 507, ../scss/excelsior/components/_navigation.scss */
     .gov-bar input[type="submit"] {
       height: 23px;
       font-size: 1.2em;
       line-height: 1.7em;
       margin-top: 1px; }
 
-  /* line 494, ../scss/excelsior/components/_navigation.scss */
+  /* line 517, ../scss/excelsior/components/_navigation.scss */
   .gov-bar,
   .active-gov-bar .gov-bar,
   .gov-bar a {
     height: 28px; }
 
-  /* line 498, ../scss/excelsior/components/_navigation.scss */
+  /* line 521, ../scss/excelsior/components/_navigation.scss */
   .gov-bar .state-links {
     display: inline-block;
     float: left; }
 
-  /* line 503, ../scss/excelsior/components/_navigation.scss */
+  /* line 526, ../scss/excelsior/components/_navigation.scss */
   .gov-bar a.gov-link-1 {
     background: url(../images/nys-banner-img.png) no-repeat 0 0 transparent;
     display: inline-block;
@@ -7190,7 +7428,7 @@ body.off-canvas {
     text-indent: -9999px;
     width: 185px; }
 
-  /* line 513, ../scss/excelsior/components/_navigation.scss */
+  /* line 536, ../scss/excelsior/components/_navigation.scss */
   .gov-bar a.gov-link-2,
   .gov-bar a.gov-link-2:hover {
     background: url(../images/nys-banner-img.png) no-repeat 0 -28px transparent;
@@ -7201,11 +7439,11 @@ body.off-canvas {
     text-indent: -9999px;
     width: 130px; }
 
-  /* line 523, ../scss/excelsior/components/_navigation.scss */
+  /* line 546, ../scss/excelsior/components/_navigation.scss */
   .gov-bar a.gov-link-2:hover {
     background-color: transparent; }
 
-  /* line 527, ../scss/excelsior/components/_navigation.scss */
+  /* line 550, ../scss/excelsior/components/_navigation.scss */
   .gov-bar a.gov-link-3 {
     background: url(../images/nys-banner-img.png) no-repeat 0 -56px transparent;
     display: inline-block;
@@ -7213,11 +7451,11 @@ body.off-canvas {
     margin-right: 8px;
     width: 150px; }
 
-  /* line 535, ../scss/excelsior/components/_navigation.scss */
+  /* line 558, ../scss/excelsior/components/_navigation.scss */
   .gov-bar .search-container {
     margin-right: 9px; }
 
-  /* line 539, ../scss/excelsior/components/_navigation.scss */
+  /* line 562, ../scss/excelsior/components/_navigation.scss */
   .gov-bar form {
     display: none;
     float: right;
@@ -7227,16 +7465,16 @@ body.off-canvas {
     margin: 2px 5px 0 0; }
 
   /* Active Gov Bar Search Box */
-  /* line 549, ../scss/excelsior/components/_navigation.scss */
+  /* line 572, ../scss/excelsior/components/_navigation.scss */
   .active-gov-bar-search a.gov-link-3 {
     display: none; }
 
-  /* line 553, ../scss/excelsior/components/_navigation.scss */
+  /* line 576, ../scss/excelsior/components/_navigation.scss */
   .active-gov-bar-search .gov-bar form {
     display: block; }
 
   /* Site Header */
-  /* line 559, ../scss/excelsior/components/_navigation.scss */
+  /* line 582, ../scss/excelsior/components/_navigation.scss */
   .site-bar {
     background-color: #303030;
     background-image: -webkit-linear-gradient(top, #363636, #282828);
@@ -7246,30 +7484,36 @@ body.off-canvas {
     position: relative;
     width: 100%; }
 
-  /* line 567, ../scss/excelsior/components/_navigation.scss */
+  /* line 590, ../scss/excelsior/components/_navigation.scss */
   .site-bar,
   .active-gov-bar .site-bar {
     top: 0;
     -webkit-transition: top 0s ease;
+    -moz-transition: top 0s ease;
     transition: top 0s ease;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
     z-index: 0; }
 
-  /* line 573, ../scss/excelsior/components/_navigation.scss */
+  /* line 597, ../scss/excelsior/components/_navigation.scss */
   .site-bar a.site-logo {
     font-size: 2em;
     margin: 0 0 0 .3em;
     padding: 0.4em 0 0 4px; }
 
-  /* line 579, ../scss/excelsior/components/_navigation.scss */
+  /* line 603, ../scss/excelsior/components/_navigation.scss */
   .site-bar .site-functions {
     height: 100%; }
 
-  /* line 583, ../scss/excelsior/components/_navigation.scss */
+  /* line 607, ../scss/excelsior/components/_navigation.scss */
   .site-bar .mobile-functions {
     display: none !important;
     speak: none; }
 
-  /* line 588, ../scss/excelsior/components/_navigation.scss */
+  /* line 612, ../scss/excelsior/components/_navigation.scss */
   .site-bar .site-functions .site-search {
     border-bottom: none;
     background: transparent;
@@ -7282,23 +7526,23 @@ body.off-canvas {
     margin-top: -36px;
     width: 15em; }
 
-  /* line 601, ../scss/excelsior/components/_navigation.scss */
+  /* line 625, ../scss/excelsior/components/_navigation.scss */
   .site-bar .site-functions .site-search .search-container {
     margin: 0 2px 0 0; }
 
-  /* line 605, ../scss/excelsior/components/_navigation.scss */
+  /* line 629, ../scss/excelsior/components/_navigation.scss */
   .site-bar .site-functions .site-search form {
     margin: 0; }
 
-  /* line 609, ../scss/excelsior/components/_navigation.scss */
+  /* line 633, ../scss/excelsior/components/_navigation.scss */
   .site-bar .site-functions .site-search input[type="search"] {
     width: 82%; }
 
-  /* line 613, ../scss/excelsior/components/_navigation.scss */
+  /* line 637, ../scss/excelsior/components/_navigation.scss */
   .site-bar .site-functions .site-button {
     width: 18%; }
 
-  /* line 617, ../scss/excelsior/components/_navigation.scss */
+  /* line 641, ../scss/excelsior/components/_navigation.scss */
   .global-nav {
     display: block;
     height: 46px;
@@ -7306,54 +7550,52 @@ body.off-canvas {
     position: relative;
     top: 0;
     margin-top: -24px; }
+    /* line 649, ../scss/excelsior/components/_navigation.scss */
+    .global-nav .nav-container {
+      height: auto;
+      background: #666; }
+    /* line 654, ../scss/excelsior/components/_navigation.scss */
+    .global-nav ul li {
+      border-right: 1px solid #333;
+      border-left: 1px solid #888;
+      border-bottom: none;
+      float: left; }
+      /* line 660, ../scss/excelsior/components/_navigation.scss */
+      .global-nav ul li:first-child {
+        border-left: none; }
+        /* line 663, ../scss/excelsior/components/_navigation.scss */
+        .global-nav ul li:first-child a {
+          padding: 13px 12px 9px 14px; }
+      /* line 668, ../scss/excelsior/components/_navigation.scss */
+      .global-nav ul li a {
+        background: #666;
+        display: inline-block;
+        font-size: 1em;
+        text-shadow: none;
+        padding-top: 13px; }
 
-  /* line 626, ../scss/excelsior/components/_navigation.scss */
-  .global-nav .nav-container {
-    height: auto;
-    background: #666; }
-
-  /* line 631, ../scss/excelsior/components/_navigation.scss */
-  .global-nav ul li {
-    border-right: 1px solid #333;
-    border-left: 1px solid #888;
-    border-bottom: none;
-    float: left; }
-
-  /* line 638, ../scss/excelsior/components/_navigation.scss */
-  .global-nav ul li:first-child {
-    border-left: none; }
-
-  /* line 642, ../scss/excelsior/components/_navigation.scss */
-  .global-nav ul li:first-child a {
-    padding: 13px 12px 9px 14px; }
-
-  /* line 646, ../scss/excelsior/components/_navigation.scss */
-  .global-nav ul li a {
-    background: #666;
-    font-size: 1em;
-    text-shadow: none;
-    padding-top: 13px; }
-
-  /* line 653, ../scss/excelsior/components/_navigation.scss */
+  /* line 680, ../scss/excelsior/components/_navigation.scss */
   .global-nav .icon-right-open:before {
     float: right;
+    display: inline-block;
     padding-top: 3px;
-    padding-left: 5px; }
+    padding-left: 5px;
+    margin-top: 2px; }
 
-  /* line 659, ../scss/excelsior/components/_navigation.scss */
+  /* line 688, ../scss/excelsior/components/_navigation.scss */
   .global-nav .icon-right-open.active:before {
     content: "\e75c"; }
 
-  /* line 663, ../scss/excelsior/components/_navigation.scss */
+  /* line 692, ../scss/excelsior/components/_navigation.scss */
   .global-nav .nav-container ul li a.active {
     border: none;
     background-color: #888; }
 
-  /* line 668, ../scss/excelsior/components/_navigation.scss */
+  /* line 697, ../scss/excelsior/components/_navigation.scss */
   .global-nav .nav-container ul li a:hover {
     background: #888; }
 
-  /* line 672, ../scss/excelsior/components/_navigation.scss */
+  /* line 701, ../scss/excelsior/components/_navigation.scss */
   .global-nav .nav-container ul li a.active:after {
     border-right: 10px solid transparent;
     border-left: 10px solid transparent;
@@ -7365,23 +7607,23 @@ body.off-canvas {
     top: 41px;
     width: 0; }
 
-  /* line 684, ../scss/excelsior/components/_navigation.scss */
+  /* line 713, ../scss/excelsior/components/_navigation.scss */
   .global-nav ul ul li {
     border-right: 1px solid transparent;
     border-left: 1px solid transparent;
     border-bottom: none; }
 
-  /* line 690, ../scss/excelsior/components/_navigation.scss */
+  /* line 719, ../scss/excelsior/components/_navigation.scss */
   .global-nav .nav-container ul ul li a:hover {
     background-color: #393939 !important; }
 
-  /* line 694, ../scss/excelsior/components/_navigation.scss */
+  /* line 723, ../scss/excelsior/components/_navigation.scss */
   .page {
     background: #FFF;
     position: relative;
     top: -23px; }
 
-  /* line 700, ../scss/excelsior/components/_navigation.scss */
+  /* line 729, ../scss/excelsior/components/_navigation.scss */
   .page .content-section {
     padding: 2em 0; } }
 
@@ -7427,11 +7669,11 @@ body.off-canvas {
     position: relative; } }
 
 @media only screen and (min-width: 60em) {
-  /* line 708, ../scss/excelsior/components/_navigation.scss */
+  /* line 737, ../scss/excelsior/components/_navigation.scss */
   .gov-bar {
     background: #036; }
 
-  /* line 716, ../scss/excelsior/components/_navigation.scss */
+  /* line 745, ../scss/excelsior/components/_navigation.scss */
   .gov-bar .gov-wrap,
   .site-bar .site-wrap,
   .global-nav,
@@ -7442,25 +7684,15 @@ body.off-canvas {
     margin-right: auto;
     width: 60em !important; }
 
-  /* line 723, ../scss/excelsior/components/_navigation.scss */
+  /* line 752, ../scss/excelsior/components/_navigation.scss */
   .site-bar .site-wrap {
     position: relative; }
 
-  /* line 728, ../scss/excelsior/components/_navigation.scss */
+  /* line 757, ../scss/excelsior/components/_navigation.scss */
   .global-nav,
   .global-nav .nav-container {
     border-radius: 5px;
     background-clip: padding-box; } }
-
-@media only screen and (min-width: 80em) {
-  /* line 735, ../scss/excelsior/components/_navigation.scss */
-  .gov-bar {
-    background: #036; } }
-
-@media only screen and (min-width: 90em) {
-  /* line 742, ../scss/excelsior/components/_navigation.scss */
-  .gov-bar {
-    background: #036; } }
 
 @media (min-width: 60em) {
       /* line 63, ../scss/excelsior/components/_off-canvas.scss */
@@ -7470,5 +7702,56 @@ body.off-canvas {
         /* line 103, ../scss/excelsior/components/_off-canvas.scss */
         .off-canvas .global-nav ul ul {
           border-radius: 4px !important;
-          /* Do not use mixin here┬á*/
+          /* Do not use mixin here */
           background-clip: padding-box !important; } }
+
+@media print {
+  /* line 24, ../scss/excelsior/components/_print.scss */
+  .skip-to,
+  .pull-down-container,
+  .pull-down,
+  .gripper,
+  .gov-bar,
+  .gov-wrap,
+  .site-bar,
+  .site-wrap,
+  .site-title,
+  .site-functions,
+  .mobile-functions,
+  .mobile-functions ul,
+  .mobile-functions li,
+  .mobile-functions a,
+  .global-nav *,
+  .off-canvas .global-nav,
+  .global-nav .nav-container,
+  .nav-container,
+  .nav-container ul,
+  .nav-container li,
+  .nav-container a,
+  footer {
+    display: none !important;
+    visibility: hidden !important;
+    overflow: hidden !important;
+    border: none !important;
+    border-radius: 0 !important;
+    height: 0px !important;
+    margin-top: -100px !important;
+    top: -100px !important;
+    background: #FFF !important;
+    width: 0 !important;
+    z-index: 0 !important;
+    position: static !important;
+    color: #FFF !important; }
+
+  /* line 40, ../scss/excelsior/components/_print.scss */
+  .page {
+    position: static; }
+
+  /* line 45, ../scss/excelsior/components/_print.scss */
+  .alert-box {
+    text-shadow: none !important; }
+
+  /* line 52, ../scss/excelsior/components/_print.scss */
+  a.close:after,
+  .pagination a:after {
+    content: ""; } }

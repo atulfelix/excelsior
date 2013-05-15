@@ -70,7 +70,9 @@ module.exports = function(grunt) {
                     globule.findMapping(
                     [
                          'excelsior/js/vendor/*.js', // Source files to find
-                        '!excelsior/js/vendor/*.min.js' // Source files to exclude
+                        '!excelsior/js/vendor/*.min.js', // Source files to exclude
+                        '!excelsior/js/vendor/zepto.js', // Source files to exclude
+                        '!excelsior/js/vendor/jquery.js' // Source files to exclude
                     ],
                     {
                         ext: '.min.js', // Give them a .min.js extension
@@ -239,14 +241,6 @@ module.exports = function(grunt) {
                             'excelsior/css/excelsior.css'
                         ],
                         dest: 'excelsior/css/excelsior.css'
-                    },
-                    {
-                        src: [
-                            'excelsior/scss/foundation/normalize.css',
-                            'excelsior/scss/foundation/foundation.css',
-                            'excelsior/css/excelsior.oldie.css'
-                        ],
-                        dest: 'excelsior/css/excelsior.oldie.css'
                     }
                 ]
             },
@@ -254,7 +248,7 @@ module.exports = function(grunt) {
                 files: [
                     {
                         src: [
-                            'excelsior/js/vendor/jquery.js',
+                            'excelsior/js/vendor/jquery.min.js',
                             'excelsior/js/vendor/fastclick.js',
                             'excelsior/js/core/excelsior.js'
                         ],
@@ -301,10 +295,6 @@ module.exports = function(grunt) {
                     {
                         src: ['excelsior/css/excelsior.css'],
                         dest: 'excelsior/css/excelsior.min.css'
-                    },
-                    {
-                        src: ['excelsior/css/excelsior.oldie.css'],
-                        dest: 'excelsior/css/excelsior.oldie.min.css'
                     }
                 ]
 
@@ -314,6 +304,8 @@ module.exports = function(grunt) {
             generatedFiles: {
                 src: [
                     'excelsior/js/**/*.min.js',
+                    '!excelsior/js/vendor/jquery.min.js',
+                    '!excelsior/js/vendor/zepto.min.js',
                     'excelsior/js/excelsior.js',
                     'excelsior/css/*',
                     'excelsior/.sass-cache/',

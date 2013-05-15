@@ -174,6 +174,12 @@ $(document).ready(function(){
     // Active Elements
     $('[data-active]').on('click', function(e) {
 
+        // Prevent Defaults
+        e.preventDefault();
+
+        // Stop the click from moving up.
+        e.stopPropagation();
+
         // Active attribute class
         var $clickedElm = $(this),
             activeClass = $clickedElm.attr('data-active'),
@@ -221,8 +227,12 @@ $(document).ready(function(){
             }
         }
 
+        console.log($activeElm.length);
+
         // Check to see if there is already and active item
         if ($activeElm.length > 0) {
+
+            console.log('active-element-exists');
 
             // Check to make sure its not the same as the currently clicked item
             if ($activeElm.attr('data-active') !== $clickedElm.attr('data-active')) {
@@ -239,6 +249,10 @@ $(document).ready(function(){
 
             // Remove active state class from the clicked element
             $clickedElm.removeClass(selectedClass);
+
+            if (EWF.$body.hasClass('active-sub-menu')) {
+                EWF.$body.removeClass('active-sub-menu');
+            }
 
             // Remove any stray body click event
             EWF.$body.off('click');
@@ -276,12 +290,6 @@ $(document).ready(function(){
 
             // Check to see if anything special has to happen based on data-active value
             specialEvents(activeClass);
-
-            // Prevent Defaults
-            e.preventDefault();
-
-            // Stop the click from moving up.
-            e.stopPropagation();
 
         }
 
