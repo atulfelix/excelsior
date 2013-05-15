@@ -34,9 +34,10 @@ li.hide-for-small {
 
 // Sub nav
 
-.sub-nav {
+.sub-nav, .side-nav {
     dt:not(.active) a,
-    dd:not(.active) a {
+    dd:not(.active) a,
+    li:not(.active) a {
         padding: 0.1875em 0.5625em; // 3px 9px
 
         &:hover {
@@ -47,7 +48,10 @@ li.hide-for-small {
     }
 
     dt.active a,
-    dd.active a {
+    dd.active a,
+    li.active a,
+    li.active > a:first-child {
+        color: $white;
         padding: 0.1875em 0.5625em; // 3px 9px
         @include buttonBackground($buttonSecondaryBackground, $buttonSecondaryBackgroundHighlight);
 
@@ -252,6 +256,65 @@ section .title a {
     }
 }
 
+[data-magellan-expedition].section-container.vertical-tabs {
+    margin: 0.5em 0;
+    border: 1px solid $grayLighter;
+    min-width:0;
+
+    &.open {
+        display: block !important;
+        height: auto !important;
+    }
+    section {
+        margin-bottom: 0.25em;
+
+        > .title {
+            @include breakpoint($mobile-desktop-split) {
+                max-width: 10.5em;
+            }
+            &:after {
+                content: "";
+            }
+        }
+    }
+
+    section.active > .title {
+        &:after {
+            content: "";
+        }
+        @include breakpoint($mobile-desktop-split) {
+            max-width: 10.5em;
+        }
+
+    }
+
+    @include breakpoint($mobile-desktop-split) {
+        padding: 0;
+        border: none;
+        background: transparent;
+        position:relative;
+
+        &.f-dropdown {
+            top: auto;
+
+            &:before, &:after {
+                border: 0;
+            }
+
+        }
+
+        section:first-of-type .title {
+            border-top-left-radius: $baseBorderRadius;
+            border-top-right-radius: $baseBorderRadius;
+        }
+
+        section:last-of-type .title {
+            border-bottom-left-radius: $baseBorderRadius;
+            border-bottom-right-radius: $baseBorderRadius;
+        }
+
+    }
+}
 // Orbit
 
 .orbit-container .orbit-prev,
