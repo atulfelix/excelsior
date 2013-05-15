@@ -4561,14 +4561,14 @@ a.th {
   .f-dropdown.large {
     max-width: 800px; }
 
-/* line 6, ../../../../.rvm/gems/ruby-2.0.0-p0/gems/toolkit-1.0.0/stylesheets/toolkit/_border-box.scss */
+/* line 6, ../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_border-box.scss */
 *, *:after, *:before {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   *behavior: url('../behaviors/box-sizing/boxsizing.php'); }
 
-/* line 4, ../../../../.rvm/gems/ruby-2.0.0-p0/gems/toolkit-1.0.0/stylesheets/toolkit/_fluid-media.scss */
+/* line 4, ../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_fluid-media.scss */
 img, video {
   max-width: 100%;
   height: auto; }
@@ -4818,7 +4818,7 @@ section .title a {
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg); }
-/* line 9, ../../../../.rvm/gems/ruby-2.0.0-p0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
+/* line 9, ../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
 .touch .orbit-container .orbit-prev, .touch
 .orbit-container .orbit-next {
   display: inherit; }
@@ -5004,7 +5004,7 @@ ul, ol, dl {
 /* line 10, ../scss/excelsior/components/_visibility.scss */
 .show-for-no-touch {
   display: inherit !important; }
-  /* line 9, ../../../../.rvm/gems/ruby-2.0.0-p0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
+  /* line 9, ../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
   .touch .show-for-no-touch {
     display: none !important; }
 
@@ -5012,7 +5012,7 @@ ul, ol, dl {
 .show-for-no-touch li,
 li.show-for-no-touch {
   display: list-item !important; }
-  /* line 9, ../../../../.rvm/gems/ruby-2.0.0-p0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
+  /* line 9, ../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
   .touch .show-for-no-touch li, .touch
   li.show-for-no-touch {
     display: none !important; }
@@ -5020,7 +5020,7 @@ li.show-for-no-touch {
 /* line 27, ../scss/excelsior/components/_visibility.scss */
 .hide-for-no-touch {
   display: none !important; }
-  /* line 9, ../../../../.rvm/gems/ruby-2.0.0-p0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
+  /* line 9, ../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
   .touch .hide-for-no-touch {
     display: inherit !important; }
 
@@ -5028,7 +5028,7 @@ li.show-for-no-touch {
 .hide-for-no-touch li,
 li.hide-for-no-touch {
   display: none !important; }
-  /* line 9, ../../../../.rvm/gems/ruby-2.0.0-p0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
+  /* line 9, ../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
   .touch .hide-for-no-touch li, .touch
   li.hide-for-no-touch {
     display: list-item !important; }
@@ -5036,11 +5036,11 @@ li.hide-for-no-touch {
 /* line 48, ../scss/excelsior/components/_visibility.scss */
 .show-for-screen-max-mini {
   display: none !important; }
-  /* line 9, ../../../../.rvm/gems/ruby-2.0.0-p0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
+  /* line 9, ../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
   .screen-max-tiny .show-for-screen-max-mini {
     display: inherit !important; }
 
-/* line 9, ../../../../.rvm/gems/ruby-2.0.0-p0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
+/* line 9, ../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
 .screen-max-tiny .show-for-screen-max-mini li, .screen-max-tiny
 li.show-for-screen-max-mini {
   display: list-item !important; }
@@ -5048,11 +5048,11 @@ li.show-for-screen-max-mini {
 /* line 63, ../scss/excelsior/components/_visibility.scss */
 .hide-for-screen-max-mini {
   display: inherit !important; }
-  /* line 9, ../../../../.rvm/gems/ruby-2.0.0-p0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
+  /* line 9, ../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
   .screen-max-tiny .hide-for-screen-max-mini {
     display: none !important; }
 
-/* line 9, ../../../../.rvm/gems/ruby-2.0.0-p0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
+/* line 9, ../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
 .screen-max-tiny .hide-for-screen-max-mini li, .screen-max-tiny
 li.hide-for-screen-max-mini {
   display: list-item !important; }
@@ -5060,11 +5060,11 @@ li.hide-for-screen-max-mini {
 /* line 79, ../scss/excelsior/components/_visibility.scss */
 .show-for-screen-max-medium {
   display: none !important; }
-  /* line 9, ../../../../.rvm/gems/ruby-2.0.0-p0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
+  /* line 9, ../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
   .screen-max-small .show-for-screen-max-medium {
     display: inherit !important; }
 
-/* line 9, ../../../../.rvm/gems/ruby-2.0.0-p0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
+/* line 9, ../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
 .screen-max-small .show-for-screen-max-medium li, .screen-max-small
 li.show-for-screen-max-medium {
   display: list-item !important; }
@@ -5072,11 +5072,11 @@ li.show-for-screen-max-medium {
 /* line 94, ../scss/excelsior/components/_visibility.scss */
 .hide-for-screen-max-medium {
   display: inherit !important; }
-  /* line 9, ../../../../.rvm/gems/ruby-2.0.0-p0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
+  /* line 9, ../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
   .screen-max-small .hide-for-screen-max-medium {
     display: none !important; }
 
-/* line 9, ../../../../.rvm/gems/ruby-2.0.0-p0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
+/* line 9, ../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
 .screen-max-small .hide-for-screen-max-medium li, .screen-max-small
 li.hide-for-screen-max-medium {
   display: list-item !important; }
@@ -5084,11 +5084,11 @@ li.hide-for-screen-max-medium {
 /* line 110, ../scss/excelsior/components/_visibility.scss */
 .show-for-screen-max-large {
   display: none !important; }
-  /* line 9, ../../../../.rvm/gems/ruby-2.0.0-p0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
+  /* line 9, ../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
   .screen-max-large .show-for-screen-max-large {
     display: inherit !important; }
 
-/* line 9, ../../../../.rvm/gems/ruby-2.0.0-p0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
+/* line 9, ../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
 .screen-max-large .show-for-screen-max-large li, .screen-max-large
 li.show-for-screen-max-large {
   display: list-item !important; }
@@ -5096,7 +5096,7 @@ li.show-for-screen-max-large {
 /* line 125, ../scss/excelsior/components/_visibility.scss */
 .hide-for-screen-max-large {
   display: inherit !important; }
-  /* line 9, ../../../../.rvm/gems/ruby-2.0.0-p0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
+  /* line 9, ../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
   .screen-max-large .hide-for-screen-max-large {
     display: none !important; }
 
@@ -5108,11 +5108,11 @@ li.hide-for-screen-max-large {
 /* line 140, ../scss/excelsior/components/_visibility.scss */
 .show-for-lt-ie9 {
   display: none !important; }
-  /* line 9, ../../../../.rvm/gems/ruby-2.0.0-p0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
+  /* line 9, ../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
   .lt-ie9 .show-for-lt-ie9 {
     display: inherit !important; }
 
-/* line 9, ../../../../.rvm/gems/ruby-2.0.0-p0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
+/* line 9, ../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
 .lt-ie9 .show-for-lt-ie9 li, .lt-ie9
 li.show-for-lt-ie9 {
   display: list-item !important; }
@@ -5120,11 +5120,11 @@ li.show-for-lt-ie9 {
 /* line 155, ../scss/excelsior/components/_visibility.scss */
 .show-for-ie9 {
   display: none !important; }
-  /* line 9, ../../../../.rvm/gems/ruby-2.0.0-p0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
+  /* line 9, ../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
   .ie9 .show-for-ie9 {
     display: inherit !important; }
 
-/* line 9, ../../../../.rvm/gems/ruby-2.0.0-p0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
+/* line 9, ../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
 .ie9 .show-for-ie9 li, .ie9
 li.show-for-ie9 {
   display: list-item !important; }
@@ -5132,18 +5132,18 @@ li.show-for-ie9 {
 /* line 170, ../scss/excelsior/components/_visibility.scss */
 .hide-for-lt-ie9 {
   display: inherit !important; }
-  /* line 9, ../../../../.rvm/gems/ruby-2.0.0-p0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
+  /* line 9, ../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
   .ie9 .hide-for-lt-ie9 {
     display: none !important; }
 
 /* line 178, ../scss/excelsior/components/_visibility.scss */
 .show-for-oldie {
   display: none !important; }
-  /* line 9, ../../../../.rvm/gems/ruby-2.0.0-p0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
+  /* line 9, ../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
   .oldie .show-for-oldie {
     display: inherit !important; }
 
-/* line 9, ../../../../.rvm/gems/ruby-2.0.0-p0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
+/* line 9, ../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
 .oldie .show-for-oldie li, .oldie
 li.show-for-oldie {
   display: list-item !important; }
@@ -5151,7 +5151,7 @@ li.show-for-oldie {
 /* line 193, ../scss/excelsior/components/_visibility.scss */
 .hide-for-oldie {
   display: inherit !important; }
-  /* line 9, ../../../../.rvm/gems/ruby-2.0.0-p0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
+  /* line 9, ../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
   .oldie .hide-for-oldie {
     display: none !important; }
 
@@ -5409,7 +5409,7 @@ tbody tr.info > td {
   /* line 204, ../scss/excelsior/components/_tables.scss */
   .rt-table-menu + table {
     margin-top: 1em; }
-  /* line 9, ../../../../.rvm/gems/ruby-2.0.0-p0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
+  /* line 9, ../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
   .touch .rt-table-menu > a.button {
     padding-bottom: 0.9375em;
     padding-top: 1.125em; }
@@ -6234,7 +6234,7 @@ a.label:hover, a.label:focus {
   .link-buttons-list a {
     display: inline-block;
     margin: 0.5em; }
-    /* line 9, ../../../../.rvm/gems/ruby-2.0.0-p0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
+    /* line 9, ../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
     .touch .link-buttons-list a {
       display: inline-block;
       margin-bottom: 0;
@@ -6470,7 +6470,7 @@ a.label:hover, a.label:focus {
   -ms-transform: translate3d(0, 0, 0);
   -o-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0); }
-  /* line 21, ../../../../.rvm/gems/ruby-2.0.0-p0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
+  /* line 21, ../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
   .no-no-rgba .pull-down-container {
     height: 40px; }
 
@@ -6481,7 +6481,6 @@ a.label:hover, a.label:focus {
   display: block;
   width: 100%;
   height: 100%;
-  margin-top: 4px;
   background: url(../images/nys-small.png) no-repeat 1px 4px transparent;
   background-size: 32px 32px;
   border-top: none;
@@ -6494,22 +6493,22 @@ a.label:hover, a.label:focus {
   -ms-transform: translate3d(0, 0, 0);
   -o-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0); }
-  /* line 21, ../../../../.rvm/gems/ruby-2.0.0-p0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
+  /* line 21, ../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
   .no-no-rgba .pull-down {
     margin-top: 0;
     position: absolute; }
-  /* line 66, ../scss/excelsior/components/_navigation.scss */
+  /* line 65, ../scss/excelsior/components/_navigation.scss */
   .pull-down .accessibility-text {
     text-indent: -9999px;
     position: absolute; }
-  /* line 71, ../scss/excelsior/components/_navigation.scss */
+  /* line 70, ../scss/excelsior/components/_navigation.scss */
   .pull-down .gripper, .pull-down .gripper span {
     background-color: #09223d;
     background-color: rgba(0, 0, 0, 0.4);
     height: 1px;
     position: absolute;
     width: 81%; }
-    /* line 77, ../scss/excelsior/components/_navigation.scss */
+    /* line 76, ../scss/excelsior/components/_navigation.scss */
     .pull-down .gripper:after, .pull-down .gripper span:after {
       background-color: #144e8c;
       background-color: rgba(255, 255, 255, 0.15);
@@ -6519,18 +6518,18 @@ a.label:hover, a.label:focus {
       position: absolute;
       top: 1px;
       width: 100%; }
-  /* line 88, ../scss/excelsior/components/_navigation.scss */
+  /* line 87, ../scss/excelsior/components/_navigation.scss */
   .pull-down .gripper {
     top: 39px; }
-    /* line 21, ../../../../.rvm/gems/ruby-2.0.0-p0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
+    /* line 21, ../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
     .no-no-rgba .pull-down .gripper {
       display: none; }
-    /* line 96, ../scss/excelsior/components/_navigation.scss */
+    /* line 95, ../scss/excelsior/components/_navigation.scss */
     .pull-down .gripper span {
       top: 4px;
       width: 100%; }
 
-/* line 104, ../scss/excelsior/components/_navigation.scss */
+/* line 103, ../scss/excelsior/components/_navigation.scss */
 .gov-bar {
   position: absolute;
   top: 0;
@@ -6551,10 +6550,10 @@ a.label:hover, a.label:focus {
   transform: translate3d(0, 0, 0);
   width: 100%;
   z-index: 40; }
-  /* line 117, ../scss/excelsior/components/_navigation.scss */
+  /* line 116, ../scss/excelsior/components/_navigation.scss */
   .gov-bar a {
     color: #FFF; }
-    /* line 120, ../scss/excelsior/components/_navigation.scss */
+    /* line 119, ../scss/excelsior/components/_navigation.scss */
     .gov-bar a.gov-link-1 {
       float: left;
       font-size: 1.3em;
@@ -6562,7 +6561,7 @@ a.label:hover, a.label:focus {
       padding-bottom: 5px;
       margin: 12px 0.2em 0 0.5em;
       -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
-    /* line 129, ../scss/excelsior/components/_navigation.scss */
+    /* line 128, ../scss/excelsior/components/_navigation.scss */
     .gov-bar a.gov-link-2 {
       float: right;
       background: url(../images/hamburger-no-dots.png) no-repeat 2px 0px transparent;
@@ -6573,32 +6572,32 @@ a.label:hover, a.label:focus {
       margin: 5px 0.4em;
       padding: 6px 0.2em 2px 32px;
       -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
-    /* line 141, ../scss/excelsior/components/_navigation.scss */
+    /* line 140, ../scss/excelsior/components/_navigation.scss */
     .gov-bar a.gov-link-3 {
       display: none;
       text-indent: -9999px; }
-  /* line 147, ../scss/excelsior/components/_navigation.scss */
+  /* line 146, ../scss/excelsior/components/_navigation.scss */
   .gov-bar .state-links {
     overflow: auto; }
-  /* line 151, ../scss/excelsior/components/_navigation.scss */
+  /* line 150, ../scss/excelsior/components/_navigation.scss */
   .gov-bar form {
     padding: 0.1em 0.5em 0 0.5em;
     width: 100%; }
-    /* line 155, ../scss/excelsior/components/_navigation.scss */
+    /* line 154, ../scss/excelsior/components/_navigation.scss */
     .gov-bar form .gov-search-button {
       float: right;
       font-size: 0.95em;
       width: 26%; }
-    /* line 162, ../scss/excelsior/components/_navigation.scss */
+    /* line 161, ../scss/excelsior/components/_navigation.scss */
     .gov-bar form legend,
     .gov-bar form label {
       display: none; }
-    /* line 166, ../scss/excelsior/components/_navigation.scss */
+    /* line 165, ../scss/excelsior/components/_navigation.scss */
     .gov-bar form fieldset {
       border: 0;
       margin: 0;
       padding: 0; }
-  /* line 173, ../scss/excelsior/components/_navigation.scss */
+  /* line 172, ../scss/excelsior/components/_navigation.scss */
   .gov-bar input {
     border-radius: 4px;
     background-clip: padding-box;
@@ -6608,7 +6607,7 @@ a.label:hover, a.label:focus {
     display: block;
     float: left;
     margin: 0; }
-    /* line 182, ../scss/excelsior/components/_navigation.scss */
+    /* line 181, ../scss/excelsior/components/_navigation.scss */
     .gov-bar input[type="search"] {
       border-radius: 5px 0 0 5px;
       background-clip: padding-box;
@@ -6619,7 +6618,7 @@ a.label:hover, a.label:focus {
       box-sizing: border-box;
       height: 37px;
       line-height: 37px; }
-          /* line 197, ../scss/excelsior/components/_navigation.scss */
+          /* line 196, ../scss/excelsior/components/_navigation.scss */
     .gov-bar input[type="submit"] {
       background-color: #505050;
       background-color: #7b7b7b;
@@ -6635,13 +6634,13 @@ a.label:hover, a.label:focus {
       line-height: 37px;
       width: 30%;
       margin-top: 0; }
-  /* line 212, ../scss/excelsior/components/_navigation.scss */
+  /* line 211, ../scss/excelsior/components/_navigation.scss */
   .gov-bar .search-container {
     height: 37px;
     margin: 1px 2px 0 0; }
 
 /* Site Header */
-/* line 219, ../scss/excelsior/components/_navigation.scss */
+/* line 218, ../scss/excelsior/components/_navigation.scss */
 .site-bar {
   background: #454545;
   background-color: #494949;
@@ -6650,7 +6649,7 @@ a.label:hover, a.label:focus {
   background-repeat: repeat-x;
   height: 48px;
   position: absolute;
-  top: 0;
+  top: -4px;
   width: 100%;
   z-index: 30;
   -webkit-transition: top 0.2s ease;
@@ -6661,7 +6660,7 @@ a.label:hover, a.label:focus {
   -ms-transform: translate3d(0, 0, 0);
   -o-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0); }
-  /* line 230, ../scss/excelsior/components/_navigation.scss */
+  /* line 229, ../scss/excelsior/components/_navigation.scss */
   .site-bar a.site-logo {
     color: #fff;
     float: left;
@@ -6670,26 +6669,26 @@ a.label:hover, a.label:focus {
     margin: -2px 0 0 52px;
     padding: 0.1em 0 0 0.3em;
     line-height: 48px; }
-  /* line 240, ../scss/excelsior/components/_navigation.scss */
+  /* line 239, ../scss/excelsior/components/_navigation.scss */
   .site-bar a.site-logo.two-line-title {
     display: block;
     height: 48px; }
-    /* line 244, ../scss/excelsior/components/_navigation.scss */
+    /* line 243, ../scss/excelsior/components/_navigation.scss */
     .site-bar a.site-logo.two-line-title span:first-of-type {
       margin-top: -8px; }
-    /* line 248, ../scss/excelsior/components/_navigation.scss */
+    /* line 247, ../scss/excelsior/components/_navigation.scss */
     .site-bar a.site-logo.two-line-title span {
       display: block;
       float: left;
       height: 16px;
       width: 100%; }
-    /* line 271, ../scss/excelsior/components/_navigation.scss */
+    /* line 270, ../scss/excelsior/components/_navigation.scss */
   .site-bar .site-functions {
     position: absolute;
     top: -1px;
     right: 0;
     width: 100%; }
-    /* line 277, ../scss/excelsior/components/_navigation.scss */
+    /* line 276, ../scss/excelsior/components/_navigation.scss */
     .site-bar .site-functions .site-search {
       background: #fff;
       border-bottom: 1px solid #666;
@@ -6710,31 +6709,31 @@ a.label:hover, a.label:focus {
       -ms-transform: translate3d(0, 0, 0);
       -o-transform: translate3d(0, 0, 0);
       transform: translate3d(0, 0, 0); }
-      /* line 292, ../scss/excelsior/components/_navigation.scss */
+      /* line 291, ../scss/excelsior/components/_navigation.scss */
       .site-bar .site-functions .site-search .search-container {
         height: 37px;
         padding: 0 0.3em !important; }
-      /* line 297, ../scss/excelsior/components/_navigation.scss */
+      /* line 296, ../scss/excelsior/components/_navigation.scss */
       .site-bar .site-functions .site-search form {
         margin: 3px 0 0 0;
         padding: 5px 8px;
         width: 100%; }
-        /* line 302, ../scss/excelsior/components/_navigation.scss */
+        /* line 301, ../scss/excelsior/components/_navigation.scss */
         .site-bar .site-functions .site-search form legend, .site-bar .site-functions .site-search form label {
           display: none; }
-        /* line 306, ../scss/excelsior/components/_navigation.scss */
+        /* line 305, ../scss/excelsior/components/_navigation.scss */
         .site-bar .site-functions .site-search form fieldset {
           border: 0;
           margin: 0;
           padding: 0; }
-      /* line 314, ../scss/excelsior/components/_navigation.scss */
+      /* line 313, ../scss/excelsior/components/_navigation.scss */
       .site-bar .site-functions .site-search input {
         -webkit-appearance: none;
         padding: 0;
         display: block;
         float: left;
         margin: 0; }
-      /* line 322, ../scss/excelsior/components/_navigation.scss */
+      /* line 321, ../scss/excelsior/components/_navigation.scss */
       .site-bar .site-functions .site-search input[type="search"] {
         float: left;
         border-radius: 5px 0 0 5px;
@@ -6747,7 +6746,7 @@ a.label:hover, a.label:focus {
         color: #333;
         -moz-box-sizing: border-box;
         box-sizing: border-box; }
-              /* line 338, ../scss/excelsior/components/_navigation.scss */
+              /* line 337, ../scss/excelsior/components/_navigation.scss */
       .site-bar .site-functions .site-search input[type="submit"] {
         background: url(../images/search.png) no-repeat center center transparent;
         background-image: none, url(../images/search.svg);
@@ -6758,7 +6757,7 @@ a.label:hover, a.label:focus {
         color: #fff;
         text-indent: -9999px;
         padding-bottom: 0.69em; }
-    /* line 351, ../scss/excelsior/components/_navigation.scss */
+    /* line 350, ../scss/excelsior/components/_navigation.scss */
     .site-bar .site-functions .site-button {
       float: left;
       background-color: #505050;
@@ -6771,12 +6770,12 @@ a.label:hover, a.label:focus {
       border-color: #999;
       width: 14%;
       height: 100%; }
-  /* line 362, ../scss/excelsior/components/_navigation.scss */
+  /* line 361, ../scss/excelsior/components/_navigation.scss */
   .site-bar .mobile-functions {
     float: right;
     list-style: none;
     margin: 0; }
-    /* line 367, ../scss/excelsior/components/_navigation.scss */
+    /* line 366, ../scss/excelsior/components/_navigation.scss */
     .site-bar .mobile-functions li {
       background: #454545;
       border-left: 1px solid #666;
@@ -6785,17 +6784,17 @@ a.label:hover, a.label:focus {
       background-image: linear-gradient(to bottom, #5f5f5f, #282828);
       background-repeat: repeat-x;
       float: left; }
-    /* line 374, ../scss/excelsior/components/_navigation.scss */
+    /* line 373, ../scss/excelsior/components/_navigation.scss */
     .site-bar .mobile-functions .mobile-search-button {
       background: url(../images/search.png) no-repeat 12px 12px transparent;
       background-image: none, url(../images/search.svg);
       background-size: 24px 24px; }
-    /* line 380, ../scss/excelsior/components/_navigation.scss */
+    /* line 379, ../scss/excelsior/components/_navigation.scss */
     .site-bar .mobile-functions .mobile-menu-button {
       background: url(../images/hamburger.png) no-repeat 12px 12px transparent;
       background-image: none, url(../images/hamburger.svg);
       background-size: 24px 24px; }
-    /* line 386, ../scss/excelsior/components/_navigation.scss */
+    /* line 385, ../scss/excelsior/components/_navigation.scss */
     .site-bar .mobile-functions .mobile-icons {
       display: inline-block;
       height: 48px;
@@ -6803,14 +6802,14 @@ a.label:hover, a.label:focus {
       width: 48px;
       -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
 
-/* line 400, ../scss/excelsior/components/_navigation.scss */
+/* line 399, ../scss/excelsior/components/_navigation.scss */
 .global-nav {
   background: #333;
   position: absolute;
-  top: 48px;
+  top: 43px;
   width: 100%;
   z-index: 20; }
-  /* line 407, ../scss/excelsior/components/_navigation.scss */
+  /* line 406, ../scss/excelsior/components/_navigation.scss */
   .global-nav .nav-container {
     border-bottom: 1px solid #505050;
     height: 0;
@@ -6818,16 +6817,16 @@ a.label:hover, a.label:focus {
     -webkit-transition: height 0.2s ease;
     -moz-transition: height 0.2s ease;
     transition: height 0.2s ease; }
-  /* line 414, ../scss/excelsior/components/_navigation.scss */
+  /* line 413, ../scss/excelsior/components/_navigation.scss */
   .global-nav ul {
     list-style: none;
     margin: 0;
     padding: 0; }
-    /* line 419, ../scss/excelsior/components/_navigation.scss */
+    /* line 418, ../scss/excelsior/components/_navigation.scss */
     .global-nav ul li {
       border-right: 1px solid #444;
       border-bottom: 1px solid #444; }
-      /* line 423, ../scss/excelsior/components/_navigation.scss */
+      /* line 422, ../scss/excelsior/components/_navigation.scss */
       .global-nav ul li a {
         background: #333;
         color: #FFF;
@@ -6836,55 +6835,54 @@ a.label:hover, a.label:focus {
         padding: 11px 12px 9px 12px;
         text-shadow: 1px 1px 1px #111; }
 
-/* line 439, ../scss/excelsior/components/_navigation.scss */
+/* line 438, ../scss/excelsior/components/_navigation.scss */
 .page {
   background: #282828;
-  height: 100%;
   position: relative;
   overflow: visible;
   top: 0;
   z-index: 10; }
-  /* line 447, ../scss/excelsior/components/_navigation.scss */
+  /* line 445, ../scss/excelsior/components/_navigation.scss */
   .page .content-section {
     background: #FFF;
     padding: 1em 0; }
 
 /* Active Govenor Banner */
-/* line 454, ../scss/excelsior/components/_navigation.scss */
+/* line 452, ../scss/excelsior/components/_navigation.scss */
 .active-gov-bar .gov-bar {
   height: 88px; }
 
-/* line 459, ../scss/excelsior/components/_navigation.scss */
+/* line 457, ../scss/excelsior/components/_navigation.scss */
 .active-gov-bar .site-bar,
 .active-gov-bar .pull-down-container {
   top: 88px; }
 
-/* line 463, ../scss/excelsior/components/_navigation.scss */
+/* line 461, ../scss/excelsior/components/_navigation.scss */
 .active-gov-bar .pull-down {
   background: url(../images/close.png) no-repeat 5px 7px transparent;
   background-image: none, url(../images/close.svg);
   background-size: 28px 28px; }
 
 /* Active Site Search */
-/* line 470, ../scss/excelsior/components/_navigation.scss */
+/* line 468, ../scss/excelsior/components/_navigation.scss */
 .active-site-search .site-bar .mobile-functions .mobile-icons.active {
   background: url(../images/close-x-gray.png) no-repeat 10px 12px white;
   background-image: none, url(../images/close-x-gray.svg);
   background-size: 28px 28px; }
 
 /* Active Menu */
-/* line 477, ../scss/excelsior/components/_navigation.scss */
+/* line 475, ../scss/excelsior/components/_navigation.scss */
 .active-site-menu .site-bar .mobile-functions .mobile-icons.active {
   background: url(../images/close.png) no-repeat 10px 12px #333333;
   background-image: none, url(../images/close.svg);
   background-size: 28px 28px; }
 
-/* line 483, ../scss/excelsior/components/_navigation.scss */
+/* line 481, ../scss/excelsior/components/_navigation.scss */
 .active-site-search .site-functions .site-search {
   height: 53px; }
 
 /* Active Site Menu */
-/* line 488, ../scss/excelsior/components/_navigation.scss */
+/* line 486, ../scss/excelsior/components/_navigation.scss */
 .active-site-menu .global-nav .nav-container {
   height: 343px; }
 
@@ -6909,11 +6907,11 @@ a.label:hover, a.label:focus {
 
 /* line 1, ../scss/excelsior/components/_off-canvas.scss */
 html, body {
-  background: #282828;
   height: 100%; }
 
-/* line 6, ../scss/excelsior/components/_off-canvas.scss */
+/* line 5, ../scss/excelsior/components/_off-canvas.scss */
 body.off-canvas {
+  background: #282828;
   padding-top: 48px; }
   
 /* line 16, ../scss/excelsior/components/_off-canvas.scss */
@@ -7024,7 +7022,7 @@ body.off-canvas {
 .off-canvas .page {
   -webkit-transition: top 0.2s ease, left 0.2s ease, height 0.2s ease;
   -moz-transition: top 0.2s ease, left 0.2s ease, height 0.2s ease;
-  transition: top 0.2s ease, left 0.2s ease, height 0.2s ease; }/* line 244, ../scss/excelsior/components/_off-canvas.scss */
+  transition: top 0.2s ease, left 0.2s ease, height 0.2s ease; }/* line 243, ../scss/excelsior/components/_off-canvas.scss */
 .off-canvas.active-gov-bar .pull-down-container,
 .off-canvas.active-gov-bar .site-bar {
   -webkit-transform: translate3d(0, 0, 0);
@@ -7033,14 +7031,14 @@ body.off-canvas {
   -o-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
   top: 88px; }
-/* line 250, ../scss/excelsior/components/_off-canvas.scss */
+/* line 249, ../scss/excelsior/components/_off-canvas.scss */
 .off-canvas.active-gov-bar .gov-bar,
 .off-canvas.active-gov-bar .pull-down-container {
   -webkit-transform: translate3d(0, 0, 0);
   -moz-transform: translate3d(0, 0, 0);
   -ms-transform: translate3d(0, 0, 0);
   -o-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0); }/* line 266, ../scss/excelsior/components/_off-canvas.scss */
+  transform: translate3d(0, 0, 0); }/* line 265, ../scss/excelsior/components/_off-canvas.scss */
 .off-canvas.active-site-menu .pull-down,
 .off-canvas.active-site-menu .pull-down-container,
 .off-canvas.active-site-menu .gov-bar,
@@ -7048,7 +7046,7 @@ body.off-canvas {
 .off-canvas.active-site-menu .page {
   position: fixed;
   left: -82%; }
-/* line 274, ../scss/excelsior/components/_off-canvas.scss */
+/* line 273, ../scss/excelsior/components/_off-canvas.scss */
 .off-canvas.active-site-menu .gov-bar,
 .off-canvas.active-site-menu .site-bar,
 .off-canvas.active-site-menu .global-nav,
@@ -7058,18 +7056,18 @@ body.off-canvas {
   -ms-transform: translate3d(0, 0, 0);
   -o-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0); }
-  /* line 283, ../scss/excelsior/components/_off-canvas.scss */
+  /* line 282, ../scss/excelsior/components/_off-canvas.scss */
 .off-canvas.active-site-menu .global-nav .icon-right-open:before {
   padding-top: 3px;
   position: absolute;
   right: 5%; }
-  /* line 294, ../scss/excelsior/components/_off-canvas.scss */
+  /* line 293, ../scss/excelsior/components/_off-canvas.scss */
 .off-canvas.active-site-menu .mobile-menu-button {
   box-shadow: inset 6px 0px 8px -2px #000; }
-/* line 298, ../scss/excelsior/components/_off-canvas.scss */
+/* line 297, ../scss/excelsior/components/_off-canvas.scss */
 .off-canvas.active-site-menu .page {
   box-shadow: 5px 49px 8px #000; }
-  /* line 306, ../scss/excelsior/components/_off-canvas.scss */
+  /* line 305, ../scss/excelsior/components/_off-canvas.scss */
 .off-canvas.active-site-menu .footer {
   left: -82%; }
   
@@ -7117,24 +7115,24 @@ body.off-canvas {
   /* line 15, ../scss/excelsior/components/_lightbox.scss */
   .clearing-blackout {
     top: 0; } 
-        /* line 182, ../scss/excelsior/components/_navigation.scss */
+        /* line 181, ../scss/excelsior/components/_navigation.scss */
         .gov-bar input[type="search"] {
           height: 23px;
           line-height: 23px; } 
-    /* line 256, ../scss/excelsior/components/_navigation.scss */
+    /* line 255, ../scss/excelsior/components/_navigation.scss */
     .site-bar a.site-logo.two-line-title {
       font-size: 1.5em; }
-      /* line 260, ../scss/excelsior/components/_navigation.scss */
+      /* line 259, ../scss/excelsior/components/_navigation.scss */
       .site-bar a.site-logo.two-line-title span {
         padding-bottom: 5px;
         height: 24px; }
-      /* line 265, ../scss/excelsior/components/_navigation.scss */
+      /* line 264, ../scss/excelsior/components/_navigation.scss */
       .site-bar a.site-logo.two-line-title span:first-of-type {
         margin-top: -12px; } 
-          /* line 322, ../scss/excelsior/components/_navigation.scss */
+          /* line 321, ../scss/excelsior/components/_navigation.scss */
           .site-bar .site-functions .site-search input[type="search"] {
             line-height: 36px; } 
-    /* line 6, ../scss/excelsior/components/_off-canvas.scss */
+    /* line 5, ../scss/excelsior/components/_off-canvas.scss */
     body.off-canvas {
       padding-top: 0; } 
     /* line 40, ../scss/excelsior/components/_off-canvas.scss */
@@ -7210,30 +7208,30 @@ body.off-canvas {
       min-height: auto;
       top: -22px;
       left: 0; } 
-  /* line 235, ../scss/excelsior/components/_off-canvas.scss */
+  /* line 234, ../scss/excelsior/components/_off-canvas.scss */
   .off-canvas .gov-bar,
   .off-canvas .site-bar,
   .off-canvas .global-nav,
   .off-canvas .page {
     position: relative; } 
-  /* line 254, ../scss/excelsior/components/_off-canvas.scss */
+  /* line 253, ../scss/excelsior/components/_off-canvas.scss */
   .off-canvas.active-gov-bar .site-bar {
     top: 0; } 
-    /* line 274, ../scss/excelsior/components/_off-canvas.scss */
+    /* line 273, ../scss/excelsior/components/_off-canvas.scss */
     .off-canvas.active-site-menu .gov-bar,
     .off-canvas.active-site-menu .site-bar,
     .off-canvas.active-site-menu .global-nav,
     .off-canvas.active-site-menu .page {
       left: auto;
       position: relative; } 
-    /* line 283, ../scss/excelsior/components/_off-canvas.scss */
+    /* line 282, ../scss/excelsior/components/_off-canvas.scss */
     .off-canvas.active-site-menu .global-nav .icon-right-open:before {
       position: relative;
       right: auto; } 
-    /* line 298, ../scss/excelsior/components/_off-canvas.scss */
+    /* line 297, ../scss/excelsior/components/_off-canvas.scss */
     .off-canvas.active-site-menu .page {
       box-shadow: none; } 
-    /* line 306, ../scss/excelsior/components/_off-canvas.scss */
+    /* line 305, ../scss/excelsior/components/_off-canvas.scss */
     .off-canvas.active-site-menu .footer {
       left: auto; } }
 
@@ -7282,7 +7280,7 @@ body.off-canvas {
   .crop .img2,
   .crop .img3 {
     margin-left: 0; } 
-  /* line 495, ../scss/excelsior/components/_navigation.scss */
+  /* line 493, ../scss/excelsior/components/_navigation.scss */
   .gov-bar {
     background: #036;
     border-bottom: 1px solid #555;
@@ -7295,29 +7293,29 @@ body.off-canvas {
     -ms-transform: translate3d(0, 0, 0);
     -o-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0); }
-    /* line 502, ../scss/excelsior/components/_navigation.scss */
+    /* line 500, ../scss/excelsior/components/_navigation.scss */
     .gov-bar input[type="search"] {
       height: 23px;
       margin-top: 1px; }
-    /* line 507, ../scss/excelsior/components/_navigation.scss */
+    /* line 505, ../scss/excelsior/components/_navigation.scss */
     .gov-bar input[type="submit"] {
       height: 23px;
       font-size: 1.2em;
       line-height: 1.7em;
       margin-top: 1px; }
 
-  /* line 517, ../scss/excelsior/components/_navigation.scss */
+  /* line 515, ../scss/excelsior/components/_navigation.scss */
   .gov-bar,
   .active-gov-bar .gov-bar,
   .gov-bar a {
     height: 28px; }
 
-  /* line 521, ../scss/excelsior/components/_navigation.scss */
+  /* line 519, ../scss/excelsior/components/_navigation.scss */
   .gov-bar .state-links {
     display: inline-block;
     float: left; }
 
-  /* line 526, ../scss/excelsior/components/_navigation.scss */
+  /* line 524, ../scss/excelsior/components/_navigation.scss */
   .gov-bar a.gov-link-1 {
     background: url(../images/nys-banner-img.png) no-repeat 0 0 transparent;
     display: inline-block;
@@ -7326,7 +7324,7 @@ body.off-canvas {
     text-indent: -9999px;
     width: 185px; }
 
-  /* line 536, ../scss/excelsior/components/_navigation.scss */
+  /* line 534, ../scss/excelsior/components/_navigation.scss */
   .gov-bar a.gov-link-2,
   .gov-bar a.gov-link-2:hover {
     background: url(../images/nys-banner-img.png) no-repeat 0 -28px transparent;
@@ -7337,11 +7335,11 @@ body.off-canvas {
     text-indent: -9999px;
     width: 130px; }
 
-  /* line 546, ../scss/excelsior/components/_navigation.scss */
+  /* line 544, ../scss/excelsior/components/_navigation.scss */
   .gov-bar a.gov-link-2:hover {
     background-color: transparent; }
 
-  /* line 550, ../scss/excelsior/components/_navigation.scss */
+  /* line 548, ../scss/excelsior/components/_navigation.scss */
   .gov-bar a.gov-link-3 {
     background: url(../images/nys-banner-img.png) no-repeat 0 -56px transparent;
     display: inline-block;
@@ -7349,11 +7347,11 @@ body.off-canvas {
     margin-right: 8px;
     width: 150px; }
 
-  /* line 558, ../scss/excelsior/components/_navigation.scss */
+  /* line 556, ../scss/excelsior/components/_navigation.scss */
   .gov-bar .search-container {
     margin-right: 9px; }
 
-  /* line 562, ../scss/excelsior/components/_navigation.scss */
+  /* line 560, ../scss/excelsior/components/_navigation.scss */
   .gov-bar form {
     display: none;
     float: right;
@@ -7363,16 +7361,16 @@ body.off-canvas {
     margin: 2px 5px 0 0; }
 
   /* Active Gov Bar Search Box */
-  /* line 572, ../scss/excelsior/components/_navigation.scss */
+  /* line 570, ../scss/excelsior/components/_navigation.scss */
   .active-gov-bar-search a.gov-link-3 {
     display: none; }
 
-  /* line 576, ../scss/excelsior/components/_navigation.scss */
+  /* line 574, ../scss/excelsior/components/_navigation.scss */
   .active-gov-bar-search .gov-bar form {
     display: block; }
 
   /* Site Header */
-  /* line 582, ../scss/excelsior/components/_navigation.scss */
+  /* line 580, ../scss/excelsior/components/_navigation.scss */
   .site-bar {
     background-color: #303030;
     background-image: -webkit-linear-gradient(top, #363636, #282828);
@@ -7382,7 +7380,7 @@ body.off-canvas {
     position: relative;
     width: 100%; }
 
-  /* line 590, ../scss/excelsior/components/_navigation.scss */
+  /* line 588, ../scss/excelsior/components/_navigation.scss */
   .site-bar,
   .active-gov-bar .site-bar {
     top: 0;
@@ -7396,22 +7394,22 @@ body.off-canvas {
     transform: translate3d(0, 0, 0);
     z-index: 0; }
 
-  /* line 597, ../scss/excelsior/components/_navigation.scss */
+  /* line 595, ../scss/excelsior/components/_navigation.scss */
   .site-bar a.site-logo {
     font-size: 2em;
     margin: 0 0 0 .3em;
     padding: 0.4em 0 0 4px; }
 
-  /* line 603, ../scss/excelsior/components/_navigation.scss */
+  /* line 601, ../scss/excelsior/components/_navigation.scss */
   .site-bar .site-functions {
     height: 100%; }
 
-  /* line 607, ../scss/excelsior/components/_navigation.scss */
+  /* line 605, ../scss/excelsior/components/_navigation.scss */
   .site-bar .mobile-functions {
     display: none !important;
     speak: none; }
 
-  /* line 612, ../scss/excelsior/components/_navigation.scss */
+  /* line 610, ../scss/excelsior/components/_navigation.scss */
   .site-bar .site-functions .site-search {
     border-bottom: none;
     background: transparent;
@@ -7424,23 +7422,23 @@ body.off-canvas {
     margin-top: -36px;
     width: 15em; }
 
-  /* line 625, ../scss/excelsior/components/_navigation.scss */
+  /* line 623, ../scss/excelsior/components/_navigation.scss */
   .site-bar .site-functions .site-search .search-container {
     margin: 0 2px 0 0; }
 
-  /* line 629, ../scss/excelsior/components/_navigation.scss */
+  /* line 627, ../scss/excelsior/components/_navigation.scss */
   .site-bar .site-functions .site-search form {
     margin: 0; }
 
-  /* line 633, ../scss/excelsior/components/_navigation.scss */
+  /* line 631, ../scss/excelsior/components/_navigation.scss */
   .site-bar .site-functions .site-search input[type="search"] {
     width: 82%; }
 
-  /* line 637, ../scss/excelsior/components/_navigation.scss */
+  /* line 635, ../scss/excelsior/components/_navigation.scss */
   .site-bar .site-functions .site-button {
     width: 18%; }
 
-  /* line 641, ../scss/excelsior/components/_navigation.scss */
+  /* line 639, ../scss/excelsior/components/_navigation.scss */
   .global-nav {
     display: block;
     height: 46px;
@@ -7448,23 +7446,23 @@ body.off-canvas {
     position: relative;
     top: 0;
     margin-top: -24px; }
-    /* line 649, ../scss/excelsior/components/_navigation.scss */
+    /* line 647, ../scss/excelsior/components/_navigation.scss */
     .global-nav .nav-container {
       height: auto;
       background: #666; }
-    /* line 654, ../scss/excelsior/components/_navigation.scss */
+    /* line 652, ../scss/excelsior/components/_navigation.scss */
     .global-nav ul li {
       border-right: 1px solid #333;
       border-left: 1px solid #888;
       border-bottom: none;
       float: left; }
-      /* line 660, ../scss/excelsior/components/_navigation.scss */
+      /* line 658, ../scss/excelsior/components/_navigation.scss */
       .global-nav ul li:first-child {
         border-left: none; }
-        /* line 663, ../scss/excelsior/components/_navigation.scss */
+        /* line 661, ../scss/excelsior/components/_navigation.scss */
         .global-nav ul li:first-child a {
           padding: 13px 12px 9px 14px; }
-      /* line 668, ../scss/excelsior/components/_navigation.scss */
+      /* line 666, ../scss/excelsior/components/_navigation.scss */
       .global-nav ul li a {
         background: #666;
         display: inline-block;
@@ -7472,7 +7470,7 @@ body.off-canvas {
         text-shadow: none;
         padding-top: 13px; }
 
-  /* line 680, ../scss/excelsior/components/_navigation.scss */
+  /* line 678, ../scss/excelsior/components/_navigation.scss */
   .global-nav .icon-right-open:before {
     float: right;
     display: inline-block;
@@ -7480,20 +7478,20 @@ body.off-canvas {
     padding-left: 5px;
     margin-top: 2px; }
 
-  /* line 688, ../scss/excelsior/components/_navigation.scss */
+  /* line 686, ../scss/excelsior/components/_navigation.scss */
   .global-nav .icon-right-open.active:before {
     content: "\e75c"; }
 
-  /* line 692, ../scss/excelsior/components/_navigation.scss */
+  /* line 690, ../scss/excelsior/components/_navigation.scss */
   .global-nav .nav-container ul li a.active {
     border: none;
     background-color: #888; }
 
-  /* line 697, ../scss/excelsior/components/_navigation.scss */
+  /* line 695, ../scss/excelsior/components/_navigation.scss */
   .global-nav .nav-container ul li a:hover {
     background: #888; }
 
-  /* line 701, ../scss/excelsior/components/_navigation.scss */
+  /* line 699, ../scss/excelsior/components/_navigation.scss */
   .global-nav .nav-container ul li a.active:after {
     border-right: 10px solid transparent;
     border-left: 10px solid transparent;
@@ -7505,23 +7503,23 @@ body.off-canvas {
     top: 41px;
     width: 0; }
 
-  /* line 713, ../scss/excelsior/components/_navigation.scss */
+  /* line 711, ../scss/excelsior/components/_navigation.scss */
   .global-nav ul ul li {
     border-right: 1px solid transparent;
     border-left: 1px solid transparent;
     border-bottom: none; }
 
-  /* line 719, ../scss/excelsior/components/_navigation.scss */
+  /* line 717, ../scss/excelsior/components/_navigation.scss */
   .global-nav .nav-container ul ul li a:hover {
     background-color: #393939 !important; }
 
-  /* line 723, ../scss/excelsior/components/_navigation.scss */
+  /* line 721, ../scss/excelsior/components/_navigation.scss */
   .page {
     background: #FFF;
     position: relative;
     top: -23px; }
 
-  /* line 729, ../scss/excelsior/components/_navigation.scss */
+  /* line 727, ../scss/excelsior/components/_navigation.scss */
   .page .content-section {
     padding: 2em 0; } }
 
@@ -7567,26 +7565,26 @@ body.off-canvas {
     position: relative; } }
 
 @media only screen and (min-width: 60em) {
-  /* line 737, ../scss/excelsior/components/_navigation.scss */
+  /* line 735, ../scss/excelsior/components/_navigation.scss */
   .gov-bar {
     background: #036; }
 
-  /* line 745, ../scss/excelsior/components/_navigation.scss */
+  /* line 743, ../scss/excelsior/components/_navigation.scss */
   .gov-bar .gov-wrap,
   .site-bar .site-wrap,
   .global-nav,
   .page .content-section,
   .footer .footer-contents {
-    height: 100%;
     margin-left: auto;
     margin-right: auto;
     width: 60em !important; }
 
-  /* line 752, ../scss/excelsior/components/_navigation.scss */
+  /* line 749, ../scss/excelsior/components/_navigation.scss */
   .site-bar .site-wrap {
-    position: relative; }
+    position: relative;
+    height: 90px; }
 
-  /* line 757, ../scss/excelsior/components/_navigation.scss */
+  /* line 755, ../scss/excelsior/components/_navigation.scss */
   .global-nav,
   .global-nav .nav-container {
     border-radius: 5px;
@@ -7601,7 +7599,14 @@ body.off-canvas {
         .off-canvas .global-nav ul ul {
           border-radius: 4px !important;
           /* Do not use mixin here */
-          background-clip: padding-box !important; } }
+          background-clip: padding-box !important; } 
+  /* line 317, ../scss/excelsior/components/_off-canvas.scss */
+  .off-canvas.active-site-menu .gov-bar .gov-wrap,
+  .off-canvas.active-site-menu .site-bar .site-wrap,
+  .off-canvas.active-site-menu .global-nav,
+  .off-canvas.active-site-menu .page .content-section,
+  .off-canvas.active-site-menu .footer .footer-contents {
+    height: 100%; } }
 
 @media print {
   /* line 24, ../scss/excelsior/components/_print.scss */

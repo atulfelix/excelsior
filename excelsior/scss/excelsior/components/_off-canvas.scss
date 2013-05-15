@@ -1,9 +1,9 @@
 html, body {
-    background: #282828;
     height: 100%;
 }
 
 body.off-canvas {
+    background: #282828;
     padding-top: $nav-bar-height;
 
     @include breakpoint($off-canvas-medium-width, $no-query: true) {
@@ -307,6 +307,16 @@ body.off-canvas {
 
             @include breakpoint($off-canvas-medium-width, $no-query: true) {
                 left: auto;
+            }
+        }
+
+        .gov-bar .gov-wrap,
+        .site-bar .site-wrap,
+        .global-nav,
+        .page .content-section,
+        .footer .footer-contents {
+            @include breakpoint(60em, $no-query: true) {
+                height: 100%;
             }
         }
 
