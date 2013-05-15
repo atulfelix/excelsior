@@ -312,7 +312,6 @@ body.off-canvas {
 
         .gov-bar .gov-wrap,
         .site-bar .site-wrap,
-        .global-nav,
         .page .content-section,
         .footer .footer-contents {
             @include breakpoint(60em, $no-query: true) {
