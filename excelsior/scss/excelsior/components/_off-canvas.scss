@@ -109,7 +109,7 @@ body.off-canvas {
                 width: 100%;
                 background: #333 !important;
                 @include transition(left 0.2s ease);
-                //@include translate3d(0,0,0);
+                @include translate3d(0,0,0);
 
                 @include breakpoint($off-canvas-medium-width, $no-query: true) {
                     position: absolute;
@@ -120,7 +120,7 @@ body.off-canvas {
                     overflow: hidden;
                     visibility: hidden;
                     @include transition(left 0s ease);
-                    //@include translate3d(0,0,0);
+                    @include translate3d(0,0,0);
 
                 }
 
@@ -215,7 +215,7 @@ body.off-canvas {
 
         @include breakpoint($off-canvas-medium-width, $no-query: true) {
             min-height: auto;
-            top: -23px;
+            top: -22px;
             left: 0;
         }
     }
@@ -226,7 +226,6 @@ body.off-canvas {
     .site-bar,
     .page {
         @include transition(top 0.2s ease, left 0.2s ease, height 0.2s ease);
-        //@include translate3d(0,0,0);
     }
 
     .gov-bar,
@@ -242,7 +241,13 @@ body.off-canvas {
 
         .pull-down-container,
         .site-bar {
+            @include translate3d(0,0,0);
             top: 88px;
+        }
+
+        .gov-bar,
+        .pull-down-container {
+            @include translate3d(0,0,0);
         }
 
         .site-bar {
@@ -266,6 +271,8 @@ body.off-canvas {
         .site-bar,
         .global-nav,
         .page {
+            @include translate3d(0,0,0);
+
             @include breakpoint($off-canvas-medium-width, $no-query: true) {
                 left: auto;
                 position: relative;
