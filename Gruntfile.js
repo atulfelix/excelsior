@@ -8,15 +8,15 @@ module.exports = function(grunt) {
         pkg: grunt.file.readJSON('package.json'),
         uglify: {
             options: {
-                mangle: false//, // Don't change variable and function names
-                //report: 'min' // Print size savings to the command line
+                mangle: false // Don't change variable and function names
             },
             excelsior: {
                 files:
                     globule.findMapping(
                     [
                         'excelsior/js/core/*.js', // Source files to find
-                        '!excelsior/js/core/*.min.js' // Source files to exclude
+                        '!excelsior/js/core/*.min.js', // Source files to exclude
+                        '!excelsior/js/core/excelsior.js' // Source files to exclude
                     ],
                     {
                         ext: '.min.js', // Give them a .min.js extension
@@ -121,6 +121,7 @@ module.exports = function(grunt) {
                 'excelsior/js/core/*.js',
                 'project-assets/js/*.js',
                 '!excelsior/js/core/*.min.js',
+                '!excelsior/js/core/excelsior.js',
                 '!project-assets/js/*.min.js'
             ]
         },
@@ -211,7 +212,7 @@ module.exports = function(grunt) {
                             '!excelsior/images/source/**',
                             '!excelsior/js/**', // Exclude all the JS files
                             'excelsior/js/**/*.min.js', // Include just the Min JS files
-                            '!excelsior/js/core/excelsior.*',
+                            '!excelsior/js/core/core.*',
                             '!excelsior/js/vendor/fastclick.*',
                             '!excelsior/js/vendor/jquery.*',
                             '!excelsior/',
@@ -250,9 +251,9 @@ module.exports = function(grunt) {
                         src: [
                             'excelsior/js/vendor/jquery.min.js',
                             'excelsior/js/vendor/fastclick.min.js',
-                            'excelsior/js/core/excelsior.js'
+                            'excelsior/js/core/core.js'
                         ],
-                        dest: 'excelsior/js/excelsior.js'
+                        dest: 'excelsior/js/core/excelsior.js'
                     }
                 ]
             },
@@ -262,9 +263,9 @@ module.exports = function(grunt) {
                         src: [
                             'excelsior/js/vendor/jquery.min.js',
                             'excelsior/js/vendor/fastclick.min.js',
-                            'excelsior/js/core/excelsior.min.js'
+                            'excelsior/js/core/core.min.js'
                         ],
-                        dest: 'excelsior/js/excelsior.min.js'
+                        dest: 'excelsior/js/core/excelsior.min.js'
                     }
                 ]
             },
@@ -278,7 +279,7 @@ module.exports = function(grunt) {
                         src: [
                             'css/*.min.css',
                             'js/core/*.min.js',
-                            'js/*.min.js'
+                            '!js/core/core.min.js'
                         ],
                         expand: true,
                         dest: 'excelsior/'
@@ -287,9 +288,6 @@ module.exports = function(grunt) {
             }
         },
         cssmin: {
-            /*options: {
-                report: 'min'
-            },*/
             excelsior: {
                 files: [
                     {
@@ -310,10 +308,8 @@ module.exports = function(grunt) {
         clean: {
             generatedFiles: {
                 src: [
-                    'excelsior/js/**/*.min.js',
-                    '!excelsior/js/vendor/jquery.min.js',
-                    '!excelsior/js/vendor/zepto.min.js',
-                    'excelsior/js/excelsior.js',
+                    'excelsior/js/core/*.min.js',
+                    'excelsior/js/core/excelsior.js',
                     'excelsior/css/*',
                     'excelsior/.sass-cache/',
                     'project-assets/.sass-cache/',
@@ -374,7 +370,7 @@ module.exports = function(grunt) {
             'clean', // clean up generated files
             'compass:clean', // clean compas cache
             'compass:excelsior', // Create Excelsior CSS files
-            'uglify', // minify Excelsior, and Foundation JS
+            'uglify:excelsior', // minify Excelsior JS
             'concat:excelsiorCSS', // Combine excelsior.css with foundation and normalize
             'concat:excelsiorJS', // Combine the core js used on all Excelsior pages.
             'concat:excelsiorProdJS', // Combine the core js used on all Excelsior pages.
