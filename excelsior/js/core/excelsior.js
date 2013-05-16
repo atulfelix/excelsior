@@ -226,11 +226,17 @@ $(document).ready(function(){
 
                     // clean up addition classes if off-canvase is defined
                     if (EWF.$body.hasClass('off-canvas')) {
-                        EWF.$body.removeClass('active-sub-menu');
-                        EWF.$body.removeClass('active-site-menu');
-                        $('#sub-menu-title').text("");
-                        $('#global-nav .active').removeClass('active');
-                        $('#global-nav .active-menu').removeClass('active-menu');
+                        EWF.$body
+                            .removeClass('active-sub-menu active-site-menu');
+
+                        $('#sub-menu-title').text('');
+
+                        $('#global-nav')
+                            .find('.active')
+                                .removeClass('active')
+                            .end()
+                            .find('.active-menu')
+                                .removeClass('active-menu');
                     }
                 }
             }
@@ -255,9 +261,7 @@ $(document).ready(function(){
             // Remove active state class from the clicked element
             $clickedElm.removeClass(selectedClass);
 
-            if (EWF.$body.hasClass('active-sub-menu')) {
-                EWF.$body.removeClass('active-sub-menu');
-            }
+            EWF.$body.removeClass('active-sub-menu');
 
             // Call the specialEvents function
             specialEvents(activeClass);
@@ -265,7 +269,8 @@ $(document).ready(function(){
             // Remove any stray body click event
             EWF.$body.off('click');
 
-        } else {
+        }
+        else {
             // Add active state class from header
             EWF.$body.addClass(activeClass);
 
@@ -275,13 +280,14 @@ $(document).ready(function(){
             // Setup the on click function to close open drop down if the user clicks outside the active element.
             EWF.$body.on('click', function(e) {
                 var activeElm = $('.active'),
-                clicked = $(this);
+                    clicked = $(this),
+                    activeClass;
 
                 // Check for active elements
-                if (activeElm.length > 0 && e.target.tagName !== "INPUT") {
+                if (activeElm.length > 0 && e.target.nodeName !== "INPUT") {
 
                     // Since we have an active element get the body class we need
-                    var activeClass = activeElm.attr('data-active');
+                    activeClass = activeElm.attr('data-active');
 
                     // Remove the active element class
                     EWF.$body.removeClass(activeClass);
