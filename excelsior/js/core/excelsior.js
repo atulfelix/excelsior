@@ -223,6 +223,15 @@ $(document).ready(function(){
                 } else {
                     // Remove min height
                     EWF.$body.css('min-height','');
+
+                    // clean up addition classes if off-canvase is defined
+                    if (EWF.$body.hasClass('off-canvas')) {
+                        EWF.$body.removeClass('active-sub-menu');
+                        EWF.$body.removeClass('active-site-menu');
+                        $('#sub-menu-title').text("");
+                        $('#global-nav .active').removeClass('active');
+                        $('#global-nav .active-menu').removeClass('active-menu');
+                    }
                 }
             }
         }
@@ -249,6 +258,9 @@ $(document).ready(function(){
             if (EWF.$body.hasClass('active-sub-menu')) {
                 EWF.$body.removeClass('active-sub-menu');
             }
+
+            // Call the specialEvents function
+            specialEvents(activeClass);
 
             // Remove any stray body click event
             EWF.$body.off('click');

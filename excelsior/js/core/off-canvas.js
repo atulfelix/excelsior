@@ -41,6 +41,7 @@ $(document).ready(function() {
                 $activeMenu = $('#mobile-site-menu');
 
                 if (!EWF.$body.hasClass($activeMenu.attr('data-active'))) {
+
                     // The menu is active so add the class
                     EWF.$body.addClass($activeMenu.attr('data-active'));
                     $activeMenu.addClass("active");
@@ -73,12 +74,14 @@ $(document).ready(function() {
                         // Find all occurances off active menu, active and active-sub-menu and remove them
                         EWF.$body.removeClass('active-sub-menu');
                         EWF.$body.removeClass('active-site-menu');
+                        $('#sub-menu-title').text("");
                         $('#global-nav .active').removeClass('active');
                         $('#global-nav .active-menu').removeClass('active-menu');
                     });
 
                 }
                 else {
+
                     // Menu is active
                     $subMenu.removeClass("active-menu");
                     EWF.$body.removeClass($activeMenu.attr('data-active'));
