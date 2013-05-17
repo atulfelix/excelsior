@@ -322,3 +322,17 @@ body.off-canvas {
     } // end &.active-site-menu
 
 } // end .off-canvas
+
+.oldie {
+    .global-nav,.nav-container {
+        height:auto !important;
+        position:static !important;
+    }
+    .menu-controls {
+        display:none !important;
+    }
+    .nav-container {
+        min-height:auto;
+    }
+
+}
