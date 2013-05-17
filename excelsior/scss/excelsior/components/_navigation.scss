@@ -39,7 +39,7 @@
     @include transition(top 0.2s ease);
     @include translate3d(0,0,0);
 
-    @include degrade-from(no-rgba, $no-js: false) {
+    @include degrade-from(rgba, $no-js: false) {
         height: 40px
     }
 }
@@ -57,7 +57,7 @@
     @include transition(top 0.2s ease);
     @include translate3d(0,0,0);
 
-    @include degrade-from(no-rgba, $no-js: false) {
+    @include degrade-from(rgba, $no-js: false) {
         margin-top: 0;
         position: absolute;
     }
@@ -88,7 +88,7 @@
         top: 39px;
         @extend %gripper-line;
 
-        @include degrade-from(no-rgba, $no-js: false) {
+        @include degrade-from(rgba, $no-js: false) {
             display: none;
         }
 
