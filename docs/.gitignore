@@ -1,0 +1,5 @@
+# Docpad Output Folder
+out
+
+# Node Modules
+node_modules

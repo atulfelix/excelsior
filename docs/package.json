@@ -1,0 +1,11 @@
+{
+  "name": "excelsior",
+  "title": "Excelsior Web Framework Documentation",
+  "dependencies": {
+    "docpad": "~6.34.1",
+    "docpad-plugin-marked": "~2.1.1",
+    "docpad-plugin-eco": "~2.0.2",
+    "docpad-plugin-highlightjs": "~2.1.6",
+    "docpad-plugin-partials": "~2.6.2"
+  }
+}

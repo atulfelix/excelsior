@@ -1,0 +1,63 @@
+---
+layout: demo
+title: Overlay Windows
+vendorScripts: ['foundation/foundation.reveal', 'foundation/foundation.alerts']
+---
+
+  <div class="row">
+    <div class="large-12 columns">
+      <h1>Overlay Windows</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="large-8 small-centered columns">
+      <div class="alert-box radius" data-alert>
+        <a href="#" class="close">&times;</a>
+        <h4>What to watch for:</h4>
+        <p>Watch how the overlay windows scale nicely on all device sizes.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="small-12 columns">
+      <p>Content can be overlayed on the page to draw attention or to prompt the user for action before continuing a task.</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="small-12 columns">
+      <a class="large button success" href="#" data-reveal-id="myModal">Display Overlay</a>
+    </div>
+  </div>
+  <div class="row next-prev">
+    <div class="large-12 columns">
+        <a href="#" class="button" id="prev">Previous</a>
+        <a href="#" class="button green" id="next">Next</a>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="large-4 small-6 columns">
+      <a target="_parent" class="button" href="http://foundation.zurb.com/docs/components/reveal.html">Developer Documentation</a>
+    </div>
+  </div>
+
+
+  <!-- Overlay Windows -->
+  <div id="myModal" class="reveal-modal">
+    <h2>First Window</h2>
+    <p class="lead">Overlay windows are very helpful for directing users and conveying important content.</p>
+    <p>Overlay windows can link to each other to create a continuing dialog with users.</p>
+    <p><a href="#" class="large button success" data-reveal-id="myModal2">View Another Window</a></p>
+    <a class="close-reveal-modal">&times;</a>
+  </div>
+
+  <div id="myModal2" class="reveal-modal">
+    <h2>Second Window</h2>
+    <p class="lead">These windows are easy to embed in html content.</p>
+    <p>To continue, click the close button in the top right corner.</p>
+    <a class="close-reveal-modal">&times;</a>
+  </div>
+  <!-- END Overlay Windows -->
