@@ -5,7 +5,7 @@
 @import "breakpoint";
 @import "toolkit";
 $breakpoint-no-queries: false;
-$breakpoint-no-query-wrappers: false;
+$breakpoint-no-query-wrappers: true;
 @import "excelsior/_variables.scss";
 @import "excelsior/_mixins.scss";
 @import "excelsior/_foundation-override.scss";
