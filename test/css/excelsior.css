@@ -4826,7 +4826,7 @@ section .title a {
 .section-container.vertical-nav > section > .title a,
 .section-container.horizontal-nav > section > .title a {
   padding: 0.6em 0.6em 0.6em 1em; }
-
+  
 /* line 179, ../scss/excelsior/_foundation-override.scss */
 .section-container.tabs > section > .title a {
   padding: 0.6em 1em; }
@@ -4840,7 +4840,7 @@ section .title a {
   background-clip: padding-box;
   border: 1px solid #cccccc;
   margin-bottom: 0.5em; }
-
+  
 /* line 206, ../scss/excelsior/_foundation-override.scss */
 .section-container section:last-child {
   margin-bottom: 0; }
@@ -4893,8 +4893,8 @@ section .title a {
   /* line 282, ../scss/excelsior/_foundation-override.scss */
   [data-magellan-expedition].section-container.vertical-tabs section.active > .title:after {
     content: ""; }
-
-/* line 9, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
+    
+/* line 9, ../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
 .touch .orbit-container .orbit-prev, .touch
 .orbit-container .orbit-next {
   display: inherit; }
@@ -5548,8 +5548,8 @@ tbody tr.info > td {
   .alert-block p + p {
     margin-top: 5px; }
 
-/* css for block to stack */
-
+/* css for block to stack */  
+  
 /* line 6, ../scss/excelsior/components/_buttons.scss */
 .button,
 input.button,
@@ -6302,7 +6302,7 @@ a.label:hover, a.label:focus {
 .image-to-list .image-to-list .has-video iframe {
   display: none;
   speak: none; }
-
+  
 /* line 65, ../scss/excelsior/components/_lists.scss */
 .link-buttons-list {
   margin-bottom: 2em; }
@@ -6987,7 +6987,7 @@ html, body {
 body.off-canvas {
   background: #282828;
   padding-top: 48px; }
-
+  
 /* line 16, ../scss/excelsior/components/_off-canvas.scss */
 .off-canvas .pull-down-container {
   position: absolute;
@@ -7144,7 +7144,7 @@ body.off-canvas {
   /* line 305, ../scss/excelsior/components/_off-canvas.scss */
 .off-canvas.active-site-menu .footer {
   left: -82%; }
-
+  
 /* line 327, ../scss/excelsior/components/_off-canvas.scss */
 .oldie .global-nav, .oldie .nav-container {
   height: auto !important;
@@ -7153,7 +7153,7 @@ body.off-canvas {
 .oldie .menu-controls {
   display: none !important; }
 /* line 334, ../scss/excelsior/components/_off-canvas.scss */
-.oldie .nav-container {
+.oldie .nav-container, .oldie .nav-container ul {
   min-height: auto; }
 
 @media screen and (min-width: 48em) {
@@ -7163,12 +7163,12 @@ body.off-canvas {
     font-weight: normal;
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
-    background-clip: padding-box; }
+    background-clip: padding-box; } 
   /* line 185, ../scss/excelsior/_foundation-override.scss */
   .section-container.auto > section > .title,
   .section-container.tabs > section > .title {
     border-left: 1px solid #cccccc;
-    border-top: 1px solid #cccccc; }
+    border-top: 1px solid #cccccc; } 
   /* line 250, ../scss/excelsior/_foundation-override.scss */
   .vertical-nav section,
   .horizontal-nav section {
@@ -7184,22 +7184,22 @@ body.off-canvas {
     .section-container.accordion > section > .title a,
     .section-container.vertical-nav > section > .title a,
     .section-container.horizontal-nav > section > .title a {
-      padding: 0.6em 1em; }
+      padding: 0.6em 1em; } 
     /* line 196, ../scss/excelsior/_foundation-override.scss */
     .section-container section {
-      margin-bottom: 0; }
+      margin-bottom: 0; } 
   /* line 236, ../scss/excelsior/_foundation-override.scss */
   .section-container.auto .title:after,
   .section-container.tabs .title:after,
   .section-container.vertical-nav .title:after,
   .section-container.horizontal-nav .title:after {
-    content: ""; }
+    content: ""; } 
       /* line 271, ../scss/excelsior/_foundation-override.scss */
       [data-magellan-expedition].section-container.vertical-tabs section > .title {
-        max-width: 10.5em; }
+        max-width: 10.5em; } 
     /* line 281, ../scss/excelsior/_foundation-override.scss */
     [data-magellan-expedition].section-container.vertical-tabs section.active > .title {
-      max-width: 10.5em; }
+      max-width: 10.5em; } 
     /* line 259, ../scss/excelsior/_foundation-override.scss */
     [data-magellan-expedition].section-container.vertical-tabs {
       padding: 0;
@@ -7219,17 +7219,17 @@ body.off-canvas {
       /* line 311, ../scss/excelsior/_foundation-override.scss */
       [data-magellan-expedition].section-container.vertical-tabs section:last-of-type .title {
         border-bottom-left-radius: 0.25em;
-        border-bottom-right-radius: 0.25em; }
+        border-bottom-right-radius: 0.25em; } 
   /* line 103, ../scss/excelsior/components/_global.scss */
   .margin-top-small {
-    margin-top: 1em; }
+    margin-top: 1em; } 
   /* line 15, ../scss/excelsior/components/_lightbox.scss */
   .clearing-blackout {
-    top: 0; }
+    top: 0; } 
         /* line 181, ../scss/excelsior/components/_navigation.scss */
         .gov-bar input[type="search"] {
           height: 23px;
-          line-height: 23px; }
+          line-height: 23px; } 
     /* line 255, ../scss/excelsior/components/_navigation.scss */
     .site-bar a.site-logo.two-line-title {
       font-size: 1.5em; }
@@ -7239,33 +7239,33 @@ body.off-canvas {
         height: 24px; }
       /* line 264, ../scss/excelsior/components/_navigation.scss */
       .site-bar a.site-logo.two-line-title span:first-of-type {
-        margin-top: -12px; }
+        margin-top: -12px; } 
           /* line 321, ../scss/excelsior/components/_navigation.scss */
           .site-bar .site-functions .site-search input[type="search"] {
-            line-height: 36px; }
+            line-height: 36px; } 
     /* line 5, ../scss/excelsior/components/_off-canvas.scss */
     body.off-canvas {
-      padding-top: 0; }
+      padding-top: 0; } 
     /* line 40, ../scss/excelsior/components/_off-canvas.scss */
     .off-canvas .global-nav {
       height: 46px;
       overflow: visible;
-      z-index: 30; }
+      z-index: 30; } 
       /* line 63, ../scss/excelsior/components/_off-canvas.scss */
       .off-canvas .global-nav .nav-container {
         overflow: hidden; }
         /* line 70, ../scss/excelsior/components/_off-canvas.scss */
         .off-canvas .global-nav .nav-container ul {
-          min-height: auto; }
+          min-height: auto; } 
         /* line 79, ../scss/excelsior/components/_off-canvas.scss */
         .off-canvas .global-nav .nav-container > ul {
-          min-height: auto; }
+          min-height: auto; } 
       /* line 88, ../scss/excelsior/components/_off-canvas.scss */
       .off-canvas .global-nav ul {
-        margin-left: 0; }
+        margin-left: 0; } 
         /* line 95, ../scss/excelsior/components/_off-canvas.scss */
         .off-canvas .global-nav ul li {
-          padding-left: 0; }
+          padding-left: 0; } 
         /* line 103, ../scss/excelsior/components/_off-canvas.scss */
         .off-canvas .global-nav ul ul {
           position: absolute;
@@ -7283,7 +7283,7 @@ body.off-canvas {
           -moz-transform: translate3d(0, 0, 0);
           -ms-transform: translate3d(0, 0, 0);
           -o-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0); }
+          transform: translate3d(0, 0, 0); } 
           /* line 132, ../scss/excelsior/components/_off-canvas.scss */
           .off-canvas .global-nav ul ul li {
             border-right: 1px solid #000;
@@ -7293,19 +7293,19 @@ body.off-canvas {
               border-left: none; }
             /* line 143, ../scss/excelsior/components/_off-canvas.scss */
             .off-canvas .global-nav ul ul li:last-child {
-              border-right: none; }
+              border-right: none; } 
           /* line 148, ../scss/excelsior/components/_off-canvas.scss */
           .off-canvas .global-nav ul ul li:first {
-            border-left: none; }
+            border-left: none; } 
         /* line 156, ../scss/excelsior/components/_off-canvas.scss */
         .off-canvas .global-nav ul ul.active-menu {
           visibility: visible; }
           /* line 159, ../scss/excelsior/components/_off-canvas.scss */
           .off-canvas .global-nav ul ul.active-menu li {
-            padding: 0 !important; }
+            padding: 0 !important; } 
       /* line 167, ../scss/excelsior/components/_off-canvas.scss */
       .off-canvas .global-nav .menu-controls {
-        display: none; }
+        display: none; } 
       /* line 191, ../scss/excelsior/components/_off-canvas.scss */
       .off-canvas .global-nav .active-menu li {
         padding-left: 0;
@@ -7313,35 +7313,35 @@ body.off-canvas {
         /* line 196, ../scss/excelsior/components/_off-canvas.scss */
         .off-canvas .global-nav .active-menu li a {
           border-radius: 4px;
-          background: #454545 !important; }
+          background: #454545 !important; } 
     /* line 209, ../scss/excelsior/components/_off-canvas.scss */
     .off-canvas .page {
       min-height: auto;
       top: -9px;
-      left: 0; }
+      left: 0; } 
   /* line 234, ../scss/excelsior/components/_off-canvas.scss */
   .off-canvas .gov-bar,
   .off-canvas .site-bar,
   .off-canvas .global-nav,
   .off-canvas .page {
-    position: relative; }
+    position: relative; } 
   /* line 253, ../scss/excelsior/components/_off-canvas.scss */
   .off-canvas.active-gov-bar .site-bar {
-    top: 0; }
+    top: 0; } 
     /* line 273, ../scss/excelsior/components/_off-canvas.scss */
     .off-canvas.active-site-menu .gov-bar,
     .off-canvas.active-site-menu .site-bar,
     .off-canvas.active-site-menu .global-nav,
     .off-canvas.active-site-menu .page {
       left: auto;
-      position: relative; }
+      position: relative; } 
     /* line 282, ../scss/excelsior/components/_off-canvas.scss */
     .off-canvas.active-site-menu .global-nav .icon-right-open:before {
       position: relative;
-      right: auto; }
+      right: auto; } 
     /* line 297, ../scss/excelsior/components/_off-canvas.scss */
     .off-canvas.active-site-menu .page {
-      box-shadow: none; }
+      box-shadow: none; } 
     /* line 305, ../scss/excelsior/components/_off-canvas.scss */
     .off-canvas.active-site-menu .footer {
       left: auto; } }
@@ -7380,17 +7380,17 @@ body.off-canvas {
       overflow: hidden;
       margin: 0 0 0.4em 0;
       width: 100%;
-      height: 100%; }
+      height: 100%; } 
     /* line 33, ../scss/excelsior/components/_block-to-stack.scss */
     .crop img {
       width: auto;
       height: auto;
-      max-width: 100%; }
+      max-width: 100%; } 
   /* line 49, ../scss/excelsior/components/_block-to-stack.scss */
   .crop .img1,
   .crop .img2,
   .crop .img3 {
-    margin-left: 0; }
+    margin-left: 0; } 
   /* line 496, ../scss/excelsior/components/_navigation.scss */
   .gov-bar {
     background: #036;
@@ -7641,7 +7641,7 @@ body.off-canvas {
         display: block;
         padding: 7px;
         position: relative;
-        margin-top: -39px; }
+        margin-top: -39px; } 
     /* line 5, ../scss/excelsior/components/_lists.scss */
     .image-to-list a {
       color: #efefef;
@@ -7649,12 +7649,12 @@ body.off-canvas {
       text-decoration: none; }
       /* line 27, ../scss/excelsior/components/_lists.scss */
       .image-to-list a iframe {
-        height: 100%; }
+        height: 100%; } 
     /* line 34, ../scss/excelsior/components/_lists.scss */
     .image-to-list a img,
     .image-to-list .image-to-list .has-video iframe {
       display: block;
-      speak: normal; }
+      speak: normal; } 
   /* line 45, ../scss/excelsior/components/_lists.scss */
   .image-to-list li {
     float: none; }
@@ -7670,7 +7670,7 @@ body.off-canvas {
     /* line 124, ../scss/excelsior/components/_images.scss */
     .video-container {
       height: auto;
-      padding: 0; }
+      padding: 0; } 
   /* line 145, ../scss/excelsior/components/_images.scss */
   .image-to-list .has-video a span {
     position: relative; } }
@@ -7705,22 +7705,18 @@ body.off-canvas {
       /* line 63, ../scss/excelsior/components/_off-canvas.scss */
       .off-canvas .global-nav .nav-container {
         border-radius: 4px;
-        background-clip: padding-box; }
+        background-clip: padding-box; } 
         /* line 103, ../scss/excelsior/components/_off-canvas.scss */
         .off-canvas .global-nav ul ul {
           border-radius: 4px !important;
           /* Do not use mixin here */
-          background-clip: padding-box !important; }
+          background-clip: padding-box !important; } 
   /* line 316, ../scss/excelsior/components/_off-canvas.scss */
   .off-canvas.active-site-menu .gov-bar .gov-wrap,
   .off-canvas.active-site-menu .site-bar .site-wrap,
   .off-canvas.active-site-menu .page .content-section,
   .off-canvas.active-site-menu .footer .footer-contents {
     height: 100%; } }
-
-.oldie .global-nav, .oldie .nav-container {height:auto !important; position:static !important;}
-.oldie .menu-controls {display:none !important;}
-.oldie .nav-container {min-height:auto;}
 
 @media print {
   /* line 24, ../scss/excelsior/components/_print.scss */
