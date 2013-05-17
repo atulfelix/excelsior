@@ -7706,8 +7706,10 @@ body.off-canvas {
   .off-canvas.active-site-menu .page .content-section,
   .off-canvas.active-site-menu .footer .footer-contents {
     height: 100%; } }
-.oldie .global-nav, .oldie .nav-container {height:auto !important;}
+
+.oldie .global-nav, .oldie .nav-container {height:auto !important; position:static !important;}
 .oldie .menu-controls {display:none !important;}
+.oldie .nav-container {min-height:auto;}
 
 @media print {
   /* line 24, ../scss/excelsior/components/_print.scss */
