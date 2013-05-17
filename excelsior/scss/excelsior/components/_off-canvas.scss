@@ -49,6 +49,12 @@ body.off-canvas {
             overflow: visible;
             z-index: 30;
         }
+        .oldie & {
+            position:static;
+            height: auto;
+            overflow: visible;
+            z-index: 30;
+        }
 
         .sub-menu-title {
             display: inline-block;
@@ -66,6 +72,14 @@ body.off-canvas {
 
             @include breakpoint($off-canvas-medium-width, $no-query: true) {
                 overflow: hidden;
+
+                ul {
+                    min-height: auto;
+                }
+            }
+            .oldie & {
+                overflow: hidden;
+                height:auto;
 
                 ul {
                     min-height: auto;
@@ -89,6 +103,9 @@ body.off-canvas {
             margin-left: 16%;
 
             @include breakpoint($off-canvas-medium-width, $no-query: true) {
+                margin-left: 0;
+            }
+            .oldie & {
                 margin-left: 0;
             }
 
@@ -122,6 +139,9 @@ body.off-canvas {
                     @include transition(left 0s ease);
                     @include translate3d(0,0,0);
 
+                }
+                .oldie & {
+                    position: static;
                 }
 
                 @include breakpoint($off-canvas-large-width, $no-query: true) {
@@ -168,6 +188,9 @@ body.off-canvas {
             height: 53px;
 
             @include breakpoint($off-canvas-medium-width, $no-query: true) {
+                display: none;
+            }
+            .oldie & {
                 display: none;
             }
 
@@ -322,17 +345,3 @@ body.off-canvas {
     } // end &.active-site-menu
 
 } // end .off-canvas
-
-.oldie {
-    .global-nav,.nav-container {
-        height:auto !important;
-        position:static !important;
-    }
-    .menu-controls {
-        display:none !important;
-    }
-    .nav-container, .nav-container ul {
-        min-height:auto !important;
-    }
-
-}
