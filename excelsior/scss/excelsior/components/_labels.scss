@@ -1,0 +1,83 @@
+//
+// Labels and badges
+// --------------------------------------------------
+
+// Base classes
+.label {
+    display: inline-block;
+    padding: 3px 6px;
+    font-size: $baseFontSize * 0.846;
+    font-weight: normal;
+    line-height: 15px;
+    color: $white;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    vertical-align: baseline;
+    white-space: nowrap;
+    background-color: $grayLight;
+    @include border-radius(3px);
+    border: 1px solid $buttonBorder;
+
+    // Colors
+    &.secondary,
+    &.info {
+        background-color: $infoText;
+        border-color: $infoBorder;
+        color: $white;
+
+        &[href] {
+            background-color: darken($infoText, 10%);
+        }
+    }
+
+    &.success {
+        background-color: $successText;
+        border-color: $successBorder;
+
+        &[href] {
+            background-color: darken($successText, 10%);
+        }
+    }
+
+    &.error,
+    &.alert {
+        background-color: $errorText;
+        border-color: $errorBorder;
+
+        &[href] {
+            background-color: darken($errorText, 10%);
+        }
+    }
+
+    &.warning {
+        background-color: $orange;
+
+        &[href] {
+            background-color: darken($orange, 10%);
+        }
+    }
+
+    // Collapse empty labels
+    &:empty {
+        display: none;
+    }
+}
+
+// Hover/focus state, but only for links
+a.label {
+    &:hover,
+    &:focus {
+        color: $white;
+        text-decoration: none;
+        cursor: pointer;
+    }
+}
+
+// Quick fix for labels/badges in buttons
+.button  .label {
+    position: relative;
+    top: -1px;
+}
+
+.button-mini .label {
+    top: 0;
+}

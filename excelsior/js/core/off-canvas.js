@@ -1,3 +1,10 @@
+/**
+ * Excelsior Web Framework v0.1.3
+ * (c) 2013 NYS ITS
+ * https://github.com/nys-its/excelsior.git
+ * License (MIT): https://github.com/nys-its/excelsior/blob/master/license.md
+ */
+
 /*global EWF: false */
 /*
  Additional Login needed for off canvas Menus
@@ -23,7 +30,7 @@ $(document).ready(function() {
             $link.addClass('icon-right-open');
 
             // We have a sub menu item so create the click event
-            $link.on(EWF.activateEventName, function (e) {
+            $link.on('click', function (e) {
                 var menuCheck;
 
                 // Prevent default link action
@@ -34,6 +41,7 @@ $(document).ready(function() {
                 $activeMenu = $('#mobile-site-menu');
 
                 if (!EWF.$body.hasClass($activeMenu.attr('data-active'))) {
+
                     // The menu is active so add the class
                     EWF.$body.addClass($activeMenu.attr('data-active'));
                     $activeMenu.addClass("active");
@@ -62,15 +70,18 @@ $(document).ready(function() {
                     EWF.$body.addClass('active-sub-menu');
 
                     // Add click off event handler on body
-                    EWF.$body.on(EWF.activateEventName, function () {
+                    EWF.$body.on('click', function () {
                         // Find all occurances off active menu, active and active-sub-menu and remove them
                         EWF.$body.removeClass('active-sub-menu');
+                        EWF.$body.removeClass('active-site-menu');
+                        $('#sub-menu-title').text("");
                         $('#global-nav .active').removeClass('active');
                         $('#global-nav .active-menu').removeClass('active-menu');
                     });
 
                 }
                 else {
+
                     // Menu is active
                     $subMenu.removeClass("active-menu");
                     EWF.$body.removeClass($activeMenu.attr('data-active'));
@@ -86,7 +97,7 @@ $(document).ready(function() {
     });
 
     // Bind for menu-back
-    $('#menu-back').on(EWF.activateEventName, function (e) {
+    $('#menu-back').on('click', function (e) {
         var $numberOfSubs;
 
         // Prevent element default action

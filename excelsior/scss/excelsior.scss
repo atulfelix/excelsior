@@ -1,7 +1,11 @@
 @charset "UTF-8";
+
 // Do not change the order of these files:
-@import "foundation/_normalize.scss";
-@import "foundation/_foundation.scss";
+@import "compass";
+@import "breakpoint";
+@import "toolkit";
+$breakpoint-no-queries: false;
+$breakpoint-no-query-wrappers: true;
 @import "excelsior/_variables.scss";
 @import "excelsior/_mixins.scss";
 @import "excelsior/_foundation-override.scss";
@@ -15,10 +19,14 @@
 @import "excelsior/components/_block-to-stack.scss";
 @import "excelsior/components/_buttons.scss";
 @import "excelsior/components/_forms.scss"; // Must come after `buttons`
+@import "excelsior/components/_labels.scss";
 @import "excelsior/components/_footer.scss";
 @import "excelsior/components/_lightbox.scss";
 @import "excelsior/components/_lists.scss";
 @import "excelsior/components/_images.scss";
 @import "excelsior/components/_navigation.scss";
-@import "excelsior/components/_sticky_header.scss";
-@import "excelsior/components/_components.scss";
+@import "excelsior/components/_sticky-header.scss";
+
+// Do not change the order of these files:
+@import "excelsior/components/_off-canvas.scss";
+@import "excelsior/components/_print.scss";

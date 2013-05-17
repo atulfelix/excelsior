@@ -1,3 +1,85 @@
+// Base styles
+// -----------------------
+
+html.no-touch {
+    -ms-overflow-style: scrollbar; // Stops IE10 from plopping a scroller over your content
+}
+
+body {
+    font-family: $font-sans;
+}
+
+a {
+    text-decoration: underline;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.pull-down-container,
+.gov-bar,
+.site-bar,
+nav {
+    a,
+    a:hover,
+    a:active {
+       text-decoration: none;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    @include bold();
+    @include font-serif(); // Must be after bold() to override the font-family
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.75em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+h4 {
+  font-size: 1.25em;
+}
+
+h5 {
+  font-size: 1.125em;
+}
+
+h6 {
+  font-size: 1em;
+}
+
+p {
+  font-family: $font-sans;
+}
+
+em,
+i {
+    @include italic();
+}
+
+strong,
+b {
+    @include bold();
+}
+
+strong em,
+em strong {
+    @include bold-italic();
+}
+
+ul, ol, dl {
+    font-family: inherit;
+}
+
 // Generic Classes
 
 .no-wrap {
@@ -18,6 +100,12 @@
     padding-right: 0 !important;
 }
 
+.margin-top-small {
+    @include breakpoint(48em, $no-query: true) {
+        margin-top: 1em;
+    }
+}
+
 .margin-top-xlarge {
     margin-top: 2em;
 }
@@ -28,7 +116,7 @@
 }
 
 .radius {
-    @include border-radius(0.25em); // 4px
+    @include border-radius($baseBorderRadius);
 }
 
 .unsupported-browser-message {
@@ -39,10 +127,17 @@
 }
 
 .row {
-    padding-bottom:1em;
+    padding-bottom: 1em;
 }
 
 // Prevents text from being selected (e.g., when the user is meant to swipe)
 .unselectable {
     @include user-select(none);
+}
+
+// IE10 Metro responsive
+// Required for Windows 8 Metro split-screen snapping with IE10
+// Source: http://timkadlec.com/2012/10/ie10-snap-mode-and-responsive-design/
+@-ms-viewport{
+    width: device-width;
 }

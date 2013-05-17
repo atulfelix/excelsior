@@ -1,345 +1,286 @@
-/*!
- * Bootstrap v2.3.1
- *
- * Copyright 2012 Twitter, Inc
- * Licensed under the Apache License v2.0
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Designed and built with all the love in the world @twitter by @mdo and @fat.
- */
-
+// Base styles
+// --------------------------------------------------
 
 .button,
 input.button, // Foundation specificity
 button.button {
-  padding: 6px 12px;
+    @include button();
+    padding: 6px 12px;
+    font-family: $font-sans;
+    font-weight: normal !important;
 }
 
-.button:hover,
-.button:focus,
-.button:active,
-.button.active,
-.button.disabled,
-.button[disabled] {
-  color: #333333;
-  background-color: #e6e6e6;
+.button small {
+    font-size: 75%;
 }
 
-.button:active,
-.button.active {
-  background-color: #cccccc \9;
+
+// Alternate button colors
+// --------------------------------------------------
+
+// Provide *some* extra contrast for those who can get it
+.button.secondary.active,
+.button.warning.active,
+.button.alert.active,
+.button.success.active,
+.button.info.active,
+.button.inverse.active {
+    color: rgba(255, 255, 255, 0.75);
 }
 
-.button:hover,
-.button:focus {
-  color: #333333;
-  text-decoration: none;
-  background-position: 0 -15px;
-  @include transition(background-position 0.1s linear);
+// Set the backgrounds
+// -------------------------
+.button.secondary {
+    @include buttonBackground($buttonSecondaryBackground, $buttonSecondaryBackgroundHighlight);
 }
 
-.button:focus {
-  outline: thin dotted #333;
-  outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: -2px;
+// Warning appears are orange
+.button.warning {
+    @include buttonBackground($buttonWarningBackground, $buttonWarningBackgroundHighlight);
 }
 
-.button.active,
-.button:active {
-  background-image: none;
-  outline: 0;
-  box-shadow: inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05);
+// Danger and error appear as red
+.button.alert {
+    @include buttonBackground($buttonAlertBackground, $buttonAlertBackgroundHighlight);
 }
 
-.button.disabled,
-.button[disabled] {
-  cursor: default;
-  background-image: none;
-  opacity: 0.65;
-  box-shadow: none;
+// Success appears as green
+.button.success {
+    @include buttonBackground($buttonSuccessBackground, $buttonSuccessBackgroundHighlight);
 }
 
+// Info appears as a neutral blue
+.button.info {
+    @include buttonBackground($buttonInfoBackground, $buttonInfoBackgroundHighlight);
+}
+
+// Inverse appears as dark gray
+.button.inverse {
+    @include buttonBackground($btnInverseBackground, $btnInverseBackgroundHighlight);
+}
+
+// Button Sizes
+// --------------------------------------------------
+
+// Large
 .button.large {
-  padding: 11px 19px;
-  font-size: 17.5px;
-  @include border-radius(6px);
+    padding: $paddingLarge;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    font-size: $fontSizeLarge;
+    @include border-radius($borderRadiusLarge);
+
+    [class^="icon-"],
+    [class*=" icon-"] {
+        margin-top: 4px;
+    }
 }
 
-.button.large [class^="icon-"],
-.button.large [class*=" icon-"] {
-  margin-top: 4px;
-}
-
+// Small
 .button.small {
-  padding: 2px 10px;
-  font-size: 11.9px;
-  @include border-radius(3px);
+    padding: $paddingSmall;
+    font-size: $fontSizeSmall;
+    @include border-radius($borderRadiusSmall);
+
+    [class^="icon-"],
+    [class*=" icon-"] {
+        margin-top: 0;
+    }
 }
 
-.button.small [class^="icon-"],
-.button.small [class*=" icon-"] {
-  margin-top: 0;
-}
-
-.button.tiny [class^="icon-"],
-.button.tiny [class*=" icon-"] {
-  margin-top: -1px;
-}
-
+// Tiny
 .button.tiny {
-  padding: 0 6px;
-  font-size: 10.5px;
-  @include border-radius(3px);
+    padding: $paddingTiny;
+    font-size: $fontSizeTiny;
+    @include border-radius($borderRadiusSmall);
+
+    [class^="icon-"],
+    [class*=" icon-"] {
+        margin-top: -1px;
+    }
 }
+
+
+// Block button
+// -------------------------
 
 .button-block {
-  display: block;
-  width: 100%;
-  padding-left: 0;
-  padding-right: 0;
-  @include box-sizing(border-box);
+    display: block;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    @include box-sizing(border-box);
+
+    // Vertically space out multiple block buttons
+    & + .button-block {
+        margin-top: 5px;
+    }
 }
 
-.button-block + .button-block {
-  margin-top: 5px;
+// Specificity overrides
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+    &.button-block {
+        width: 100%;
+    }
 }
 
-input[type="submit"].button-block,
-input[type="reset"].button-block,
-input[type="button"].button-block {
-  width: 100%;
-}
 
-.button.success.active,
-.button-warning.active,
-.button.alert.active,
-.button.green.active,
-.button-info.active,
-.button-inverse.active {
-  color: rgba(255, 255, 255, 0.75);
-}
+// Link buttons
+// --------------------------------------------------
 
-.button.success {
-  color: #ffffff;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  @include gradient-vertical(#0088cc, #0044cc);
-  border-color: #0044cc #0044cc #002a80;
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-}
-
-.button.success:hover,
-.button.success:focus,
-.button.success:active,
-.button.success.active,
-.button.success.disabled,
-.button.success[disabled] {
-  color: #ffffff;
-  background-color: #0044cc;
-}
-
-.button.success:active,
-.button.success.active {
-  background-color: #003399 \9;
-}
-
-.button-warning {
-  color: #ffffff;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  background-color: #faa732;
-  @include gradient-vertical(#fbb450, #f89406);
-  border-color: #f89406 #f89406 #ad6704;
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-}
-
-.button-warning:hover,
-.button-warning:focus,
-.button-warning:active,
-.button-warning.active,
-.button-warning.disabled,
-.button-warning[disabled] {
-  color: #ffffff;
-  background-color: #f89406;
-}
-
-.lt-ie9 .button-warning:active,
-.ie9 .button-warning:active,
-.ie9 .button-warning.active,
-.lt-ie9 .button-warning.active {
-  background-color: #c67605;
-}
-
-.button.alert {
-  color: #ffffff;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  background-color: #da4f49;
-  @include gradient-vertical(#ee5f5b, #bd362f);
-  border-color: #bd362f #bd362f #802420;
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-}
-
-.button.alert:hover,
-.button.alert:focus,
-.button.alert:active,
-.button.alert.active,
-.button.alert.disabled,
-.button.alert[disabled] {
-  color: #ffffff;
-  background-color: #bd362f;
-}
-
-.lt-ie9 .button.alert:active,
-.ie9 .button.alert:active,
-.lt-ie9 .button.alert.active,
-.ie9 .button.alert.active {
-  background-color: #942a25;
-}
-
-.button.green {
-  color: #ffffff;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  background-color: #5bb75b;
-  @include gradient-vertical(#62c462, #51a351);
-  border-color: #51a351 #51a351 #387038;
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-}
-
-.button.green:hover,
-.button.green:focus,
-.button.green:active,
-.button.green.active,
-.button.green.disabled,
-.button.green[disabled] {
-  color: #ffffff;
-  background-color: #51a351;
-}
-
-.button.green:active,
-.button.green.active {
-  background-color: #408140 \9;
-}
-
-.button-info {
-  color: #ffffff;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  @include gradient-vertical(#5bc0de, #2f96b4);
-  background-color: #49afcd;
-  border-color: #2f96b4 #2f96b4 #1f6377;
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-}
-
-.button-info:hover,
-.button-info:focus,
-.button-info:active,
-.button-info.active,
-.button-info.disabled,
-.button-info[disabled] {
-  color: #ffffff;
-  background-color: #2f96b4;
-}
-
-.lt-ie9 .button-info:active,
-.ie9 .button-info:active,
-.lt-ie9 .button-info.active,
-.ie9 .button-info.active {
-  background-color: #24748c;
-}
-
-.button-inverse {
-  color: #ffffff;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  @include gradient-vertical(#444444, #222222);
-  background-color: #363636;
-  border-color: #222222 #222222 #000000;
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-}
-
-.button-inverse:hover,
-.button-inverse:focus,
-.button-inverse:active,
-.button-inverse.active,
-.button-inverse.disabled,
-.button-inverse[disabled] {
-  color: #ffffff;
-  background-color: #222222;
-}
-
-.lt-ie9 .button-inverse:active,
-.ie9 .button-inverse:active,
-.lt-ie9 .button-inverse.active,
-.ie9 .button-inverse.active {
-  background-color: #080808;
-}
-
-button.button::-moz-focus-inner,
-input[type="submit"].button::-moz-focus-inner {
-  padding: 0;
-  border: 0;
-}
-
+// Make a button look and behave like a link
 .button-link,
 .button-link:active,
 .button-link[disabled] {
-  background-color: transparent;
-  background-image: none;
-  box-shadow: none;
+    background-color: transparent;
+    background-image: none;
+    box-shadow: none;
 }
 
 .button-link {
-  border-color: transparent;
-  cursor: pointer;
-  color: #0088cc;
-  border-radius: 0;
+    border-color: transparent;
+    cursor: pointer;
+    color: $linkColor;
+    @include border-radius(0);
 }
 
 .button-link:hover,
 .button-link:focus {
-  color: #005580;
-  text-decoration: underline;
-  background-color: transparent;
+    color: $linkColorHover;
+    text-decoration: underline;
+    background-color: transparent;
 }
 
 .button-link[disabled]:hover,
 .button-link[disabled]:focus {
-  color: #333333;
-  text-decoration: none;
+    color: $grayDark;
+    text-decoration: none;
 }
 
-// Close button
 
-.close {
-  float: right;
-  font-family: $font-sans-fallback;
-  font-size: 20px;
-  font-weight: bold;
-  line-height: 20px;
-  color: #000000;
-  text-shadow: 0 1px 0 #ffffff;
-  opacity: 0.2;
-  border: none; // Foundation override
-  text-decoration: none;
+// Button Groups
+// -------------------------------
+
+.button-group {
+    // No spacing between buttons
+    & > * {
+        margin: 0 0 0 -2px;
+    }
+
+    // No rounded corners on buttons in a group by default
+    & > *,
+    & > * > a,
+    & > * > button,
+    & > * > .button,
+    &.radius > *,
+    &.radius > * > a,
+    &.radius > * > button,
+    &.radius > * > .button {
+        border-radius: 0;
+    }
+
+    // Rounded corners on the first button in a group
+    & > *:first-child,
+    & > *:first-child > a,
+    & > *:first-child > button,
+    & > *:first-child > .button,
+    &.radius > *:first-child,
+    &.radius > *:first-child > a,
+    &.radius > *:first-child > button,
+    &.radius > *:first-child > .button {
+        border-bottom-left-radius: $baseBorderRadius;
+        border-top-left-radius: $baseBorderRadius;
+    }
+
+    // Round corners on the last button in a group
+    & > *:last-child,
+    & > *:last-child > a,
+    & > *:last-child > button,
+    & > *:last-child > .button,
+    &.radius > *:last-child,
+    &.radius > *:last-child > a,
+    &.radius > *:last-child > button,
+    &.radius > *:last-child > .button {
+        border-top-right-radius: $baseBorderRadius;
+        border-bottom-right-radius: $baseBorderRadius;
+    }
+
+    // Extra-rounded corners
+    &.round > *,
+    &.round > * > a,
+    &.round > * > button,
+    &.round > * > .button {
+        border-radius: 0;
+    }
+
+    &.round > *:first-child,
+    &.round > *:first-child > a,
+    &.round > *:first-child > button,
+    &.round > *:first-child > .button {
+        border-bottom-left-radius: $borderRadiusRound;
+        border-top-left-radius: $borderRadiusRound;
+    }
+
+    &.round > *:last-child,
+    &.round > *:last-child > a,
+    &.round > *:last-child > button,
+    &.round > *:last-child > .button {
+        border-top-right-radius: $borderRadiusRound;
+        border-bottom-right-radius: $borderRadiusRound;
+    }
 }
 
-.close:hover,
-.close:focus {
-  color: #000000;
-  text-decoration: none;
-  cursor: pointer;
-  opacity: 0.4;
+// Split buttons
+// ----------------------
+
+.split.button {
+    span {
+        border-left-color: #c3c3c3;
+
+        &:before {
+            top: 0.825em;
+            border-color: #444 transparent transparent transparent;
+            border-color: rgba(0, 0, 0, 0.8) transparent transparent transparent;
+        }
+    }
+
+    &.success span {
+        border-left-color: $successText;
+    }
+
+    &.secondary span {
+        border-left-color: $infoText;
+    }
+
+    &.alert span {
+        border-left-color: $errorText;
+    }
+
+    &.tiny span:before {
+        top: 0.7em;
+    }
+
+    &.small span:before {
+        top: 0.6em;
+    }
+
+    &.large span:before {
+        top: 0.8125em;
+    }
 }
 
-button.close {
-  padding: 0;
-  cursor: pointer;
-  background: transparent;
-  border: 0;
-  -webkit-appearance: none;
+// Dropdown buttons
+// ---------------------------
+
+.dropdown.button.tiny:before,
+.dropdown.button.small:before,
+.dropdown.button.large:before {
+    border-color: #444 transparent transparent transparent;
+    border-color: rgba(0, 0, 0, 0.8) transparent transparent transparent;
 }
 
-.button-for-touch {
-  display: inline-block;
-}
-
-.touch .button-for-touch {
-  @include button;
-  padding: 6px 12px;
+.dropdown.button.tiny:before {
+    top: 40%;
 }

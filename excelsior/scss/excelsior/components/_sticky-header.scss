@@ -1,0 +1,24 @@
+.sticky-header {
+    .pull-down-container {
+        position: fixed;
+        top: 0;
+        z-index: 3005;
+    }
+
+    .gov-bar {
+        position: fixed;
+        top: 0;
+    }
+
+    .page {
+        top: 48px;
+    }
+
+    &.active-gov-bar .site-bar {
+        top: 88px !important;
+    }
+
+    &.active-gov-bar .pull-down-container {
+        top: 88px;
+    }
+}
