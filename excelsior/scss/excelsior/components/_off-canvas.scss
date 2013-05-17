@@ -1,9 +1,9 @@
 html, body {
-    background: #282828;
     height: 100%;
 }
 
 body.off-canvas {
+    background: #282828;
     padding-top: $nav-bar-height;
 
     @include breakpoint($off-canvas-medium-width, $no-query: true) {
@@ -20,7 +20,7 @@ body.off-canvas {
 
     .pull-down {
         height: 40px;
-        width: 44px;
+        width: 36px;
     }
 
     .gov-bar {
@@ -49,6 +49,12 @@ body.off-canvas {
             overflow: visible;
             z-index: 30;
         }
+        .oldie & {
+            position:static;
+            height: auto;
+            overflow: visible;
+            z-index: 30;
+        }
 
         .sub-menu-title {
             display: inline-block;
@@ -66,6 +72,14 @@ body.off-canvas {
 
             @include breakpoint($off-canvas-medium-width, $no-query: true) {
                 overflow: hidden;
+
+                ul {
+                    min-height: auto;
+                }
+            }
+            .oldie & {
+                overflow: hidden;
+                height:auto;
 
                 ul {
                     min-height: auto;
@@ -91,6 +105,9 @@ body.off-canvas {
             @include breakpoint($off-canvas-medium-width, $no-query: true) {
                 margin-left: 0;
             }
+            .oldie & {
+                margin-left: 0;
+            }
 
             li {
                 padding-left: 3%;
@@ -109,7 +126,7 @@ body.off-canvas {
                 width: 100%;
                 background: #333 !important;
                 @include transition(left 0.2s ease);
-                //@include translate3d(0,0,0);
+                @include translate3d(0,0,0);
 
                 @include breakpoint($off-canvas-medium-width, $no-query: true) {
                     position: absolute;
@@ -120,8 +137,11 @@ body.off-canvas {
                     overflow: hidden;
                     visibility: hidden;
                     @include transition(left 0s ease);
-                    //@include translate3d(0,0,0);
+                    @include translate3d(0,0,0);
 
+                }
+                .oldie & {
+                    position: static;
                 }
 
                 @include breakpoint($off-canvas-large-width, $no-query: true) {
@@ -170,6 +190,9 @@ body.off-canvas {
             @include breakpoint($off-canvas-medium-width, $no-query: true) {
                 display: none;
             }
+            .oldie & {
+                display: none;
+            }
 
             .menu-back {
                 @include gradient-vertical(#999, #505050);
@@ -210,12 +233,12 @@ body.off-canvas {
         position: relative;
         height: auto;
         min-height: 100%;
-        top: 0;
+        top: 13px;
         width: 100%;
 
         @include breakpoint($off-canvas-medium-width, $no-query: true) {
             min-height: auto;
-            top: -23px;
+            top: -9px;
             left: 0;
         }
     }
@@ -226,7 +249,6 @@ body.off-canvas {
     .site-bar,
     .page {
         @include transition(top 0.2s ease, left 0.2s ease, height 0.2s ease);
-        //@include translate3d(0,0,0);
     }
 
     .gov-bar,
@@ -242,7 +264,13 @@ body.off-canvas {
 
         .pull-down-container,
         .site-bar {
+            @include translate3d(0,0,0);
             top: 88px;
+        }
+
+        .gov-bar,
+        .pull-down-container {
+            @include translate3d(0,0,0);
         }
 
         .site-bar {
@@ -266,6 +294,8 @@ body.off-canvas {
         .site-bar,
         .global-nav,
         .page {
+            @include translate3d(0,0,0);
+
             @include breakpoint($off-canvas-medium-width, $no-query: true) {
                 left: auto;
                 position: relative;
@@ -300,6 +330,15 @@ body.off-canvas {
 
             @include breakpoint($off-canvas-medium-width, $no-query: true) {
                 left: auto;
+            }
+        }
+
+        .gov-bar .gov-wrap,
+        .site-bar .site-wrap,
+        .page .content-section,
+        .footer .footer-contents {
+            @include breakpoint(60em, $no-query: true) {
+                height: 100%;
             }
         }
 

@@ -6,10 +6,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-    <title>Getting Started With Excelsior</title>
+    <title>Excelsior Docs</title>
 
     <!-- === Excelsior Stylesheets === -->
-    <link rel="stylesheet" href="css/excelsior.min.css">
+    <link rel="stylesheet" href="css/excelsior.css">
 
     <!-- === Optional Project Stylesheet (create in project-assets/css folder) === -->
     <!-- <link rel="stylesheet" href="project-assets/css/project.css"> -->
@@ -22,7 +22,7 @@
     <link rel="shortcut icon" href="../excelsior/images/apple-touch-icon.png">
     <link rel="icon" href="../excelsior/images/favicon.ico">
     <script src="../excelsior/js/vendor/custom.modernizr.min.js"></script>
-    <!--[if lte IE 8]><script src="../excelsior/js/vendor/respond.min.js"></script><![endif]-->
+    <!--[if IE 8]><script src="../excelsior/js/vendor/respond.min.js"></script><![endif]-->
 </head>
 <body class="off-canvas">
     <a href="#global-nav" class="skip-to">Skip to Navigation</a>
@@ -126,24 +126,97 @@
 
             <!-- === Place Page Content Here === -->
             <div class="row">
-                <div class="large-12 columns">
-                    <h1>Getting Started</h1>
-                    <p>Excelsior is a "meta-framework" built upon some of best technologies currently avaliable on the web. Using these different vendor libraries as a base, allows developers to create cutting edge websites and applications at a much faster pace.</p>
-                    <p>Read the <a href="https://github.com/nys-its/excelsior/wiki">Excelsior Web Framework Documentation</a> to get started.</p>
-                    <p><a href="sink/index.html">View the Sink Page</a></p>
+                <div class="large-3 columns">
+                    <p class="show-for-small"><a href="#" data-dropdown="componentNav" data-dropdown-options="activeClass: 'open'" class="button">Choose a Component</a></p>
+                    <div id="componentNav" class="f-dropdown section-container vertical-tabs magellan hide-for-small" data-magellan-expedition="fixed" data-section="vertical-tabs" data-dropdown-content>
+                      <section data-magellan-arrival="build">
+                        <p class="title" data-section-title><a href="#build">Build</a></p>
+                      </section>
+                      <section data-magellan-arrival="js">
+                        <p class="title" data-section-title><a href="#js">JavaScript</a></p>
+                      </section>
+                      <section data-magellan-arrival="buttons">
+                        <p class="title" data-section-title><a href="#buttons">Buttons</a></p>
+                      </section>
+                    </div>
                 </div>
-            </div>
-
-            <div class="row">
-                <div class="large-12 columns">
+                <div class="large-9 columns">
+                    <h2 data-magellan-destination="build" id="build">Build:</h2>
+                    <ul class="bulleted-list">
+                        <li><a href="sink/index.html">View Sink Page</a></li>
+                        <li><a href="sink/index-toggle.html">View Toggle Nav PAge</a></li>
+                        <li><a href="http://modernizr.com/">Modernizr</a></li><li><a href="http://foundation.zurb.com">Zurb's Foundation</a></li>
+                        <li><a href="http://jquery.com">jQuery</a></li>
+                        <li><a href="http://modernizr.com/">Modernizr</a></li><li><a href="http://foundation.zurb.com">Zurb's Foundation</a></li>
+                        <li><a href="http://jquery.com">jQuery</a></li>
+                        <li><a href="http://modernizr.com/">Modernizr</a></li><li><a href="http://foundation.zurb.com">Zurb's Foundation</a></li>
+                        <li><a href="http://jquery.com">jQuery</a></li>
+                        <li><a href="http://modernizr.com/">Modernizr</a></li>
+                    </ul>
                     <h3>Built with:</h3>
                     <ul class="bulleted-list">
                         <li><a href="http://foundation.zurb.com">Zurb's Foundation</a></li>
                         <li><a href="http://jquery.com">jQuery</a></li>
+                        <li><a href="http://modernizr.com/">Modernizr</a></li><li><a href="http://foundation.zurb.com">Zurb's Foundation</a></li>
+                        <li><a href="http://jquery.com">jQuery</a></li>
+                        <li><a href="http://modernizr.com/">Modernizr</a></li><li><a href="http://foundation.zurb.com">Zurb's Foundation</a></li>
+                        <li><a href="http://jquery.com">jQuery</a></li>
+                        <li><a href="http://modernizr.com/">Modernizr</a></li><li><a href="http://foundation.zurb.com">Zurb's Foundation</a></li>
+                        <li><a href="http://jquery.com">jQuery</a></li>
+                        <li><a href="http://modernizr.com/">Modernizr</a></li>
+                    </ul>
+                    <h3>Built with:</h3>
+                    <ul class="bulleted-list">
+                        <li><a href="http://foundation.zurb.com">Zurb's Foundation</a></li>
+                        <li><a href="http://jquery.com">jQuery</a></li>
+                        <li><a href="http://modernizr.com/">Modernizr</a></li><li><a href="http://foundation.zurb.com">Zurb's Foundation</a></li>
+                        <li><a href="http://jquery.com">jQuery</a></li>
+                        <li><a href="http://modernizr.com/">Modernizr</a></li><li><a href="http://foundation.zurb.com">Zurb's Foundation</a></li>
+                        <li><a href="http://jquery.com">jQuery</a></li>
+                        <li><a href="http://modernizr.com/">Modernizr</a></li><li><a href="http://foundation.zurb.com">Zurb's Foundation</a></li>
+                        <li><a href="http://jquery.com">jQuery</a></li>
+                        <li><a href="http://modernizr.com/">Modernizr</a></li>
+                    </ul>
+                    <h2 data-magellan-destination="js" id="js">JavaScript:</h2>
+                    <ul class="bulleted-list">
+                        <li><a href="http://foundation.zurb.com">Zurb's Foundation</a></li>
+                        <li><a href="http://jquery.com">jQuery</a></li>
+                        <li><a href="http://modernizr.com/">Modernizr</a></li><li><a href="http://foundation.zurb.com">Zurb's Foundation</a></li>
+                        <li><a href="http://jquery.com">jQuery</a></li>
+                        <li><a href="http://modernizr.com/">Modernizr</a></li><li><a href="http://foundation.zurb.com">Zurb's Foundation</a></li>
+                        <li><a href="http://jquery.com">jQuery</a></li>
+                        <li><a href="http://modernizr.com/">Modernizr</a></li><li><a href="http://foundation.zurb.com">Zurb's Foundation</a></li>
+                        <li><a href="http://jquery.com">jQuery</a></li>
+                        <li><a href="http://modernizr.com/">Modernizr</a></li>
+                    </ul>
+                    <h2 data-magellan-destination="buttons" id="buttons">Buttons</h2>
+                    <ul class="bulleted-list">
+                        <li><a href="http://foundation.zurb.com">Zurb's Foundation</a></li>
+                        <li><a href="http://jquery.com">jQuery</a></li>
+                        <li><a href="http://modernizr.com/">Modernizr</a></li><li><a href="http://foundation.zurb.com">Zurb's Foundation</a></li>
+                        <li><a href="http://jquery.com">jQuery</a></li>
+                        <li><a href="http://modernizr.com/">Modernizr</a></li><li><a href="http://foundation.zurb.com">Zurb's Foundation</a></li>
+                        <li><a href="http://jquery.com">jQuery</a></li>
+                        <li><a href="http://modernizr.com/">Modernizr</a></li><li><a href="http://foundation.zurb.com">Zurb's Foundation</a></li>
+                        <li><a href="http://jquery.com">jQuery</a></li>
+                        <li><a href="http://modernizr.com/">Modernizr</a></li>
+                    </ul>
+                    <h3>Built with:</h3>
+                    <ul class="bulleted-list">
+                        <li><a href="http://foundation.zurb.com">Zurb's Foundation</a></li>
+                        <li><a href="http://jquery.com">jQuery</a></li>
+                        <li><a href="http://modernizr.com/">Modernizr</a></li><li><a href="http://foundation.zurb.com">Zurb's Foundation</a></li>
+                        <li><a href="http://jquery.com">jQuery</a></li>
+                        <li><a href="http://modernizr.com/">Modernizr</a></li><li><a href="http://foundation.zurb.com">Zurb's Foundation</a></li>
+                        <li><a href="http://jquery.com">jQuery</a></li>
+                        <li><a href="http://modernizr.com/">Modernizr</a></li><li><a href="http://foundation.zurb.com">Zurb's Foundation</a></li>
+                        <li><a href="http://jquery.com">jQuery</a></li>
                         <li><a href="http://modernizr.com/">Modernizr</a></li>
                     </ul>
                 </div>
+
             </div>
+
 
             <!-- === End Page Content === -->
         </div>
@@ -163,7 +236,7 @@
         </footer>
     </div>
 
-    <script src="../excelsior/js/excelsior.min.js"></script>
+    <script src="../excelsior/js/core/excelsior.min.js"></script>
     <script src="../excelsior/js/core/off-canvas.min.js"></script>
     <script src="../excelsior/js/foundation/foundation.min.js"></script>
 
@@ -175,13 +248,13 @@
 
     <!-- <script src="../excelsior/js/foundation/foundation.cookie.min.js"></script> -->
 
-    <!-- <script src="../excelsior/js/foundation/foundation.dropdown.min.js"></script> -->
+    <script src="../excelsior/js/foundation/foundation.dropdown.min.js"></script>
 
     <!-- <script src="../excelsior/js/foundation/foundation.forms.min.js"></script> -->
 
-    <!-- <script src="../excelsior/js/foundation/foundation.joyride.min.js"></script> -->
+    <script src="../excelsior/js/foundation/foundation.joyride.min.js"></script>
 
-    <!-- <script src="../excelsior/js/foundation/foundation.magellan.min.js"></script> -->
+    <script src="../excelsior/js/foundation/foundation.magellan.min.js"></script>
 
     <!-- <script src="../excelsior/js/foundation/foundation.orbit.min.js"></script> -->
 
@@ -189,7 +262,7 @@
 
     <!-- <script src="../excelsior/js/foundation/foundation.reveal.min.js"></script> -->
 
-    <!-- <script src="../excelsior/js/foundation/foundation.section.min.js"></script> -->
+    <script src="../excelsior/js/foundation/foundation.section.min.js"></script>
 
     <!-- <script src="../excelsior/js/foundation/foundation.tooltips.min.js"></script> -->
 
