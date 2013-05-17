@@ -1,9 +1,9 @@
 html, body {
-    background: #282828;
     height: 100%;
 }
 
 body.off-canvas {
+    background: #282828;
     padding-top: $nav-bar-height;
 
     @include breakpoint($off-canvas-medium-width, $no-query: true) {
@@ -20,7 +20,7 @@ body.off-canvas {
 
     .pull-down {
         height: 40px;
-        width: 44px;
+        width: 36px;
     }
 
     .gov-bar {
@@ -210,12 +210,12 @@ body.off-canvas {
         position: relative;
         height: auto;
         min-height: 100%;
-        top: 0;
+        top: 13px;
         width: 100%;
 
         @include breakpoint($off-canvas-medium-width, $no-query: true) {
             min-height: auto;
-            top: -22px;
+            top: -9px;
             left: 0;
         }
     }
@@ -307,6 +307,15 @@ body.off-canvas {
 
             @include breakpoint($off-canvas-medium-width, $no-query: true) {
                 left: auto;
+            }
+        }
+
+        .gov-bar .gov-wrap,
+        .site-bar .site-wrap,
+        .page .content-section,
+        .footer .footer-contents {
+            @include breakpoint(60em, $no-query: true) {
+                height: 100%;
             }
         }
 
