@@ -52,8 +52,6 @@ module.exports = function(grunt) {
                         extDot: 'last'  // Fixes the issue of finding multiple dots in a filename
                     })
             },
-            app_js: {
-                files: [
             /*  files: [
                     {
                         cwd: 'excelsior/js/foundation/',
@@ -307,16 +305,6 @@ module.exports = function(grunt) {
                 ]
             }
         },
-        concat: {
-            options: {
-                banner: '/*! <%= pkg.title %> v<%= pkg.version %> | (c) <%= grunt.template.today("yyyy") %> NYS ITS | <%= pkg.repository.url %> | <%= pkg.license.type %>: <%= pkg.license.url %> */\n'
-            },
-            addBanners: {
-                files: [
-                        {expand: true, src: ['excelsior/css/*.css'], dest: '.'}
-                ]
-            }
-        },
         clean: {
             generatedFiles: {
                 src: [
@@ -339,7 +327,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-compress');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-concat');
-    //grunt.loadNpmTasks('grunt-csscss'); //TODO: try to fix Ruby 2.0 error on windows
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-copy');
 
