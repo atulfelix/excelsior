@@ -1,8 +1,8 @@
 #Orbit
 
 <div class="row">
-    <div class="large-6 columns">
-        <ul id="featured1" data-orbit data-options="timer_speed:5000;">
+    <div class="large-12 columns">
+        <ul data-orbit>
             <li>
                 <img src="../project-assets/img/demos/demo1.jpg" />
                 <div class="orbit-caption">

@@ -301,7 +301,7 @@ module.exports = function(grunt) {
         copy: {
             docsCSS: {
                 files: [
-                    {expand: true, cwd: 'excelsior/css', src: ['*'], dest: 'test/css/', filter: 'isFile'}
+                    {expand: true, cwd: 'excelsior/css', src: ['*'], dest: 'docs/src/files/excelsior/css', filter: 'isFile'}
                 ]
             }
         },

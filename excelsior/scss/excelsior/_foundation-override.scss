@@ -324,6 +324,14 @@ section .title a {
     }
 }
 
+.orbit-container .orbit-slides-container > * {
+    height: auto;
+}
+
+.orbit-container .orbit-slides-container li img {
+    width: 100%;
+}
+
 // Progress meters
 
 .progress {

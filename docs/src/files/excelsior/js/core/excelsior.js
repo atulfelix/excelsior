@@ -26,8 +26,8 @@ var EWF = {
     $body: null,
     $html: null,
     $window: null,
-    projectRoot: 'excelsior/',
-    imagePath: 'excelsior/images/'
+    projectRoot: '/excelsior/',
+    imagePath: '/excelsior/images/'
 };
 
 /**

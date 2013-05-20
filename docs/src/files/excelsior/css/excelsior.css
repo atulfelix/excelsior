@@ -4899,31 +4899,39 @@ section .title a {
 .orbit-container .orbit-next {
   display: inherit; }
 
-/* line 330, ../scss/excelsior/_foundation-override.scss */
+/* line 327, ../scss/excelsior/_foundation-override.scss */
+.orbit-container .orbit-slides-container > * {
+  height: auto; }
+
+/* line 331, ../scss/excelsior/_foundation-override.scss */
+.orbit-container .orbit-slides-container li img {
+  width: 100%; }
+
+/* line 338, ../scss/excelsior/_foundation-override.scss */
 .progress .meter {
   background: #3a87ad; }
-/* line 334, ../scss/excelsior/_foundation-override.scss */
+/* line 342, ../scss/excelsior/_foundation-override.scss */
 .progress.success .meter {
   background: #468847; }
-/* line 338, ../scss/excelsior/_foundation-override.scss */
+/* line 346, ../scss/excelsior/_foundation-override.scss */
 .progress.alert .meter {
   background: #b94a48; }
-/* line 342, ../scss/excelsior/_foundation-override.scss */
+/* line 350, ../scss/excelsior/_foundation-override.scss */
 .progress.secondary .meter {
   background: #999999; }
 
-/* line 349, ../scss/excelsior/_foundation-override.scss */
+/* line 357, ../scss/excelsior/_foundation-override.scss */
 .pricing-table .cta-button {
   padding: 1.25em 1.25em; }
 
-/* line 355, ../scss/excelsior/_foundation-override.scss */
+/* line 363, ../scss/excelsior/_foundation-override.scss */
 form.custom .custom.checkbox.checked:before {
   content: "x";
   margin-top: -3px;
   margin-left: 2px;
   font-size: 1.3em; }
 
-/* line 363, ../scss/excelsior/_foundation-override.scss */
+/* line 371, ../scss/excelsior/_foundation-override.scss */
 .f-dropdown {
   top: -99999px; }
 

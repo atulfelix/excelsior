@@ -1,0 +1,48 @@
+<html class="no-js" lang="en">
+<head>
+    <title><%= @document.title %></title>
+    <%- @getBlock("meta").toHTML() %>
+    <%- @getBlock("styles").add(["/excelsior/css/excelsior.css"]).toHTML() %>
+    <%- @getBlock("styles").toHTML() %>
+    <%- @getBlock("scripts").add(["/excelsior/js/vendor/custom.modernizr.js"]).toHTML() %>
+
+    <!-- Custom (Project) Styles -->
+    <% if @document.customStyles : %>
+      <% for style in @document.customStyles : %>
+        <%- @getBlock("styles").add(["/project-assets/css/" + style + ".css" ]).toHTML() %>
+      <% end %>
+    <% end %>
+
+    <%- @getBlock("scripts").add(["/excelsior/js/vendor/custom.modernizr.js"],{defer:false,async:false}).toHTML() %>
+
+</head>
+<body>
+
+    <%- @content %>
+
+    <%- @getBlock("scripts").add(["/excelsior/js/vendor/jquery.js"],{defer:false,async:false}).toHTML() %>
+    <%- @getBlock("scripts").add(["/excelsior/js/vendor/zepto.js"],{defer:false,async:false}).toHTML() %>
+    <%- @getBlock("scripts").add(["/excelsior/js/core/core.js"],{defer:false,async:false}).toHTML() %>
+    <%- @getBlock("scripts").add(["/excelsior/js/core/off-canvas.js"],{defer:false,async:false}).toHTML() %>
+    <%- @getBlock("scripts").add(["/excelsior/js/foundation/foundation.js"],{defer:false,async:false}).toHTML() %>
+
+    <!-- Vendor Scripts -->
+    <% if @document.vendorScripts : %>
+      <% for item in @document.vendorScripts : %>
+            <%- @getBlock("scripts").add(["/excelsior/js/" + item + ".js"],{defer:false,async:false}).toHTML() %>
+      <% end %>
+    <% end %>
+
+    <!-- Page Scripts -->
+    <% if @document.customScripts : %>
+      <% for item in @document.customScripts : %>
+        <%- @getBlock("scripts").add(["/project-assets/js/" + item + ".js" ],{defer:false,async:false}).toHTML() %>
+      <% end %>
+    <% end %>
+
+    <script>$(document).foundation();</script>
+
+
+    <%- @getBlock("scripts").toHTML() %>
+</body>
+</html>

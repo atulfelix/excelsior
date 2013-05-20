@@ -1,5 +1,5 @@
 ---
-layout: demo
+layout: blank-page
 title: Foundation Orbits
 vendorScripts: ['foundation/foundation.orbit']
 ---
