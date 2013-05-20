@@ -1,6 +1,7 @@
 ---
-layout: default
+layout: demo
 title: Foundation Alert Boxes
+vendorScripts: ['foundation/foundation.alerts']
 ---
 
-<%-@partial('foundation-alerts.html.md.eco')%>
+<%-@partial('foundation-alerts.html.md')%>

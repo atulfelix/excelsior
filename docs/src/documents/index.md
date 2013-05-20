@@ -15,10 +15,11 @@ title: Homepage!
 
 <ul>
     <li><a href="foundation/alert.html">Alert Boxes</a></li>
-</ul>
-
-<h3>Custom Components</h3>
-
-<ul>
-    <li><a href="#">...</a></li>
+    <li><a href="foundation/block-grid.html">Block Grid</a></li>
+    <li><a href="foundation/breadcrumbs.html">Breadcrumbs</a></li>
+    <li><a href="foundation/button-groups.html">Button Groups</a></li>
+    <li><a href="foundation/buttons.html">Buttons</a></li>
+    <li><a href="foundation/clearing.html">Clearing</a></li>
+    <li><a href="foundation/dropdowns.html">Drop Downs</a></li>
+    <li><a href="foundation/split-buttons.html">Split Buttons</a></li>
 </ul>

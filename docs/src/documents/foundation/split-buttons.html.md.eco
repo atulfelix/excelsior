@@ -1,0 +1,6 @@
+---
+layout: demo
+title: Foundation Dropdowns
+---
+
+<%-@partial('foundation-split-button.html.md')%>

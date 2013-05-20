@@ -1,0 +1,6 @@
+---
+layout: demo
+title: Foundation Buttons
+---
+
+<%-@partial('foundation-button-groups.html.md')%>

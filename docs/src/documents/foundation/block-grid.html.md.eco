@@ -1,0 +1,6 @@
+---
+layout: demo
+title: Foundation Block Grid
+---
+
+<%-@partial('foundation-block-grid.html.md')%>
