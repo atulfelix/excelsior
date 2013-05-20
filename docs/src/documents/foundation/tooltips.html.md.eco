@@ -1,0 +1,7 @@
+---
+layout: demo
+title: Foundation Tooltips
+vendorScripts: ['foundation/foundation.tooltips']
+---
+
+<%-@partial('foundation-tooltips.html.md')%>

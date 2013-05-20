@@ -1,0 +1,7 @@
+---
+layout: demo
+title: Foundation Top Bar
+vendorScripts: ['foundation/foundation.topbar']
+---
+
+<%-@partial('foundation-top-bar.html.md')%>

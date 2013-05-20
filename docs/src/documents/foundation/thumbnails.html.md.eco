@@ -1,0 +1,6 @@
+---
+layout: demo
+title: Foundation Alert Boxes
+---
+
+<%-@partial('foundation-thumbnails.html.md')%>

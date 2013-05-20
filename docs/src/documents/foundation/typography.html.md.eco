@@ -1,0 +1,6 @@
+---
+layout: demo
+title: Foundation Typography
+---
+
+<%-@partial('foundation-typography.html.md')%>
