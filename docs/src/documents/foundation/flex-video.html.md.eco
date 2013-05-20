@@ -1,0 +1,7 @@
+---
+layout: demo
+title: Foundation Flex Video
+vendorScripts: ['foundation/foundation.alerts']
+---
+
+<%-@partial('foundation-flex.html.md')%>

@@ -1,0 +1,8 @@
+---
+layout: demo
+title: Foundation Joyride
+vendorScripts: ['foundation/foundation.joyride']
+customScripts: ['joyride']
+---
+
+<%-@partial('foundation-joyride.html.md')%>

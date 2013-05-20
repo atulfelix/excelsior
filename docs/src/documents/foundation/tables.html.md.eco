@@ -1,0 +1,6 @@
+---
+layout: demo
+title: Foundation Tables
+---
+
+<%-@partial('foundation-tables.html.md')%>

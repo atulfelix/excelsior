@@ -1,0 +1,6 @@
+---
+layout: demo
+title: Foundation Price Table
+---
+
+<%-@partial('foundation-price-table.html.md')%>

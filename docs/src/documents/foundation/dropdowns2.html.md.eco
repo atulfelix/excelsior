@@ -1,0 +1,7 @@
+---
+layout: demo
+title: Foundation Dropdowns
+vendorScripts: ['foundation/foundation.dropdown']
+---
+
+<%-@partial('foundation-dropdowns2.html.md')%>

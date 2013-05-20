@@ -1,0 +1,6 @@
+---
+layout: demo
+title: Foundation Forms
+---
+
+<%-@partial('foundation-forms.html.md')%>

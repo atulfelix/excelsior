@@ -1,0 +1,7 @@
+---
+layout: demo
+title: Foundation Orbits
+vendorScripts: ['foundation/foundation.orbit']
+---
+
+<%-@partial('foundation-orbits.html.md')%>

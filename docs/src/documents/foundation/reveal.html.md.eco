@@ -1,0 +1,7 @@
+---
+layout: demo
+title: Foundation Reveal Modals
+vendorScripts: ['foundation/foundation.reveal']
+---
+
+<%-@partial('foundation-reveal.html.md')%>

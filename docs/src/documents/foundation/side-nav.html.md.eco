@@ -1,0 +1,6 @@
+---
+layout: demo
+title: Foundation Side Nav
+---
+
+<%-@partial('foundation-side-nav.html.md')%>

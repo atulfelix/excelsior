@@ -1,0 +1,7 @@
+---
+layout: demo
+title: Foundation Sections
+vendorScripts: ['foundation/foundation.section']
+---
+
+<%-@partial('foundation-sections.html.md')%>

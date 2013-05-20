@@ -1,0 +1,6 @@
+---
+layout: demo
+title: Foundation Progress Bats
+---
+
+<%-@partial('foundation-progress-bars.html.md')%>

@@ -1,0 +1,7 @@
+---
+layout: demo
+title: Foundation Alert Boxes
+vendorScripts: ['foundation/foundation.magellan']
+---
+
+<%-@partial('foundation-magellan.html.md')%>

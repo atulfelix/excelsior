@@ -1,0 +1,6 @@
+---
+layout: demo
+title: Foundation Pagination
+---
+
+<%-@partial('foundation-pagination.html.md')%>

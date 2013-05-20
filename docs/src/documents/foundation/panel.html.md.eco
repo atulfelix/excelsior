@@ -1,0 +1,6 @@
+---
+layout: demo
+title: Foundation Panles
+---
+
+<%-@partial('foundation-panel.html.md')%>

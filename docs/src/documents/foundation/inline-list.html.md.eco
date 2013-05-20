@@ -1,0 +1,6 @@
+---
+layout: demo
+title: Foundation Inline List
+---
+
+<%-@partial('foundation-inline-list.html.md')%>

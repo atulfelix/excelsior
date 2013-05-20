@@ -7,11 +7,13 @@ title: Homepage!
 <p>A better title would be cool</p>
 
 <h2>See everything at once</h2>
-<a href="#">Kitchen Sink</a>
+<p>
+    <a href="#">Kitchen Sink</a>
+</p>
 
-<h2>See individual items with Developer Documentation</h2>
+<h3>See individual items with Developer Documentation</h3>
 
-<h3>Foundation Items</h3>
+<h4>Foundation Items</h4>
 
 <ul>
     <li><a href="foundation/alert.html">Alert Boxes</a></li>
