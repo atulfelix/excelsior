@@ -240,6 +240,7 @@ body.off-canvas {
             min-height: auto;
             top: -9px;
             left: 0;
+            z-index: inherit;
         }
     }
 
@@ -320,6 +321,14 @@ body.off-canvas {
         .page {
             box-shadow: 5px 49px 8px #000;
 
+            .content-section {
+                margin-top: 48px;
+
+                @include breakpoint($off-canvas-medium-width, $no-query: true) {
+                    margin-top: 0;
+                }
+            }
+
             @include breakpoint($off-canvas-medium-width, $no-query: true) {
                 box-shadow: none;
             }
@@ -335,7 +344,6 @@ body.off-canvas {
 
         .gov-bar .gov-wrap,
         .site-bar .site-wrap,
-        .page .content-section,
         .footer .footer-contents {
             @include breakpoint(60em, $no-query: true) {
                 height: 100%;

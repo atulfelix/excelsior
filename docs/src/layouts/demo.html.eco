@@ -123,7 +123,6 @@
     <%-@partial('foundation-reveal-modals.html.md')%>
 
     <%- @getBlock("scripts").add(["/excelsior/js/vendor/jquery.js"],{defer:false,async:false}).toHTML() %>
-    <%- @getBlock("scripts").add(["/excelsior/js/vendor/zepto.js"],{defer:false,async:false}).toHTML() %>
     <%- @getBlock("scripts").add(["/excelsior/js/core/core.js"],{defer:false,async:false}).toHTML() %>
     <%- @getBlock("scripts").add(["/excelsior/js/core/off-canvas.js"],{defer:false,async:false}).toHTML() %>
     <%- @getBlock("scripts").add(["/excelsior/js/foundation/foundation.js"],{defer:false,async:false}).toHTML() %>

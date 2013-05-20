@@ -7118,7 +7118,7 @@ body.off-canvas {
   min-height: 100%;
   top: 13px;
   width: 100%; }
-  /* line 250, ../scss/excelsior/components/_off-canvas.scss */
+  /* line 251, ../scss/excelsior/components/_off-canvas.scss */
 .off-canvas .pull-down,
 .off-canvas .pull-down-container,
 .off-canvas .gov-bar,
@@ -7126,7 +7126,7 @@ body.off-canvas {
 .off-canvas .page {
   -webkit-transition: top 0.2s ease, left 0.2s ease, height 0.2s ease;
   -moz-transition: top 0.2s ease, left 0.2s ease, height 0.2s ease;
-  transition: top 0.2s ease, left 0.2s ease, height 0.2s ease; }/* line 266, ../scss/excelsior/components/_off-canvas.scss */
+  transition: top 0.2s ease, left 0.2s ease, height 0.2s ease; }/* line 267, ../scss/excelsior/components/_off-canvas.scss */
 .off-canvas.active-gov-bar .pull-down-container,
 .off-canvas.active-gov-bar .site-bar {
   -webkit-transform: translate3d(0, 0, 0);
@@ -7135,14 +7135,14 @@ body.off-canvas {
   -o-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
   top: 88px; }
-/* line 272, ../scss/excelsior/components/_off-canvas.scss */
+/* line 273, ../scss/excelsior/components/_off-canvas.scss */
 .off-canvas.active-gov-bar .gov-bar,
 .off-canvas.active-gov-bar .pull-down-container {
   -webkit-transform: translate3d(0, 0, 0);
   -moz-transform: translate3d(0, 0, 0);
   -ms-transform: translate3d(0, 0, 0);
   -o-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0); }/* line 288, ../scss/excelsior/components/_off-canvas.scss */
+  transform: translate3d(0, 0, 0); }/* line 289, ../scss/excelsior/components/_off-canvas.scss */
 .off-canvas.active-site-menu .pull-down,
 .off-canvas.active-site-menu .pull-down-container,
 .off-canvas.active-site-menu .gov-bar,
@@ -7150,7 +7150,7 @@ body.off-canvas {
 .off-canvas.active-site-menu .page {
   position: fixed;
   left: -82%; }
-/* line 296, ../scss/excelsior/components/_off-canvas.scss */
+/* line 297, ../scss/excelsior/components/_off-canvas.scss */
 .off-canvas.active-site-menu .gov-bar,
 .off-canvas.active-site-menu .site-bar,
 .off-canvas.active-site-menu .global-nav,
@@ -7160,18 +7160,21 @@ body.off-canvas {
   -ms-transform: translate3d(0, 0, 0);
   -o-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0); }
-  /* line 305, ../scss/excelsior/components/_off-canvas.scss */
+  /* line 306, ../scss/excelsior/components/_off-canvas.scss */
 .off-canvas.active-site-menu .global-nav .icon-right-open:before {
   padding-top: 3px;
   position: absolute;
   right: 5%; }
-  /* line 316, ../scss/excelsior/components/_off-canvas.scss */
+  /* line 317, ../scss/excelsior/components/_off-canvas.scss */
 .off-canvas.active-site-menu .mobile-menu-button {
   box-shadow: inset 6px 0px 8px -2px #000; }
-/* line 320, ../scss/excelsior/components/_off-canvas.scss */
+/* line 321, ../scss/excelsior/components/_off-canvas.scss */
 .off-canvas.active-site-menu .page {
   box-shadow: 5px 49px 8px #000; }
-  /* line 328, ../scss/excelsior/components/_off-canvas.scss */
+  /* line 324, ../scss/excelsior/components/_off-canvas.scss */
+  .off-canvas.active-site-menu .page .content-section {
+    margin-top: 48px; }
+      /* line 337, ../scss/excelsior/components/_off-canvas.scss */
 .off-canvas.active-site-menu .footer {
   left: -82%; }
   
@@ -7337,31 +7340,35 @@ body.off-canvas {
     .off-canvas .page {
       min-height: auto;
       top: -9px;
-      left: 0; } 
-  /* line 257, ../scss/excelsior/components/_off-canvas.scss */
+      left: 0;
+      z-index: inherit; } 
+  /* line 258, ../scss/excelsior/components/_off-canvas.scss */
   .off-canvas .gov-bar,
   .off-canvas .site-bar,
   .off-canvas .global-nav,
   .off-canvas .page {
     position: relative; } 
-  /* line 276, ../scss/excelsior/components/_off-canvas.scss */
+  /* line 277, ../scss/excelsior/components/_off-canvas.scss */
   .off-canvas.active-gov-bar .site-bar {
     top: 0; } 
-    /* line 296, ../scss/excelsior/components/_off-canvas.scss */
+    /* line 297, ../scss/excelsior/components/_off-canvas.scss */
     .off-canvas.active-site-menu .gov-bar,
     .off-canvas.active-site-menu .site-bar,
     .off-canvas.active-site-menu .global-nav,
     .off-canvas.active-site-menu .page {
       left: auto;
       position: relative; } 
-    /* line 305, ../scss/excelsior/components/_off-canvas.scss */
+    /* line 306, ../scss/excelsior/components/_off-canvas.scss */
     .off-canvas.active-site-menu .global-nav .icon-right-open:before {
       position: relative;
       right: auto; } 
-    /* line 320, ../scss/excelsior/components/_off-canvas.scss */
+      /* line 324, ../scss/excelsior/components/_off-canvas.scss */
+      .off-canvas.active-site-menu .page .content-section {
+        margin-top: 0; } 
+    /* line 321, ../scss/excelsior/components/_off-canvas.scss */
     .off-canvas.active-site-menu .page {
       box-shadow: none; } 
-    /* line 328, ../scss/excelsior/components/_off-canvas.scss */
+    /* line 337, ../scss/excelsior/components/_off-canvas.scss */
     .off-canvas.active-site-menu .footer {
       left: auto; } }
 
@@ -7730,10 +7737,9 @@ body.off-canvas {
           border-radius: 4px !important;
           /* Do not use mixin here */
           background-clip: padding-box !important; } 
-  /* line 339, ../scss/excelsior/components/_off-canvas.scss */
+  /* line 347, ../scss/excelsior/components/_off-canvas.scss */
   .off-canvas.active-site-menu .gov-bar .gov-wrap,
   .off-canvas.active-site-menu .site-bar .site-wrap,
-  .off-canvas.active-site-menu .page .content-section,
   .off-canvas.active-site-menu .footer .footer-contents {
     height: 100%; } }
 
