@@ -1,7 +1,7 @@
 ---
 layout: demo
 title: Foundation Clearing
-vendorScripts: ['vendorScripts: ['foundation/foundation.clearing']']
+vendorScripts: ['foundation/foundation.clearing']
 ---
 
 <%-@partial('foundation-clearing.html.md')%>

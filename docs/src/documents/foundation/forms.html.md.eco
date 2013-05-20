@@ -1,6 +1,7 @@
 ---
 layout: demo
 title: Foundation Forms
+vendorScripts: ['foundation/foundation.forms']
 ---
 
 <%-@partial('foundation-forms.html.md')%>
