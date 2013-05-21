@@ -1,0 +1,6 @@
+---
+layout: demo
+title: Excelsior Thumbnail Lists
+---
+
+<%-@partial('excelsior-thumbnail-list.html.md')%>

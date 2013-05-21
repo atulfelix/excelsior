@@ -2,6 +2,7 @@
 // -----------------------
 
 .image-to-list {
+
     a {
         color: #2ba6cb;
         text-decoration: underline;
@@ -41,23 +42,43 @@
         }
     }
 
-    @include breakpoint($image-to-list-small-min-width, $no-query: true) {
-        li {
-            float: none;
 
-            &[class*="large-"]:last-child,
-            &[class*="small-"]:last-child {
-                float: left; // Foundation override
-            }
+    li {
+        float: none;
+        display: block;
+
+        @include breakpoint(max-width 24em, $no-query: true) {
+            width: 100%;
         }
 
-        li
+        @include breakpoint($image-to-list-small-min-width, $no-query: ture) {
+            float: left;
+        }
+
+        &[class*="large-"]:last-child,
+        &[class*="small-"]:last-child {
+            float: left; // Foundation override
+        }
+
+        .video-container {
+
+            @include breakpoint(max-width 24em, $no-query: true) {
+                height: 200px;
+            }
+
+        }
 
         .video-container .has-video a {
             display: none !important;
+            position: relative;
+            min-height: 200px;
+
         }
+
     }
+
 }
+
 
 // Easy-Tap Links
 // ------------------------

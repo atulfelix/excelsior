@@ -1,0 +1,9 @@
+---
+layout: demo
+title: Excelsior Charting
+vendorScripts: ['vendor/chart','core/responsive-chart']
+customScripts: ['charts']
+customStyles: ['chart-styles']
+---
+
+<%-@partial('excelsior-charts.html.md')%>

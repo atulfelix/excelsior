@@ -1,0 +1,8 @@
+---
+layout: demo
+title: Excelsior Responsive Tables
+vendorScripts: ['core/responsive-table', 'foundation/foundation.dropdown']
+customScripts: ['responsive-table']
+---
+
+<%-@partial('excelsior-responsive-tables.html.md')%>

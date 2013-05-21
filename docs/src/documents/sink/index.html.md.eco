@@ -1,0 +1,176 @@
+---
+layout: demo
+title: Kitchen Sink
+vendorScripts: ['foundation/foundation.alerts','foundation/foundation.clearing','foundation/foundation.dropdown','foundation/foundation.forms','foundation/foundation.joyride','foundation/foundation.magellan','foundation/foundation.orbit','foundation/foundation.reveal','foundation/foundation.section','foundation/foundation.tooltips','foundation/foundation.topbar','core/responsive-table','vendor/chart','core/responsive-chart']
+customScripts: ['joyride','touch','charts','responsive-table']
+customStyles: ['touch','chart-styles']
+---
+
+<div class="row">
+    <div class="large-4 columns">
+        <p class="show-for-small"><a href="#" data-dropdown="componentNav" data-dropdown-options="activeClass: 'open'" class="button">Choose a Component</a></p>
+        <div id="componentNav" class="f-dropdown section-container vertical-tabs magellan hide-for-small" data-magellan-expedition="fixed" data-section="vertical-tabs" data-dropdown-content>
+          <section data-magellan-arrival="foundation">
+            <p class="title" data-section-title><a href="#foundation">Foundation</a></p>
+          </section>
+          <section data-magellan-arrival="excelsior">
+            <p class="title" data-section-title><a href="#excelsior">Excelsior</a></p>
+          </section>
+        </div>
+    </div>
+    <div class="large-8 columns">
+
+
+        <h1><a id="foundation"></a>Foundation Components</h1>
+
+        <%-@partial('foundation-alerts.html.md')%>
+
+        <hr>
+
+        <%-@partial('foundation-block-grid.html.md')%>
+
+        <hr>
+
+        <%-@partial('foundation-breadcrumbs.html.md')%>
+
+        <hr>
+
+        <%-@partial('foundation-button-groups.html.md')%>
+
+        <hr>
+
+        <%-@partial('foundation-buttons.html.md')%>
+
+        <hr>
+
+        <%-@partial('foundation-clearing.html.md')%>
+
+        <hr>
+
+        <%-@partial('foundation-dropdowns.html.md')%>
+
+        <hr>
+
+        <%-@partial('foundation-dropdowns2.html.md')%>
+
+        <hr>
+
+        <%-@partial('foundation-flex.html.md')%>
+
+        <hr>
+
+        <%-@partial('foundation-forms.html.md')%>
+
+        <hr>
+
+        <%-@partial('foundation-inline-list.html.md')%>
+
+        <hr>
+
+        <%-@partial('foundation-joyride.html.md')%>
+
+        <hr>
+
+        <%-@partial('foundation-keystroke.html.md')%>
+
+        <hr>
+
+        <%-@partial('foundation-magellan.html.md')%>
+
+        <hr>
+
+        <%-@partial('foundation-orbits.html.md')%>
+
+        <hr>
+
+        <%-@partial('foundation-pagination.html.md')%>
+
+        <hr>
+
+        <%-@partial('foundation-panel.html.md')%>
+
+        <hr>
+
+        <%-@partial('foundation-price-table.html.md')%>
+
+        <hr>
+
+        <%-@partial('foundation-progress-bars.html.md')%>
+
+        <hr>
+
+        <%-@partial('foundation-reveal.html.md')%>
+
+        <hr>
+
+        <%-@partial('foundation-sections.html.md')%>
+
+        <hr>
+
+        <%-@partial('foundation-side-nav.html.md')%>
+
+        <hr>
+
+        <%-@partial('foundation-split-button.html.md')%>
+
+        <hr>
+
+        <%-@partial('foundation-sub-nav.html.md')%>
+
+        <hr>
+
+        <%-@partial('foundation-switch.html.md')%>
+
+        <hr>
+
+        <%-@partial('foundation-tables.html.md')%>
+
+        <hr>
+
+        <%-@partial('foundation-thumbnails.html.md')%>
+
+        <hr>
+
+        <%-@partial('foundation-tooltips.html.md')%>
+
+        <hr>
+
+        <%-@partial('foundation-top-bar.html.md')%>
+
+        <hr>
+
+        <%-@partial('foundation-typography.html.md')%>
+
+        <h1><a id="excelsior"></a>Excelsior Components</h1>
+
+        <%-@partial('excelsior-block-to-stack.html.md')%>
+
+        <hr>
+
+        <%-@partial('excelsior-charts.html.md')%>
+
+        <hr>
+
+        <%-@partial('excelsior-easy-tap-links.html.md')%>
+
+        <hr>
+
+        <%-@partial('excelsior-forms.html.md')%>
+
+        <hr>
+
+        <%-@partial('excelsior-media-lists.html.md')%>
+
+        <hr>
+
+        <%-@partial('excelsior-responsive-tables.html.md')%>
+
+        <hr>
+
+        <%-@partial('excelsior-thumbnail-list.html.md')%>
+
+        <hr>
+
+        <%-@partial('excelsior-touch-actions.html.md')%>
+    </div>
+</div>

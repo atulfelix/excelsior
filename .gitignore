@@ -25,5 +25,8 @@ _site
 sass
 stylesheets
 
+# Generated Documentation
+docs/out
+
 # Grunt Build
 node_modules

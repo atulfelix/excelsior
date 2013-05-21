@@ -1,0 +1,7 @@
+---
+layout: demo
+title: Excelsior Forms
+vendorScripts: ['foundation/foundation.tooltips']
+---
+
+<%-@partial('excelsior-forms.html.md')%>

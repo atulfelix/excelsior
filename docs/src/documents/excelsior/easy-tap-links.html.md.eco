@@ -1,0 +1,6 @@
+---
+layout: demo
+title: Excelsior Easy Tap Link
+---
+
+<%-@partial('excelsior-easy-tap-links.html.md')%>

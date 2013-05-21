@@ -4,4 +4,4 @@ title: Foundation Alert Boxes
 vendorScripts: ['foundation/foundation.alerts']
 ---
 
-<%-@partial('foundation-alerts.html.md')%>
+<%-@partial('foundation-charts.html.md')%>

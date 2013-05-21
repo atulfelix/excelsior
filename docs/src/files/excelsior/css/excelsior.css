@@ -6297,24 +6297,36 @@ a.label:hover, a.label:focus {
   .clearing-close:hover {
     text-decoration: none; }
 
-/* line 5, ../scss/excelsior/components/_lists.scss */
+/* line 6, ../scss/excelsior/components/_lists.scss */
 .image-to-list a {
   color: #2ba6cb;
   text-decoration: underline; }
-  /* line 9, ../scss/excelsior/components/_lists.scss */
+  /* line 10, ../scss/excelsior/components/_lists.scss */
   .image-to-list a span {
     background: none;
     margin-top: 0; }
-      /* line 34, ../scss/excelsior/components/_lists.scss */
+      /* line 35, ../scss/excelsior/components/_lists.scss */
 .image-to-list a img,
 .image-to-list .image-to-list .has-video iframe {
   display: none;
   speak: none; }
-  
-/* line 65, ../scss/excelsior/components/_lists.scss */
+  /* line 46, ../scss/excelsior/components/_lists.scss */
+.image-to-list li {
+  float: none;
+  display: block; }
+      /* line 59, ../scss/excelsior/components/_lists.scss */
+  .image-to-list li[class*="large-"]:last-child, .image-to-list li[class*="small-"]:last-child {
+    float: left; }
+    /* line 71, ../scss/excelsior/components/_lists.scss */
+  .image-to-list li .video-container .has-video a {
+    display: none !important;
+    position: relative;
+    min-height: 200px; }
+
+/* line 86, ../scss/excelsior/components/_lists.scss */
 .link-buttons-list {
   margin-bottom: 2em; }
-  /* line 68, ../scss/excelsior/components/_lists.scss */
+  /* line 89, ../scss/excelsior/components/_lists.scss */
   .link-buttons-list a {
     display: inline-block;
     margin: 0.5em; }
@@ -6380,7 +6392,7 @@ a.label:hover, a.label:focus {
         background-image: none;
         opacity: 0.65;
         box-shadow: none; }
-      /* line 80, ../scss/excelsior/components/_lists.scss */
+      /* line 101, ../scss/excelsior/components/_lists.scss */
       .touch .link-buttons-list a a:hover {
         text-decoration: none; }
 
@@ -7393,7 +7405,7 @@ body.off-canvas {
     height: 70px;
     margin: 0 0.7em 0 0;
     padding: 0; }
-  /* line 33, ../scss/excelsior/components/_block-to-stack.scss */
+  /* line 32, ../scss/excelsior/components/_block-to-stack.scss */
   .crop img {
     width: 300px;
     height: 70px;
@@ -7405,14 +7417,13 @@ body.off-canvas {
       float: left;
       overflow: hidden;
       margin: 0 0 0.4em 0;
-      width: 100%;
-      height: 100%; } 
-    /* line 33, ../scss/excelsior/components/_block-to-stack.scss */
+      width: 100%; } 
+    /* line 32, ../scss/excelsior/components/_block-to-stack.scss */
     .crop img {
       width: auto;
       height: auto;
       max-width: 100%; } 
-  /* line 49, ../scss/excelsior/components/_block-to-stack.scss */
+  /* line 48, ../scss/excelsior/components/_block-to-stack.scss */
   .crop .img1,
   .crop .img2,
   .crop .img3 {
@@ -7661,38 +7672,37 @@ body.off-canvas {
     padding: 2em 0; } }
 
 @media (min-width: 24em) {
-      /* line 9, ../scss/excelsior/components/_lists.scss */
+      /* line 10, ../scss/excelsior/components/_lists.scss */
       .image-to-list a span {
         background: rgba(0, 0, 0, 0.7);
         display: block;
         padding: 7px;
         position: relative;
         margin-top: -39px; } 
-    /* line 5, ../scss/excelsior/components/_lists.scss */
+    /* line 6, ../scss/excelsior/components/_lists.scss */
     .image-to-list a {
       color: #efefef;
       display: block;
       text-decoration: none; }
-      /* line 27, ../scss/excelsior/components/_lists.scss */
+      /* line 28, ../scss/excelsior/components/_lists.scss */
       .image-to-list a iframe {
         height: 100%; } 
-    /* line 34, ../scss/excelsior/components/_lists.scss */
+    /* line 35, ../scss/excelsior/components/_lists.scss */
     .image-to-list a img,
     .image-to-list .image-to-list .has-video iframe {
       display: block;
       speak: normal; } 
-  /* line 45, ../scss/excelsior/components/_lists.scss */
-  .image-to-list li {
-    float: none; }
-    /* line 49, ../scss/excelsior/components/_lists.scss */
-    .image-to-list li[class*="large-"]:last-child, .image-to-list li[class*="small-"]:last-child {
-      float: left; }
-  /* line 56, ../scss/excelsior/components/_lists.scss */
-  .image-to-list li
-  .video-container .has-video a {
-    display: none !important; } }
+    /* line 46, ../scss/excelsior/components/_lists.scss */
+    .image-to-list li {
+      float: left; } }
 
 @media (max-width: 24em) {
+    /* line 46, ../scss/excelsior/components/_lists.scss */
+    .image-to-list li {
+      width: 100%; } 
+    /* line 63, ../scss/excelsior/components/_lists.scss */
+    .image-to-list li .video-container {
+      height: 200px; } 
     /* line 124, ../scss/excelsior/components/_images.scss */
     .video-container {
       height: auto;

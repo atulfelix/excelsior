@@ -54,7 +54,14 @@ title: Homepage!
     <div class="large-6 columns">
         <h4>Excelsior Items</h4>
         <ul>
+            <li><a href="excelsior/block-to-stack.html">Block to Stack</a></li>
+            <li><a href="excelsior/charts.html">Charting</a></li>
+            <li><a href="excelsior/easy-tap-links.html">Easy Tap Links</a></li>
+            <li><a href="excelsior/forms.html">Forms</a></li>
             <li><a href="excelsior/media-lists.html">Media Lists</a></li>
+            <li><a href="excelsior/responsive-tables.html">Responsive Tables</a></li>
+            <li><a href="excelsior/thumbnail-lists.html">Thumbnail Lists</a></li>
+            <li><a href="excelsior/touch-actions.html">Touch Actions</a></li>
         </ul>
     </div>
 </div>

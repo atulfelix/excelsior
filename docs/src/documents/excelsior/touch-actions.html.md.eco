@@ -1,0 +1,8 @@
+---
+layout: demo
+title: Excelsior Touch Actions
+customScripts: ['touch']
+customStyles: ['touch']
+---
+
+<%-@partial('excelsior-touch-actions.html.md')%>

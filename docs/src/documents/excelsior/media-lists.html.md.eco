@@ -1,0 +1,6 @@
+---
+layout: demo
+title: Excelsior Media Lists
+---
+
+<%-@partial('excelsior-media-lists.html.md')%>

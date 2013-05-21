@@ -1,0 +1,6 @@
+---
+layout: demo
+title: Excelsior Block to Stack
+---
+
+<%-@partial('excelsior-block-to-stack.html.md')%>
