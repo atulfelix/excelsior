@@ -1,7 +1,6 @@
 ---
 layout: demo
 title: Foundation Keystroke
-vendorScripts: ['foundation/foundation.alerts']
 ---
 
 <%-@partial('foundation-keystroke.html.md')%>

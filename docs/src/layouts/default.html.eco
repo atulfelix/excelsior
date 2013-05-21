@@ -110,7 +110,7 @@
         </footer>
     </div>
 
-    <%- @getBlock("scripts").add(["/excelsior/js/vendor/jquery.js","/excelsior/js/core/core.js","/excelsior/js/core/off-canvas.js"]).toHTML() %>
+    <%- @getBlock("scripts").add(["/excelsior/js/vendor/jquery.js","/excelsior/js/vendor/fastclick.js","/excelsior/js/core/core.js","/excelsior/js/core/off-canvas.js"]).toHTML() %>
 
     <%- @getBlock("scripts").toHTML() %>
 </body>
