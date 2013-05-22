@@ -21,7 +21,7 @@ customStyles: ['touch','chart-styles']
     <div class="large-8 columns">
 
 
-        <h1><a id="foundation"></a>Foundation Components</h1>
+        <h1><a id="foundation" data-magellan-destination="foundation"></a>Foundation Components</h1>
 
         <%-@partial('foundation-alerts.html.md')%>
 
@@ -141,7 +141,7 @@ customStyles: ['touch','chart-styles']
 
         <%-@partial('foundation-typography.html.md')%>
 
-        <h1><a id="excelsior"></a>Excelsior Components</h1>
+        <h1><a id="excelsior" data-magellan-destination="excelsior"></a>Excelsior Components</h1>
 
         <%-@partial('excelsior-block-to-stack.html.md')%>
 
