@@ -1,7 +1,7 @@
 # Block to Stack
 
 <div class="row">
-  <div class="large-9 small-12 columns">
+  <div class="large-4 small-12 columns">
     <div class="block">
       <h4>New York City</h4>
       <div class="crop">
@@ -10,7 +10,7 @@
       <p>New York is the most populous city in the United States and the center of the New York Metropolitan Area, one of the most populous urban agglomerations in the world. The city is referred to as New York City or the City of New York to distinguish it from the State of New York, of which it is a part. A global power city, New York exerts a significant impact upon commerce, finance, media, art, fashion, research, technology, education, and entertainment. The home of the United Nations Headquarters, New York is an important center for international diplomacy and has been described as the cultural capital of the world.</p>
     </div>
   </div>
-  <div class="large-9 small-12 columns">
+  <div class="large-4 small-12 columns">
     <div class="block">
       <h4>Buffalo</h4>
       <div class="crop">
@@ -19,7 +19,7 @@
       <p>Buffalo is the second most populous city in the state of New York, after New York City. Located in Western New York on the eastern shores of Lake Erie and at the head of the Niagara River across from Fort Erie, Ontario, Buffalo is the seat of Erie County and the principal city of the Buffalo-Niagara Falls metropolitan area, the largest in Upstate New York. Buffalo itself has a population of 261,310 (2010 Census) and the Buffalo–Niagara–Cattaraugus Combined Statistical Area is home to 1,215,826 residents.</p>
     </div>
   </div>
-  <div class="large-9 small-12 columns">
+  <div class="large-4 small-12 columns">
     <div class="block">
       <h4>Rochester</h4>
       <div class="crop">

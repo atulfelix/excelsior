@@ -1,3 +1,3 @@
 $(document).ready(function(){
-	$('table').responsiveTable();
+	$('#responsive-example').responsiveTable();
 });

@@ -3,7 +3,7 @@
 <div class="row" style="margin-top: 20px; margin-bottom: 20px;">
     <div class="large-9 columns">
       <div class="row">
-        <div class="large-4 columns">
+        <div class="large-8 columns">
           <canvas id="canvasTest-2" height="269" width="450" style="width: 450px; height: 269px;"></canvas>
         </div>
         <div class="large-4 columns">
@@ -27,7 +27,7 @@
               </tr>
               <tr>
                 <th>
-                  Opera Mini
+                  Opera
                   <span class="swatch opera"></span>
                 </th>
                 <td>
