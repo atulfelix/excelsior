@@ -32,28 +32,102 @@
             width: 100%;
         }
 
+        p {
+            text-align: center;
+        }
+
+        p em {
+            color: #4c4c4c;
+            display: block;
+            font-size: 1.35em;
+            line-height: 1.2;
+            margin-bottom: 35px;
+            padding: 0 14%;
+        }
+
+        .excelsior-logo {
+            padding: 10%;
+        }
+
         .download {
             font-size: 1.25em;
-            line-height: 1;
-            margin-top: 40px;
+            line-height: 1.75;
             margin-bottom: 30px;
-            padding: 1em;
+            padding: 0.75em;
         }
 
         .seconday-action {
             padding: 0.75em;
         }
 
-        .github, .documentation {
-            padding-left: 0;
-            padding-right: 0;
+        .gh-ribbon {
+            display:none;
         }
 
-        .documentation {
+        .gh-button {
+            display: inline-block;
             margin-top: 20px;
         }
 
+        .documentation {
+            margin-top: 10px;
+        }
+
+        .description {
+            margin: 10px 0;
+        }
+
+        @media (min-width: 768px) {
+            p {
+                margin-top: 55px;
+            }
+
+            p em {
+                font-size: 1.1em;
+            }
+        }
+
+        @media (min-width: 820px) {
+            p {
+                margin-top: 65px;
+            }
+        }
+
+        @media (min-width: 860px) {
+            p {
+                margin-top: 76px;
+            }
+        }
+
+        @media (min-width: 890px) {
+            p {
+                margin-top: 85px;
+            }
+        }
+
+        @media (min-width: 930px) {
+            p {
+                margin-top: 97px;
+            }
+        }
+
+        @media (min-width: 933px) {
+            p {
+                margin-top: 118px;
+            }
+        }
+
+        @media (min-width: 956px) {
+            p {
+                margin-top: 127px;
+            }
+        }
+
         @media (min-width: 48em) {
+
+            .full-width {
+                width: 70%;
+            }
 
             .gov-bar .search-container {
                 margin-top: -1px;
@@ -67,23 +141,23 @@
                 padding-top: 150px;
             }
 
-            .button-container {
-                margin-top: 171px !important;
+            .gh-ribbon {
+                display:block;
+            }
+
+            .gh-button {
+                display: none;
             }
 
             .download {
-                font-size: 2em;
+                font-size: 1.35em;
+                line-height: 1;
                 margin-top: 0;
                 margin-bottom: 0;
             }
 
-            .github {
-                padding-left: 0;
-                padding-right: .9375em;
-            }
-
             .documentation {
-                margin-top: 0;
+                margin-top: 30px;
                 padding-right: 0;
                 padding-left: .9375em;
             }
@@ -95,6 +169,7 @@
 <body>
     <a href="#global-nav" class="skip-to">Skip to Navigation</a>
     <a href="#page" class="skip-to">Skip to Content</a>
+    <a href="https://github.com/nys-its/excelsior" class="gh-ribbon"><img style="position: absolute; top: 28px; right: 0; border: 0; z-index: 100;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
     <div class="pull-down-container show-for-small">
         <a href="#" id="pull-down" class="pull-down show-for-small" data-active="active-gov-bar">
             <span class="accessibility-text">Open New York State Search</span>
@@ -134,22 +209,32 @@
         <div class="content-section">
             <div class="row">
                 <div class="large-6 columns">
-                    <img src="https://raw.github.com/esteinborn/excelsior-presentation/master/img/excelsior-dark-text-w-shadow.png" alt="Excelsior Web Framework"/>
+                    <img src="https://raw.github.com/esteinborn/excelsior-presentation/master/img/excelsior-dark-text-w-shadow.png" alt="Excelsior Web Framework" class="excelsior-logo"/>
                 </div>
                 <div class="large-6 columns">
                     <div class="row button-container">
                         <div class="large-12 columns">
+                            <div class="outter-wrap">
+                                <div class="inner-wrap">
                             <p>
-                                <a href="https://github.com/nys-its/excelsior/raw/master/excelsior.zip" class="button success download full-width">Download the Framework</a>
+                                <em>
+                                    Create New York State sites and apps that adapt to every device!
+                                </em>
+                                <a href="https://github.com/nys-its/excelsior/raw/master/excelsior.zip" class="button success download full-width">Download Now</a>
+                                <a href="https://github.com/nys-its/excelsior/wiki" class="button seconday-action full-width documentation"> Documentation</a>
+                                <a href="https://github.com/nys-its/excelsior" class="button seconday-action full-width gh-button"> On GitHub</a>
                             </p>
-                            <div class="large-6 columns github">
-                                <a href="https://github.com/nys-its/excelsior" class="button seconday-action full-width">See it on GitHub </a>
-                            </div>
-                            <div class="large-6 columns documentation">
-                                <a href="https://github.com/nys-its/excelsior/wiki" class="button seconday-action full-width">Read the Documentation</a>
+                                </div>
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="large-12 columns">
+                    <p class="description">
+                        The NYS Excelsior Web Framework (EWF) is a way to fast-track your project's user interface development. It is a collaboratively built front-end framework used to enable NYS web projects to start on a solid mobile-first responsive foundation. It is platform agnostic, yet platform ready - which allows it to be ported to multiple different platform/language templates (Drupal, Java, ColdFusion, .NET, Teamsite etc).
+                    </p>
                 </div>
             </div>
         </div>
