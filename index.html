@@ -6,8 +6,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-    <title>Getting Started With Excelsior</title>
-
+    <title>Excelsior Web Framework</title>
+    <meta name="apple-mobile-web-app-title" content="Excelsior">
     <!-- === Excelsior Stylesheets === -->
     <!--<link rel="stylesheet" href="excelsior/css/excelsior.min.css">-->
     <style>
@@ -18,16 +18,20 @@
     <!-- <link rel="stylesheet" href="project-assets/css/project.css"> -->
 
     <!-- Fav icons -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="excelsior/images/apple-touch-icon-144x144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="excelsior/images/apple-touch-icon-114x114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="excelsior/images/apple-touch-icon-72x72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="excelsior/images/apple-touch-icon-57x57-precomposed.png">
-    <link rel="shortcut icon" href="excelsior/images/apple-touch-icon.png">
-    <link rel="icon" href="excelsior/images/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="excelsior/images/source/excelsior-icons/apple-touch-icon-144x144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="excelsior/images/source/excelsior-icons/apple-touch-icon-114x114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="excelsior/images/source/excelsior-icons/apple-touch-icon-72x72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="excelsior/images/source/excelsior-icons/apple-touch-icon-57x57-precomposed.png">
+    <link rel="shortcut icon" href="excelsior/images/source/excelsior-icons/apple-touch-icon.png">
+    <link rel="icon" href="excelsior/images/source/excelsior-icons/favicon.ico">
     <script src="excelsior/js/vendor/custom.modernizr.min.js"></script>
     <!--[if (IE 8)|(IE 7)]><script src="excelsior/js/vendor/respond.min.js"></script><![endif]-->
 
     <style>
+        .center-text {
+            text-align:center;
+        }
+
         .full-width {
             width: 100%;
         }
@@ -83,47 +87,50 @@
 
         @media (min-width: 768px) {
             p {
-                margin-top: 55px;
+                margin-top: 93px;
             }
 
             p em {
-                font-size: 1.1em;
+                font-size: 1.05em;
             }
         }
 
         @media (min-width: 820px) {
             p {
-                margin-top: 65px;
+                margin-top: 105px;
             }
-        }
+       }
 
         @media (min-width: 860px) {
             p {
-                margin-top: 76px;
+                margin-top: 115px;
             }
         }
 
         @media (min-width: 890px) {
             p {
-                margin-top: 85px;
+                margin-top: 120px;
             }
-        }
+       }
 
         @media (min-width: 930px) {
             p {
                 margin-top: 97px;
             }
+              p em {
+                font-size: 1.35em;
+            }
         }
 
         @media (min-width: 933px) {
             p {
-                margin-top: 118px;
+                margin-top: 121px;
             }
         }
 
         @media (min-width: 956px) {
             p {
-                margin-top: 127px;
+                margin-top: 125px;
             }
         }
 
@@ -146,7 +153,8 @@
             }
 
             .page .content-section {
-                padding: 150px 0 1em 0;
+                padding: 140px 0 1em 0;
+
             }
 
             .gh-ribbon {
@@ -216,8 +224,8 @@
     <div class="page">
         <div class="content-section">
             <div class="row">
-                <div class="large-6 columns">
-                    <img src="https://raw.github.com/esteinborn/excelsior-presentation/master/img/excelsior-dark-text-w-shadow.png" alt="Excelsior Web Framework" class="excelsior-logo"/>
+                <div class="large-6 columns center-text">
+                    <img src="excelsior/images/source/excelsior-icons/excelsior-hp-logo.png" alt="Excelsior Web Framework" class="excelsior-logo"/>
                 </div>
                 <div class="large-6 columns">
                     <div class="row button-container">
@@ -241,7 +249,7 @@
             <div class="row">
                 <div class="large-12 columns">
                     <p class="description">
-                        The NYS Excelsior Web Framework (EWF) is a way to fast-track your project's user interface development. It is a collaboratively built front-end framework used to enable NYS web projects to start on a solid mobile-first responsive foundation. It is platform agnostic, yet platform ready - which allows it to be ported to multiple different platform/language templates (Drupal, Java, ColdFusion, .NET, Teamsite etc).
+                        The NYS Excelsior Web Framework is a way to fast-track your project's user interface development. It is a collaboratively built front-end framework used to enable NYS web projects to start on a solid mobile-first responsive foundation. It is platform agnostic, yet platform ready - which allows it to be ported to multiple different platform/language templates (Drupal, Java, ColdFusion, .NET, Teamsite etc).
                     </p>
                 </div>
             </div>
