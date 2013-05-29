@@ -1,0 +1,63 @@
+// Skip navigation items
+html {
+    background: $htmlColor;
+}
+
+body {
+    background: $bodyColor;
+}
+
+.skip-to {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: inline-block;
+    padding: 10px;
+    background: $black;
+    border: 1px solid $primary-color;
+    @include border-radius(3px);
+    clip: rect(0, 0, 0, 0);
+    font-size: 1.4em;
+
+    &:focus {
+        clip: auto;
+        outline: 1px solid $primary-color;
+        z-index: 100;
+    }
+}
+
+.site-bar {
+    @include gradient-vertical($sitebarPrimaryColor, $sitebarSecondaryColor);
+    height: $sitebarHeight;
+    position: relative;
+
+    a {
+        color: $sitebarTextColor;
+        font-size: $sitebarLogoSize;
+
+    }
+
+    .site-title {
+        position: absolute;
+        top: 50%;
+        margin-top: -($sitebarLogoSize / 2); // Center text reguardless of sitebar size
+        max-width: 62.5em;
+    }
+}
+
+.page {
+    background: $pageBackgroundColor;
+
+    p, a {
+        font-size: 1.2em; 
+    }
+}
+
+.footer {
+    background: $footerBackgroundColor;
+    color: $footeTextColor;
+
+    h2, h3, h4, h5, h6 {
+        color: $footeTextColor;
+    }
+}
