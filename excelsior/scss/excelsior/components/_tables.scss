@@ -28,7 +28,7 @@ td {
 }
 
 th {
-    @include bold();
+    font-weight: bold;
 }
 
 // Bottom align for column headings

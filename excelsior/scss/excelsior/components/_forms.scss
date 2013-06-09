@@ -25,7 +25,7 @@ fieldset legend {
     font-size: $baseFontSize * 1.5;
     line-height: $baseLineHeight * 2;
     color: $grayDark;
-    @include bold();
+    font-weight: bold;
     border: 0;
     border-bottom: 1px solid #e5e5e5;
     background: transparent;
@@ -50,7 +50,7 @@ input,
 button,
 select,
 textarea {
-    @include font-sans(); // And only set font-family here for those that need it (note the missing label element)
+    font-family: $font-sans; // And only set font-family here for those that need it (note the missing label element)
     @include border-radius($baseBorderRadius);
 }
 
