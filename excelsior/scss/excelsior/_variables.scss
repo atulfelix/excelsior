@@ -48,6 +48,9 @@ $red:                   #9d261d !default;
 $yellow:                #ffc40d !default;
 $orange:                #f89406 !default;
 
+// Site Color
+$bodyColor:             #282828 !default;
+
 // Navigation
 // -------------------------
 $nav-bar-height: 48px;
@@ -67,8 +70,21 @@ $pulldown-line-light: #144e8c;
 
 // Scaffolding
 // -------------------------
-$bodyBackground:        $white !default;
-$textColor:             $grayDark !default;
+
+// Header
+$headerHeight: 48px;
+$headerPrimaryColor: #4c4c4c;
+$headerSecondayColor: #333333;
+$headerTextSize: 1em;
+$headerTextColor: $white !default;
+
+// Content Area
+$bodyBackground: $white !default;
+$textColor: $grayDark !default;
+
+// Footer
+$footerBackgroundColor: #282828;
+$footeTextColor: $white !default;
 
 // Links
 // -------------------------
