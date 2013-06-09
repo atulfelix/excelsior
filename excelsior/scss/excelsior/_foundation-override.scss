@@ -77,7 +77,7 @@ li.hide-for-small {
 
 .pagination {
     a {
-        @include font-sans();
+        font-family: $font-sans;
     }
 
     li.current a,
@@ -131,8 +131,8 @@ section .title a {
     border:0;
 }
 .section-container.tabs section .title {
-      font-family: $font-sans-bold;
-      font-weight: normal;
+      font-family: $font-sans;
+      font-weight: bold;
       border-top-left-radius: 6px;
       border-top-right-radius: 6px;
       background-clip: padding-box;
@@ -147,8 +147,8 @@ section .title a {
 // Same styles as above
 @media screen and (min-width: 48em) {
     .section-container.auto section .title {
-        font-family: $font-sans-bold;
-        font-weight: normal;
+        font-family: $font-sans;
+        font-weight: bold;
         border-top-left-radius: 6px;
         border-top-right-radius: 6px;
         background-clip: padding-box;

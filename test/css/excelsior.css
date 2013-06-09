@@ -4561,14 +4561,14 @@ a.th {
   .f-dropdown.large {
     max-width: 800px; }
 
-/* line 6, ../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_border-box.scss */
+/* line 6, ../../../../../.rvm/gems/ruby-1.9.3-p392/gems/toolkit-1.0.0/stylesheets/toolkit/_border-box.scss */
 *, *:after, *:before {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   *behavior: url('../behaviors/box-sizing/boxsizing.php'); }
 
-/* line 4, ../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_fluid-media.scss */
+/* line 4, ../../../../../.rvm/gems/ruby-1.9.3-p392/gems/toolkit-1.0.0/stylesheets/toolkit/_fluid-media.scss */
 img, video {
   max-width: 100%;
   height: auto; }
@@ -4593,17 +4593,16 @@ li.hide-for-small {
   background-repeat: repeat-x;
   border-color: #0044cc #0044cc #002a80;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25); }
-  /* line 334, ../scss/excelsior/_mixins.scss */
+  /* line 303, ../scss/excelsior/_mixins.scss */
   .panel.callout:hover, .panel.callout:focus, .panel.callout:active, .panel.callout.active, .panel.callout.disabled, .panel.callout[disabled] {
     color: white;
     background-color: #0044cc; }
-  /* line 341, ../scss/excelsior/_mixins.scss */
+  /* line 310, ../scss/excelsior/_mixins.scss */
   .panel.callout:active, .panel.callout.active {
     background-color: #003399 \9; }
   /* line 21, ../scss/excelsior/_foundation-override.scss */
   .panel.callout:hover {
     -webkit-transition: background-position 0.1s linear;
-    -moz-transition: background-position 0.1s linear;
     transition: background-position 0.1s linear; }
 /* line 26, ../scss/excelsior/_foundation-override.scss */
 .panel h4 a {
@@ -4647,7 +4646,7 @@ li.hide-for-small {
   background-repeat: repeat-x;
   border-color: #0044cc #0044cc #002a80;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25); }
-  /* line 334, ../scss/excelsior/_mixins.scss */
+  /* line 303, ../scss/excelsior/_mixins.scss */
   .sub-nav dt.active a:hover, .sub-nav dt.active a:focus, .sub-nav dt.active a:active, .sub-nav dt.active a.active, .sub-nav dt.active a.disabled, .sub-nav dt.active a[disabled],
   .sub-nav dd.active a:hover,
   .sub-nav dd.active a:focus,
@@ -4687,7 +4686,7 @@ li.hide-for-small {
   .side-nav li.active > a:first-child[disabled] {
     color: white;
     background-color: #0044cc; }
-  /* line 341, ../scss/excelsior/_mixins.scss */
+  /* line 310, ../scss/excelsior/_mixins.scss */
   .sub-nav dt.active a:active, .sub-nav dt.active a.active,
   .sub-nav dd.active a:active,
   .sub-nav dd.active a.active,
@@ -4713,7 +4712,6 @@ li.hide-for-small {
     border-radius: 1000em;
     background-clip: padding-box;
     -webkit-transition: background-position 0.1s linear;
-    -moz-transition: background-position 0.1s linear;
     transition: background-position 0.1s linear;
     color: white; }
 
@@ -4726,9 +4724,7 @@ li.hide-for-small {
 
 /* line 79, ../scss/excelsior/_foundation-override.scss */
 .pagination a {
-  font-family: "SourceSansPro", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-  font-weight: normal !important;
-  font-style: normal !important; }
+  font-family: "SourceSansPro", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
 /* line 84, ../scss/excelsior/_foundation-override.scss */
 .pagination li.current a,
 .pagination li.current a {
@@ -4743,7 +4739,7 @@ li.hide-for-small {
   background-repeat: repeat-x;
   border-color: #0044cc #0044cc #002a80;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25); }
-  /* line 334, ../scss/excelsior/_mixins.scss */
+  /* line 303, ../scss/excelsior/_mixins.scss */
   .pagination li.current a:hover, .pagination li.current a:focus, .pagination li.current a:active, .pagination li.current a.active, .pagination li.current a.disabled, .pagination li.current a[disabled],
   .pagination li.current a:hover,
   .pagination li.current a:focus,
@@ -4753,7 +4749,7 @@ li.hide-for-small {
   .pagination li.current a[disabled] {
     color: white;
     background-color: #0044cc; }
-  /* line 341, ../scss/excelsior/_mixins.scss */
+  /* line 310, ../scss/excelsior/_mixins.scss */
   .pagination li.current a:active, .pagination li.current a.active,
   .pagination li.current a:active,
   .pagination li.current a.active {
@@ -4764,7 +4760,6 @@ li.hide-for-small {
   .pagination li.current a:focus {
     text-decoration: none;
     -webkit-transition: background-position 0.1s linear;
-    -moz-transition: background-position 0.1s linear;
     transition: background-position 0.1s linear; }
 
 /* line 99, ../scss/excelsior/_foundation-override.scss */
@@ -4797,8 +4792,8 @@ section .title a {
 
 /* line 133, ../scss/excelsior/_foundation-override.scss */
 .section-container.tabs section .title {
-  font-family: "SourceSansProBold", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-  font-weight: normal;
+  font-family: "SourceSansPro", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-weight: bold;
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
   background-clip: padding-box; }
@@ -4894,7 +4889,7 @@ section .title a {
   [data-magellan-expedition].section-container.vertical-tabs section.active > .title:after {
     content: ""; }
     
-/* line 9, ../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
+/* line 9, ../../../../../.rvm/gems/ruby-1.9.3-p392/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
 .touch .orbit-container .orbit-prev, .touch
 .orbit-container .orbit-next {
   display: inherit; }
@@ -4959,11 +4954,8 @@ nav a:active {
 
 /* line 31, ../scss/excelsior/components/_global.scss */
 h1, h2, h3, h4, h5, h6 {
-  font-family: "SourceSansProBold", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-  font-weight: normal;
-  font-family: "MerriweatherRegular", Georgia, serif;
-  font-weight: normal !important;
-  font-style: normal !important; }
+  font-family: "Merriweather", Georgia, serif;
+  font-weight: bold; }
 
 /* line 36, ../scss/excelsior/components/_global.scss */
 h1 {
@@ -4993,73 +4985,54 @@ h6 {
 p {
   font-family: "SourceSansPro", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
 
-/* line 65, ../scss/excelsior/components/_global.scss */
-em,
-i {
-  font-family: "SourceSansProItalic", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-  font-style: normal; }
-
-/* line 70, ../scss/excelsior/components/_global.scss */
-strong,
-b {
-  font-family: "SourceSansProBold", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-  font-weight: normal; }
-
-/* line 75, ../scss/excelsior/components/_global.scss */
-strong em,
-em strong {
-  font-family: "SourceSansProBoldItalic", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-  font-weight: normal;
-  font-style: normal; }
-
-/* line 79, ../scss/excelsior/components/_global.scss */
+/* line 64, ../scss/excelsior/components/_global.scss */
 ul, ol, dl {
   font-family: inherit; }
 
-/* line 85, ../scss/excelsior/components/_global.scss */
+/* line 70, ../scss/excelsior/components/_global.scss */
 .no-wrap {
   white-space: nowrap; }
 
-/* line 89, ../scss/excelsior/components/_global.scss */
+/* line 74, ../scss/excelsior/components/_global.scss */
 .align-center {
   text-align: center; }
 
-/* line 93, ../scss/excelsior/components/_global.scss */
+/* line 78, ../scss/excelsior/components/_global.scss */
 .bulleted-list {
   list-style-position: outside;
   margin-left: 1em; }
 
-/* line 98, ../scss/excelsior/components/_global.scss */
+/* line 83, ../scss/excelsior/components/_global.scss */
 .padding-sides-none {
   padding-left: 0 !important;
   padding-right: 0 !important; }
 
-/* line 109, ../scss/excelsior/components/_global.scss */
+/* line 94, ../scss/excelsior/components/_global.scss */
 .margin-top-xlarge {
   margin-top: 2em; }
 
-/* line 113, ../scss/excelsior/components/_global.scss */
+/* line 98, ../scss/excelsior/components/_global.scss */
 .scrollable-x {
   overflow-x: scroll;
   -webkit-overflow-scrolling: touch; }
 
-/* line 118, ../scss/excelsior/components/_global.scss */
+/* line 103, ../scss/excelsior/components/_global.scss */
 .radius {
   border-radius: 0.25em;
   background-clip: padding-box; }
 
-/* line 122, ../scss/excelsior/components/_global.scss */
+/* line 107, ../scss/excelsior/components/_global.scss */
 .unsupported-browser-message {
   margin: 1em 0 0.5em 0;
   text-align: center;
   font-size: 110%;
   line-height: 120%; }
 
-/* line 129, ../scss/excelsior/components/_global.scss */
+/* line 114, ../scss/excelsior/components/_global.scss */
 .row {
   padding-bottom: 1em; }
 
-/* line 134, ../scss/excelsior/components/_global.scss */
+/* line 119, ../scss/excelsior/components/_global.scss */
 .unselectable {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -5080,7 +5053,7 @@ ul, ol, dl {
 /* line 10, ../scss/excelsior/components/_visibility.scss */
 .show-for-no-touch {
   display: inherit !important; }
-  /* line 9, ../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
+  /* line 9, ../../../../../.rvm/gems/ruby-1.9.3-p392/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
   .touch .show-for-no-touch {
     display: none !important; }
 
@@ -5088,7 +5061,7 @@ ul, ol, dl {
 .show-for-no-touch li,
 li.show-for-no-touch {
   display: list-item !important; }
-  /* line 9, ../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
+  /* line 9, ../../../../../.rvm/gems/ruby-1.9.3-p392/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
   .touch .show-for-no-touch li, .touch
   li.show-for-no-touch {
     display: none !important; }
@@ -5096,7 +5069,7 @@ li.show-for-no-touch {
 /* line 27, ../scss/excelsior/components/_visibility.scss */
 .hide-for-no-touch {
   display: none !important; }
-  /* line 9, ../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
+  /* line 9, ../../../../../.rvm/gems/ruby-1.9.3-p392/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
   .touch .hide-for-no-touch {
     display: inherit !important; }
 
@@ -5104,7 +5077,7 @@ li.show-for-no-touch {
 .hide-for-no-touch li,
 li.hide-for-no-touch {
   display: none !important; }
-  /* line 9, ../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
+  /* line 9, ../../../../../.rvm/gems/ruby-1.9.3-p392/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
   .touch .hide-for-no-touch li, .touch
   li.hide-for-no-touch {
     display: list-item !important; }
@@ -5112,11 +5085,11 @@ li.hide-for-no-touch {
 /* line 48, ../scss/excelsior/components/_visibility.scss */
 .show-for-screen-max-mini {
   display: none !important; }
-  /* line 9, ../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
+  /* line 9, ../../../../../.rvm/gems/ruby-1.9.3-p392/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
   .screen-max-tiny .show-for-screen-max-mini {
     display: inherit !important; }
 
-/* line 9, ../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
+/* line 9, ../../../../../.rvm/gems/ruby-1.9.3-p392/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
 .screen-max-tiny .show-for-screen-max-mini li, .screen-max-tiny
 li.show-for-screen-max-mini {
   display: list-item !important; }
@@ -5124,11 +5097,11 @@ li.show-for-screen-max-mini {
 /* line 63, ../scss/excelsior/components/_visibility.scss */
 .hide-for-screen-max-mini {
   display: inherit !important; }
-  /* line 9, ../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
+  /* line 9, ../../../../../.rvm/gems/ruby-1.9.3-p392/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
   .screen-max-tiny .hide-for-screen-max-mini {
     display: none !important; }
 
-/* line 9, ../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
+/* line 9, ../../../../../.rvm/gems/ruby-1.9.3-p392/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
 .screen-max-tiny .hide-for-screen-max-mini li, .screen-max-tiny
 li.hide-for-screen-max-mini {
   display: list-item !important; }
@@ -5136,11 +5109,11 @@ li.hide-for-screen-max-mini {
 /* line 79, ../scss/excelsior/components/_visibility.scss */
 .show-for-screen-max-medium {
   display: none !important; }
-  /* line 9, ../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
+  /* line 9, ../../../../../.rvm/gems/ruby-1.9.3-p392/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
   .screen-max-small .show-for-screen-max-medium {
     display: inherit !important; }
 
-/* line 9, ../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
+/* line 9, ../../../../../.rvm/gems/ruby-1.9.3-p392/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
 .screen-max-small .show-for-screen-max-medium li, .screen-max-small
 li.show-for-screen-max-medium {
   display: list-item !important; }
@@ -5148,11 +5121,11 @@ li.show-for-screen-max-medium {
 /* line 94, ../scss/excelsior/components/_visibility.scss */
 .hide-for-screen-max-medium {
   display: inherit !important; }
-  /* line 9, ../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
+  /* line 9, ../../../../../.rvm/gems/ruby-1.9.3-p392/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
   .screen-max-small .hide-for-screen-max-medium {
     display: none !important; }
 
-/* line 9, ../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
+/* line 9, ../../../../../.rvm/gems/ruby-1.9.3-p392/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
 .screen-max-small .hide-for-screen-max-medium li, .screen-max-small
 li.hide-for-screen-max-medium {
   display: list-item !important; }
@@ -5160,11 +5133,11 @@ li.hide-for-screen-max-medium {
 /* line 110, ../scss/excelsior/components/_visibility.scss */
 .show-for-screen-max-large {
   display: none !important; }
-  /* line 9, ../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
+  /* line 9, ../../../../../.rvm/gems/ruby-1.9.3-p392/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
   .screen-max-large .show-for-screen-max-large {
     display: inherit !important; }
 
-/* line 9, ../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
+/* line 9, ../../../../../.rvm/gems/ruby-1.9.3-p392/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
 .screen-max-large .show-for-screen-max-large li, .screen-max-large
 li.show-for-screen-max-large {
   display: list-item !important; }
@@ -5172,7 +5145,7 @@ li.show-for-screen-max-large {
 /* line 125, ../scss/excelsior/components/_visibility.scss */
 .hide-for-screen-max-large {
   display: inherit !important; }
-  /* line 9, ../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
+  /* line 9, ../../../../../.rvm/gems/ruby-1.9.3-p392/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
   .screen-max-large .hide-for-screen-max-large {
     display: none !important; }
 
@@ -5184,11 +5157,11 @@ li.hide-for-screen-max-large {
 /* line 140, ../scss/excelsior/components/_visibility.scss */
 .show-for-lt-ie9 {
   display: none !important; }
-  /* line 9, ../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
+  /* line 9, ../../../../../.rvm/gems/ruby-1.9.3-p392/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
   .lt-ie9 .show-for-lt-ie9 {
     display: inherit !important; }
 
-/* line 9, ../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
+/* line 9, ../../../../../.rvm/gems/ruby-1.9.3-p392/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
 .lt-ie9 .show-for-lt-ie9 li, .lt-ie9
 li.show-for-lt-ie9 {
   display: list-item !important; }
@@ -5196,11 +5169,11 @@ li.show-for-lt-ie9 {
 /* line 155, ../scss/excelsior/components/_visibility.scss */
 .show-for-ie9 {
   display: none !important; }
-  /* line 9, ../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
+  /* line 9, ../../../../../.rvm/gems/ruby-1.9.3-p392/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
   .ie9 .show-for-ie9 {
     display: inherit !important; }
 
-/* line 9, ../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
+/* line 9, ../../../../../.rvm/gems/ruby-1.9.3-p392/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
 .ie9 .show-for-ie9 li, .ie9
 li.show-for-ie9 {
   display: list-item !important; }
@@ -5208,18 +5181,18 @@ li.show-for-ie9 {
 /* line 170, ../scss/excelsior/components/_visibility.scss */
 .hide-for-lt-ie9 {
   display: inherit !important; }
-  /* line 9, ../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
+  /* line 9, ../../../../../.rvm/gems/ruby-1.9.3-p392/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
   .ie9 .hide-for-lt-ie9 {
     display: none !important; }
 
 /* line 178, ../scss/excelsior/components/_visibility.scss */
 .show-for-oldie {
   display: none !important; }
-  /* line 9, ../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
+  /* line 9, ../../../../../.rvm/gems/ruby-1.9.3-p392/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
   .oldie .show-for-oldie {
     display: inherit !important; }
 
-/* line 9, ../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
+/* line 9, ../../../../../.rvm/gems/ruby-1.9.3-p392/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
 .oldie .show-for-oldie li, .oldie
 li.show-for-oldie {
   display: list-item !important; }
@@ -5227,7 +5200,7 @@ li.show-for-oldie {
 /* line 193, ../scss/excelsior/components/_visibility.scss */
 .hide-for-oldie {
   display: inherit !important; }
-  /* line 9, ../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
+  /* line 9, ../../../../../.rvm/gems/ruby-1.9.3-p392/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
   .oldie .hide-for-oldie {
     display: none !important; }
 
@@ -5239,38 +5212,38 @@ li.show-for-oldie {
   font-style: normal; }
 
 @font-face {
-  font-family: "SourceSansProItalic";
+  font-family: "SourceSansPro";
+  src: url("../fonts/source-sans-pro/SourceSansPro-Bold.eot");
+  src: url("../fonts/source-sans-pro/SourceSansPro-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/source-sans-pro/SourceSansPro-Bold.woff") format("woff"), url("../fonts/source-sans-pro/SourceSansPro-Bold.ttf") format("truetype"), url("../fonts/source-sans-pro/SourceSansPro-Bold.svg#SourceSansProBold") format("svg");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: "SourceSansPro";
   src: url("../fonts/source-sans-pro/SourceSansPro-It.eot");
   src: url("../fonts/source-sans-pro/SourceSansPro-It.eot?#iefix") format("embedded-opentype"), url("../fonts/source-sans-pro/SourceSansPro-It.woff") format("woff"), url("../fonts/source-sans-pro/SourceSansPro-It.ttf") format("truetype"), url("../fonts/source-sans-pro/SourceSansPro-It.svg#SourceSansProItalic") format("svg");
   font-weight: normal;
-  font-style: normal; }
+  font-style: italic; }
 
 @font-face {
-  font-family: "SourceSansProBold";
-  src: url("../fonts/source-sans-pro/SourceSansPro-Bold.eot");
-  src: url("../fonts/source-sans-pro/SourceSansPro-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/source-sans-pro/SourceSansPro-Bold.woff") format("woff"), url("../fonts/source-sans-pro/SourceSansPro-Bold.ttf") format("truetype"), url("../fonts/source-sans-pro/SourceSansPro-Bold.svg#SourceSansProBold") format("svg");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: "SourceSansProBoldItalic";
+  font-family: "SourceSansPro";
   src: url("../fonts/source-sans-pro/SourceSansPro-BoldIt.eot");
   src: url("../fonts/source-sans-pro/SourceSansPro-BoldIt.eot?#iefix") format("embedded-opentype"), url("../fonts/source-sans-pro/SourceSansPro-BoldIt.woff") format("woff"), url("../fonts/source-sans-pro/SourceSansPro-BoldIt.ttf") format("truetype"), url("../fonts/source-sans-pro/SourceSansPro-BoldIt.svg#SourceSansProBoldItalic") format("svg");
-  font-weight: normal;
-  font-style: normal; }
+  font-weight: bold;
+  font-style: italic; }
 
 @font-face {
-  font-family: "MerriweatherRegular";
+  font-family: "Merriweather";
   src: url("../fonts/merriweather/Merriweather.eot");
   src: url("../fonts/merriweather/Merriweather.eot?#iefix") format("embedded-opentype"), url("../fonts/merriweather/Merriweather.woff") format("woff"), url("../fonts/merriweather/Merriweather.ttf") format("truetype"), url("../fonts/merriweather/Merriweather.svg#MerriweatherRegular") format("svg");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
-  font-family: "MerriweatherBold";
+  font-family: "Merriweather";
   src: url("../fonts/merriweather/Merriweather-Bold.eot");
   src: url("../fonts/merriweather/Merriweather-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/merriweather/Merriweather-Bold.woff") format("woff"), url("../fonts/merriweather/Merriweather-Bold.ttf") format("truetype"), url("../fonts/merriweather/Merriweather-Bold.svg#MerriweatherBold") format("svg");
-  font-weight: normal;
+  font-weight: bold;
   font-style: normal; }
 
 @font-face {
@@ -5280,7 +5253,7 @@ li.show-for-oldie {
   font-weight: normal;
   font-style: normal; }
 
-/* line 80, ../scss/excelsior/components/_fonts.scss */
+/* line 93, ../scss/excelsior/components/_fonts.scss */
 [class^="icon-"]:before,
 [class*=" icon-"]:before,
 [class^="icon-"]:after,
@@ -5308,22 +5281,22 @@ li.show-for-oldie {
   /* Uncomment for 3D effect */
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */ }
 
-/* line 105, ../scss/excelsior/components/_fonts.scss */
+/* line 118, ../scss/excelsior/components/_fonts.scss */
 .icon-down-open:before {
   content: "\e75c"; }
 
 /* down open arrow */
-/* line 106, ../scss/excelsior/components/_fonts.scss */
+/* line 119, ../scss/excelsior/components/_fonts.scss */
 .icon-left-open:before {
   content: "\e75d"; }
 
 /* left open arrow */
-/* line 107, ../scss/excelsior/components/_fonts.scss */
+/* line 120, ../scss/excelsior/components/_fonts.scss */
 .icon-right-open:before {
   content: "\e75e"; }
 
 /* right open arrow */
-/* line 108, ../scss/excelsior/components/_fonts.scss */
+/* line 121, ../scss/excelsior/components/_fonts.scss */
 .icon-up-open:before {
   content: "\e75f"; }
 
@@ -5355,8 +5328,7 @@ td {
 
 /* line 30, ../scss/excelsior/components/_tables.scss */
 th {
-  font-family: "SourceSansProBold", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-  font-weight: normal; }
+  font-weight: bold; }
 
 /* line 35, ../scss/excelsior/components/_tables.scss */
 thead th {
@@ -5485,7 +5457,7 @@ tbody tr.info > td {
   /* line 204, ../scss/excelsior/components/_tables.scss */
   .rt-table-menu + table {
     margin-top: 1em; }
-  /* line 9, ../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
+  /* line 9, ../../../../../.rvm/gems/ruby-1.9.3-p392/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
   .touch .rt-table-menu > a.button {
     padding-bottom: 0.9375em;
     padding-top: 1.125em; }
@@ -5578,7 +5550,7 @@ button.button {
   padding: 6px 12px;
   font-family: "SourceSansPro", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-weight: normal !important; }
-  /* line 334, ../scss/excelsior/_mixins.scss */
+  /* line 303, ../scss/excelsior/_mixins.scss */
   .button:hover, .button:focus, .button:active, .button.active, .button.disabled, .button[disabled],
   input.button:hover,
   input.button:focus,
@@ -5594,14 +5566,14 @@ button.button {
   button.button[disabled] {
     color: #333333;
     background-color: #e6e6e6; }
-  /* line 341, ../scss/excelsior/_mixins.scss */
+  /* line 310, ../scss/excelsior/_mixins.scss */
   .button:active, .button.active,
   input.button:active,
   input.button.active,
   button.button:active,
   button.button.active {
     background-color: #cccccc \9; }
-  /* line 296, ../scss/excelsior/_mixins.scss */
+  /* line 265, ../scss/excelsior/_mixins.scss */
   .button:hover, .button:focus,
   input.button:hover,
   input.button:focus,
@@ -5611,16 +5583,15 @@ button.button {
     text-decoration: none;
     background-position: 0 -15px;
     -webkit-transition: background-position 0.1s linear;
-    -moz-transition: background-position 0.1s linear;
     transition: background-position 0.1s linear; }
-  /* line 307, ../scss/excelsior/_mixins.scss */
+  /* line 276, ../scss/excelsior/_mixins.scss */
   .button:focus,
   input.button:focus,
   button.button:focus {
     outline: thin dotted #333;
     outline: 5px auto -webkit-focus-ring-color;
     outline-offset: -2px; }
-  /* line 313, ../scss/excelsior/_mixins.scss */
+  /* line 282, ../scss/excelsior/_mixins.scss */
   .button.active, .button:active,
   input.button.active,
   input.button:active,
@@ -5629,7 +5600,7 @@ button.button {
     background-image: none;
     outline: 0;
     box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05); }
-  /* line 321, ../scss/excelsior/_mixins.scss */
+  /* line 290, ../scss/excelsior/_mixins.scss */
   .button.disabled, .button[disabled],
   input.button.disabled,
   input.button[disabled],
@@ -5663,11 +5634,11 @@ button.button {
   background-repeat: repeat-x;
   border-color: #0044cc #0044cc #002a80;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25); }
-  /* line 334, ../scss/excelsior/_mixins.scss */
+  /* line 303, ../scss/excelsior/_mixins.scss */
   .button.secondary:hover, .button.secondary:focus, .button.secondary:active, .button.secondary.active, .button.secondary.disabled, .button.secondary[disabled] {
     color: white;
     background-color: #0044cc; }
-  /* line 341, ../scss/excelsior/_mixins.scss */
+  /* line 310, ../scss/excelsior/_mixins.scss */
   .button.secondary:active, .button.secondary.active {
     background-color: #003399 \9; }
 
@@ -5681,11 +5652,11 @@ button.button {
   background-repeat: repeat-x;
   border-color: #f89406 #f89406 #ad6704;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25); }
-  /* line 334, ../scss/excelsior/_mixins.scss */
+  /* line 303, ../scss/excelsior/_mixins.scss */
   .button.warning:hover, .button.warning:focus, .button.warning:active, .button.warning.active, .button.warning.disabled, .button.warning[disabled] {
     color: white;
     background-color: #f89406; }
-  /* line 341, ../scss/excelsior/_mixins.scss */
+  /* line 310, ../scss/excelsior/_mixins.scss */
   .button.warning:active, .button.warning.active {
     background-color: #c67605 \9; }
 
@@ -5699,11 +5670,11 @@ button.button {
   background-repeat: repeat-x;
   border-color: #bd362f #bd362f #802420;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25); }
-  /* line 334, ../scss/excelsior/_mixins.scss */
+  /* line 303, ../scss/excelsior/_mixins.scss */
   .button.alert:hover, .button.alert:focus, .button.alert:active, .button.alert.active, .button.alert.disabled, .button.alert[disabled] {
     color: white;
     background-color: #bd362f; }
-  /* line 341, ../scss/excelsior/_mixins.scss */
+  /* line 310, ../scss/excelsior/_mixins.scss */
   .button.alert:active, .button.alert.active {
     background-color: #942a25 \9; }
 
@@ -5717,11 +5688,11 @@ button.button {
   background-repeat: repeat-x;
   border-color: #51a351 #51a351 #387038;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25); }
-  /* line 334, ../scss/excelsior/_mixins.scss */
+  /* line 303, ../scss/excelsior/_mixins.scss */
   .button.success:hover, .button.success:focus, .button.success:active, .button.success.active, .button.success.disabled, .button.success[disabled] {
     color: white;
     background-color: #51a351; }
-  /* line 341, ../scss/excelsior/_mixins.scss */
+  /* line 310, ../scss/excelsior/_mixins.scss */
   .button.success:active, .button.success.active {
     background-color: #408140 \9; }
 
@@ -5735,11 +5706,11 @@ button.button {
   background-repeat: repeat-x;
   border-color: #2f96b4 #2f96b4 #1f6377;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25); }
-  /* line 334, ../scss/excelsior/_mixins.scss */
+  /* line 303, ../scss/excelsior/_mixins.scss */
   .button.info:hover, .button.info:focus, .button.info:active, .button.info.active, .button.info.disabled, .button.info[disabled] {
     color: white;
     background-color: #2f96b4; }
-  /* line 341, ../scss/excelsior/_mixins.scss */
+  /* line 310, ../scss/excelsior/_mixins.scss */
   .button.info:active, .button.info.active {
     background-color: #24748c \9; }
 
@@ -5753,11 +5724,11 @@ button.button {
   background-repeat: repeat-x;
   border-color: #282828 #282828 #020202;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25); }
-  /* line 334, ../scss/excelsior/_mixins.scss */
+  /* line 303, ../scss/excelsior/_mixins.scss */
   .button.inverse:hover, .button.inverse:focus, .button.inverse:active, .button.inverse.active, .button.inverse.disabled, .button.inverse[disabled] {
     color: white;
     background-color: #282828; }
-  /* line 341, ../scss/excelsior/_mixins.scss */
+  /* line 310, ../scss/excelsior/_mixins.scss */
   .button.inverse:active, .button.inverse.active {
     background-color: #0e0e0e \9; }
 
@@ -5927,8 +5898,7 @@ fieldset legend {
   font-size: 24px;
   line-height: 40px;
   color: #333333;
-  font-family: "SourceSansProBold", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-  font-weight: normal;
+  font-weight: bold;
   border: 0;
   border-bottom: 1px solid #e5e5e5;
   background: transparent; }
@@ -5953,8 +5923,6 @@ button,
 select,
 textarea {
   font-family: "SourceSansPro", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-  font-weight: normal !important;
-  font-style: normal !important;
   border-radius: 0.25em;
   background-clip: padding-box; }
 
@@ -6017,7 +5985,6 @@ input[type="color"],
   border: 1px solid #cccccc;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
-  -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
   transition: border linear 0.2s, box-shadow linear 0.2s; }
   /* line 124, ../scss/excelsior/components/_forms.scss */
   textarea:focus,
@@ -6310,7 +6277,7 @@ a.label:hover, a.label:focus {
   .link-buttons-list a {
     display: inline-block;
     margin: 0.5em; }
-    /* line 9, ../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
+    /* line 9, ../../../../../.rvm/gems/ruby-1.9.3-p392/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
     .touch .link-buttons-list a {
       display: inline-block;
       margin-bottom: 0;
@@ -6341,32 +6308,31 @@ a.label:hover, a.label:focus {
       background-image: -webkit-linear-gradient(top, white, #e6e6e6);
       background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
       background-repeat: repeat-x; }
-      /* line 334, ../scss/excelsior/_mixins.scss */
+      /* line 303, ../scss/excelsior/_mixins.scss */
       .touch .link-buttons-list a:hover, .touch .link-buttons-list a:focus, .touch .link-buttons-list a:active, .touch .link-buttons-list a.active, .touch .link-buttons-list a.disabled, .touch .link-buttons-list a[disabled] {
         color: #333333;
         background-color: #e6e6e6; }
-      /* line 341, ../scss/excelsior/_mixins.scss */
+      /* line 310, ../scss/excelsior/_mixins.scss */
       .touch .link-buttons-list a:active, .touch .link-buttons-list a.active {
         background-color: #cccccc \9; }
-      /* line 296, ../scss/excelsior/_mixins.scss */
+      /* line 265, ../scss/excelsior/_mixins.scss */
       .touch .link-buttons-list a:hover, .touch .link-buttons-list a:focus {
         color: #333333;
         text-decoration: none;
         background-position: 0 -15px;
         -webkit-transition: background-position 0.1s linear;
-        -moz-transition: background-position 0.1s linear;
         transition: background-position 0.1s linear; }
-      /* line 307, ../scss/excelsior/_mixins.scss */
+      /* line 276, ../scss/excelsior/_mixins.scss */
       .touch .link-buttons-list a:focus {
         outline: thin dotted #333;
         outline: 5px auto -webkit-focus-ring-color;
         outline-offset: -2px; }
-      /* line 313, ../scss/excelsior/_mixins.scss */
+      /* line 282, ../scss/excelsior/_mixins.scss */
       .touch .link-buttons-list a.active, .touch .link-buttons-list a:active {
         background-image: none;
         outline: 0;
         box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05); }
-      /* line 321, ../scss/excelsior/_mixins.scss */
+      /* line 290, ../scss/excelsior/_mixins.scss */
       .touch .link-buttons-list a.disabled, .touch .link-buttons-list a[disabled] {
         cursor: default;
         background-image: none;
@@ -6417,7 +6383,6 @@ a.label:hover, a.label:focus {
   padding: 5px;
   background-color: transparent;
   -webkit-transition: background-color 0.2s ease;
-  -moz-transition: background-color 0.2s ease;
   transition: background-color 0.2s ease; }
   /* line 49, ../scss/excelsior/components/_images.scss */
   .img-list li > a:hover {
@@ -6539,15 +6504,14 @@ a.label:hover, a.label:focus {
   position: relative;
   z-index: 35;
   -webkit-transition: top 0.2s ease;
-  -moz-transition: top 0.2s ease;
   transition: top 0.2s ease;
   -webkit-transform: translate3d(0, 0, 0);
   -moz-transform: translate3d(0, 0, 0);
   -ms-transform: translate3d(0, 0, 0);
   -o-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0); }
-  /* line 21, ../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
-  .no-no-rgba .pull-down-container {
+  /* line 21, ../../../../../.rvm/gems/ruby-1.9.3-p392/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
+  .no-rgba .pull-down-container {
     height: 40px; }
 
 /* line 47, ../scss/excelsior/components/_navigation.scss */
@@ -6562,15 +6526,14 @@ a.label:hover, a.label:focus {
   border-top: none;
   z-index: 50;
   -webkit-transition: top 0.2s ease;
-  -moz-transition: top 0.2s ease;
   transition: top 0.2s ease;
   -webkit-transform: translate3d(0, 0, 0);
   -moz-transform: translate3d(0, 0, 0);
   -ms-transform: translate3d(0, 0, 0);
   -o-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0); }
-  /* line 21, ../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
-  .no-no-rgba .pull-down {
+  /* line 21, ../../../../../.rvm/gems/ruby-1.9.3-p392/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
+  .no-rgba .pull-down {
     margin-top: 0;
     position: absolute; }
   /* line 65, ../scss/excelsior/components/_navigation.scss */
@@ -6597,8 +6560,8 @@ a.label:hover, a.label:focus {
   /* line 87, ../scss/excelsior/components/_navigation.scss */
   .pull-down .gripper {
     top: 39px; }
-    /* line 21, ../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
-    .no-no-rgba .pull-down .gripper {
+    /* line 21, ../../../../../.rvm/gems/ruby-1.9.3-p392/gems/toolkit-1.0.0/stylesheets/toolkit/_pe.scss */
+    .no-rgba .pull-down .gripper {
       display: none; }
     /* line 95, ../scss/excelsior/components/_navigation.scss */
     .pull-down .gripper span {
@@ -6617,7 +6580,6 @@ a.label:hover, a.label:focus {
   background-repeat: repeat-x;
   overflow: hidden;
   -webkit-transition: height 0.2s ease;
-  -moz-transition: height 0.2s ease;
   transition: height 0.2s ease;
   -webkit-transform: translate3d(0, 0, 0);
   -moz-transform: translate3d(0, 0, 0);
@@ -6729,7 +6691,6 @@ a.label:hover, a.label:focus {
   width: 100%;
   z-index: 30;
   -webkit-transition: top 0.2s ease;
-  -moz-transition: top 0.2s ease;
   transition: top 0.2s ease;
   -webkit-transform: translate3d(0, 0, 0);
   -moz-transform: translate3d(0, 0, 0);
@@ -6778,7 +6739,6 @@ a.label:hover, a.label:focus {
       width: 100%;
       z-index: 15;
       -webkit-transition: height 0.2s ease;
-      -moz-transition: height 0.2s ease;
       transition: height 0.2s ease;
       -webkit-transform: translate3d(0, 0, 0);
       -moz-transform: translate3d(0, 0, 0);
@@ -6891,7 +6851,6 @@ a.label:hover, a.label:focus {
     height: 0;
     overflow: hidden;
     -webkit-transition: height 0.2s ease;
-    -moz-transition: height 0.2s ease;
     transition: height 0.2s ease; }
   /* line 413, ../scss/excelsior/components/_navigation.scss */
   .global-nav ul {
@@ -7062,7 +7021,6 @@ body.off-canvas {
       width: 100%;
       background: #333 !important;
       -webkit-transition: left 0.2s ease;
-      -moz-transition: left 0.2s ease;
       transition: left 0.2s ease;
       -webkit-transform: translate3d(0, 0, 0);
       -moz-transform: translate3d(0, 0, 0);
@@ -7117,7 +7075,6 @@ body.off-canvas {
 .off-canvas .site-bar,
 .off-canvas .page {
   -webkit-transition: top 0.2s ease, left 0.2s ease, height 0.2s ease;
-  -moz-transition: top 0.2s ease, left 0.2s ease, height 0.2s ease;
   transition: top 0.2s ease, left 0.2s ease, height 0.2s ease; }/* line 266, ../scss/excelsior/components/_off-canvas.scss */
 .off-canvas.active-gov-bar .pull-down-container,
 .off-canvas.active-gov-bar .site-bar {
@@ -7170,8 +7127,8 @@ body.off-canvas {
 @media screen and (min-width: 48em) {
   /* line 149, ../scss/excelsior/_foundation-override.scss */
   .section-container.auto section .title {
-    font-family: "SourceSansProBold", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-    font-weight: normal;
+    font-family: "SourceSansPro", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+    font-weight: bold;
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
     background-clip: padding-box; } 
@@ -7231,7 +7188,7 @@ body.off-canvas {
       [data-magellan-expedition].section-container.vertical-tabs section:last-of-type .title {
         border-bottom-left-radius: 0.25em;
         border-bottom-right-radius: 0.25em; } 
-  /* line 103, ../scss/excelsior/components/_global.scss */
+  /* line 88, ../scss/excelsior/components/_global.scss */
   .margin-top-small {
     margin-top: 1em; } 
   /* line 15, ../scss/excelsior/components/_lightbox.scss */
@@ -7288,7 +7245,6 @@ body.off-canvas {
           overflow: hidden;
           visibility: hidden;
           -webkit-transition: left 0s ease;
-          -moz-transition: left 0s ease;
           transition: left 0s ease;
           -webkit-transform: translate3d(0, 0, 0);
           -moz-transform: translate3d(0, 0, 0);
@@ -7408,7 +7364,6 @@ body.off-canvas {
     border-bottom: 1px solid #555;
     position: relative;
     -webkit-transition: height 0s ease;
-    -moz-transition: height 0s ease;
     transition: height 0s ease;
     -webkit-transform: translate3d(0, 0, 0);
     -moz-transform: translate3d(0, 0, 0);
@@ -7507,7 +7462,6 @@ body.off-canvas {
   .active-gov-bar .site-bar {
     top: 0;
     -webkit-transition: top 0s ease;
-    -moz-transition: top 0s ease;
     transition: top 0s ease;
     -webkit-transform: translate3d(0, 0, 0);
     -moz-transform: translate3d(0, 0, 0);
