@@ -17,10 +17,624 @@
     <script src="excelsior/js/vendor/custom.modernizr.min.js"></script>
     <!--[if (IE 8)|(IE 7)]><script src="excelsior/js/vendor/respond.min.js"></script><![endif]-->
     <style>
- article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{ display:block}html{ background:#fff; color:#000; font-family:sans-serif; -ms-text-size-adjust:100%; -webkit-text-size-adjust:100%}body{ margin:0}a:focus{ outline:thin dotted}a:active,a:hover{ outline:0}h1{ font-size:2em; margin:0.67em 0}b,strong{ font-weight:bold}img{ border:0}svg:not(:root){ overflow:hidden}button,input,select,textarea{ font-family:inherit; font-size:100%; margin:0}button,input{ line-height:normal}button,select{ text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{ -webkit-appearance:button; cursor:pointer}button[disabled],html input[disabled]{ cursor:default}input[type="search"]{ -webkit-appearance:textfield; -moz-box-sizing:content-box; -webkit-box-sizing:content-box; box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{ -webkit-appearance:none}button::-moz-focus-inner,input::-moz-focus-inner{ border:0; padding:0}*,*:before,*:after{ -moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box}html,body{ font-size:100%}body{ background:white; color:#222; padding:0; margin:0; font-family:"Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif; font-weight:normal; font-style:normal; line-height:1; position:relative; cursor:default}a:hover{ cursor:pointer}a:focus{ outline:none}img{ max-width:100%; height:auto}img{ -ms-interpolation-mode:bicubic}.row{ width:100%; margin-left:auto; margin-right:auto; margin-top:0; margin-bottom:0; max-width:62.5em; *zoom:1} .row:before,.row:after{ content:""; display:table} .row:after{ clear:both} .row .row{ width:auto; margin-left:-0.9375em; margin-right:-0.9375em; margin-top:0; margin-bottom:0; max-width:none; *zoom:1} .row .row:before,.row .row:after{ content:""; display:table} .row .row:after{ clear:both}.column,.columns{ position:relative; padding-left:0.9375em; padding-right:0.9375em; width:100%; float:left}@media only screen{ .column, .columns{ position:relative; padding-left:0.9375em; padding-right:0.9375em; float:left} [class*="column"]+[class*="column"]:last-child{ float:right} [class*="column"]+[class*="column"].end{ float:left} }@media only screen and (min-width:768px){ .large-1{ position:relative; width:8.33333%} .large-2{ position:relative; width:16.66667%} .large-3{ position:relative; width:25%} .large-4{ position:relative; width:33.33333%} .large-5{ position:relative; width:41.66667%} .large-6{ position:relative; width:50%} .large-7{ position:relative; width:58.33333%} .large-8{ position:relative; width:66.66667%} .large-9{ position:relative; width:75%} .large-10{ position:relative; width:83.33333%} .large-11{ position:relative; width:91.66667%} .large-12{ position:relative; width:100%} }.show-for-small{ display:inherit !important}
- @media only screen and (min-width:768px){ .show-for-medium, .show-for-medium-up{ display:inherit !important} .show-for-small{ display:none !important}}
-button,.button{  display:inline-block;margin-bottom:0;padding:6px 12px;font-size:16px;line-height:20px;text-align:center;vertical-align:middle;cursor:pointer;color:#333;text-shadow:0 1px 1px rgba(255,255,255,.75);background-color:whitesmoke;background-image:-webkit-linear-gradient(top,#fff,#e6e6e6);background-image:linear-gradient(to bottom,#fff,#e6e6e6);background-repeat:repeat-x;border-color:#e6e6e6 #e6e6e6 #bfbfbf;border-color:rgba(0,0,0,.1) rgba(0,0,0,.1) rgba(0,0,0,.25);border:1px solid #ccc;border-bottom-color:#b3b3b3;border-radius:.25em;background-clip:padding-box;box-shadow:inset 0 1px 0 rgba(255,255,255,.2),0 1px 2px rgba(0,0,0,.05);padding:6px 12px;font-family:SourceSansPro,"Helvetica Neue",Helvetica,Helvetica,Arial,sans-serif;font-weight:400!important}  button:hover,button:focus,.button:hover,.button:focus{    background-color:#2284a1}  button:hover,button:focus,.button:hover,.button:focus{    color:white}  button.secondary,.button.secondary{    background-color:#e9e9e9;    border-color:#d0d0d0;    color:#333}    button.secondary:hover,button.secondary:focus,.button.secondary:hover,.button.secondary:focus{      background-color:#d0d0d0}    button.secondary:hover,button.secondary:focus,.button.secondary:hover,.button.secondary:focus{      color:#333}  button.success,.button.success{    color:#fff;text-shadow:0 -1px 0 rgba(0,0,0,.25);background-color:#5bb65b;background-image:-webkit-linear-gradient(top,#62c462,#51a351);background-image:linear-gradient(to bottom,#62c462,#51a351);background-repeat:repeat-x;border-color:#457a1a;border-color:rgba(0,0,0,.1) rgba(0,0,0,.1) rgba(0,0,0,.25);    color:white}    button.success:hover,button.success:focus,.button.success:hover,.button.success:focus{      background-color:#457a1a}    button.success:hover,button.success:focus,.button.success:hover,.button.success:focus{      color:white}  button.large,.button.large{    padding-top:1em;    padding-right:2em;    padding-bottom:1.0625em;    padding-left:2em;    font-size:1.25em}  button.expand,.button.expand{    padding-right:0px;    padding-left:0px;    width:100%}button,.button{  padding-top:0.8125em;  padding-bottom:0.75em}  button.tiny,.button.tiny{    padding-top:0.5em;    padding-bottom:0.4375em}  button.small,.button.small{    padding-top:0.625em;    padding-bottom:0.5625em}  button.large,.button.large{    padding-top:1.03125em;    padding-bottom:1.03125em}    .button.success:hover,.button.success:focus,.button.success:active,.button.success.active,.button.success.disabled,.button.success[disabled]{color:#fff;background-color:#51a351}.button:hover,.button:focus,.button:active,.button.active,.button.disabled,.button[disabled],input.button:hover,input.button:focus,input.button:active,input.button.active,input.button.disabled,input.button[disabled],button.button:hover,button.button:focus,button.button:active,button.button.active,button.button.disabled,button.button[disabled]{color:#333;background-color:#e6e6e6}.button:hover,.button:focus,input.button:hover,input.button:focus,button.button:hover,button.button:focus{color:#333;text-decoration:none;background-position:0 -15px;-webkit-transition:background-position .1s linear;-moz-transition:background-position .1s linear;transition:background-position .1s linear}@media only screen{  button,.button{    -webkit-box-shadow:0 1px 0 rgba(255,255,255,0.5) inset;    box-shadow:0 1px 0 rgba(255,255,255,0.5) inset;    -webkit-transition:background-color 300ms ease-out;    -moz-transition:background-color 300ms ease-out;    transition:background-color 300ms ease-out}    button:active,.button:active{      -webkit-box-shadow:0 1px 0 rgba(0,0,0,0.2) inset;      box-shadow:0 1px 0 rgba(0,0,0,0.2) inset}    button.radius,.button.radius{      -webkit-border-radius:3px;      border-radius:3px}    button.round,.button.round{      -webkit-border-radius:1000px;      border-radius:1000px}}@media only screen and (min-width:768px){  button,.button{    display:inline-block}}    p{font-family:inherit;font-weight:400;font-size:1em;line-height:1.6;margin-bottom:1.25em;text-rendering:optimizeLegibility}a{color:#2ba6cb;text-decoration:none;line-height:inherit}.skip-to{position:absolute;top:10px;left:10px;display:inline-block;padding:10px;background:#fff;border:1px solid #2ba6cb;border-radius:3px;background-clip:padding-box;clip:rect(0,0,0,0);font-size:1.4em}.skip-to:focus{clip:auto;outline:1px solid #2ba6cb;z-index:100}.pull-down-container{background:#036;border-radius:0 0 5px 5px;background-clip:padding-box;box-shadow:1px 0 2px #000;height:53px;width:44px;margin:0 5px 8px;padding:0 4px 4px;position:relative;z-index:35;-webkit-transition:top .2s ease;-moz-transition:top .2s ease;transition:top .2s ease;-webkit-transform:translate3d(0,0,0);-moz-transform:translate3d(0,0,0);-ms-transform:translate3d(0,0,0);-o-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}.no-no-rgba .pull-down-container{height:40px}.pull-down{position:relative;top:4px;display:block;width:100%;height:100%;background:url(excelsior/images/nys-small.png) no-repeat 1px 4px transparent;background-size:32px 32px;border-top:0;z-index:50;-webkit-transition:top .2s ease;-moz-transition:top .2s ease;transition:top .2s ease;-webkit-transform:translate3d(0,0,0);-moz-transform:translate3d(0,0,0);-ms-transform:translate3d(0,0,0);-o-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}.no-no-rgba .pull-down{margin-top:0;position:absolute}.pull-down .accessibility-text{text-indent:-9999px;position:absolute}.pull-down .gripper,.pull-down .gripper span{background-color:#09223d;background-color:rgba(0,0,0,.4);height:1px;position:absolute;width:100%}.pull-down .gripper:after,.pull-down .gripper span:after{background-color:#144e8c;background-color:rgba(255,255,255,.15);content:"";display:block;height:1px;position:absolute;top:1px;width:100%}.pull-down .gripper{top:39px}.no-no-rgba .pull-down .gripper{display:none}.pull-down .gripper span{top:4px;width:100%}.gov-bar{position:absolute;top:0;height:0;background:#036;background-color:#002c59;background-image:-webkit-linear-gradient(top,#002851,#036);background-image:linear-gradient(to bottom,#002851,#036);background-repeat:repeat-x;overflow:hidden;-webkit-transition:height .2s ease;-moz-transition:height .2s ease;transition:height .2s ease;-webkit-transform:translate3d(0,0,0);-moz-transform:translate3d(0,0,0);-ms-transform:translate3d(0,0,0);-o-transform:translate3d(0,0,0);transform:translate3d(0,0,0);width:100%;z-index:40}.gov-bar a{color:#FFF}.gov-bar a.gov-link-1{float:left;font-size:1.3em;text-align:center;padding-bottom:5px;margin:12px .2em 0 .5em;-webkit-tap-highlight-color:rgba(0,0,0,0)}.gov-bar a.gov-link-2{float:right;background:url(excelsior/images/hamburger-no-dots.png) no-repeat 2px 0 transparent;background-image:none,url(excelsior/images/hamburger-no-dots.svg);background-size:24px;color:#FFF;font-size:1em;margin:5px .4em;padding:6px .2em 2px 32px;-webkit-tap-highlight-color:rgba(0,0,0,0)}.gov-bar a.gov-link-3{display:none;text-indent:-9999px}.gov-bar .state-links{overflow:auto}.gov-bar form{padding:.1em .5em 0;width:100%}.gov-bar form .gov-search-button{float:right;font-size:.95em;width:26%}.gov-bar form legend,.gov-bar form label{display:none}.gov-bar form fieldset{border:0;margin:0;padding:0}.gov-bar input{border-radius:4px;background-clip:padding-box;-webkit-appearance:none;border:1px solid #666;padding:0;display:block;float:left;margin:0}.gov-bar input[type=search]{border-radius:5px 0 0 5px;background-clip:padding-box;padding-left:10px;width:70%;color:#333;-moz-box-sizing:border-box;box-sizing:border-box;height:37px;line-height:37px}.gov-bar input[type=submit]{background-color:#505050;background-color:#7b7b7b;background-image:-webkit-linear-gradient(top,#999,#505050);background-image:linear-gradient(to bottom,#999,#505050);background-repeat:repeat-x;border-radius:0 5px 5px 0;background-clip:padding-box;border:1px solid #666;border-left:0;color:#FFF;height:37px;line-height:37px;width:30%;margin-top:0}.gov-bar .search-container{height:37px;margin:1px 2px 0 0}.page .content-section{background:#FFF;padding:1em 0}.active-gov-bar .gov-bar{height:88px}.active-gov-bar .site-bar,.active-gov-bar .pull-down-container{top:88px}.active-gov-bar .pull-down{background:url(excelsior/images/close.png) no-repeat 5px 7px transparent;xbackground-image:none,url(excelsior/images/close.svg);background-size:28px 28px}html,body{height:100%}@media screen and (min-width:48em){    .gov-bar input[type=search]{height:23px;line-height:23px}    .site-bar .site-functions .site-search input[type=search]{line-height:36px}}@media only screen and (min-width:48em){    .gov-bar{background:#036;border-bottom:1px solid #555;position:relative;-webkit-transition:height 0s ease;-moz-transition:height 0s ease;transition:height 0s ease;-webkit-transform:translate3d(0,0,0);-moz-transform:translate3d(0,0,0);-ms-transform:translate3d(0,0,0);-o-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}.gov-bar input[type=search]{height:23px;margin-top:1px}.gov-bar input[type=submit]{height:23px;font-size:1.2em;line-height:1.7em;margin-top:1px}.gov-bar,.active-gov-bar .gov-bar,.gov-bar a{height:28px}.gov-bar .state-links{display:inline-block;float:left}.gov-bar a.gov-link-1{background:url(excelsior/images/nys-banner-img.png) no-repeat 0 0 transparent;display:inline-block;float:left;margin:0 0 0 -1px;text-indent:-9999px;width:185px}.gov-bar a.gov-link-2,.gov-bar a.gov-link-2:hover{background:url(excelsior/images/nys-banner-img.png) no-repeat 0 -28px transparent;border:0;float:left;margin:0;padding:0;text-indent:-9999px;width:130px}.gov-bar a.gov-link-2:hover{background-color:transparent}.gov-bar a.gov-link-3{background:url(excelsior/images/nys-banner-img.png) no-repeat 0 -56px transparent;display:inline-block;float:right;margin-right:8px;width:150px}.gov-bar .search-container{margin-right:9px}.gov-bar form{display:none;float:right;font-size:.75em;width:280px;padding:0;margin:2px 5px 0 0}.active-gov-bar-search a.gov-link-3{display:none}.active-gov-bar-search .gov-bar form{display:block}.page .content-section{padding:2em 0}}@media (min-width:24em){.image-to-list a span{background:rgba(0,0,0,.7);display:block;padding:7px;position:relative;margin-top:-39px}} @media only screen and (min-width:60em){.gov-bar{background:#036}.gov-bar .gov-wrap,.site-bar .site-wrap,.global-nav,.page .content-section,.footer .footer-contents{margin-left:auto;margin-right:auto;width:60em!important}}
-.center-text{ text-align:center} .full-width{ width:100%} .page .content-section{ padding:0} p{ text-align:center} p em{ color:#4c4c4c; display:block; font-size:1.35em; line-height:1.2; margin-bottom:35px; padding:0 14%} .excelsior-logo{ padding:0 10% 5% 10%; margin-top:-30px} @media (orientation:landscape){ .excelsior-logo{ padding:0 30% 5% 30%} } .download{ font-size:1.25em; line-height:1.75; margin-bottom:30px; padding:0.75em} .seconday-action{ padding:0.75em} .gh-ribbon{ display:none} .gh-button{ display:inline-block; margin-top:20px} .documentation{ margin-top:10px} .description{ margin:10px 0} @media (min-width:768px){ p{ margin-top:88px} p em{ font-size:1.05em} } @media (min-width:820px){ p{ margin-top:100px} } @media (min-width:860px){ p{ margin-top:109px} } @media (min-width:890px){ p{ margin-top:120px} } @media (min-width:930px){ p{ margin-top:110px} p em{ font-size:1.35em} } @media (min-width:933px){ p{ margin-top:113px} } @media (min-width:956px){ p{ margin-top:118px} } @media (min-width:48em){ .excelsior-logo{ padding:10%; margin-top:0} .full-width{ width:70%} .gov-bar .search-container{ margin-top:-1px} .gov-bar input[type=submit]{ line-height:0.7} .page .content-section{ padding:100px 0 1em 0} .gh-ribbon{ display:block} .gh-button{ display:none} .download{ font-size:1.35em; line-height:1; margin-top:0; margin-bottom:0} .documentation{ margin-top:30px; padding-right:0; padding-left:.9375em} }
+   /*! normalize.css v2.1.1 | MIT License | git.io/normalize */
+
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+
+/**
+ * Correct `block` display not defined in IE 8/9.
+ */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+    display: block;
+}
+
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+
+[hidden] {
+    display: none;
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+
+/**
+ * 1. Prevent system color scheme's background color being used in Firefox, IE,
+ *    and Opera.
+ * 2. Prevent system color scheme's text color being used in Firefox, IE, and
+ *    Opera.
+ * 3. Set default font family to sans-serif.
+ * 4. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+
+html {
+    background: #fff; /* 1 */
+    color: #000; /* 2 */
+    font-family: sans-serif; /* 3 */
+    -ms-text-size-adjust: 100%; /* 4 */
+    -webkit-text-size-adjust: 100%; /* 4 */
+}
+
+/**
+ * Remove default margin.
+ */
+
+body {
+    margin: 0;
+}
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+
+a:focus {
+    outline: thin dotted;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+
+a:active,
+a:hover {
+    outline: 0;
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari 5, and Chrome.
+ */
+
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+}
+
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+ */
+
+b,
+strong {
+    font-weight: bold;
+}
+
+/**
+ * Remove border when inside `a` element in IE 8/9.
+ */
+
+img {
+    border: 0;
+}
+
+/**
+ * Correct overflow displayed oddly in IE 9.
+ */
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit; /* 1 */
+    font-size: 100%; /* 2 */
+    margin: 0; /* 3 */
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+
+button,
+input {
+    line-height: normal;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+
+button,
+select {
+    text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+
+button,
+html input[type="button"], /* 1 */
+input[type="reset"],
+input[type="submit"] {
+    -webkit-appearance: button; /* 2 */
+    cursor: pointer; /* 3 */
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+
+input[type="search"] {
+    -webkit-appearance: textfield; /* 1 */
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box; /* 2 */
+    box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html,
+body {
+  font-size: 100%; }
+
+body {
+  background: white;
+  color: #222222;
+  padding: 0;
+  margin: 0;
+  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1;
+  position: relative;
+  cursor: default; }
+
+a:hover {
+  cursor: pointer; }
+
+a:focus {
+  outline: none; }
+
+img{
+  max-width: 100%;
+  height: auto;
+  -ms-interpolation-mode: bicubic;
+  display: inline-block;
+  vertical-align: middle; }
+
+/* Grid HTML Classes */
+.row {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 62.5em;
+  *zoom: 1; }
+  .row:before, .row:after {
+    content: " ";
+    display: table; }
+  .row:after {
+    clear: both; }
+  .row .row {
+    width: auto;
+    margin-left: -0.9375em;
+    margin-right: -0.9375em;
+    margin-top: 0;
+    margin-bottom: 0;
+    max-width: none;
+    *zoom: 1; }
+    .row .row:before, .row .row:after {
+      content: " ";
+      display: table; }
+    .row .row:after {
+      clear: both; }
+
+.column,
+.columns {
+  position: relative;
+  padding-left: 0.9375em;
+  padding-right: 0.9375em;
+  width: 100%;
+  float: left; }
+
+@media only screen {
+  .column,
+  .columns {
+    position: relative;
+    padding-left: 0.9375em;
+    padding-right: 0.9375em;
+    float: left; }
+
+  [class*="column"] + [class*="column"]:last-child {
+    float: right; }
+
+  [class*="column"] + [class*="column"].end {
+    float: left; }
+
+  }
+/* Styles for screens that are atleast 768px; */
+@media only screen and (min-width: 768px) {
+  .large-1 {
+    position: relative;
+    width: 8.33333%; }
+
+  .large-2 {
+    position: relative;
+    width: 16.66667%; }
+
+  .large-3 {
+    position: relative;
+    width: 25%; }
+
+  .large-4 {
+    position: relative;
+    width: 33.33333%; }
+
+  .large-5 {
+    position: relative;
+    width: 41.66667%; }
+
+  .large-6 {
+    position: relative;
+    width: 50%; }
+
+  .large-7 {
+    position: relative;
+    width: 58.33333%; }
+
+  .large-8 {
+    position: relative;
+    width: 66.66667%; }
+
+  .large-9 {
+    position: relative;
+    width: 75%; }
+
+  .large-10 {
+    position: relative;
+    width: 83.33333%; }
+
+  .large-11 {
+    position: relative;
+    width: 91.66667%; }
+
+  .large-12 {
+    position: relative;
+    width: 100%; }
+
+  }
+/* Foundation Visibility HTML Classes */
+.show-for-small{
+  display: inline-block !important;}
+.hide-for-small{
+    display:none !important;
+}
+
+/* Medium Displays: 768px - 1279px */
+@media only screen and (min-width:48em) {
+  .show-for-small {
+    display: none !important;}
+  .hide-for-small {
+    display:inline-block !important;
+  }
+}
+
+.button {
+  display: inline-block;
+margin-bottom: 0;
+padding: 6px 12px;
+font-size: 16px;
+line-height: 20px;
+text-align: center;
+vertical-align: middle;
+cursor: pointer;
+color: #333;
+text-shadow: 0 1px 1px rgba(255,255,255,.75);
+background-color: whitesmoke;
+background-image: -webkit-linear-gradient(top,#fff,#e6e6e6);
+background-image: linear-gradient(to bottom,#fff,#e6e6e6);
+background-repeat: repeat-x;
+border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+border-color: rgba(0,0,0,.1) rgba(0,0,0,.1) rgba(0,0,0,.25);
+border: 1px solid #ccc;
+border-bottom-color: #b3b3b3;
+border-radius: .25em;
+background-clip: padding-box;
+box-shadow: inset 0 1px 0 rgba(255,255,255,.2),0 1px 2px rgba(0,0,0,.05);
+padding: 6px 12px;
+font-family: SourceSansPro,"Helvetica Neue",Helvetica,Helvetica,Arial,sans-serif;
+font-weight: 400!important;}
+  .button:hover, .button:focus {
+    background-color: #2284a1; }
+  .button:hover, .button:focus {
+    color: white; }
+  .button.success {
+    color: #fff;
+text-shadow: 0 -1px 0 rgba(0,0,0,.25);
+background-color: #5bb65b;
+background-image: -webkit-linear-gradient(top,#62c462,#51a351);
+background-image: linear-gradient(to bottom,#62c462,#51a351);
+background-repeat: repeat-x;
+border-color: #457a1a;
+border-color: rgba(0,0,0,.1) rgba(0,0,0,.1) rgba(0,0,0,.25);
+
+    color: white; }
+    .button.success:hover, .button.success:focus {
+      background-color: #457a1a; }
+    .button.success:hover, .button.success:focus {
+      color: white; }
+
+.button {
+  padding-top: 0.8125em;
+  padding-bottom: 0.75em; }
+    .button.success:hover, .button.success:focus, .button.success:active{
+            color: #fff;
+            background-color: #51a351;
+        }
+.button:hover, .button:focus, .button:active{
+color: #333;
+background-color: #e6e6e6;
+}
+.button:hover, .button:focus{
+color: #333;
+text-decoration: none;
+background-position: 0 -15px;
+-webkit-transition: background-position .1s linear;
+-moz-transition: background-position .1s linear;
+transition: background-position .1s linear;
+}
+@media only screen {
+  .button {
+    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+    -webkit-transition: background-color 300ms ease-out;
+    -moz-transition: background-color 300ms ease-out;
+    transition: background-color 300ms ease-out; }
+    .button:active {
+      -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset;
+      box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset; }
+    }
+@media only screen and (min-width: 768px) {
+  .button {
+    display: inline-block; } }
+    p {
+font-family: inherit;
+font-weight: 400;
+font-size: 1em;
+line-height: 1.6;
+margin-bottom: 1.25em;
+text-rendering: optimizeLegibility;
+}
+a { color:#2ba6cb;
+text-decoration: none;
+line-height:inherit;}
+.skip-to{position:absolute;top:10px;left:10px;display:inline-block;padding:10px;background:#fff;border:1px solid #2ba6cb;border-radius:3px;background-clip:padding-box;clip:rect(0,0,0,0);font-size:1.4em}.skip-to:focus{clip:auto;outline:1px solid #2ba6cb;z-index:100}.pull-down-container{background:#036;border-radius:0 0 5px 5px;background-clip:padding-box;box-shadow:1px 0 2px #000;height:53px;width:44px;margin:0 5px 8px;padding:0 4px 4px;position:relative;z-index:35;-webkit-transition:top .2s ease;-moz-transition:top .2s ease;transition:top .2s ease;-webkit-transform:translate3d(0,0,0);-moz-transform:translate3d(0,0,0);-ms-transform:translate3d(0,0,0);-o-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}.no-no-rgba .pull-down-container{height:40px}.pull-down{position:relative;top:4px;display:block;width:100%;height:100%;background:url(excelsior/images/nys-small.png) no-repeat 1px 4px transparent;background-size:32px 32px;border-top:0;z-index:50;-webkit-transition:top .2s ease;-moz-transition:top .2s ease;transition:top .2s ease;-webkit-transform:translate3d(0,0,0);-moz-transform:translate3d(0,0,0);-ms-transform:translate3d(0,0,0);-o-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}.no-no-rgba .pull-down{margin-top:0;position:absolute}.pull-down .accessibility-text{text-indent:-9999px;position:absolute}.pull-down .gripper,.pull-down .gripper span{background-color:#09223d;background-color:rgba(0,0,0,.4);height:1px;position:absolute;width:100%}.pull-down .gripper:after,.pull-down .gripper span:after{background-color:#144e8c;background-color:rgba(255,255,255,.15);content:"";display:block;height:1px;position:absolute;top:1px;width:100%}.pull-down .gripper{top:39px}.no-no-rgba .pull-down .gripper{display:none}.pull-down .gripper span{top:4px;width:100%}.gov-bar{position:absolute;top:0;height:0;background:#036;background-color:#002c59;background-image:-webkit-linear-gradient(top,#002851,#036);background-image:linear-gradient(to bottom,#002851,#036);background-repeat:repeat-x;overflow:hidden;-webkit-transition:height .2s ease;-moz-transition:height .2s ease;transition:height .2s ease;-webkit-transform:translate3d(0,0,0);-moz-transform:translate3d(0,0,0);-ms-transform:translate3d(0,0,0);-o-transform:translate3d(0,0,0);transform:translate3d(0,0,0);width:100%;z-index:40}.gov-bar a{color:#FFF}.gov-bar a.gov-link-1{float:left;font-size:1.3em;text-align:center;padding-bottom:5px;margin:12px .2em 0 .5em;-webkit-tap-highlight-color:rgba(0,0,0,0)}.gov-bar a.gov-link-2{float:right;background:url(excelsior/images/hamburger-no-dots.png) no-repeat 2px 0 transparent;background-image:none,url(excelsior/images/hamburger-no-dots.svg);background-size:24px;color:#FFF;font-size:1em;margin:5px .4em;padding:6px .2em 2px 32px;-webkit-tap-highlight-color:rgba(0,0,0,0)}.gov-bar a.gov-link-3{display:none;text-indent:-9999px}.gov-bar .state-links{overflow:auto}.gov-bar form{padding:.1em .5em 0;width:100%}.gov-bar form .gov-search-button{float:right;font-size:.95em;width:26%}.gov-bar form legend,.gov-bar form label{display:none}.gov-bar form fieldset{border:0;margin:0;padding:0}.gov-bar input{border-radius:4px;background-clip:padding-box;-webkit-appearance:none;border:1px solid #666;padding:0;display:block;float:left;margin:0}.gov-bar input[type=search]{border-radius:5px 0 0 5px;background-clip:padding-box;padding-left:10px;width:70%;color:#333;-moz-box-sizing:border-box;box-sizing:border-box;height:37px;line-height:37px}.gov-bar input[type=submit]{background-color:#505050;background-color:#7b7b7b;background-image:-webkit-linear-gradient(top,#999,#505050);background-image:linear-gradient(to bottom,#999,#505050);background-repeat:repeat-x;border-radius:0 5px 5px 0;background-clip:padding-box;border:1px solid #666;border-left:0;color:#FFF;height:37px;line-height:37px;width:30%;margin-top:0}.gov-bar .search-container{height:37px;margin:1px 2px 0 0}.page .content-section{background:#FFF;padding:1em 0}.active-gov-bar .gov-bar{height:88px}.active-gov-bar .site-bar,.active-gov-bar .pull-down-container{top:88px}.active-gov-bar .pull-down{background:url(excelsior/images/close.png) no-repeat 5px 7px transparent;xbackground-image:none,url(excelsior/images/close.svg);background-size:28px 28px}
+html,body{height:100%}
+@media screen and (min-width:48em){
+    .gov-bar input[type=search]{height:23px;line-height:23px}
+    .site-bar .site-functions .site-search input[type=search]{line-height:36px}}
+@media only screen and (min-width:48em){
+    .gov-bar{background:#036;border-bottom:1px solid #555;position:relative;-webkit-transition:height 0s ease;-moz-transition:height 0s ease;transition:height 0s ease;-webkit-transform:translate3d(0,0,0);-moz-transform:translate3d(0,0,0);-ms-transform:translate3d(0,0,0);-o-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}.gov-bar input[type=search]{height:23px;margin-top:1px}.gov-bar input[type=submit]{height:23px;font-size:1.2em;line-height:1.7em;margin-top:1px}.gov-bar,.active-gov-bar .gov-bar,.gov-bar a{height:28px}.gov-bar .state-links{display:inline-block;float:left}.gov-bar a.gov-link-1{background:url(excelsior/images/nys-banner-img.png) no-repeat 0 0 transparent;display:inline-block;float:left;margin:0 0 0 -1px;text-indent:-9999px;width:185px}.gov-bar a.gov-link-2,.gov-bar a.gov-link-2:hover{background:url(excelsior/images/nys-banner-img.png) no-repeat 0 -28px transparent;border:0;float:left;margin:0;padding:0;text-indent:-9999px;width:130px}.gov-bar a.gov-link-2:hover{background-color:transparent}.gov-bar a.gov-link-3{background:url(excelsior/images/nys-banner-img.png) no-repeat 0 -56px transparent;display:inline-block;float:right;margin-right:8px;width:150px}.gov-bar .search-container{margin-right:9px}.gov-bar form{display:none;float:right;font-size:.75em;width:280px;padding:0;margin:2px 5px 0 0}.active-gov-bar-search a.gov-link-3{display:none}.active-gov-bar-search .gov-bar form{display:block}.page .content-section{padding:2em 0}}@media (min-width:24em){.image-to-list a span{background:rgba(0,0,0,.7);display:block;padding:7px;position:relative;margin-top:-39px}
+}
+    @media only screen and (min-width:60em){.gov-bar{background:#036}.gov-bar .gov-wrap,.site-bar .site-wrap,.global-nav,.page .content-section,.footer .footer-contents{margin-left:auto;margin-right:auto;width:60em!important}}
+    @media (min-width:60em){.off-canvas .global-nav .nav-container{border-radius:4px;background-clip:padding-box}
+}
+@media print{.skip-to,.pull-down-container,.pull-down,.gripper,.gov-bar,.gov-wrap,.site-bar,.site-wrap,.site-title,.site-functions,.mobile-functions,.mobile-functions ul,.mobile-functions li,.mobile-functions a,.global-nav *,.off-canvas .global-nav,.global-nav .nav-container,.nav-container,.nav-container ul,.nav-container li,.nav-container a,footer{display:none!important;visibility:hidden!important;overflow:hidden!important;border:0!important;border-radius:0!important;height:0!important;margin-top:-100px!important;top:-100px!important;background:#FFF!important;width:0!important;z-index:0!important;position:static!important;color:#FFF!important}.page{position:static}.alert-box{text-shadow:none!important}a.close:after,.pagination a:after{content:""}}
+
+        .center-text {
+            text-align:center;
+        }
+
+        .full-width {
+            width: 100%;
+        }
+
+        .page .content-section {
+            padding: 0;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        p em {
+            color: #4c4c4c;
+            display: block;
+            font-size: 1.1em;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            padding: 0 14%;
+        }
+
+        .excelsior-logo {
+            padding: 0 10%;
+            margin-top: -30px;
+        }
+
+        @media (orientation: landscape) {
+
+            .excelsior-logo {
+                padding: 0 30% 5% 30%;
+            }
+        }
+        .button{
+            margin-bottom:20px;
+        }
+        .download {
+            font-size: 1.25em;
+            line-height: 1.75;
+            padding: 0.75em;
+        }
+
+        .gh-ribbon {
+            display:none;
+        }
+
+        .description {
+            margin: 10px 0;
+            text-align: justify;
+        }
+
+        @media (min-width: 768px) {
+        .excelsior-logo {
+            padding-bottom:5%;
+        }
+            p {
+                margin-top: 88px;
+
+            }
+
+            p em {
+                font-size: 1.05em;
+                margin-bottom:35px;
+            }
+        }
+
+        @media (min-width: 820px) {
+            p {
+                margin-top: 100px;
+            }
+       }
+
+        @media (min-width: 860px) {
+            p {
+                margin-top: 109px;
+            }
+        }
+
+        @media (min-width: 890px) {
+            p {
+                margin-top: 120px;
+            }
+       }
+
+        @media (min-width: 930px) {
+            p {
+                margin-top: 110px;
+            }
+              p em {
+                font-size: 1.35em;
+            }
+        }
+
+        @media (min-width: 933px) {
+            p {
+                margin-top: 113px;
+            }
+        }
+
+        @media (min-width: 956px) {
+            p {
+                margin-top: 118px;
+            }
+        }
+
+        @media (min-width: 48em) {
+
+            .excelsior-logo {
+                padding: 10%;
+                margin-top: 0;
+            }
+
+            .full-width {
+                width: 70%;
+            }
+
+            .gov-bar .search-container {
+                margin-top: -1px;
+            }
+
+            .gov-bar input[type=submit] {
+                line-height: 0.7;
+            }
+
+            .page .content-section {
+                padding: 100px 0 1em 0;
+
+            }
+
+            .gh-ribbon {
+                display:block;
+            }
+
+            .gh-button {
+                display: none;
+            }
+
+            .download {
+                font-size: 1.35em;
+                line-height: 1;
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+
+            .documentation {
+                margin-top: 30px;
+                padding-right: 0;
+                padding-left: .9375em;
+            }
+
+        }
+
     </style>
 </head>
 <body>
@@ -77,9 +691,9 @@ button,.button{  display:inline-block;margin-bottom:0;padding:6px 12px;font-size
                                 <em>
                                     Create New York State sites and apps that adapt to every device!
                                 </em>
+                                <a href="https://github.com/nys-its/excelsior" class="button seconday-action full-width show-for-small">View On GitHub</a>
                                 <a href="https://github.com/nys-its/excelsior/raw/master/excelsior.zip" class="button success download full-width">Download Now</a>
-                                <a href="https://github.com/nys-its/excelsior/wiki" class="button seconday-action full-width documentation"> Documentation</a>
-                                <a href="https://github.com/nys-its/excelsior" class="button seconday-action full-width gh-button"> On GitHub</a>
+                                <a href="https://github.com/nys-its/excelsior/wiki" class="button seconday-action full-width documentation">Documentation</a>
                             </p>
                                 </div>
                             </div>
@@ -100,31 +714,12 @@ button,.button{  display:inline-block;margin-bottom:0;padding:6px 12px;font-size
     <script>    function FastClick(layer){"use strict";var oldOnClick,self=this;if(this.trackingClick=!1,this.trackingClickStart=0,this.targetElement=null,this.touchStartX=0,this.touchStartY=0,this.lastTouchIdentifier=0,this.layer=layer,!layer||!layer.nodeType)throw new TypeError("Layer must be a document node");this.onClick=function(){return FastClick.prototype.onClick.apply(self,arguments)},this.onMouse=function(){return FastClick.prototype.onMouse.apply(self,arguments)},this.onTouchStart=function(){return FastClick.prototype.onTouchStart.apply(self,arguments)},this.onTouchEnd=function(){return FastClick.prototype.onTouchEnd.apply(self,arguments)},this.onTouchCancel=function(){return FastClick.prototype.onTouchCancel.apply(self,arguments)},FastClick.notNeeded(layer)||(this.deviceIsAndroid&&(layer.addEventListener("mouseover",this.onMouse,!0),layer.addEventListener("mousedown",this.onMouse,!0),layer.addEventListener("mouseup",this.onMouse,!0)),layer.addEventListener("click",this.onClick,!0),layer.addEventListener("touchstart",this.onTouchStart,!1),layer.addEventListener("touchend",this.onTouchEnd,!1),layer.addEventListener("touchcancel",this.onTouchCancel,!1),Event.prototype.stopImmediatePropagation||(layer.removeEventListener=function(type,callback,capture){var rmv=Node.prototype.removeEventListener;"click"===type?rmv.call(layer,type,callback.hijacked||callback,capture):rmv.call(layer,type,callback,capture)},layer.addEventListener=function(type,callback,capture){var adv=Node.prototype.addEventListener;"click"===type?adv.call(layer,type,callback.hijacked||(callback.hijacked=function(event){event.propagationStopped||callback(event)}),capture):adv.call(layer,type,callback,capture)}),"function"==typeof layer.onclick&&(oldOnClick=layer.onclick,layer.addEventListener("click",function(event){oldOnClick(event)},!1),layer.onclick=null))}FastClick.prototype.deviceIsAndroid=navigator.userAgent.indexOf("Android")>0,FastClick.prototype.deviceIsIOS=/iP(ad|hone|od)/.test(navigator.userAgent),FastClick.prototype.deviceIsIOS4=FastClick.prototype.deviceIsIOS&&/OS 4_\d(_\d)?/.test(navigator.userAgent),FastClick.prototype.deviceIsIOSWithBadTarget=FastClick.prototype.deviceIsIOS&&/OS ([6-9]|\d{2})_\d/.test(navigator.userAgent),FastClick.prototype.needsClick=function(target){"use strict";switch(target.nodeName.toLowerCase()){case"button":case"select":case"textarea":if(target.disabled)return!0;break;case"input":if(this.deviceIsIOS&&"file"===target.type||target.disabled)return!0;break;case"label":case"video":return!0}return/\bneedsclick\b/.test(target.className)},FastClick.prototype.needsFocus=function(target){"use strict";switch(target.nodeName.toLowerCase()){case"textarea":case"select":return!0;case"input":switch(target.type){case"button":case"checkbox":case"file":case"image":case"radio":case"submit":return!1}return!target.disabled&&!target.readOnly;default:return/\bneedsfocus\b/.test(target.className)}},FastClick.prototype.sendClick=function(targetElement,event){"use strict";var clickEvent,touch;document.activeElement&&document.activeElement!==targetElement&&document.activeElement.blur(),touch=event.changedTouches[0],clickEvent=document.createEvent("MouseEvents"),clickEvent.initMouseEvent("click",!0,!0,window,1,touch.screenX,touch.screenY,touch.clientX,touch.clientY,!1,!1,!1,!1,0,null),clickEvent.forwardedTouchEvent=!0,targetElement.dispatchEvent(clickEvent)},FastClick.prototype.focus=function(targetElement){"use strict";var length;this.deviceIsIOS&&targetElement.setSelectionRange?(length=targetElement.value.length,targetElement.setSelectionRange(length,length)):targetElement.focus()},FastClick.prototype.updateScrollParent=function(targetElement){"use strict";var scrollParent,parentElement;if(scrollParent=targetElement.fastClickScrollParent,!scrollParent||!scrollParent.contains(targetElement)){parentElement=targetElement;do{if(parentElement.scrollHeight>parentElement.offsetHeight){scrollParent=parentElement,targetElement.fastClickScrollParent=parentElement;break}parentElement=parentElement.parentElement}while(parentElement)}scrollParent&&(scrollParent.fastClickLastScrollTop=scrollParent.scrollTop)},FastClick.prototype.getTargetElementFromEventTarget=function(eventTarget){"use strict";return eventTarget.nodeType===Node.TEXT_NODE?eventTarget.parentNode:eventTarget},FastClick.prototype.onTouchStart=function(event){"use strict";var targetElement,touch,selection;if(event.targetTouches.length>1)return!0;if(targetElement=this.getTargetElementFromEventTarget(event.target),touch=event.targetTouches[0],this.deviceIsIOS){if(selection=window.getSelection(),selection.rangeCount&&!selection.isCollapsed)return!0;if(!this.deviceIsIOS4){if(touch.identifier===this.lastTouchIdentifier)return event.preventDefault(),!1;this.lastTouchIdentifier=touch.identifier,this.updateScrollParent(targetElement)}}return this.trackingClick=!0,this.trackingClickStart=event.timeStamp,this.targetElement=targetElement,this.touchStartX=touch.pageX,this.touchStartY=touch.pageY,200>event.timeStamp-this.lastClickTime&&event.preventDefault(),!0},FastClick.prototype.touchHasMoved=function(event){"use strict";var touch=event.changedTouches[0];return Math.abs(touch.pageX-this.touchStartX)>10||Math.abs(touch.pageY-this.touchStartY)>10?!0:!1},FastClick.prototype.findControl=function(labelElement){"use strict";return void 0!==labelElement.control?labelElement.control:labelElement.htmlFor?document.getElementById(labelElement.htmlFor):labelElement.querySelector("button, input:not([type=hidden]), keygen, meter, output, progress, select, textarea")},FastClick.prototype.onTouchEnd=function(event){"use strict";var forElement,trackingClickStart,targetTagName,scrollParent,touch,targetElement=this.targetElement;if(this.touchHasMoved(event)&&(this.trackingClick=!1,this.targetElement=null),!this.trackingClick)return!0;if(200>event.timeStamp-this.lastClickTime)return this.cancelNextClick=!0,!0;if(this.lastClickTime=event.timeStamp,trackingClickStart=this.trackingClickStart,this.trackingClick=!1,this.trackingClickStart=0,this.deviceIsIOSWithBadTarget&&(touch=event.changedTouches[0],targetElement=document.elementFromPoint(touch.pageX-window.pageXOffset,touch.pageY-window.pageYOffset)),targetTagName=targetElement.tagName.toLowerCase(),"label"===targetTagName){if(forElement=this.findControl(targetElement)){if(this.focus(targetElement),this.deviceIsAndroid)return!1;targetElement=forElement}}else if(this.needsFocus(targetElement))return event.timeStamp-trackingClickStart>100||this.deviceIsIOS&&window.top!==window&&"input"===targetTagName?(this.targetElement=null,!1):(this.focus(targetElement),this.deviceIsIOS4&&"select"===targetTagName||(this.targetElement=null,event.preventDefault()),!1);return this.deviceIsIOS&&!this.deviceIsIOS4&&(scrollParent=targetElement.fastClickScrollParent,scrollParent&&scrollParent.fastClickLastScrollTop!==scrollParent.scrollTop)?!0:(this.needsClick(targetElement)||(event.preventDefault(),this.sendClick(targetElement,event)),!1)},FastClick.prototype.onTouchCancel=function(){"use strict";this.trackingClick=!1,this.targetElement=null},FastClick.prototype.onMouse=function(event){"use strict";return this.targetElement?event.forwardedTouchEvent?!0:event.cancelable?!this.needsClick(this.targetElement)||this.cancelNextClick?(event.stopImmediatePropagation?event.stopImmediatePropagation():event.propagationStopped=!0,event.stopPropagation(),event.preventDefault(),!1):!0:!0:!0},FastClick.prototype.onClick=function(event){"use strict";var permitted;return this.trackingClick?(this.targetElement=null,this.trackingClick=!1,!0):"submit"===event.target.type&&0===event.detail?!0:(permitted=this.onMouse(event),permitted||(this.targetElement=null),permitted)},FastClick.prototype.destroy=function(){"use strict";var layer=this.layer;this.deviceIsAndroid&&(layer.removeEventListener("mouseover",this.onMouse,!0),layer.removeEventListener("mousedown",this.onMouse,!0),layer.removeEventListener("mouseup",this.onMouse,!0)),layer.removeEventListener("click",this.onClick,!0),layer.removeEventListener("touchstart",this.onTouchStart,!1),layer.removeEventListener("touchend",this.onTouchEnd,!1),layer.removeEventListener("touchcancel",this.onTouchCancel,!1)},FastClick.notNeeded=function(layer){"use strict";var metaViewport;if(window.ontouchstart===void 0)return!0;if(/Chrome\/[0-9]+/.test(navigator.userAgent)){if(!FastClick.prototype.deviceIsAndroid)return!0;if(metaViewport=document.querySelector("meta[name=viewport]"),metaViewport&&-1!==metaViewport.content.indexOf("user-scalable=no"))return!0}return"none"===layer.style.msTouchAction?!0:!1},FastClick.attach=function(layer){"use strict";return new FastClick(layer)},"undefined"!=typeof define&&define.amd?define(function(){"use strict";return FastClick}):"undefined"!=typeof module&&module.exports?(module.exports=FastClick.attach,module.exports.FastClick=FastClick):window.FastClick=FastClick;
 </script>
 <script>
-
-/**
- * Excelsior Web Framework v0.1.3
- * (c) 2013 NYS ITS
- * https://github.com/nys-its/excelsior.git
- * License (MIT): https://github.com/nys-its/excelsior/blob/master/license.md
- */
-
-/**
- * @fileOverview Excelsior Framework common functions
- * @author <a href="https://github.com/nys-its/excelsior">NYS-ITS</a>
- * @version 0.1.3
- */
-
-/**
- * @namespace
- */
 var EWF = {
     ua: navigator.userAgent,
     iOS: false,
     $body: null,
     $html: null,
-    $window: null,
-    projectRoot: 'excelsior/',
-    imagePath: 'https://raw.github.com/nys-its/excelsior/master/excelsior/images/'
+    $window: null
 };
 
 /**
@@ -151,19 +746,6 @@ EWF.init = function _init () {
         // Foundation's `large-` classes may take effect
         EWF.$html.addClass('screen-max-large');
     }
-
-    // Preload assets
-    EWF.fixImagePath();
-
-    // Images referenced by CSS that aren't visible at page load but will likely appear in normal usage
-    //EWF.preloader.add('<img src="' + EWF.imagePath + 'close.svg" alt="">');
-    //EWF.preloader.add('<img src="' + EWF.imagePath + 'close-x-gray.svg" alt="">');
-    //EWF.preloader.add('<img src="' + EWF.imagePath + 'hamburger-no-dots.svg" alt="">');
-    //EWF.preloader.add('<img src="' + EWF.imagePath + 'nys-small.png" alt="">');
-    //EWF.preloader.add('<img src="' + EWF.imagePath + 'nys-banner-img.png" alt="">');
-    EWF.preloader.add('<img src="' + EWF.imagePath + 'close.png" alt="">');
-
-    EWF.preloader.init();
 };
 
 $(document).ready(function(){EWF.init();});
@@ -171,32 +753,6 @@ $(document).ready(function(){EWF.init();});
 /**
  * Client- and environment-related properties
  */
-
-/**
- * Relative image path
- */
-EWF.fixImagePath = function _fixImagePath() {
-    var currentUrl = document.location.pathname,
-        slashRegex, index, numSubDirectories, i;
-
-    if (currentUrl < 0) { // Cannot determine relative path
-        return false;
-    }
-
-    // Trim path down to just the Excelsior
-    index = currentUrl.indexOf(EWF.projectRoot);
-    currentUrl = currentUrl.substr(index);
-
-    slashRegex = /\//g;
-
-    if (slashRegex.test(currentUrl)) {
-        // Add a dot-dot-slash for each sub directory we're in
-        numSubDirectories = currentUrl.match(slashRegex).length - 1;
-        for (i = 0; i < numSubDirectories; i++) {
-            EWF.imagePath = '../' + EWF.imagePath;
-        }
-    }
-};
 
 (function () {
   // Determine click type
@@ -311,40 +867,6 @@ $(document).ready(function(){
         * Special functionality determined by the data-active value
         * @param {object} activeElm The active element
         */
-        function specialEvents(activeElm) {
-
-            if (activeElm === 'active-site-search') {
-                $('#site-search-box').focus();
-            }
-
-            if (activeElm === 'active-site-menu') {
-
-                // Check to see if off canvas is being used
-                if (EWF.$body.hasClass('off-canvas') && EWF.$body.hasClass('active-site-menu')) {
-                    // Get the screen size and set it has a min-height
-                    //document.getElementsByTagName("body").style.minHeight = screen.height + "px";
-                    EWF.$body.css('min-height',screen.height+'px');
-                } else {
-                    // Remove min height
-                    EWF.$body.css('min-height','');
-
-                    // clean up addition classes if off-canvase is defined
-                    if (EWF.$body.hasClass('off-canvas')) {
-                        EWF.$body
-                            .removeClass('active-sub-menu active-site-menu');
-
-                        $('#sub-menu-title').text('');
-
-                        $('#global-nav')
-                            .find('.active')
-                                .removeClass('active')
-                            .end()
-                            .find('.active-menu')
-                                .removeClass('active-menu');
-                    }
-                }
-            }
-        }
 
         // Check to see if there is already and active item
         if ($activeElm.length > 0) {
@@ -366,9 +888,6 @@ $(document).ready(function(){
             $clickedElm.removeClass(selectedClass);
 
             EWF.$body.removeClass('active-sub-menu');
-
-            // Call the specialEvents function
-            specialEvents(activeClass);
 
             // Remove any stray body click event
             EWF.$body.off('click');
@@ -406,63 +925,11 @@ $(document).ready(function(){
 
             });
 
-            // Check to see if anything special has to happen based on data-active value
-            specialEvents(activeClass);
-
         }
 
     });
 
 });
-
-/**
- * @namespace Asset Preloader
- */
-EWF.preloader = {
-    container: null, // The container <div>
-    assets: []       // Assets to be preloaded (HTML strings); this can be prepopulated
-};
-
-/**
- * Creates an off-screen container for preloaded assets and adds any assets present in the queue.
- * Should be called at document.ready
- */
-EWF.preloader.init = function _EWF_preloader_init () {
-    // Create container
-    EWF.preloader.container = document.createElement('div');
-    EWF.preloader.container.className = 'hide-off-screen';
-    document.body.appendChild(EWF.preloader.container);
-
-    // Load anything that's already in the queue
-    $.each(EWF.preloader.assets, function(i, asset) {
-        EWF.preloader.add(asset);
-    });
-
-    // Empty the queue
-    EWF.preloader.assets = [];
-};
-
-/**
- * Adds an asset to the preload container
- * May be called before or after preload.setup() has run
- * @param {string} html HTML string to be added to the page
- */
-EWF.preloader.add = function _EWF_preloader_add (html) {
-    if (!html || typeof html !== 'string') { return false; }
-
-    // If the container has already been set up, add this asset immediately
-    if (EWF.preloader.container) {
-        EWF.preloader.container.innerHTML += html;
-    }
-    // Otherwise, queue it to load when setup() is run
-    else {
-        EWF.preloader.assets.push(html);
-    }
-};
-
-/**
- * Plugins
- */
 
 try {
     /**
